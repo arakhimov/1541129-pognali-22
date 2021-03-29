@@ -18,13 +18,32 @@
           <a class="page-header__link">
             <img src="img/pognali-logo_white.png" alt="Логотип Погнали" class="page-header__logo page-logo" width="96" height="15" />
           </a>
+
           <button type="button" class="page-header__open-menu" aria-label="Открыть мобильное меню"></button>
 
-          <div class="page-header__container">
-            <img src="img/pognali-logo_dark.png" alt="Логотип Погнали" class="page-header__logo page-logo" width="96" height="15" />
-            <button type="button" class="page-header__close-menu" aria-label="Закрыть мобильное меню"></button>
+          <nav class="page-header__navigation navigation">
+            <ul class="navigation__list">
+              <li class="navigation__item"><a href="blank.html" class="navigation__link">О сервисе</a></li>
+              <li class="navigation__item"><a href="form.html" class="navigation__link">Направления</a></li>
+              <li class="navigation__item"><a href="catalog.html" class="navigation__link">Попутчики</a></li>
+            </ul>
+          </nav>
 
-            <nav class="page-header__navigation navigation">
+          <div class="page-menu">
+            <a href="tel:+78005558628" class="page-menu__phone"
+              aria-label="Позвоните нам по номеру телефона: 8 800 555-86-28"></a>
+            <a href="mailto:mail@htmlacademy.ru" class="page-menu__email"
+              aria-label="Напишите нам на почтовый ящик: mail@htmlacademy.ru"></a>
+            <button type="button" class="page-menu__authorization button-autorization">авторизация</button>
+          </div>
+
+          <div class="page-header__popup popup-menu">
+            <a class="page-header__link">
+              <img src="img/pognali-logo_dark.png" alt="Логотип Погнали" class="page-header__logo page-logo" width="96" height="15" />
+            </a>
+            <button type="button" class="popup-menu__close-menu" aria-label="Закрыть мобильное меню"></button>
+
+            <nav class="popup-menu__navigation navigation">
               <ul class="navigation__list">
                 <li class="navigation__item"><a href="blank.html" class="navigation__link">О сервисе</a></li>
                 <li class="navigation__item"><a href="form.html" class="navigation__link">Направления</a></li>
@@ -32,19 +51,20 @@
               </ul>
             </nav>
 
-            <button type="button" class="page-header__authorization button-autorization button-autorization--hidden">авторизация</button>
+            <a href="blank" class="page-header__authorization button-autorization">авторизация</a>
 
-            <ul class="page-header__contacts-list list-contacts list-contacts--hidden">
-              <li class="list-contacts__item list-contacts__item--dark">
-                <a href="tel:+78005558628" class="list-contacts__telephone"
+            <ul class="popup-menu__contacts-list list-contacts">
+              <li class="list-contacts__item">
+                <a href="tel:+78005558628" class="list-contacts__telephone list-contacts__telephone--dark"
                   aria-label="Позвоните нам по номеру телефона: 8 800 555-86-28">8 800 555-86-28</a>
               </li>
-              <li class="list-contacts__item list-contacts__item--dark">
-                <a href="mailto:mail@htmlacademy.ru" class="list-contacts__email"
+              <li class="list-contacts__item">
+                <a href="mailto:mail@htmlacademy.ru" class="list-contacts__email list-contacts__email--dark"
                   aria-label="Напишите нам на почтовый ящик: mail@htmlacademy.ru">mail@htmlacademy.ru</a>
               </li>
             </ul>
-            <ul class="page-header__socials-list socials socials--hidden">
+
+            <ul class="popup-menu__socials-list socials">
               <li class="socials__item">
                 <a href="https://ru-ru.facebook.com/" class="socials__link" aria-label="Наша страница в facebook">
                   <img src="img/facebook-logo.svg" alt="Логотип facebook" class="socials__logo"></a>
@@ -59,14 +79,6 @@
               </li>
             </ul>
           </div>
-
-          <div class="page-menu">
-            <a href="tel:+78005558628" class="page-menu__phone"
-              aria-label="Позвоните нам по номеру телефона: 8 800 555-86-28"></a>
-            <a href="mailto:mail@htmlacademy.ru" class="page-menu__email"
-              aria-label="Напишите нам на почтовый ящик: mail@htmlacademy.ru"></a>
-            <button type="button" class="page-menu__authorization button-autorization">авторизация</button>
-          </div>
         </div>
       </header>
 
@@ -79,7 +91,10 @@
             <h2 class="intro__title">В путешествие с крутыми попутчиками!</h2>
             <blockquote class="intro__quote quote-intro">
               <p class="quote-intro__text">&laquo;Лучшее приложение, что я видел в жизни!&raquo;</p>
-              <cite class="quote-inro__author">Мурат Эльтазин главный редактор газеты &laquo;гаджетлайф&raquo;</cite>
+              <cite class="quote-inro__author">
+                <span class="quote-inro__author-name">Мурат Эльтазин</span>
+                <span class="quote-inro__author-position">главный редактор газеты &laquo;гаджетлайф&raquo;</span>
+              </cite>
             </blockquote>
             <ol class="intro__list">
               <li class="intro__item">Выберите направление</li>
@@ -96,7 +111,7 @@
             <h2 class="about-service__title page-title">О сервисе</h2>
             <p class="about-service__text page-text">Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими
               идеями путешествий и черпайте вдохновение в чужих.</p>
-            <p class="about-service__lead lead-text">А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</p>
+            <p class="about-service__text page-text page-text--strong">А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</p>
             <a href="#" class="about-service__link page-link">Подробнее</a>
           </div>
         </section>
@@ -113,6 +128,7 @@
                 <article class="list-directions__card">
                   <img src="img/directions-thailand.jpg" alt="Острова Таиланда, покрытые зеленью и голубое море"
                     class="list-directions__image" width="270" height="110">
+                  <img src="img/thailand.png" alt="Флаг Таиланда" class="list-directions__flag-image">
                   <h3 class="list-directions__title">Таиланд</h3>
                   <span class="list-directions__counter">18321</span>
                   <p class="list-directions__description">Джунгли зовут!</p>
@@ -122,6 +138,7 @@
                 <article class="list-directions__card">
                   <img src="img/directions-france.jpg" alt="Классическая архитектура французских городов"
                     class="list-directions__image" width="270" height="110">
+                  <img src="img/france.png" alt="Флаг Франции" class="list-directions__flag-image">
                   <h3 class="list-directions__title">Франция</h3>
                   <span class="list-directions__counter">12518</span>
                   <p class="list-directions__description">Трэ бьен, манифик!</p>
@@ -131,6 +148,7 @@
                 <article class="list-directions__card">
                   <img src="img/directions-czech.jpg" alt="Речные прогулки с осмотром достопримечательностей Чехии"
                     class="list-directions__image" width="270" height="110">
+                  <img src="img/czech.png" alt="Флаг Чехии" class="list-directions__flag-image">
                   <h3 class="list-directions__title">Чехия</h3>
                   <span class="list-directions__counter">5326</span>
                   <p class="list-directions__description">Закоулки старой Европы</p>
@@ -149,7 +167,7 @@
 
             <p class="travelers__text page-text page-text--white">Все мы индивидуальны и у каждого свой взгляд на идеальный отдых. Одному нужен
               пляж и коктейль, а другому маршрут для хайкинга. </p>
-            <p class="travelers__lead text-lead">Теперь можно легко найти единомышленников!</p>
+            <p class="travelers__text text-text page-text--white page-text--strong">Теперь можно легко найти единомышленников!</p>
 
             <ul class="travelers__list list-travelers">
               <li class="list-travelers">
@@ -224,11 +242,16 @@
           <div class="page-wrapper">
             <h2 class="profile__title page-title">Добавьте свой профиль</h2>
             <div class="profile__rates-container"><span class="profile__rates">₽</span></div>
-            <ol class="profile__list">
-              <li class="profile__item">Базовое размещение Бесплатно</li>
-              <li class="profile__item">Вывод на первых позициях 99руб./мес</li>
-              <li class="profile__item">Кастомный цвет карточки 59руб./мес</li>
-            </ol>
+            <dl class="profile__list">
+              <dt class="profile__term">Базовое размещение</dt>
+              <dd class="profile__description">Бесплатно</dd>
+
+              <dt class="profile__term">Вывод на первых позициях</dt>
+              <dd class="profile__description">99руб./мес</dd>
+
+              <dt class="profile__term">Кастомный цвет карточки</dt>
+              <dd class="profile__description">59руб./мес</dd>
+            </dl>
             <a href="#" class="profile__bisiness">Показать тарифы для бизнеса</a>
           </div>
         </section>
@@ -244,7 +267,9 @@
 
             <form action="https://echo.htmlacademy.ru/" method="POST" name="registration" class="contacts__registration registration-form">
               <input type="email" class="registration-form__email" placeholder="E-mail" aria-label="Введите ваш email" />
-              <button type="submit" class="registration-form__submit" aria-label="Регистрация"></button>
+              <button type="submit" class="registration-form__submit" aria-label="Регистрация" title="Регистрация">
+                <span class="registration-form__text">Регистрация</span>
+              </button>
             </form>
 
             <p class="contacts__questions page-text">Остались вопросы? Мы с радостью на них ответим!</p>
