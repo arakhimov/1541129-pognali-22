@@ -83,7 +83,7 @@
       </header>
 
       <main class="main">
-        <h1 class="visually-hidden">Направления</h1>
+        <h1 class="page-title">Направления</h1>
 
         <!-- секция профиль -->
         <section class="profile">
@@ -151,9 +151,15 @@
             <h2 class="add-plan__title page-title">Добавить план</h2>
 
             <ul class="add-plan__markers markers">
-              <li class="markers__item markers__item--current" title="Первый шаг" aria-label="Первый шаг"></li>
-              <li class="markers__item" title="Второй шаг" aria-label="Второй шаг"></li>
-              <li class="markers__item" title="Третий шаг" aria-label="Третий шаг"></li>
+              <li class="markers__item markers__item--current" title="Даты" aria-label="Даты">
+                <span class="markers__text markers__text--hidden">Даты</span>
+              </li>
+              <li class="markers__item" title="Маршрут" aria-label="Маршрут">
+                <span class="markers__text markers__text--hidden">Маршрут</span>
+              </li>
+              <li class="markers__item" title="Развлечения" aria-label="Развлечения">
+                <span class="markers__text markers__text--hidden">Развлечения</span>
+              </li>
             </ul>
 
             <form action="https://echo.htmlacademy.ru/" method="POST" class="add-plan__form" target="_blank">
@@ -300,45 +306,294 @@
 
                     <section class="routes__popup countries">
                       <ul class="countries__headind-list">
-                        <li class="contries__heading-item"><button type="button" class="countries__button" value="a" aria-pressed="true">а</button></li>
-                        <li class="contries__heading-item"><button type="button" class="countries__button" value="б">б</button></li>
-                        <li class="contries__heading-item"><button type="button" class="countries__button" value="в">в</button></li>
-                        <li class="contries__heading-item"><button type="button" class="countries__button" value="г">г</button></li>
-                        <li class="contries__heading-item"><button type="button" class="countries__button" value="д">д</button></li>
-                        <li class="contries__heading-item"><button type="button" class="countries__button" value="е">е</button></li>
-                        <li class="contries__heading-item"><button type="button" class="countries__button" value="з">з</button></li>
-                        <li class="contries__heading-item"><button type="button" class="countries__button" value="и">и</button></li>
-                        <li class="contries__heading-item"><button type="button" class="countries__button" value="к">к</button></li>
-                        <li class="contries__heading-item"><button type="button" class="countries__button" value="л">л</button></li>
-                        <li class="contries__heading-item"><button type="button" class="countries__button" value="м">м</button></li>
-                        <li class="contries__heading-item"><button type="button" class="countries__button" value="н">н</button></li>
-                        <li class="contries__heading-item"><button type="button" class="countries__button" value="о">о</button></li>
-                        <li class="contries__heading-item"><button type="button" class="countries__button" value="п">п</button></li>
-                        <li class="contries__heading-item"><button type="button" class="countries__button" value="р">р</button></li>
-                        <li class="contries__heading-item"><button type="button" class="countries__button" value="с">с</button></li>
-                        <li class="contries__heading-item"><button type="button" class="countries__button" value="т">т</button></li>
-                        <li class="contries__heading-item"><button type="button" class="countries__button" value="у">у</button></li>
-                        <li class="contries__heading-item"><button type="button" class="countries__button" value="ф">ф</button></li>
-                        <li class="contries__heading-item"><button type="button" class="countries__button" value="х">х</button></li>
-                        <li class="contries__heading-item"><button type="button" class="countries__button" value="ч">ч</button></li>
-                        <li class="contries__heading-item"><button type="button" class="countries__button" value="ш">ш</button></li>
-                        <li class="contries__heading-item"><button type="button" class="countries__button" value="э">э</button></li>
-                        <li class="contries__heading-item"><button type="button" class="countries__button" value="ю">ю</button></li>
-                        <li class="contries__heading-item"><button type="button" class="countries__button" value="я">я</button></li>
-                      </ul>
-
-                      <ul class="countries__list">
-                        <li class="countries__item"><button class="coutries__button-country" value="Австралия">Австралия</button></li>
-                        <li class="countries__item"><button class="coutries__button-country" value="Австрия">Австрия</button></li>
-                        <li class="countries__item"><button class="coutries__button-country" value="Азербайджан">Азербайджан</button></li>
-                        <li class="countries__item"><button class="coutries__button-country" value="Албания">Албания</button></li>
-                        <li class="countries__item"><button class="coutries__button-country" value="Алжир">Алжир</button></li>
-                        <li class="countries__item"><button class="coutries__button-country" value="Ангола">Ангола</button></li>
-                        <li class="countries__item"><button class="coutries__button-country" value="Андорра">Андорра</button></li>
-                        <li class="countries__item"><button class="coutries__button-country" value="Антигуа и Барбуда">Антигуа и Барбуда</button></li>
-                        <li class="countries__item"><button class="coutries__button-country" value="Аргентина">Аргентина</button></li>
-                        <li class="countries__item"><button class="coutries__button-country" value="Армения">Армения</button></li>
-                        <li class="countries__item"><button class="coutries__button-country" value="Афганистан">Афганистан</button></li>
+                        <li class="contries__heading-item">
+                          <button type="button" class="countries__button" value="a" aria-pressed="true">а</button>
+                          <ul class="countries__list countries__list--active">
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Австралия</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Австрия</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Азербайджан</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Албания</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Алжир</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Ангола</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Андорра</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Антигуа и Барбуда</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Аргентина</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Армения</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Афганистан</a></li>
+                          </ul>
+                        </li>
+                        <li class="contries__heading-item">
+                          <button type="button" class="countries__button" value="б">б</button>
+                          <ul class="countries__list">
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Багамские острова</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Бангладеш</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Барбадос</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Бахрейн</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Белоруссия</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Белиз</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Бельгия</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Бенин</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Болгария</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Боливия</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Босния и Герцеговина</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Ботсвана</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Бразилия</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Бруней</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Буркина-Фасо</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Бурунди</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Бутан</a></li>
+                          </ul>
+                        </li>
+                        <li class="contries__heading-item">
+                          <button type="button" class="countries__button" value="в">в</button>
+                          <ul class="countries__list">
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Вануату</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Великобритания</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Венгрия</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Венисуэла</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Восточный Тимор</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Вьетнам</a></li>
+                          </ul>
+                        </li>
+                        <li class="contries__heading-item">
+                          <button type="button" class="countries__button" value="г">г</button>
+                          <ul class="countries__list">
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Габон</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Гаити</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Гайана</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Гамбия</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Гана</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Гватемала</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Гвинея</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Гвинея-Бисау</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Германия</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Гондурас</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Гренада</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Греция</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Грузия</a></li>
+                          </ul>
+                        </li>
+                        <li class="contries__heading-item">
+                          <button type="button" class="countries__button" value="д">д</button>
+                          <ul class="countries__list">
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Дания</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Джибути</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Доминика</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Доминикана</a></li>
+                          </ul>
+                        </li>
+                        <li class="contries__heading-item">
+                          <button type="button" class="countries__button" value="е">е</button>
+                          <ul class="countries__list">
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Египед</a></li>
+                          </ul>
+                        </li>
+                        <li class="contries__heading-item">
+                          <button type="button" class="countries__button" value="з">з</button>
+                          <ul class="countries__list">
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Замбия</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Зимбабве</a></li>
+                          </ul>
+                        </li>
+                        <li class="contries__heading-item">
+                          <button type="button" class="countries__button" value="и">и</button>
+                          <ul class="countries__list">
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Израиль</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Индия</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Индонезия</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Иордания</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Ирак</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Иран</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Ирландия</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Исладндия</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Испания</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Италия</a></li>
+                          </ul>
+                        </li>
+                        <li class="contries__heading-item">
+                          <button type="button" class="countries__button" value="к">к</button>
+                          <ul class="countries__list">
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Кабо-Верде</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Казахстан</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Камбоджа</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Камерун</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Канада</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Катар</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Кения</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Кипр</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Киргизия</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Кирибати</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Китай</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Колумбия</a></li>
+                          </ul>
+                        </li>
+                        <li class="contries__heading-item">
+                          <button type="button" class="countries__button" value="л">л</button>
+                          <ul class="countries__list">
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Лаос</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Латвия</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Лесото</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Либерия</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Ливан</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Ливия</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Литва</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Лихтеншейн</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Люксембург</a></li>
+                          </ul>
+                        </li>
+                        <li class="contries__heading-item">
+                          <button type="button" class="countries__button" value="м">м</button>
+                          <ul class="countries__list">
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Маврикий</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Мавритания</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Мадагаскар</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Малави</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Малайзия</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Мали</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Мальдивы</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Мальта</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Марокко</a></li>
+                          </ul>
+                        </li>
+                        <li class="contries__heading-item">
+                          <button type="button" class="countries__button" value="н">н</button>
+                          <ul class="countries__list">
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Намибия</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Науру</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Непал</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Нигер</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Нигерия</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Нидерланды</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Никорагуа</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Новая Зеландия</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Норвегия</a></li>
+                          </ul>
+                        </li>
+                        <li class="contries__heading-item">
+                          <button type="button" class="countries__button" value="о">о</button>
+                          <ul class="countries__list">
+                            <li class="countries__item"><a href="#" class="coutries__button-country">ОАЭ</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Оман</a></li>
+                          </ul>
+                        </li>
+                        <li class="contries__heading-item">
+                          <button type="button" class="countries__button" value="п">п</button>
+                          <ul class="countries__list">
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Пакистан</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Палау</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Панама</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Папуа-Новая Гвинея</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Парагвай</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Перу</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Польша</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Португалия</a></li>
+                          </ul>
+                        </li>
+                        <li class="contries__heading-item">
+                          <button type="button" class="countries__button" value="р">р</button>
+                          <ul class="countries__list">
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Руанда</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Румыния</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Россия</a></li>
+                          </ul>
+                        </li>
+                        <li class="contries__heading-item">
+                          <button type="button" class="countries__button" value="с">с</button>
+                          <ul class="countries__list">
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Сальвадор</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Самоа</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Сан-Марино</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Саудовская Аравия</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Сейшелы</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Сенегал</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Сербия</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Сингапур</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Сирия</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Словакия</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Словения</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">США</a></li>
+                          </ul>
+                        </li>
+                        <li class="contries__heading-item">
+                          <button type="button" class="countries__button" value="т">т</button>
+                          <ul class="countries__list">
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Таджикистан</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Таиланд</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Танзания</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Того</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Тонга</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Тринидад и Тобаго</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Тувалу</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Тунис</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Туркмения</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Турция</a></li>
+                          </ul>
+                        </li>
+                        <li class="contries__heading-item">
+                          <button type="button" class="countries__button" value="у">у</button>
+                          <ul class="countries__list">
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Уганда</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Узбекистан</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Украина</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Уругвай</a></li>
+                          </ul>
+                        </li>
+                        <li class="contries__heading-item">
+                          <button type="button" class="countries__button" value="ф">ф</button>
+                          <ul class="countries__list">
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Фиджи</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Филипины</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Финляндия</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Франция</a></li>
+                          </ul>
+                        </li>
+                        <li class="contries__heading-item">
+                          <button type="button" class="countries__button" value="х">х</button>
+                          <ul class="countries__list">
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Хорватия</a></li>
+                          </ul>
+                        </li>
+                        <li class="contries__heading-item">
+                          <button type="button" class="countries__button" value="ч">ч</button>
+                          <ul class="countries__list">
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Чад</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Черногория</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Чехия</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Чили</a></li>
+                          </ul>
+                        </li>
+                        <li class="contries__heading-item">
+                          <button type="button" class="countries__button" value="ш">ш</button>
+                          <ul class="countries__list">
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Швейцария</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Швеция</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Шри-Ланка</a></li>
+                          </ul>
+                        </li>
+                        <li class="contries__heading-item">
+                          <button type="button" class="countries__button" value="э">э</button>
+                          <ul class="countries__list">
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Эквадор</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Эритрея</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Эсватини</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Эстония</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Эфиопия</a></li>
+                          </ul>
+                        </li>
+                        <li class="contries__heading-item">
+                          <button type="button" class="countries__button" value="ю">ю</button>
+                          <ul class="countries__list">
+                            <li class="countries__item"><a href="#" class="coutries__button-country">ЮАР</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Южный Судан</a></li>
+                          </ul>
+                        </li>
+                        <li class="contries__heading-item">
+                          <button type="button" class="countries__button" value="я">я</button>
+                          <ul class="countries__list">
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Ямайка</a></li>
+                            <li class="countries__item"><a href="#" class="coutries__button-country">Япония</a></li>
+                          </ul>
+                        </li>
                       </ul>
                     </section>
                   </li>
