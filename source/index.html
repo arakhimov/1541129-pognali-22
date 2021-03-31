@@ -35,7 +35,7 @@
               aria-label="Позвоните нам по номеру телефона: 8 800 555-86-28"></a>
             <a href="mailto:mail@htmlacademy.ru" class="page-menu__email"
               aria-label="Напишите нам на почтовый ящик: mail@htmlacademy.ru"></a>
-            <button type="button" class="page-menu__authorization button-autorization">авторизация</button>
+            <a href="blank.html" class="page-header__authorization button-autorization">авторизация</a>
           </div>
 
           <div class="page-header__popup popup-menu">
@@ -52,7 +52,7 @@
               </ul>
             </nav>
 
-            <a href="blank" class="page-header__authorization button-autorization">авторизация</a>
+            <a href="blank.html" class="page-header__authorization button-autorization">авторизация</a>
 
             <ul class="popup-menu__contacts-list list-contacts">
               <li class="list-contacts__item">
@@ -87,43 +87,64 @@
         <h1 class="visually-hidden">Сервис для путешественников "Погнали"</h1>
 
         <!-- секция введение -->
-        <!-- <section class="intro">
-          <div class="page-wrapper">
+        <section class="intro">
+          <div class="intro__wrapper">
             <h2 class="intro__title">В путешествие с крутыми попутчиками!</h2>
-            <blockquote class="intro__quote quote-intro">
-              <p class="quote-intro__text">&laquo;Лучшее приложение, что я видел в жизни!&raquo;</p>
-              <cite class="quote-inro__author">
-                <span class="quote-inro__author-name">Мурат Эльтазин</span>
-                <span class="quote-inro__author-position">главный редактор газеты &laquo;гаджетлайф&raquo;</span>
-              </cite>
-            </blockquote>
-            <ol class="intro__list">
-              <li class="intro__item">Выберите направление</li>
-              <li class="intro__item">Изучите идеи путешественников</li>
-              <li class="intro__item">Находите тех, кто похож на вас</li>
-              <li class="intro__item">Путешествуйте вместе!</li>
-            </ol>
           </div>
-        </section> -->
+
+          <header class="intro__header intro-header">
+            <div class="page-wrapper">
+              <a class="intro-header__link">
+                <img src="img/pognali-logo_white.png" alt="Логотип Погнали" class="intro-header__logo page-logo" width="96" height="15" />
+              </a>
+              <nav class="intro-header__navigation navigation">
+                <ul class="navigation__list">
+                  <li class="navigation__item"><a href="blank.html" class="navigation__link">О сервисе</a></li>
+                  <li class="navigation__item"><a href="form.html" class="navigation__link">Направления</a></li>
+                  <li class="navigation__item"><a href="catalog.html" class="navigation__link">Попутчики</a></li>
+                </ul>
+              </nav>
+              <div class="page-menu page-menu--visible">
+                <a href="tel:+78005558628" class="page-menu__phone"
+                  aria-label="Позвоните нам по номеру телефона: 8 800 555-86-28"></a>
+                <a href="mailto:mail@htmlacademy.ru" class="page-menu__email"
+                  aria-label="Напишите нам на почтовый ящик: mail@htmlacademy.ru"></a>
+                <a href="blank.html" class="intro-header__authorization button-autorization">авторизация</a>
+              </div>
+            </div>
+          </header>
+
+          <blockquote class="intro__quote quote-intro">
+            <p class="quote-intro__text">&laquo;Лучшее приложение, что я видел в жизни!&raquo;</p>
+            <cite class="quote-inro__author">
+              <span class="quote-inro__author-name">Мурат Эльтазин</span>
+              <span class="quote-inro__author-position">главный редактор газеты &laquo;гаджетлайф&raquo;</span>
+            </cite>
+          </blockquote>
+          <ol class="intro__list">
+            <li class="intro__item">Выберите<br />направление</li>
+            <li class="intro__item">Изучите идеи путешественников</li>
+            <li class="intro__item">Находите тех,<br />кто похож на вас</li>
+            <li class="intro__item">Путешествуйте<br />вместе!</li>
+          </ol>
+        </section>
 
         <!-- секция о сервисе -->
-        <!-- <section class="about-service">
-          <div class="page-wrapper">
-            <h2 class="about-service__title page-title">О сервисе</h2>
-            <p class="about-service__text page-text">Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими
-              идеями путешествий и черпайте вдохновение в чужих.</p>
-            <p class="about-service__text page-text page-text--strong">А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</p>
-            <a href="#" class="about-service__link page-link">Подробнее</a>
-          </div>
-        </section> -->
+        <section class="about-service">
+          <h2 class="about-service__title page-title">О сервисе</h2>
+          <p class="about-service__text page-text">Любое путешествие веселее с попутчиками, которые на одной волне с тобой! Делитесь своими
+            идеями путешествий и черпайте вдохновение в чужих.</p>
+          <p class="about-service__text page-text page-text--strong">А если найдете кого-то близкого по духу — скорее зовите в совместный трип!</p>
+          <a href="#" class="about-service__link">Подробнее</a>
+        </section>
 
         <!-- секция направления -->
-        <!-- <section class="directions">
-          <div class="page-wrapper">
-            <h2 class="directions__title page-title">Направления</h2>
-            <p class="directions__text page-text page-text--dark">Мы не продаем туры и ничего не рекламируем. Люди сами пишут о странах,
-              куда хотели бы отправиться и чем можно там заняться.</p>
+        <section class="directions">
+          <h2 class="directions__title page-title">Направления</h2>
+          <p class="directions__text page-text page-text--dark">Мы не продаем туры и&nbsp;ничего не рекламируем. Люди сами пишут
+            о&nbsp;странах, куда хотели бы отправиться и&nbsp;чем можно там заняться.</p>
 
+          <div class="page-wrapper">
             <ul class="directions__list list-directions">
               <li class="list-directions__item">
                 <article class="list-directions__card">
@@ -157,9 +178,9 @@
               </li>
             </ul>
 
-            <a href="catalog.html" class="direction__link page-link">Показать все</a>
+            <a href="catalog.html" class="direction__link page-link"><span class="page-link__text">Показать все</span></a>
           </div>
-        </section> -->
+        </section>
 
         <!-- секция Попутчики -->
         <!-- <section class="travelers">
@@ -296,7 +317,7 @@
 
       </main>
 
-      <!-- <footer class="page-footer">
+      <footer class="page-footer">
         <a class="page-footer__link">
           <img src="img/pognali-logo_dark.png" alt="Логотип Погнали" class="page-footer__logo page-logo" width="96" height="15" />
         </a>
@@ -320,7 +341,7 @@
         <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__study-link">
           <img src="img/htmlacademy.svg" alt="Логотип HTML Academy" class="page-footer__study-center" width="27" height="34">
         </a>
-      </footer> -->
+      </footer>
 
     </body>
 </html>

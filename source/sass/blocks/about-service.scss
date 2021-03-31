@@ -1,0 +1,34 @@
+.about-service {
+  background-image: url("../../img/about-mobile.png"),
+    url("../../img/about_bcg_mobile.png");
+  background-position: center, top left;
+  background-repeat: no-repeat;
+  background-color: $special_blue;
+  padding-top: 33px;
+  padding-bottom: 23px;
+  padding-left: 49px;
+  padding-bottom: 60px;
+  margin-bottom: 71px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+}
+
+.about-service__title {
+  margin: 0;
+  margin-bottom: 19px;
+}
+
+.about-service__text {
+  margin: 0;
+  width: 78%;
+  margin-bottom: 20px;
+}
+
+.about-service__link {
+  display: none;
+  align-items: center;
+  background-color: $basic_yellow;
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+}

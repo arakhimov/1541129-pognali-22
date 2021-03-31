@@ -1,0 +1,19 @@
+.page-link {
+  display: flex;
+  align-items: center;
+  border-radius: 10px;
+  min-height: 62px;
+  width: 270px;
+  text-decoration: none;
+  border: 1px solid red;
+}
+
+.page-link__text {
+  font-family: inherit;
+  font-style: inherit;
+  font-weight: 700;
+  font-style: 24px;
+  line-height: 24px;
+  background-color: $basic_yellow;
+  color: $basic_blue_light;
+}
