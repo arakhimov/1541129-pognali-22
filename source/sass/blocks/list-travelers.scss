@@ -1,0 +1,21 @@
+.list-travelers {
+  margin-bottom: 20px;
+}
+
+.list-travelers__item:not(:last-of-type) {
+  margin-bottom: 9px;
+}
+
+.list-travelers__card {
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.list-travelers__image {
+  display: inline-block;
+  vertical-align: top;
+}
+
+.list-travelers__wrapper {
+  background-color: $basic_white;
+}
