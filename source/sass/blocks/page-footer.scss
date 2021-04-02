@@ -1,0 +1,28 @@
+.page-footer {
+  background-color: $basic_white;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -60px;
+    width: 100%;
+    height: 60px;
+    background-color: $basic_white;
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+  }
+}
+
+.page-footer__wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page-footer__copyright-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}

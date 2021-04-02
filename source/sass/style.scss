@@ -1,1 +1,31 @@
-// Начните писать стили здесь
+// Global
+
+@import "global/normalize.scss";
+@import "global/fonts.scss";
+@import "global/variables.scss";
+@import "global/global.scss";
+
+// Blocks
+
+@import "blocks/page.scss";
+@import "blocks/page-header.scss";
+@import "blocks/page-wrapper.scss";
+@import "blocks/navigation.scss";
+@import "blocks/popup-menu.scss";
+@import "blocks/page-menu.scss";
+@import "blocks/main.scss";
+@import "blocks/intro.scss";
+@import "blocks/about-service.scss";
+@import "blocks/page-title.scss";
+@import "blocks/page-text.scss";
+@import "blocks/page-link.scss";
+@import "blocks/directions.scss";
+@import "blocks/list-directions.scss";
+@import "blocks/travelers.scss";
+@import "blocks/list-travelers.scss";
+@import "blocks/profile.scss";
+@import "blocks/contacts.scss";
+@import "blocks/registration-form.scss";
+@import "blocks/list-contacts.scss";
+@import "blocks/page-footer.scss";
+@import "blocks/socials.scss";

@@ -1,0 +1,102 @@
+.intro {
+  background-color: $basic_blue;
+  color: $basic_white;
+}
+
+.intro__wrapper {
+  background-image: url("../../img/intro_bcg_man.png"),
+    url("../../img/intro_bcg.png");
+  background-size: 192px 255px, 320px 569px;
+  background-position: center bottom, 50% 50%;
+  background-repeat: no-repeat;
+  padding-bottom: 265px;
+}
+
+.intro__title {
+  margin: 0 auto;
+  width: 90%;
+  font-weight: bold;
+  font-size: 36px;
+  line-height: 40px;
+  text-align: center;
+}
+
+.intro-header__link {
+  display: none;
+}
+
+.intro__quote {
+  padding: 0;
+  padding-left: 50px;
+  margin: 0;
+  margin-bottom: 29px;
+  background-color: $basic_blue;
+}
+
+.quote-intro__text {
+  margin: 0;
+  width: 151px;
+  margin-bottom: 18px;
+  line-height: 22px;
+}
+
+.quote-inro__author {
+  display: inline-block;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 22px;
+  width: 161px;
+}
+
+.quote-inro__author-name,
+.quote-inro__author-position {
+  margin: 0;
+}
+
+.intro__list {
+  padding: 0;
+  margin: 0;
+  padding-bottom: 39px;
+  background-image: linear-gradient(
+    to bottom,
+    $basic_blue 80px,
+    $basic_blue_light 80px
+  );
+  color: $basic_blue;
+  list-style-type: none;
+  position: relative;
+}
+
+.intro__item {
+  width: 270px;
+  display: flex;
+  align-items: center;
+  width: calc(100% - 56px);
+  min-height: 80px;
+  padding-left: 24px;
+  box-sizing: border-box;
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 18px;
+  &:first-of-type {
+    background-color: $special_orange;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    position: relative;
+    z-index: 10;
+  }
+  &:nth-of-type(2) {
+    background-color: $basic_orange;
+  }
+  &:nth-of-type(3) {
+    background-color: $special_yellow-dark;
+  }
+  &:nth-of-type(4) {
+    background-color: $basic_yellow;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+  }
+}
