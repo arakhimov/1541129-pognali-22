@@ -1,0 +1,61 @@
+.add-plan {
+  background-color: $special_blue_half_dark;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  padding-top: 30px;
+  padding-bottom: 73px;
+  position: relative;
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 20px;
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+    background-color: $special_blue-light;
+  }
+}
+
+.add-plan__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 29px;
+}
+
+.add-plan__group {
+  width: 100%;
+  background-color: $basic_white;
+  border: none;
+  border-radius: 10px;
+  padding: 24px;
+  box-sizing: border-box;
+
+  &:not(:last-of-type) {
+    margin-bottom: 10px;
+  }
+}
+
+.add-plan__subtitle {
+  color: $basic_blue_light;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 20px;
+}
+
+.add-plan__description {
+  line-height: 22px;
+  margin-bottom: 20px;
+}
+
+.add-plan__label {
+  display: inline-block;
+  vertical-align: top;
+  margin-bottom: 24px;
+}
+
+.add-plan__month-control {
+  margin-bottom: 22px;
+}

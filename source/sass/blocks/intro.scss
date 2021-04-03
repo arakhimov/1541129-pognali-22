@@ -57,21 +57,16 @@
   padding: 0;
   margin: 0;
   padding-bottom: 39px;
-  background-image: linear-gradient(
-    to bottom,
-    $basic_blue 80px,
-    $basic_blue_light 80px
-  );
+  background-image: linear-gradient(to bottom, $basic_blue 80px, $basic_blue_light 80px);
   color: $basic_blue;
   list-style-type: none;
   position: relative;
 }
 
 .intro__item {
-  width: 270px;
   display: flex;
   align-items: center;
-  width: calc(100% - 56px);
+  width: calc(100% - 50px);
   min-height: 80px;
   padding-left: 24px;
   box-sizing: border-box;
@@ -81,6 +76,7 @@
   font-weight: bold;
   font-size: 18px;
   line-height: 18px;
+
   &:first-of-type {
     background-color: $special_orange;
     border-top-left-radius: 10px;
@@ -88,12 +84,15 @@
     position: relative;
     z-index: 10;
   }
+
   &:nth-of-type(2) {
     background-color: $basic_orange;
   }
+
   &:nth-of-type(3) {
     background-color: $special_yellow-dark;
   }
+
   &:nth-of-type(4) {
     background-color: $basic_yellow;
     border-bottom-left-radius: 10px;

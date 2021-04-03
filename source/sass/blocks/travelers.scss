@@ -5,6 +5,7 @@
   padding-top: 62px;
   padding-bottom: 31px;
   position: relative;
+
   &::before {
     content: "";
     position: absolute;
@@ -26,9 +27,11 @@
 .travelers__text {
   width: 68%;
   padding-left: 49px;
+
   &:not(:last-of-type) {
     margin-bottom: 25px;
   }
+
   &:last-of-type {
     margin-bottom: 54px;
   }
