@@ -1,0 +1,114 @@
+.user-profile {
+  display: contents;
+}
+
+.user-profile__level-container {
+  justify-self: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  margin-top: 14px;
+  grid-column: 2 / 3;
+  position: relative;
+  margin-bottom: 18px;
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("../../img/demin_level.svg");
+  }
+}
+
+.user-profile__level {
+  color: $basic_blue;
+  font-weight: bold;
+  font-size: 38px;
+  line-height: 38px;
+  position: relative;
+  border-bottom: 1px solid rgba(($special_gray), 0.3);
+  margin-bottom: 6px;
+}
+
+.user-profile__level-text {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 18px;
+  color: $special_gray;
+}
+
+.user-profile__image {
+  margin-top: 14px;
+  grid-column: 3 / 4;
+  border-radius: 50%;
+  justify-self: center;
+}
+
+.user-profile__change-photo {
+  min-height: 40px;
+  grid-column: 2 / -2;
+  background-color: $special_blue_light;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase;
+  color: $basic_blue;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 18px;
+}
+
+.user-profile__hashtags {
+  grid-column: 2 / -2;
+  margin-bottom: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.user-profile__subtitle {
+  display: inline-block;
+  vertical-align: top;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+  color: $basic_blue_light;
+  background-color: $basic_gray_light;
+  margin: 0 auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  transform: translateY(50%);
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.user-profile__hashtag-list {
+  padding: 27px 25px;
+  border: 1px solid $basic_gray;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  border-radius: 10px;
+}
+
+.user-profile__transports {
+  grid-column: 2 / -2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-bottom: 34px;
+}
+
+.user-profile__transports-list {
+  margin: 0;
+  border: 1px solid $basic_gray;
+  border-radius: 10px;
+  padding-top: 16px;
+  padding-bottom: 16px;
+}

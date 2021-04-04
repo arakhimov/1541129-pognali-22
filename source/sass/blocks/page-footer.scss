@@ -1,18 +1,23 @@
 .page-footer {
   background-color: $basic_white;
   position: relative;
+  padding-top: 7px;
 
   &::before {
     content: "";
     position: absolute;
     left: 0;
-    top: -60px;
+    top: -30px;
     width: 100%;
-    height: 60px;
+    height: 30px;
     background-color: $basic_white;
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
   }
+}
+
+.page-footer__link {
+  margin-bottom: 40px;
 }
 
 .page-footer__wrapper {
@@ -21,8 +26,15 @@
   align-items: center;
 }
 
+.page-footer__copyright {
+  margin: 0;
+}
+
 .page-footer__copyright-container {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
+  padding-top: 50px;
+  margin-bottom: 19px;
 }

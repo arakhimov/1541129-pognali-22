@@ -1,0 +1,148 @@
+.routes__list {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 25px;
+  list-style-type: none;
+  color: $basic_blue_light;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.routes__item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  min-height: 42px;
+  position: relative;
+  box-sizing: border-box;
+
+  &:not(:last-of-type) {
+    margin-bottom: 22px;
+  }
+
+  &--select,
+  &--add {
+    border: 1px solid $basic_gray;
+    border-radius: 4px;
+    padding-right: 10px;
+  }
+}
+
+.routes__country-name {
+  width: 168px;
+  align-self: stretch;
+  border: 1px solid $basic_gray;
+  margin: 0;
+  box-sizing: border-box;
+  padding: 11px;
+  border-radius: 4px;
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  &::after {
+    content: "";
+    width: 8px;
+    height: 8px;
+    position: absolute;
+    right: 0;
+    top: 50%;
+    z-index: 100;
+    transform: translate(50%, -50%);
+    border-radius: 50%;
+    box-sizing: border-box;
+    border: 1px solid $basic_gray;
+    background-color: $basic_white;
+  }
+
+  &::before {
+    content: "";
+    width: 8px;
+    height: 11px;
+    position: absolute;
+    right: 0;
+    bottom: -6px;
+    transform: translate(50%, 100%);
+    z-index: 100;
+    background-image: url("../../img/arrow_route.svg");
+  }
+
+  &--active::after {
+    background-color: $basic_blue_light;
+  }
+
+  &--select {
+    border: none;
+  }
+
+  &--add {
+    border: none;
+
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.routes__country-text {
+  display: flex;
+  white-space: nowrap;
+  overflow: hidden;
+  position: relative;
+  flex-grow: 1;
+  box-sizing: border-box;
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: linear-gradient(to right, transparent 70%, $basic_white 83%, $basic_white 100%);
+  }
+}
+
+.routes__select-country {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  z-index: 10;
+  transform: translateY(-50%);
+}
+
+.routes__country-flag {
+  width: 53px;
+  align-self: stretch;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid $basic_gray;
+  margin: 0;
+  box-sizing: border-box;
+  padding: 11px;
+  border-radius: 4px;
+  transform: translate(-1px);
+}
+
+.routes__delete-country {
+  position: absolute;
+  top: 0;
+  right: 0;
+  transform: translate(50%, -50%);
+}
+
+.routes__wrapper {
+  flex-grow: 1;
+  position: relative;
+}
+
+.routes__add-country {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+}

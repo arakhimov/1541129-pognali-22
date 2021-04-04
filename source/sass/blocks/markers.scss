@@ -1,0 +1,41 @@
+.markers {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  &--no-text {
+    display: flex;
+  }
+
+  &--adv {
+    display: none;
+  }
+}
+
+.markers__item {
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: "";
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    display: inline-block;
+    vertical-align: top;
+    background-color: $basic_blue_light;
+    opacity: 0.3;
+  }
+
+  &--current::before {
+    opacity: 1;
+  }
+
+  &--no-text:not(:last-of-type) {
+    margin-right: 16px;
+  }
+}
+
+.markers__text {
+  padding-left: 36px;
+}

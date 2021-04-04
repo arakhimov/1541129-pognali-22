@@ -1,0 +1,16 @@
+.button-autorization {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50px;
+  background-color: $basic_yellow;
+  color: $special_blue;
+  font-family: inherit;
+  font-style: inherit;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  border-radius: 25px;
+}
