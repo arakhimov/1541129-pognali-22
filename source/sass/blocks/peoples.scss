@@ -1,0 +1,235 @@
+.peoples {
+  padding-bottom: 76px;
+}
+
+.peoples__list {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+  list-style-type: none;
+}
+
+.peoples__item:not(:last-of-type) {
+  margin-bottom: 10px;
+}
+
+.peoples__card {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-template-rows: repeat(7, min-content);
+  background-color: $basic_white;
+  border-radius: 30px;
+  overflow: hidden;
+  padding: 15px 23px;
+  box-sizing: border-box;
+}
+
+.peoples__image {
+  margin-left: 18px;
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+  border-radius: 50%;
+  margin-bottom: 13px;
+  margin-right: 12px;
+}
+
+.peoples__title {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 20px;
+  color: $basic_blue_light;
+  margin: 0;
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 6px;
+    height: 6px;
+    position: absolute;
+    top: 10px;
+    right: 0;
+    border-radius: 50%;
+    background-color: $special_red_dark;
+    margin-right: 22px;
+  }
+}
+
+.peoples__likes-counter {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+  align-self: flex-end;
+  font-weight: bold;
+  font-size: 14px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: $basic_blue;
+  position: relative;
+}
+
+.peoples__likes-button {
+  position: absolute;
+  top: 50%;
+  left: -37px;
+  transform: translateY(-50%);
+  border-radius: 50%;
+  border: none;
+  width: 30px;
+  height: 30px;
+  background-color: $basic_half_gray;
+  background-image: url("../../img/likes.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  cursor: pointer;
+
+  &--active {
+    background-color: $special_red_light;
+    background-image: url("../../img/likes_active.svg");
+  }
+}
+
+.peoples__hashtags {
+  width: 80%;
+  padding: 0 26px;
+  grid-column: 1 / -1;
+  margin-bottom: 16px;
+  box-sizing: border-box;
+}
+
+.peoples__subtitle {
+  display: flex;
+  align-items: center;
+  margin: 0;
+  font-weight: normal;
+  font-size: 15px;
+  line-height: 16px;
+  color: $special_gray;
+  position: relative;
+  white-space: nowrap;
+}
+
+.peoples__subtitle--places {
+  grid-column: 1 / -1;
+  margin-bottom: 19px;
+}
+
+.peoples__subtitle--places,
+.peoples__subtitle--transport {
+  position: relative;
+  padding-left: 10%;
+
+  &::before {
+    content: "";
+    width: 7%;
+    height: 1px;
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: $basic_gray_light;
+  }
+
+  &::after {
+    content: "";
+    flex-grow: 1;
+    height: 1px;
+    background-color: $basic_gray_light;
+    margin-left: 10px;
+    transform: translateY(100%);
+  }
+}
+
+.peoples__countries {
+  grid-column: 1 / -1;
+  margin: 0;
+  list-style-type: none;
+  margin-bottom: 12px;
+  padding: 0 25px;
+}
+
+.peoples__countries-item {
+  display: flex;
+  align-items: center;
+
+  &:not(:last-of-type) {
+    margin-bottom: 10px;
+  }
+}
+
+.peoples__countries-image {
+  margin-right: 14px;
+}
+
+.peoples__country-name {
+  margin: 0;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 16px;
+  text-transform: uppercase;
+  color: $basic_blue_light;
+}
+
+.peoples__subtitle--transport {
+  grid-column: 1 / -1;
+  grid-row: 5 / 6;
+}
+
+.peoples__subtitle--level {
+  grid-column: 2 / -1;
+  grid-row: 5 / 6;
+  justify-self: flex-end;
+  margin-right: 10%;
+  padding: 0 10px;
+  background-color: $basic_white;
+}
+
+.peoples__level-container {
+  margin-top: 10px;
+  justify-self: flex-end;
+  width: 60px;
+  height: 60px;
+  margin-right: 11%;
+  margin-bottom: 13px;
+}
+
+.peoples__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-column: 1 / -1;
+  width: calc(100% - 40px);
+  min-height: 40px;
+  margin: 0 20px;
+  background-color: $basic_yellow;
+  box-sizing: border-box;
+  border-radius: 25px;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 17px;
+  text-align: center;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $basic_blue;
+}
+
+.peoples__add-traveler {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $basic_blue_light;
+  margin-bottom: 18px;
+
+  &::before {
+    content: "";
+    width: 18px;
+    height: 18px;
+    background-image: url("../../img/icon_plus_more.svg");
+    margin-right: 15px;
+  }
+}

@@ -1,0 +1,59 @@
+.form-travelers {
+  border-radius: 30px;
+  background-color: $basic_yellow;
+  box-sizing: border-box;
+  padding: 26px 25px 22px;
+}
+
+.form-travelers__title {
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 22px;
+  letter-spacing: 0.02em;
+  color: $basic_blue_light;
+  margin: 0 0 23px;
+}
+
+.form-travelers__group {
+  border: none;
+  padding: 0;
+}
+
+.form-travelers__subtitle {
+  min-height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  color: $basic_blue_light;
+  margin: 0;
+  border-top: 1px solid $special_orange_light;
+
+  &::after {
+    content: "";
+    width: 10px;
+    height: 6px;
+    display: inline-block;
+    vertical-align: top;
+    background-image: url("../../img/arrow-interests_down.svg");
+    background-repeat: no-repeat;
+  }
+}
+
+.form-travelers__submit {
+  width: 100%;
+  min-height: 41px;
+  border-radius: 25px;
+  background-color: $basic_white;
+  border: none;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 17px;
+  text-align: center;
+  text-transform: uppercase;
+  color: $basic_blue;
+  cursor: pointer;
+}

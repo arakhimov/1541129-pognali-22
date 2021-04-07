@@ -1,8 +1,12 @@
 .page-header {
-  background-color: $special_blue;
+  background-color: $basic_blue;
   padding-top: 19px;
   padding-bottom: 60px;
   position: relative;
+
+  &--lighten {
+    background-color: $basic_blue_light;
+  }
 }
 
 .page-header__container {
