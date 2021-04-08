@@ -8,7 +8,7 @@
   border-bottom-right-radius: 30px;
   padding-top: 20px;
   padding-bottom: 15px;
-  margin-bottom: 21px;
+  margin-bottom: 20px;
   position: relative;
 
   &::before {
@@ -54,10 +54,7 @@
   height: 17px;
   display: none;
   align-self: center;
-  background-image: url("../../img/filter-expand.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-color: transparent;
+  background: transparent url("../../img/filter-expand.svg") center no-repeat;
   border: none;
   cursor: pointer;
 }
@@ -72,9 +69,9 @@
   align-self: center;
 }
 
-.filter__button-text {
-  display: none;
-}
+// .filter__button-text {
+//   display: none;
+// }
 
 .filter__popup {
   display: none;
@@ -96,10 +93,10 @@
 }
 
 .filter__heading-list {
-  margin: 0 51px 14px;
+  margin: 0 50px 15px;
 }
 
 .filter__choise-list {
-  padding-left: 51px;
+  padding-left: 50px;
   margin-bottom: 28px;
 }

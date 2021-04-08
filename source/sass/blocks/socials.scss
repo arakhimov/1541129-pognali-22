@@ -1,3 +1,5 @@
+$socials-icon: 45px;
+
 .socials {
   list-style-type: none;
   display: flex;
@@ -9,8 +11,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 45px;
-  height: 45px;
+  width: $socials-icon;
+  height: $socials-icon;
   border-radius: 50%;
   background-color: $basic_yellow;
 }
