@@ -1,0 +1,71 @@
+.level {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  &::after {
+    content: "";
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-image: url("../../img/demin_level.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+
+  &--firsova::after {
+    background-image: url("../../img/99_small.svg");
+  }
+
+  &--demin::after {
+    background-image: url("../../img/80_small.svg");
+  }
+
+  &--smolov::after {
+    background-image: url("../../img/25_small.svg");
+    background-size: 50%;
+    background-position: top right;
+  }
+
+  &--yarovaya::after {
+    background-image: url("../../img/50_small.svg");
+    background-size: 50%;
+    background-position: top right;
+  }
+}
+
+.level__counter {
+  color: $basic_blue;
+  font-weight: bold;
+  font-size: 38px;
+  line-height: 38px;
+  position: relative;
+  border-bottom: 1px solid rgba(($special_gray), 0.3);
+  margin-bottom: 6%;
+
+  &--light {
+    color: $basic_blue_light;
+  }
+
+  &--small {
+    border: none;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 24px;
+  }
+}
+
+.level__text {
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 18px;
+  color: $special_gray;
+
+  &--hidden {
+    display: none;
+  }
+}

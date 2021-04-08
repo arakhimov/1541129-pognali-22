@@ -16,7 +16,7 @@
 </head>
 
 <body class="page__body">
-  <header class="page-header">
+  <header class="page-header page-header--lighten">
     <div class="page-wrapper">
       <div class="page-header__container">
         <a href="index.html" class="page-header__link">
@@ -45,14 +45,14 @@
 
       <section class="page-header__popup popup-menu">
         <div class="page-wrapper">
-          <header class="popup-menu__header">
+          <div class="popup-menu__header">
             <a href="index.html" class="page-header__link">
               <img src="img/pognali-logo_dark.png" alt="Логотип Погнали" class="page-header__logo page-logo" width="96"
                 height="15" />
             </a>
             <button type="button" class="popup-menu__close-menu" aria-label="Закрыть мобильное меню"></button>
             <a href="blank.html" class="popup-menu__authorization button-autorization">авторизация</a>
-          </header>
+          </div>
 
           <nav class="popup-menu__navigation">
             <ul class="popup-menu__list">
@@ -97,15 +97,15 @@
 
   <main class="main">
     <div class="main__wrapper">
-      <h1 class="main__title page-title page-title--white page-title--adv">Направления</h1>
+      <h1 class="main__title main__title--underline page-title page-title--white page-title--adv">Направления</h1>
 
       <!-- секция профиль -->
       <section class="user-profile">
         <h2 class="visually-hidden">Мой профиль</h2>
 
-        <div class="user-profile__level-container">
-          <span class="user-profile__level" aria-label="У Пети Демина 80 уровень">80</span>
-          <span class="user-profile__level-text">level</span>
+        <div class="user-profile__level-container level">
+          <span class="level__counter" aria-label="У Пети Демина 80 уровень">80</span>
+          <span class="level__text">level</span>
         </div>
         <img src="img/travelers2.png" alt="Фотография Пети Демина" class="user-profile__image" width="100" height="100">
         <button type="button" class="user-profile__change-photo">Сменить фото</button>

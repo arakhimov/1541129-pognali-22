@@ -1,6 +1,18 @@
+$socials-icon: 45px;
+
 .socials {
   list-style-type: none;
   display: flex;
   padding: 0;
   margin: 0;
+}
+
+.socials__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: $socials-icon;
+  height: $socials-icon;
+  border-radius: 50%;
+  background-color: $basic_yellow;
 }

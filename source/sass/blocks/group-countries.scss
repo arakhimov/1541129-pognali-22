@@ -1,0 +1,32 @@
+.group-countries {
+  display: none;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+
+  &--popup {
+    display: block;
+    padding-left: 51px;
+    margin-bottom: 21px;
+  }
+}
+
+.group-countries__item {
+  &:not(:last-of-type) {
+    margin-bottom: 9px;
+  }
+}
+
+.group-counries__link {
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 18px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $special_blue;
+  opacity: 0.3;
+
+  &--active {
+    opacity: 1;
+  }
+}
