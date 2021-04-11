@@ -1,17 +1,29 @@
 .page-header {
   background-color: $basic_blue;
   padding-top: 19px;
-  padding-bottom: 60px;
   position: relative;
 
   &--lighten {
     background-color: $basic_blue_light;
+  }
+
+  @media (min-width: $tablet_width) {
+    padding-top: 40px;
+    padding-bottom: 72px;
+    background-color: $basic_blue_light;
+  }
+
+  @media (min-width: $desktop_width) {
+    padding-top: 46px;
+    padding-bottom: 11px;
+    background-color: $basic_blue;
   }
 }
 
 .page-header__container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .page-header__open-menu {
@@ -28,7 +40,3 @@
     background-image: url("../../img/icon_menu_mobile.svg");
   }
 }
-
-// .page-header__navigation {
-//   display: none;
-// }

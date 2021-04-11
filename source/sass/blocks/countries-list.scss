@@ -1,0 +1,10 @@
+.countries-list {
+  padding: 0;
+  margin: 0;
+  list-style-type: none;
+  display: flex;
+}
+
+.countries-list__item:not(:last-of-type) {
+  margin-right: 20px;
+}

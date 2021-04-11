@@ -1,33 +1,70 @@
 .about-service {
-  background-image: url("../../img/about-mobile.png"),
-    url("../../img/about_bcg_mobile.png");
+  // background-image: url("../../img/about-mobile.png"),
+  //   url("../../img/about_bcg_mobile.png");
   background-position: center, top left;
   background-repeat: no-repeat;
   background-color: $special_blue;
-  padding-top: 33px;
-  padding-left: 49px;
-  padding-bottom: 82px;
-  margin-bottom: 71px;
+  padding: 33px 25px 42px;
   border-bottom-left-radius: 40px;
   border-bottom-right-radius: 40px;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet_width) {
+    padding: 40px 75px 90px;
+  }
+
+  @media (min-width: $desktop_width) {
+    min-height: 665px;
+    padding: 42px 130px 163px;
+  }
 }
 
 .about-service__title {
+  padding: 0 25px;
   margin: 0;
   margin-bottom: 19px;
+
+  @media (min-width: $tablet_width) {
+    padding: 0;
+    width: 50%;
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $desktop_width) {
+    margin-bottom: 57px;
+  }
 }
 
 .about-service__text {
-  margin: 0;
-  width: 78%;
-  margin-bottom: 20px;
+  padding: 0 25px;
+  width: 85%;
+  margin: 0 0 20px;
+
+  @media (min-width: $tablet_width) {
+    padding: 0;
+    width: 50%;
+    margin-bottom: 31px;
+  }
+
+  @media (min-width: $desktop_width) {
+    margin-bottom: 38px;
+    width: 55%;
+  }
+
+  &--accent {
+    margin-bottom: 20px;
+
+    @media (min-width: $tablet_width) {
+      margin-bottom: 52px;
+    }
+
+    @media (min-width: $desktop_width) {
+      width: 40%;
+      margin-bottom: 85px;
+    }
+  }
 }
 
 .about-service__link {
-  display: none;
-  align-items: center;
-  background-color: $basic_yellow;
-  margin-left: auto;
-  margin-right: auto;
-  box-sizing: border-box;
+  width: 50%;
 }

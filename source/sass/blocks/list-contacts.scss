@@ -1,4 +1,9 @@
 .list-contacts {
   list-style-type: none;
   margin-bottom: 10px;
+
+  @media (min-width: $desktop_width) {
+    display: flex;
+    justify-content: center;
+  }
 }

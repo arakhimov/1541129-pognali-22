@@ -1,18 +1,30 @@
 .page-link {
+  width: 100%;
   display: flex;
   align-items: center;
   border-radius: 10px;
   min-height: 62px;
-  width: 270px;
   box-sizing: border-box;
-  padding: 0 23px;
+  padding: 0 25px;
   text-decoration: none;
   background-color: $basic_yellow;
   color: $basic_blue_light;
-}
 
-.page-link--bordered {
-  border: 3px solid $special_blue;
+  &--bordered {
+    border: 3px solid $special_blue;
+  }
+
+  &--short {
+    width: 270px;
+  }
+
+  @media (min-width: $tablet_width) {
+    min-height: 80px;
+  }
+
+  @media (min-width: $desktop_width) {
+    width: 275px;
+  }
 }
 
 .page-link__text {
@@ -23,8 +35,8 @@
   font-family: inherit;
   font-style: inherit;
   font-weight: 700;
-  font-size: 24px;
-  line-height: 24px;
+  font-size: 18px;
+  line-height: 18px;
 
   &::after {
     content: "";
