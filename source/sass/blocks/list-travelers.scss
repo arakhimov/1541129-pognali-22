@@ -1,21 +1,76 @@
+$level-icon: 56px;
+
 .list-travelers {
   margin-bottom: 20px;
+
+  @media (min-width: $tablet_width) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop_width) {
+    grid-column: 2 / 3;
+    grid-row: 1 / -1;
+  }
 }
 
-.list-travelers__item:not(:last-of-type) {
-  margin-bottom: 9px;
+.list-travelers__item {
+  &:not(:last-of-type) {
+    margin-bottom: 9px;
+  }
+
+  @media (min-width: $tablet_width) {
+    width: 285px;
+  }
 }
 
 .list-travelers__card {
+  background-color: $basic_white;
   border-radius: 10px;
   overflow: hidden;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(5, min-content);
+  justify-items: center;
 }
 
 .list-travelers__image {
   display: inline-block;
   vertical-align: top;
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+
+  @media (min-width: $tablet_width) {
+    width: 285px;
+    height: auto;
+  }
 }
 
 .list-travelers__wrapper {
   background-color: $basic_white;
+}
+
+.list-travelers__level-container {
+  width: $level-icon;
+  height: $level-icon;
+  transform: translate(20px, 20px);
+  justify-self: flex-start;
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+}
+
+.list-travelers__countries {
+  transform: translateY(-50%);
+}
+
+.list-travelers__title {
+  margin: 0;
+  margin-bottom: 15px;
+}
+
+.list-travelers__hashtags {
+  width: 69.3296%;
+  justify-content: center;
+  margin-bottom: 14px;
 }

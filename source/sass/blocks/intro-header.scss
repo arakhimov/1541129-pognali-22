@@ -1,0 +1,35 @@
+.intro-header {
+  background-color: $basic_white;
+  color: $basic_blue;
+
+  @media (max-width: $mobile_width_only) {
+    background-color: $basic_blue;
+  }
+
+  @media (min-width: $tablet_width) {
+    display: none;
+  }
+
+  @media (min-width: $desktop_width) {
+    display: block;
+  }
+}
+
+.intro-header__wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media (min-width: $desktop_width) {
+    min-height: 90px;
+  }
+}
+
+.intro-header__link {
+  display: none;
+
+  @media (min-width: $desktop_width) {
+    display: inline-block;
+    vertical-align: top;
+  }
+}

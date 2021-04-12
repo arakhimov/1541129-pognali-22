@@ -5,6 +5,11 @@
   align-items: center;
   position: relative;
 
+  &--bg-dark {
+    background-color: rgba($basic_black, 0.6);
+    border-radius: 50%;
+  }
+
   &::after {
     content: "";
     width: 100%;
@@ -15,6 +20,14 @@
     background-image: url("../../img/demin_level.svg");
     background-size: contain;
     background-repeat: no-repeat;
+  }
+
+  &--firsova-rounded::after {
+    background-image: url("../../img/99.svg");
+  }
+
+  &--demin-rounded::after {
+    background-image: url("../../img/80.svg");
   }
 
   &--firsova::after {
@@ -51,6 +64,10 @@
     color: $basic_blue_light;
   }
 
+  &--white {
+    color: $basic_white;
+  }
+
   &--small {
     border: none;
     font-weight: bold;
@@ -67,5 +84,14 @@
 
   &--hidden {
     display: none;
+  }
+
+  &--white {
+    color: $basic_white;
+  }
+
+  &--small {
+    font-size: 14px;
+    line-height: 14px;
   }
 }

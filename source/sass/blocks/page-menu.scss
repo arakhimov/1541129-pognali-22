@@ -1,7 +1,73 @@
+$icon-container: 50px;
+$phone-icon: 16px;
+
 .page-menu {
   display: none;
+
+  @media (min-width: $tablet_width) {
+    display: flex;
+  }
+
+  &--visible {
+    display: flex;
+    position: relative;
+
+    @media (max-width: $mobile_width_only) {
+      transform: translateY(-50%);
+    }
+  }
 }
 
-.page-menu--visible {
-  display: block;
+.page-menu__phone {
+  background-color: $special_orange;
+  width: $icon-container;
+  height: $icon-container;
+  position: relative;
+  border-radius: 50%;
+
+  &::after {
+    content: "";
+    width: $phone-icon;
+    height: $phone-icon;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url("../../img/phone.svg");
+  }
+
+  @media (min-width: $tablet_width) {
+    display: none;
+  }
+
+  @media (min-width: $desktop_width) {
+    display: flex;
+  }
+}
+
+.page-menu__email {
+  background-color: $special_orange;
+  width: $icon-container;
+  height: $icon-container;
+  position: relative;
+  border-radius: 50%;
+
+  &::after {
+    content: "";
+    width: 14px;
+    height: 12px;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-image: url("../../img/mail.svg");
+  }
+
+  @media (min-width: $tablet_width) {
+    display: none;
+  }
+
+  @media (min-width: $desktop_width) {
+    display: flex;
+  }
 }

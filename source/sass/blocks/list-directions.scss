@@ -1,5 +1,86 @@
 .list-directions {
   margin: 0;
-  padding: 0;
   list-style-type: none;
+  margin-bottom: 27px;
+
+  @media (min-width: $tablet_width) {
+    margin-bottom: 46px;
+  }
+
+  @media (min-width: $desktop_width) {
+    margin: 0;
+  }
+}
+
+.list-directions__item:not(:last-of-type) {
+  margin-bottom: 10px;
+}
+
+.list-directions__card {
+  background-color: $basic_white;
+  border-radius: 10px;
+
+  @media (min-width: $tablet_width) {
+    width: 618px;
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    grid-template-rows: repeat(3, min-content);
+  }
+
+  @media (min-width: $desktop_width) {
+    width: 560px;
+  }
+}
+
+.list-directions__image-wrapper {
+  position: relative;
+
+  @media (min-width: $tablet_width) {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    justify-self: flex-end;
+  }
+}
+
+.list-directions__image {
+  display: block;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+
+  @media (min-width: $tablet_width) {
+    width: 186px;
+    height: 149px;
+    background-size: contain;
+    background-position: top right;
+  }
+}
+
+.list-directions__flag-image {
+  position: absolute;
+  bottom: 0;
+  left: 25px;
+  transform: translateY(50%);
+
+  @media (min-width: $tablet_width) {
+    width: 70px;
+    height: auto;
+    left: 0;
+    top: 17px;
+    transform: translate(-50%);
+  }
+}
+
+.list-directions__title {
+  grid-column: 1 / -1;
+  grid-row: 1 / 2;
+}
+
+.list-directions__description {
+  grid-column: 1 / -1;
+  grid-row: 2 / 3;
+}
+
+.list-directions__counter {
+  grid-column: 1 / -1;
+  grid-row: 3 / 4;
 }

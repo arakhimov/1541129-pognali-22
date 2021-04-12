@@ -1,0 +1,32 @@
+.quote-intro__text {
+  width: 151px;
+  margin: 0 0 18px;
+  line-height: 22px;
+
+  @media (min-width: $tablet_width) {
+    width: 264px;
+    font-size: 28px;
+    line-height: 33px;
+    margin: 0 0 45px;
+  }
+}
+
+.quote-inro__author {
+  display: inline-block;
+  vertical-align: top;
+  font-style: normal;
+  font-weight: bold;
+  line-height: 22px;
+  width: 161px;
+
+  @media (min-width: $tablet_width) {
+    width: 251px;
+    font-size: 21px;
+    line-height: 25px;
+  }
+}
+
+.quote-inro__author-name,
+.quote-inro__author-position {
+  margin: 0;
+}

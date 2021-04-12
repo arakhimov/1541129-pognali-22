@@ -1,14 +1,24 @@
 .page-text {
   font-family: "Blogger Sans", "Arial", "Helvetica", sans-serif;
   font-size: 16px;
+  line-height: 22px;
   font-weight: 300;
   font-style: normal;
-  line-height: 22px;
   color: $basic_white;
+
+  @media (min-width: $tablet_width) {
+    font-size: 28px;
+    line-height: 33px;
+  }
 }
 
 .page-text--strong {
   font-weight: 700;
+
+  @media (min-width: $tablet_width) {
+    font-size: 21px;
+    line-height: 25px;
+  }
 }
 
 .page-text--dark {

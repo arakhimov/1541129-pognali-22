@@ -4,7 +4,7 @@
 
 .page__body {
   display: grid;
-  grid-template-columns: 320px;
+  grid-template-columns: minmax(auto, 1440px);
   grid-template-rows: min-content 1fr min-content;
   justify-content: safe center;
   min-height: 100%;
