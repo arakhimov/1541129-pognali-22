@@ -3,10 +3,6 @@
   padding-top: 19px;
   position: relative;
 
-  &--lighten {
-    background-color: $basic_blue_light;
-  }
-
   @media (min-width: $tablet_width) {
     padding-top: 40px;
     padding-bottom: 72px;
@@ -17,6 +13,14 @@
     padding-top: 46px;
     padding-bottom: 11px;
     background-color: $basic_blue;
+  }
+
+  &--lighten {
+    background-color: $basic_blue_light;
+  }
+
+  &--form {
+    padding-bottom: 0;
   }
 }
 

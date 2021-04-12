@@ -6,10 +6,6 @@
   &--no-text {
     display: flex;
   }
-
-  &--adv {
-    display: none;
-  }
 }
 
 .markers__item {
@@ -38,4 +34,10 @@
 
 .markers__text {
   padding-left: 36px;
+  font-weight: normal;
+  font-size: 20px;
+  line-height: 24px;
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: $basic_black;
 }

@@ -19,10 +19,46 @@
 }
 
 .add-plan__wrapper {
+  padding: 0 25px;
+
+  @media (min-width: $tablet_width) {
+    padding: 0 75px;
+  }
+
+  @media (min-width: $desktop_width) {
+    padding: 0 60px;
+  }
+}
+
+.add-plan__header {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding-bottom: 29px;
+}
+
+.add-plan__group-header {
+  @media (min-width: $desktop_width) {
+    display: grid;
+    grid-template-columns: 1fr min-content;
+    grid-template-rows: min-content min-content;
+    border-bottom: 1px solid rgba($basic_gray, 0.3);
+    margin-bottom: 55px;
+  }
+}
+
+.add-plan__title {
+  margin: 0;
+}
+
+.add-plan__markers {
+  display: none;
+
+  @media (min-width: $desktop_width) {
+    display: block;
+    grid-column: 2 / 3;
+    grid-row: 1 / -1;
+  }
 }
 
 .add-plan__group {
@@ -30,24 +66,77 @@
   background-color: $basic_white;
   border: none;
   border-radius: 10px;
-  padding: 24px;
+  padding: 25px;
   box-sizing: border-box;
 
   &:not(:last-of-type) {
     margin-bottom: 10px;
   }
+
+  @media (min-width: $tablet_width) {
+    padding: 48px 40px 56px;
+    border-radius: 30px;
+  }
+
+  @media (min-width: $desktop_width) {
+    padding: 100px 160px 106px;
+    border-radius: 40px;
+  }
 }
 
 .add-plan__subtitle {
+  display: flex;
+  flex-direction: column;
   color: $basic_blue_light;
   font-weight: bold;
   font-size: 20px;
   line-height: 20px;
+  margin: 0;
+  margin-bottom: 16px;
+
+  @media (min-width: $tablet_width) {
+    font-size: 36px;
+    line-height: 36px;
+    margin-bottom: 35px;
+  }
+
+  @media (min-width: $desktop_width) {
+    flex-direction: row;
+    margin-bottom: 55px;
+  }
+}
+
+.add-plan__subtitle-counter {
+  @media (min-width: $desktop_width) {
+    margin-right: 10px;
+  }
 }
 
 .add-plan__description {
+  font-size: 16px;
   line-height: 22px;
   margin-bottom: 20px;
+
+  @media (min-width: $tablet_width) {
+    font-size: 20px;
+    line-height: 24px;
+    padding-bottom: 38px;
+    border-bottom: 1px solid rgba($basic_gray, 0.3);
+  }
+
+  @media (min-width: $desktop_width) {
+    padding-bottom: 55px;
+    border-bottom: 0;
+    margin: 0;
+  }
+}
+
+.add-plan__container {
+  @media (min-width: $desktop_width) {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 33px;
+  }
 }
 
 .add-plan__label {

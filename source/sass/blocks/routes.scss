@@ -32,7 +32,7 @@
 }
 
 .routes__country-name {
-  width: 168px;
+  flex-grow: 1;
   align-self: stretch;
   border: 1px solid $basic_gray;
   margin: 0;
