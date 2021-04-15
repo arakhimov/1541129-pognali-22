@@ -29,6 +29,14 @@
   text-transform: uppercase;
   margin-bottom: 8px;
 
+  @media (min-width: $tablet_width) {
+    margin-bottom: 24px;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 18px;
+    letter-spacing: 0.1em;
+  }
+
   @media (min-width: $desktop_width) {
     margin-bottom: 0;
     width: 220px;
@@ -38,9 +46,6 @@
 .paramtres__unit {
   justify-self: flex-end;
   color: $basic_blue_light;
-  font-weight: 500;
-  letter-spacing: 0.07em;
-  text-transform: uppercase;
   opacity: 0.3;
 
   @media (min-width: $desktop_width) {
@@ -60,9 +65,37 @@
   padding: 15px 14px 14px;
   margin-bottom: 20px;
 
+  @media (min-width: $tablet_width) {
+    min-height: 70px;
+  }
+
   @media (min-width: $desktop_width) {
     margin-bottom: 0;
     margin-right: 35px;
+  }
+}
+
+.parametres__button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  width: 14px;
+  height: 14px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+
+  @media (min-width: $tablet_width) {
+    width: 20px;
+    height: 20px;
+  }
+
+  &--less {
+    background-image: url("../../img/minus.svg");
+  }
+
+  &--more {
+    background-image: url("../../img/plus.svg");
   }
 }
 
@@ -77,4 +110,9 @@
   line-height: 14px;
   text-transform: uppercase;
   text-align: center;
+
+  @media (min-width: $tablet_width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }

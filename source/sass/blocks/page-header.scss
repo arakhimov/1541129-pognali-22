@@ -26,8 +26,14 @@
 
 .page-header__container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+}
+
+.page-header__logo {
+  @media (min-width: $tablet_width) {
+    margin-right: 40px;
+  }
 }
 
 .page-header__open-menu {
@@ -43,4 +49,8 @@
     height: 11px;
     background-image: url("../../img/icon_menu_mobile.svg");
   }
+}
+
+.page-header__navigation {
+  flex-grow: 1;
 }

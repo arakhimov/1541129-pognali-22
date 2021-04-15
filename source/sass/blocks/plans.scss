@@ -75,12 +75,16 @@
 }
 
 .plans__subtitle-counter {
+  margin-right: 5px;
+
   @media (min-width: $tablet_width) {
     order: 2;
+    margin-right: 0;
   }
 
   @media (min-width: $desktop_width) {
     order: 0;
+    margin-right: 36px;
   }
 }
 
@@ -91,20 +95,41 @@
     align-items: center;
     padding: 0 40px;
     min-height: 54px;
+
+    @media (min-width: $desktop_width) {
+      width: 50%;
+    }
   }
 }
 
-.plans__description {
+.plans__description,
+.plans__date {
   font-weight: 500;
   font-size: 14px;
   line-height: 14px;
   letter-spacing: 0.06em;
   text-transform: uppercase;
   margin: 0;
+  margin-bottom: 5px;
 
   @media (min-width: $tablet_width) {
     font-size: 20px;
     line-height: 20px;
+    margin-bottom: 0;
+  }
+}
+
+.plans__description {
+  @media (min-width: $tablet_width) {
+    width: 30%;
+  }
+}
+
+.plans__date {
+  margin-bottom: 24px;
+
+  @media (min-width: $tablet_width) {
+    margin-bottom: 0;
   }
 }
 
@@ -115,11 +140,14 @@
   letter-spacing: 0.03em;
   text-transform: uppercase;
   color: rgba($basic_black, 0.3);
+  text-align: end;
+  text-decoration: none;
 
   @media (min-width: $tablet_width) {
     font-size: 20px;
     line-height: 20px;
     letter-spacing: 0.1em;
+    flex-grow: 1;
   }
 
   @media (min-width: $desktop_width) {
