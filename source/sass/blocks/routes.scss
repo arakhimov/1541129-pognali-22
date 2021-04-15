@@ -1,6 +1,7 @@
 .routes__list {
   padding: 0;
   margin: 0;
+  padding-top: 20px;
   margin-bottom: 25px;
   list-style-type: none;
   color: $basic_blue_light;
@@ -9,46 +10,60 @@
   line-height: 18px;
   letter-spacing: 0.1em;
   text-transform: uppercase;
+  position: relative;
+  border-top: 1px solid rgba($basic_gray, 0.3);
+
+  @media (min-width: $tablet_width) {
+    padding-top: 42px;
+  }
+
+  @media (min-width: $desktop_width) {
+    padding-top: 62px;
+  }
+
+  &::after {
+    @media (min-width: $tablet_width) {
+      content: "";
+      height: 100%;
+      width: 1px;
+      position: absolute;
+      top: 0;
+      right: 129px;
+      background-color: $basic_gray;
+    }
+
+    @media (min-width: $desktop_width) {
+      right: 205px;
+    }
+  }
 }
 
 .routes__item {
-  width: 100%;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   min-height: 42px;
   position: relative;
   box-sizing: border-box;
 
   &:not(:last-of-type) {
     margin-bottom: 22px;
-  }
 
-  &--select,
-  &--add {
-    border: 1px solid $basic_gray;
-    border-radius: 4px;
-    padding-right: 10px;
-  }
-}
+    @media (min-width: $tablet_width) {
+      margin-bottom: 16px;
+    }
 
-.routes__country-name {
-  width: 168px;
-  align-self: stretch;
-  border: 1px solid $basic_gray;
-  margin: 0;
-  box-sizing: border-box;
-  padding: 11px;
-  border-radius: 4px;
-  position: relative;
-  display: flex;
-  align-items: center;
+    @media (min-width: $desktop_width) {
+      margin-bottom: 14px;
+    }
+  }
 
   &::after {
     content: "";
     width: 8px;
     height: 8px;
     position: absolute;
-    right: 0;
+    right: 58px;
     top: 50%;
     z-index: 100;
     transform: translate(50%, -50%);
@@ -56,6 +71,16 @@
     box-sizing: border-box;
     border: 1px solid $basic_gray;
     background-color: $basic_white;
+
+    @media (min-width: $tablet_width) {
+      width: 14px;
+      height: 14px;
+      right: 130px;
+    }
+
+    @media (min-width: $desktop_width) {
+      right: 205px;
+    }
   }
 
   &::before {
@@ -63,37 +88,104 @@
     width: 8px;
     height: 11px;
     position: absolute;
-    right: 0;
+    right: 58px;
     bottom: -6px;
     transform: translate(50%, 100%);
     z-index: 100;
     background-image: url("../../img/arrow_route.svg");
+
+    @media (min-width: $tablet_width) {
+      display: none;
+    }
+  }
+
+  &--active::after {
+    background-color: $basic_black;
+  }
+
+  &--add::after {
+    background-color: $basic_gray_light;
+  }
+
+  &--add {
+    background-color: $basic_gray_light;
+
+    @media (min-width: $tablet_width) {
+      background-color: $basic_white;
+    }
+  }
+
+  &--add::before {
+    display: none;
+  }
+
+  &--active {
+    @media (min-width: $desktop_width) {
+      margin-right: 0;
+    }
+  }
+}
+
+.routes__country-name {
+  flex-grow: 1;
+  align-self: stretch;
+  border: 1px solid $basic_gray;
+  margin: 0;
+  box-sizing: border-box;
+  padding: 10px;
+  border-radius: 4px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 18px;
+  letter-spacing: 0.1em;
+
+  @media (min-width: $tablet_width) {
+    font-size: 20px;
+    line-height: 20px;
+    padding: 25px;
   }
 
   &--active::after {
     background-color: $basic_blue_light;
   }
 
-  &--select {
-    border: none;
+  &--select,
+  &--add {
+    @media (min-width: $mobile_width_only) {
+      border: none;
+    }
+
+    @media (min-width: $tablet_width) {
+      border: 1px solid $basic_gray;
+      margin-right: 156px;
+    }
+
+    @media (min-width: $desktop_width) {
+      margin-right: 232px;
+    }
   }
 
   &--add {
-    border: none;
-
-    &::before {
-      display: none;
+    @media (min-width: $tablet_width) {
+      background-color: $basic_gray_light;
     }
   }
 }
 
 .routes__country-text {
   display: flex;
+  flex-grow: 1;
   white-space: nowrap;
   overflow: hidden;
   position: relative;
-  flex-grow: 1;
   box-sizing: border-box;
+
+  @media (max-width: 400px) {
+    width: 136px;
+  }
 
   &::after {
     content: "";
@@ -108,24 +200,57 @@
 
 .routes__select-country {
   position: absolute;
-  right: 0;
+  right: 10px;
   top: 50%;
   z-index: 10;
   transform: translateY(-50%);
+  cursor: pointer;
+  background-color: transparent;
+  border: none;
+  background-image: url("../../img/select_country.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  width: 11px;
+  height: 8px;
+
+  @media (min-width: $tablet_width) {
+    width: 20px;
+    height: 17px;
+    right: 25px;
+  }
 }
 
-.routes__country-flag {
-  width: 53px;
+.routes__flag-wrapper {
   align-self: stretch;
   display: flex;
   justify-content: center;
   align-items: center;
   border: 1px solid $basic_gray;
+  border-left: none;
   margin: 0;
   box-sizing: border-box;
   padding: 11px;
   border-radius: 4px;
-  transform: translate(-1px);
+
+  @media (min-width: $tablet_width) {
+    border: none;
+    padding-left: 52px;
+    padding-right: 34px;
+  }
+
+  @media (min-width: $desktop_width) {
+    padding-right: 112px;
+  }
+}
+
+.routes__country-flag {
+  width: 35px;
+  height: 24px;
+
+  @media (min-width: $tablet_width) {
+    width: 70px;
+    height: 47px;
+  }
 }
 
 .routes__delete-country {
@@ -133,6 +258,23 @@
   top: 0;
   right: 0;
   transform: translate(50%, -50%);
+  cursor: pointer;
+  background-color: $basic_gray_light;
+  border-radius: 50%;
+  border: none;
+  background-image: url("../../img/icon_close.svg");
+  background-repeat: no-repeat;
+  background-size: 9px;
+  background-position: center;
+  width: 21px;
+  height: 21px;
+
+  @media (min-width: $tablet_width) {
+    background-size: 24px;
+    background-color: transparent;
+    top: 50%;
+    transform: translateY(-50%);
+  }
 }
 
 .routes__wrapper {
@@ -143,6 +285,20 @@
 .routes__add-country {
   position: absolute;
   top: 50%;
-  right: 0;
+  right: 10px;
   transform: translateY(-50%);
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  width: 14px;
+  height: 14px;
+  background-image: url("../../img/plus.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+
+  @media (min-width: $tablet_width) {
+    right: 25px;
+    width: 24px;
+    height: 24px;
+  }
 }

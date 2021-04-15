@@ -3,10 +3,6 @@
   padding-top: 19px;
   position: relative;
 
-  &--lighten {
-    background-color: $basic_blue_light;
-  }
-
   @media (min-width: $tablet_width) {
     padding-top: 40px;
     padding-bottom: 72px;
@@ -18,12 +14,26 @@
     padding-bottom: 11px;
     background-color: $basic_blue;
   }
+
+  &--lighten {
+    background-color: $basic_blue_light;
+  }
+
+  &--form {
+    padding-bottom: 0;
+  }
 }
 
 .page-header__container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
+}
+
+.page-header__logo {
+  @media (min-width: $tablet_width) {
+    margin-right: 40px;
+  }
 }
 
 .page-header__open-menu {
@@ -39,4 +49,8 @@
     height: 11px;
     background-image: url("../../img/icon_menu_mobile.svg");
   }
+}
+
+.page-header__navigation {
+  flex-grow: 1;
 }

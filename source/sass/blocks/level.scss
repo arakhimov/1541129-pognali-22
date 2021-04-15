@@ -4,6 +4,7 @@
   justify-content: center;
   align-items: center;
   position: relative;
+  margin: 0;
 
   &--bg-dark {
     background-color: rgba($basic_black, 0.6);
@@ -74,6 +75,12 @@
     font-size: 24px;
     line-height: 24px;
   }
+
+  &--form {
+    @media (min-width: $desktop_width) {
+      color: $basic_white;
+    }
+  }
 }
 
 .level__text {
@@ -93,5 +100,11 @@
   &--small {
     font-size: 14px;
     line-height: 14px;
+  }
+
+  &--form {
+    @media (min-width: $desktop_width) {
+      color: $basic_white;
+    }
   }
 }

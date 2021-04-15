@@ -16,7 +16,7 @@
 </head>
 
 <body class="page__body">
-  <header class="page-header page-header--lighten">
+  <header class="page-header page-header--lighten page-header--form">
     <div class="page-wrapper">
       <div class="page-header__container">
         <a href="index.html" class="page-header__link">
@@ -24,7 +24,7 @@
             height="15" />
         </a>
 
-        <button type="button" class="page-header__open-menu" aria-label="Открыть мобильное меню"></button>
+        <button type="button" class="page-header__open-menu desktop-none" aria-label="Открыть мобильное меню"></button>
 
         <nav class="page-header__navigation navigation">
           <ul class="navigation__list">
@@ -33,20 +33,20 @@
             <li class="navigation__item"><a href="catalog.html" class="navigation__link">Попутчики</a></li>
           </ul>
         </nav>
-      </div>
 
-      <div class="page-menu">
-        <a href="tel:+78005558628" class="page-menu__phone"
-          aria-label="Позвоните нам по номеру телефона: 8 800 555-86-28"></a>
-        <a href="mailto:mail@htmlacademy.ru" class="page-menu__email"
-          aria-label="Напишите нам на почтовый ящик: mail@htmlacademy.ru"></a>
-        <a href="blank" class="page-header__authorization button-autorization">авторизация</a>
+        <div class="page-menu">
+          <a href="tel:+78005558628" class="page-menu__phone"
+            aria-label="Позвоните нам по номеру телефона: 8 800 555-86-28"></a>
+          <a href="mailto:mail@htmlacademy.ru" class="page-menu__email"
+            aria-label="Напишите нам на почтовый ящик: mail@htmlacademy.ru"></a>
+          <a href="blank.html" class="page-header__authorization button-autorization">авторизация</a>
+        </div>
       </div>
 
       <section class="page-header__popup popup-menu">
         <div class="page-wrapper">
           <div class="popup-menu__header">
-            <a href="index.html" class="page-header__link">
+            <a class="page-header__link">
               <img src="img/pognali-logo_dark.png" alt="Логотип Погнали" class="page-header__logo page-logo" width="96"
                 height="15" />
             </a>
@@ -97,21 +97,23 @@
 
   <main class="main">
     <div class="main__wrapper">
-      <h1 class="main__title main__title--underline page-title page-title--white page-title--adv">Направления</h1>
+      <h1 class="main__title main__title--form main__title--underline page-title page-title--white page-title--adv">
+        <span class="main__title-text main__title-text--form">Направления</span></h1>
 
       <!-- секция профиль -->
       <section class="user-profile">
         <h2 class="visually-hidden">Мой профиль</h2>
 
         <div class="user-profile__level-container level">
-          <span class="level__counter" aria-label="У Пети Демина 80 уровень">80</span>
-          <span class="level__text">level</span>
+          <span class="level__counter level__counter--form" aria-label="У Пети Демина 80 уровень">80</span>
+          <span class="level__text level__text--form">level</span>
         </div>
         <img src="img/travelers2.png" alt="Фотография Пети Демина" class="user-profile__image" width="100" height="100">
-        <button type="button" class="user-profile__change-photo">Сменить фото</button>
+        <button type="button" class="user-profile__change-photo">
+          <span class="user-profile__change-photo-text">Сменить </span>фото</button>
 
         <section class="user-profile__hashtags">
-          <h3 class="user-profile__subtitle">теги</h3>
+          <h3 class="user-profile__subtitle user-profile__subtitle--tags">теги</h3>
           <ul class="user-profile__hashtag-list hashtags">
             <li class="hashtags__item hashtags__item--lighten">#бургер</li>
             <li class="hashtags__item hashtags__item--lighten">#бар</li>
@@ -124,13 +126,12 @@
         <section class="user-profile__transports">
           <h3 class="user-profile__subtitle">транспорт</h3>
           <ul class="user-profile__transports-list transports">
-            <li class="transports__item transports__item--rounded transports__item--avia transports__item-active"
+            <li class="transports__item transports__item--rounded transports__item--avia transports__item--active"
               aria-label="Авиаперелет"></li>
-            <li class="transports__item transports__item--rounded transports__item--auto transports__item-active"
+            <li class="transports__item transports__item--rounded transports__item--auto transports__item--active"
               aria-label="Автотранспорт"></li>
-            <li class="transports__item transports__item--rounded transports__item--bicycle" aria-label="Велосипед">
-            </li>
-            <li class="transports__item transports__item--rounded transports__item--run transports__item-active"
+            <li class="transports__item transports__item--rounded transports__item--bicycle" aria-label="Велосипед"></li>
+            <li class="transports__item transports__item--rounded transports__item--run transports__item--active"
               aria-label="Пешком"></li>
           </ul>
         </section>
@@ -139,34 +140,41 @@
 
     <!-- секция мои планы -->
     <section class="plans">
-      <div class="page-wrapper">
-        <h2 class="plans__title page-title page-title--dark">Мои планы:</h2>
-
-        <ol class="plans__list">
-          <li class="plans__item">
-            <article class="plans__card">
-              <h3 class="plan__subtitle">1. Франция, Италия</h3>
+      <h2 class="plans__title page-title page-title--dark">Мои планы:</h2>
+      <ol class="plans__list">
+        <li class="plans__item">
+          <article class="plans__card">
+            <h3 class="plans__subtitle">
+              <span class="plans__subtitle-counter">1.</span>
+              <span class="plans__subtitle-text">Франция, Италия</span>
+            </h3>
+            <div class="plans__wrapper">
               <p class="plans__description">3 попутчика</p>
-              <p class="plans__description">26 мар &mdash; 29 мар</p>
-              <a href="blank.html" class="plans__change">Изменить</a>
-            </article>
-          </li>
-          <li class="plans__item">
-            <article class="plans__card">
-              <h3 class="plans__title">2. Таиланд, Индонезия</h3>
+              <p class="plans__date">26 мар &mdash; 29 мар</p>
+              <a href="blank.html" class="plans__change-link">Изменить</a>
+            </div>
+          </article>
+        </li>
+        <li class="plans__item">
+          <article class="plans__card">
+            <h3 class="plans__subtitle">
+              <span class="plans__subtitle-counter">2.</span>
+              <span class="plans__subtitle-text">Таиланд, Индонезия</span>
+            </h3>
+            <div class="plans__wrapper">
               <p class="plans__description">1 попутчик</p>
-              <p class="plans__description">1 июл &mdash; 15 июл</p>
-              <a href="blank.html" class="plans__change">Изменить</a>
-            </article>
-          </li>
-        </ol>
-      </div>
+              <p class="plans__date">1 июл &mdash; 15 июл</p>
+              <a href="blank.html" class="plans__change-link">Изменить</a>
+            </div>
+          </article>
+        </li>
+      </ol>
     </section>
 
     <!-- секция добавить план -->
     <section class="add-plan">
-      <div class="page-wrapper">
-        <div class="add-plan__wrapper">
+      <div class="add-plan__wrapper">
+        <div class="add-plan__header">
           <h2 class="add-plan__title page-title page-title--dark">Добавить план</h2>
 
           <ul class="add-plan__markers markers markers--no-text">
@@ -178,50 +186,54 @@
 
         <form action="https://echo.htmlacademy.ru/" method="POST" class="add-plan__form" target="_blank">
           <fieldset class="add-plan__group" id="dates">
-            <h3 class="add-plan__subtitle">Шаг 1.<br />Даты пребывания</h3>
+            <div class="add-plan__group-header">
+              <h3 class="add-plan__subtitle">
+                <span class="add-plan__subtitle-counter">Шаг 1.</span>
+                <span class="add-plan__subtitle-description">Даты пребывания</span>
+              </h3>
+              <p class="add-plan__description">Укажите предпочтительное количество попутчиков, которых вы хотели бы
+                позвать в&nbsp;поездку, и ее предполагаемую длительность.</p>
 
-            <p class="add-plan__description">Укажите предпочтительное количество попутчиков, которых вы хотели бы
-              позвать
-              в&nbsp;поездку, и ее предполагаемую длительность.</p>
+              <ul class="add-plan__markers markers">
+                <li class="markers__item markers__item--current"><span class="markers__text">Даты</span></li>
+                <li class="markers__item"><span class="markers__text">Маршрут</span></li>
+                <li class="markers__item"><span class="markers__text">Развлечения</span></li>
+              </ul>
+            </div>
 
-            <ul class="add-plan__markers markers markers--adv">
-              <li class="markers__item markers__item--current"><span class="markers__text">Даты</span></li>
-              <li class="markers__item"><span class="markers__text">Маршрут</span></li>
-              <li class="markers__item"><span class="markers__text">Развлечения</span></li>
-            </ul>
+            <div class="add-plan__container">
+              <ul class="add-plan__parametres parametres">
+                <li class="parametres__item">
+                  <h4 class="parametres__title">Ищу попутчиков:</h4>
+                  <span class="paramtres__unit">чел.</span>
+                  <div class="parametres__control">
+                    <button type="button" class="parametres__button parametres__button--less"
+                      aria-label="Уменьшить количество человек" title="Уменьшить количество человек"></button>
+                    <input type="text" class="parametres__input" name="fellow-travelers" value="2"
+                      aria-label="Количество попутчиков" />
+                    <button type="button" class="parametres__button parametres__button--more"
+                      aria-label="Увеличить количество человек" title="Увеличить количество человек"></button>
+                  </div>
+                </li>
+                <li class="parametres__item">
+                  <h4 class="parametres__title">Длительность</h4>
+                  <span class="paramtres__unit">дн.</span>
+                  <div class="parametres__control">
+                    <button type="button" class="parametres__button parametres__button--less"
+                      aria-label="Уменьшить количество дней" title="Уменьшить количество дней"></button>
+                    <input type="text" class="parametres__input" name="travel-days" value="3"
+                      aria-label="Количество дней" />
+                    <button type="button" class="parametres__button parametres__button--more"
+                      aria-label="Увеличить количество дней" title="Увеличить количество дней"></button>
+                  </div>
+                </li>
+              </ul>
 
-            <ul class="add-plan__parametres parametres">
-              <li class="parametres__item">
-                <h4 class="parametres__title">Ищу попутчиков:</h4>
-                <span class="paramtres__unit">чел.</span>
-                <div class="parametres__control">
-                  <button type="button"
-                    class="parametres__button parametres__button--travelers parametres__button--less"
-                    aria-label="Уменьшить количество человек" title="Уменьшить количество человек"></button>
-                  <input type="text" class="parametres__input" name="fellow-travelers" value="2"
-                    aria-label="Количество попутчиков" />
-                  <button type="button"
-                    class="parametres__button parametres__button--travelers parametres__button--more"
-                    aria-label="Увеличить количество человек" title="Увеличить количество человек"></button>
-                </div>
-              </li>
-              <li class="parametres__item">
-                <h4 class="parametres__title">Длительность</h4>
-                <span class="paramtres__unit">дн.</span>
-                <div class="parametres__control">
-                  <button type="button" class="parametres__button parametres__button--days parametres__button--less"
-                    aria-label="Уменьшить количество дней" title="Уменьшить количество дней"></button>
-                  <input type="text" class="parametres__input" name="travel-days" value="3"
-                    aria-label="Количество дней" />
-                  <button type="button" class="parametres__button parametres__button--days parametres__button--more"
-                    aria-label="Увеличить количество дней" title="Увеличить количество дней"></button>
-                </div>
-              </li>
-            </ul>
-
-            <label class="add-plan__label">
-              <input type="checkbox" class="add-plan__childrens-field" value="Можно с детьми" checked />Можно с
-              детьми</label>
+              <div class="add-plan__childrens-wrapper">
+                <input type="checkbox" id="childrens-field" class="add-plan__childrens-field visually-hidden" value="Можно с детьми" checked />
+                <label for="" class="add-plan__childrens-label">Можно с детьми</label>
+              </div>
+            </div>
 
             <section class="add-plan__calendar calendar">
               <h4 class="visually-hidden">Календарь</h4>
@@ -230,7 +242,7 @@
                   title="Предыдущий месяц"></button>
                 <input type="text" class="calendar__month-field" name="travel-month" value="Март 2019"
                   aria-label="Месяц путешествия" />
-                <button type="button" class="calendar__control calendar__control--less" aria-label="Следующий месяц"
+                <button type="button" class="calendar__control calendar__control--more" aria-label="Следующий месяц"
                   title="Следующий месяц"></button>
               </div>
 
@@ -318,57 +330,68 @@
           </fieldset>
 
           <fieldset class="add-plan__group routes" id="routes">
-            <h3 class="add-plan__subtitle">Шаг 2.<br />Маршрут</h3>
+            <div class="add-plan__group-header">
+              <h3 class="add-plan__subtitle">
+                <span class="add-plan__subtitle-counter">Шаг 2.</span>
+                <span class="add-plan__subtitle-description">Маршрут</span>
+              </h3>
 
-            <p class="add-plan__description">Укажите страны, которые вы хотели бы посетить. Это может быть одна или
-              сразу несколько.</p>
+              <p class="add-plan__description">Укажите страны, которые вы хотели бы посетить. Это может быть одна или
+                сразу несколько.</p>
 
-            <ul class="add-plan__markers markers markers--adv">
-              <li class="markers__item"><span class="markers__text">Даты</span></li>
-              <li class="markers__item markers__item--current"><span class="markers__text">Маршрут</span></li>
-              <li class="markers__item"><span class="markers__text">Развлечения</span></li>
-            </ul>
+              <ul class="add-plan__markers markers markers--adv">
+                <li class="markers__item"><span class="markers__text">Даты</span></li>
+                <li class="markers__item markers__item--current"><span class="markers__text">Маршрут</span></li>
+                <li class="markers__item"><span class="markers__text">Развлечения</span></li>
+              </ul>
+            </div>
 
             <ul class="add-plan__list-routes routes__list">
-              <li class="routes__item">
+              <li class="routes__item routes__item--active">
                 <h4 class="routes__country-name routes__country-name--active">
-                  <span class="routes__country-text">Босния и Герцеговина
-                    <button class="routes__select-country" aria-label="Выбрать страну"
-                      title="Выбрать страну"></button></span>
+                  <span class="routes__country-text">Босния и Герцеговина</span>
+                  <button class="routes__select-country" aria-label="Выбрать страну" title="Выбрать страну"></button>
                 </h4>
                 <input type="hidden" class="routes__country-field" name="counrties" value="Босния и Герцеговина">
-                <img src="img/bosnia-and-herzegovina.png" alt="Флаг Боснии и Герцеговины" class="routes__country-flag">
+                <div class="routes__flag-wrapper">
+                  <img src="img/bosnia-and-herzegovina.png" alt="Флаг Боснии и Герцеговины" class="routes__country-flag" width="35" height="24">
+                </div>
                 <button class="routes__delete-country" aria-label="Удалить страну" title="Удалить страну"></button>
               </li>
-              <li class="routes__item">
+              <li class="routes__item routes__item--active">
                 <h4 class="routes__country-name routes__country-name--active">
-                  <span class="routes__country-text">Чехия
-                    <button class="routes__select-country" aria-label="Выбрать страну"
-                      title="Выбрать страну"></button></span>
+                  <span class="routes__country-text">Чехия</span>
+                  <button class="routes__select-country" aria-label="Выбрать страну" title="Выбрать страну"></button>
                 </h4>
                 <input type="hidden" class="routes__country-field" name="counrties" value="Чехия">
-                <img src="img/czech.png" alt="Флаг Чехии" class="routes__country-flag">
+                <div class="routes__flag-wrapper">
+                  <img src="img/czech.png" alt="Флаг Чехии" class="routes__country-flag" width="35" height="24">
+                </div>
                 <button class="routes__delete-country" aria-label="Удалить страну" title="Удалить страну"></button>
               </li>
               <li class="routes__item routes__item--select">
                 <div class="routes__wrapper">
-                  <h4 class="routes__country-name routes__country-name--select">Выберите страну</h4>
-                  <button class="routes__select-country" aria-label="Выбрать страну" title="Выбрать страну"></button>
+                  <h4 class="routes__country-name routes__country-name--select">Выберите страну
+                    <button class="routes__select-country" aria-label="Выбрать страну" title="Выбрать страну"></button></h4>
                 </div>
                 <button class="routes__delete-country" aria-label="Удалить страну" title="Удалить страну"></button>
               </li>
               <li class="routes__item routes__item--add">
                 <div class="routes__wrapper">
-                  <h4 class="routes__country-name routes__country-name--add">Добавить страну</h4>
-                  <button class="routes__add-country" aria-label="Добавить страну" title="Добавить страну"></button>
+                  <h4 class="routes__country-name routes__country-name--add">Добавить страну
+                    <button class="routes__add-country" aria-label="Добавить страну" title="Добавить страну"></button> </h4>
                 </div>
               </li>
             </ul>
 
             <section class="routes__popup index">
+              <header class="index__header">
+                <h4 class="index__title">Выберите страну</h4>
+                <button class="index__close-button" aria-label="Закрыть список стран" title="Закрыть список стран"></button>
+              </header>
               <ul class="index__headind-list">
                 <li class="index__heading-item">
-                  <button type="button" class="index__button" value="a" aria-pressed="true">а</button>
+                  <button type="button" class="index__button index__button--active" value="a" aria-pressed="true">а</button>
                 </li>
                 <li class="index__heading-item">
                   <button type="button" class="index__button" value="б">б</button>
@@ -744,17 +767,21 @@
           </fieldset>
 
           <fieldset class="add-plan__group entertainments" id="entertainments">
-            <h3 class="add-plan__subtitle">Шаг 3.<br />Развлечения</h3>
+            <div class="add-plan__group-header">
+              <h3 class="add-plan__subtitle">
+                <span class="add-plan__subtitle-counter">Шаг 3.</span>
+                <span class="add-plan__subtitle-description">Развлечения</span>
+              </h3>
 
-            <p class="add-plan__description">Наконец, расскажите о своих планах времяпровождения. Можно писать в
-              свободной
-              форме и ставить тэги.</p>
+              <p class="add-plan__description">Наконец, расскажите о своих планах времяпровождения. Можно писать
+                в свободной форме и ставить тэги.</p>
 
-            <ul class="add-plan__markers markers markers--adv">
-              <li class="markers__item"><span class="markers__text">Даты</span></li>
-              <li class="markers__item"><span class="markers__text">Маршрут</span></li>
-              <li class="markers__item markers__item--current"><span class="markers__text">Развлечения</span></li>
-            </ul>
+              <ul class="add-plan__markers markers markers--adv">
+                <li class="markers__item"><span class="markers__text">Даты</span></li>
+                <li class="markers__item"><span class="markers__text">Маршрут</span></li>
+                <li class="markers__item markers__item--current"><span class="markers__text">Развлечения</span></li>
+              </ul>
+            </div>
 
             <ul class="entertainments__list">
               <li class="entertainments__item entertainments__item--add-line">
