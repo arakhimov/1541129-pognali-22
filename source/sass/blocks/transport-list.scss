@@ -2,4 +2,72 @@
   padding: 0;
   margin: 0;
   list-style-type: none;
+  display: flex;
+}
+
+.transport-list__item {
+  &:not(:last-of-type) {
+    @media (min-width: $tablet_width) {
+      margin-right: 2px;
+    }
+
+    @media (min-width: $tablet_width) {
+      margin-right: 1px;
+    }
+  }
+}
+
+.transport-list__label {
+  display: inline-block;
+  vertical-align: top;
+  width: 32px;
+  height: 32px;
+  background-color: $basic_white;
+  border-radius: 50%;
+  position: relative;
+  cursor: pointer;
+
+  &::after {
+    content: "";
+    width: 17px;
+    height: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    opacity: 0.15;
+  }
+
+  &--avia::after {
+    background-image: url("../../img/avia.svg");
+  }
+
+  &--auto::after {
+    background-image: url("../../img/auto.svg");
+  }
+
+  &--bicycle::after {
+    background-image: url("../../img/bicycle.svg");
+  }
+
+  &--run::after {
+    background-image: url("../../img/run.svg");
+  }
+
+  @media (min-width: $tablet_width) {
+    width: 43px;
+    height: 43px;
+
+    &::after {
+      width: 23px;
+      height: 22px;
+    }
+  }
+}
+
+.transport-list__field:checked ~ .transport-list__label::after {
+  opacity: 1;
 }

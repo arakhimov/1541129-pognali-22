@@ -23,6 +23,7 @@
     transform: translate(-50%, -50%);
     background-repeat: no-repeat;
     background-size: contain;
+    background-position: center;
     opacity: 0.15;
   }
 
@@ -46,6 +47,12 @@
     opacity: 1;
   }
 
+  &--gray {
+    @media (max-width: $mobile_width_only) {
+      background-color: $basic_gray_light;
+    }
+  }
+
   @media (min-width: $tablet_width) {
     width: 43px;
     height: 43px;
@@ -54,5 +61,10 @@
       width: 23px;
       height: 22px;
     }
+  }
+
+  &--small {
+    width: 29px;
+    height: 29px;
   }
 }

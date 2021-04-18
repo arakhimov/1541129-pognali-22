@@ -16,7 +16,7 @@
 </head>
 
 <body class="page__body">
-  <header class="page-header page-header--lighten">
+  <header class="page-header page-header--lighten page-header--form">
     <div class="page-wrapper">
       <div class="page-header__container">
         <a href="index.html" class="page-header__link">
@@ -24,7 +24,7 @@
             height="15" />
         </a>
 
-        <button type="button" class="page-header__open-menu" aria-label="Открыть мобильное меню"></button>
+        <button type="button" class="page-header__open-menu desktop-none" aria-label="Открыть мобильное меню"></button>
 
         <nav class="page-header__navigation navigation">
           <ul class="navigation__list">
@@ -33,20 +33,20 @@
             <li class="navigation__item"><a href="catalog.html" class="navigation__link">Попутчики</a></li>
           </ul>
         </nav>
-      </div>
 
-      <div class="page-menu">
-        <a href="tel:+78005558628" class="page-menu__phone"
-          aria-label="Позвоните нам по номеру телефона: 8 800 555-86-28"></a>
-        <a href="mailto:mail@htmlacademy.ru" class="page-menu__email"
-          aria-label="Напишите нам на почтовый ящик: mail@htmlacademy.ru"></a>
-        <a href="blank" class="page-header__authorization button-autorization">авторизация</a>
+        <div class="page-menu">
+          <a href="tel:+78005558628" class="page-menu__phone"
+            aria-label="Позвоните нам по номеру телефона: 8 800 555-86-28"></a>
+          <a href="mailto:mail@htmlacademy.ru" class="page-menu__email"
+            aria-label="Напишите нам на почтовый ящик: mail@htmlacademy.ru"></a>
+          <a href="blank.html" class="page-header__authorization button-autorization">авторизация</a>
+        </div>
       </div>
 
       <section class="page-header__popup popup-menu">
         <div class="page-wrapper">
           <div class="popup-menu__header">
-            <a href="index.html" class="page-header__link">
+            <a class="page-header__link">
               <img src="img/pognali-logo_dark.png" alt="Логотип Погнали" class="page-header__logo page-logo" width="96"
                 height="15" />
             </a>
@@ -96,12 +96,16 @@
   </header>
 
   <main class="main">
-    <h1 class="main__title page-title page-title--white page-title--adv">Попутчики</h1>
+    <div class="main__container">
+      <h1 class="main__title main__title--catalog page-title page-title--white page-title--adv">
+        <span class="main__title-text main__title-text--catalog">Попутчики</span></h1>
+      <a href="index.html" class="main__index-link">На главную</a>
+    </div>
 
     <!-- секция фильтр -->
     <section class="filter">
       <header class="filter__header">
-        <div class="filter__wrapper page-wrapper">
+        <div class="filter__wrapper">
           <h2 class="filter__title">Фильтрация по странам:</h2>
           <ul class="filter__countries-group-list group-countries">
             <li class="group-countries__item">
@@ -111,114 +115,111 @@
             <li class="group-countries__item"><a href="#" class="group-counries__link">Америка</a></li>
             <li class="group-countries__item"><a href="#" class="group-counries__link">Острова</a></li>
           </ul>
-          <button type="button" class="filter__button-show filter__button-show--active"
-            aria-label="Показать список стран" title="Показать список стран">
-            <span class="filter__button-text mobile-hidden">Показать все</span></button>
-          <button type="button" class="filter__button-hide filter__button-hide--active"
-            aria-label="Свернуть список стран" title="Свернуть список стран">
-            <span class="filter__button-text">Свернуть</span></button>
+          <button type="button" class="filter__button filter__button--show" aria-label="Показать список стран" title="Показать список стран">
+            <span class="filter__button-text">Показать все</span></button>
         </div>
       </header>
 
       <section class="filter__popup filter__popup--opened">
-        <ul class="filter__countries-group-list group-countries group-countries--popup">
-          <li class="group-countries__item group-countries__item--popup">
-            <a href="#" class=" group-counries__link group-counries__link--active">Европа</a>
-          </li>
-          <li class="group-countries__item group-countries__item--popup">
-            <a href="#" class="group-counries__link">Азия</a>
-          </li>
-          <li class="group-countries__item group-countries__item--popup">
-            <a href="#" class="group-counries__link">Америка</a>
-          </li>
-          <li class="group-countries__item group-countries__item--popup">
-            <a href="#" class="group-counries__link">Острова</a>
-          </li>
-        </ul>
+        <header class="filter__header">
+          <div class="filter__wrapper">
+            <h2 class="filter__title">Фильтрация по странам:</h2>
+            <ul class="filter__countries-group-list group-countries group-countries--popup">
+              <li class="group-countries__item group-countries__item--popup">
+                <a href="#" class="group-counries__link group-counries__link--active">Европа</a>
+              </li>
+              <li class="group-countries__item group-countries__item--popup"><a href="#" class="group-counries__link">Азия</a></li>
+              <li class="group-countries__item group-countries__item--popup"><a href="#" class="group-counries__link">Америка</a></li>
+              <li class="group-countries__item group-countries__item--popup"><a href="#" class="group-counries__link">Острова</a></li>
+            </ul>
+            <button type="button" class="filter__button filter__button--hide" aria-label="Свернуть список стран" title="Свернуть список стран">
+              <span class="filter__button-text">Свернуть</span></button>
+          </div>
+        </header>
 
-        <section class="routes__popup index">
-          <ul class="index__headind-list">
-            <li class="index__heading-item">
-              <button type="button" class="index__button" value="a" aria-pressed="true">а</button>
+        <section class="filter__index index index--catalog">
+          <ul class="index__headind-list index__headind-list--catalog">
+            <li class="index__heading-item index__heading-item--catalog">
+              <button type="button" class="index__button index__button--catalog index__button--catalog-active" value="a" aria-pressed="true">а</button>
             </li>
-            <li class="index__heading-item">
-              <button type="button" class="index__button" value="б">б</button>
+            <li class="index__heading-item index__heading-item--catalog">
+              <button type="button" class="index__button index__button--catalog" value="б">б</button>
             </li>
-            <li class="index__heading-item">
-              <button type="button" class="index__button" value="в">в</button>
+            <li class="index__heading-item index__heading-item--catalog">
+              <button type="button" class="index__button index__button--catalog" value="в">в</button>
             </li>
-            <li class="index__heading-item">
-              <button type="button" class="index__button" value="г">г</button>
+            <li class="index__heading-item index__heading-item--catalog">
+              <button type="button" class="index__button index__button--catalog" value="г">г</button>
             </li>
-            <li class="index__heading-item">
-              <button type="button" class="index__button" value="д">д</button>
+            <li class="index__heading-item index__heading-item--catalog">
+              <button type="button" class="index__button index__button--catalog" value="д">д</button>
             </li>
-            <li class="index__heading-item">
-              <button type="button" class="index__button" value="е">е</button>
+            <li class="index__heading-item index__heading-item--catalog">
+              <button type="button" class="index__button index__button--catalog" value="е">е</button>
             </li>
-            <li class="index__heading-item">
-              <button type="button" class="index__button" value="з">з</button>
+            <li class="index__heading-item index__heading-item--catalog">
+              <button type="button" class="index__button index__button--catalog" value="з">з</button>
             </li>
-            <li class="index__heading-item">
-              <button type="button" class="index__button" value="и">и</button>
+            <li class="index__heading-item index__heading-item--catalog">
+              <button type="button" class="index__button index__button--catalog" value="и">и</button>
             </li>
-            <li class="index__heading-item">
-              <button type="button" class="index__button" value="к">к</button>
+            <li class="index__heading-item index__heading-item--catalog">
+              <button type="button" class="index__button index__button--catalog" value="к">к</button>
             </li>
-            <li class="index__heading-item">
-              <button type="button" class="index__button" value="л">л</button>
+            <li class="index__heading-item index__heading-item--catalog">
+              <button type="button" class="index__button index__button--catalog" value="л">л</button>
             </li>
-            <li class="index__heading-item">
-              <button type="button" class="index__button" value="м">м</button>
+            <li class="index__heading-item index__heading-item--catalog">
+              <button type="button" class="index__button index__button--catalog" value="м">м</button>
             </li>
-            <li class="index__heading-item">
-              <button type="button" class="index__button" value="н">н</button>
+            <li class="index__heading-item index__heading-item--catalog">
+              <button type="button" class="index__button index__button--catalog" value="н">н</button>
             </li>
-            <li class="index__heading-item">
-              <button type="button" class="index__button" value="о">о</button>
+            <li class="index__heading-item index__heading-item--catalog">
+              <button type="button" class="index__button index__button--catalog" value="о">о</button>
             </li>
-            <li class="index__heading-item">
-              <button type="button" class="index__button" value="п">п</button>
+            <li class="index__heading-item index__heading-item--catalog">
+              <button type="button" class="index__button index__button--catalog" value="п">п</button>
             </li>
-            <li class="index__heading-item">
-              <button type="button" class="index__button" value="р">р</button>
+            <li class="index__heading-item index__heading-item--catalog">
+              <button type="button" class="index__button index__button--catalog" value="р">р</button>
             </li>
-            <li class="index__heading-item">
-              <button type="button" class="index__button" value="с">с</button>
+            <li class="index__heading-item index__heading-item--catalog">
+              <button type="button" class="index__button index__button--catalog" value="с">с</button>
             </li>
-            <li class="index__heading-item">
-              <button type="button" class="index__button" value="т">т</button>
+            <li class="index__heading-item index__heading-item--catalog">
+              <button type="button" class="index__button index__button--catalog" value="т">т</button>
             </li>
-            <li class="index__heading-item">
-              <button type="button" class="index__button" value="у">у</button>
+            <li class="index__heading-item index__heading-item--catalog">
+              <button type="button" class="index__button index__button--catalog" value="у">у</button>
             </li>
-            <li class="index__heading-item">
-              <button type="button" class="index__button" value="ф">ф</button>
+            <li class="index__heading-item index__heading-item--catalog">
+              <button type="button" class="index__button index__button--catalog" value="ф">ф</button>
             </li>
-            <li class="index__heading-item">
-              <button type="button" class="index__button" value="х">х</button>
+            <li class="index__heading-item index__heading-item--catalog">
+              <button type="button" class="index__button index__button--catalog" value="х">х</button>
             </li>
-            <li class="index__heading-item">
-              <button type="button" class="index__button" value="ч">ч</button>
+            <li class="index__heading-item index__heading-item--catalog">
+              <button type="button" class="index__button index__button--catalog" value="ч">ч</button>
             </li>
-            <li class="index__heading-item">
-              <button type="button" class="index__button" value="ш">ш</button>
+            <li class="index__heading-item index__heading-item--catalog">
+              <button type="button" class="index__button index__button--catalog" value="ш">ш</button>
             </li>
-            <li class="index__heading-item">
-              <button type="button" class="index__button" value="э">э</button>
+            <li class="index__heading-item index__heading-item--catalog">
+              <button type="button" class="index__button index__button--catalog" value="э">э</button>
             </li>
-            <li class="index__heading-item">
-              <button type="button" class="index__button" value="ю">ю</button>
+            <li class="index__heading-item index__heading-item--catalog">
+              <button type="button" class="index__button index__button--catalog" value="ю">ю</button>
             </li>
-            <li class="index__heading-item">
-              <button type="button" class="index__button" value="я">я</button>
+            <li class="index__heading-item index__heading-item--catalog">
+              <button type="button" class="index__button index__button--catalog" value="я">я</button>
             </li>
           </ul>
 
-          <ul class="index__choise-list">
-            <li class="index__choise-item index__choise-item--active" data-heading="а">
-              <span class="index__headind-symbol">а</span>
-              <ul class="index__list">
+          <ul class="index__choise-list index__choise-list--catalog">
+            <li class="index__choise-item index__choise-item--open index__choise-item--active" data-heading="а">
+              <span class="index__headind-symbol index__headind-symbol--catalog">а</span>
+              <ul class="index__list index__list--catalog">
                 <li class="index__item"><a href="#" class="index__link">Австралия</a></li>
                 <li class="index__item"><a href="#" class="index__link">Австрия</a></li>
                 <li class="index__item"><a href="#" class="index__link">Азербайджан</a></li>
@@ -232,9 +233,9 @@
                 <li class="index__item"><a href="#" class="index__link">Афганистан</a></li>
               </ul>
             </li>
-            <li class="index__choise-item" data-heading="б">
-              <span class="index__headind-symbol">б</span>
-              <ul class="index__list">
+            <li class="index__choise-item index__choise-item--open" data-heading="б">
+              <span class="index__headind-symbol index__headind-symbol--catalog">б</span>
+              <ul class="index__list index__list--catalog">
                 <li class="index__item"><a href="#" class="index__link">Багамские острова</a></li>
                 <li class="index__item"><a href="#" class="index__link">Бангладеш</a></li>
                 <li class="index__item"><a href="#" class="index__link">Барбадос</a></li>
@@ -255,9 +256,9 @@
                 <li class="index__item"><a href="#" class="index__link">Бутан</a></li>
               </ul>
             </li>
-            <li class="index__choise-item" data-heading="в">
-              <span class="index__headind-symbol">в</span>
-              <ul class="index__list">
+            <li class="index__choise-item index__choise-item--open" data-heading="в">
+              <span class="index__headind-symbol index__headind-symbol--catalog">в</span>
+              <ul class="index__list index__list--catalog">
                 <li class="index__item"><a href="#" class="index__link">Вануату</a></li>
                 <li class="index__item"><a href="#" class="index__link">Великобритания</a></li>
                 <li class="index__item"><a href="#" class="index__link">Венгрия</a></li>
@@ -266,9 +267,9 @@
                 <li class="index__item"><a href="#" class="index__link">Вьетнам</a></li>
               </ul>
             </li>
-            <li class="index__choise-item" data-heading="г">
-              <span class="index__headind-symbol"></span>г
-              <ul class="index__list">
+            <li class="index__choise-item index__choise-item--open" data-heading="г">
+              <span class="index__headind-symbol index__headind-symbol--catalog">г</span>
+              <ul class="index__list index__list--catalog">
                 <li class="index__item"><a href="#" class="index__link">Габон</a></li>
                 <li class="index__item"><a href="#" class="index__link">Гаити</a></li>
                 <li class="index__item"><a href="#" class="index__link">Гайана</a></li>
@@ -284,31 +285,31 @@
                 <li class="index__item"><a href="#" class="index__link">Грузия</a></li>
               </ul>
             </li>
-            <li class="index__choise-item" data-heading="д">
-              <span class="index__headind-symbol">д</span>
-              <ul class="index__list">
+            <li class="index__choise-item index__choise-item--open" data-heading="д">
+              <span class="index__headind-symbol index__headind-symbol--catalog">д</span>
+              <ul class="index__list index__list--catalog">
                 <li class="index__item"><a href="#" class="index__link">Дания</a></li>
                 <li class="index__item"><a href="#" class="index__link">Джибути</a></li>
                 <li class="index__item"><a href="#" class="index__link">Доминика</a></li>
                 <li class="index__item"><a href="#" class="index__link">Доминикана</a></li>
               </ul>
             </li>
-            <li class="index__choise-item" data-heading="е">
-              <span class="index__headind-symbol">е</span>
-              <ul class="index__list">
+            <li class="index__choise-item index__choise-item--open" data-heading="е">
+              <span class="index__headind-symbol index__headind-symbol--catalog">е</span>
+              <ul class="index__list index__list--catalog">
                 <li class="index__item"><a href="#" class="index__link">Египед</a></li>
               </ul>
             </li>
-            <li class="index__choise-item" data-heading="з">
-              <span class="index__headind-symbol">з</span>
-              <ul class="index__list">
+            <li class="index__choise-item index__choise-item--open" data-heading="з">
+              <span class="index__headind-symbol index__headind-symbol--catalog">з</span>
+              <ul class="index__list index__list--catalog">
                 <li class="index__item"><a href="#" class="index__link">Замбия</a></li>
                 <li class="index__item"><a href="#" class="index__link">Зимбабве</a></li>
               </ul>
             </li>
-            <li class="index__choise-item" data-heading="и">
-              <span class="index__headind-symbol">и</span>
-              <ul class="index__list">
+            <li class="index__choise-item index__choise-item--open" data-heading="и">
+              <span class="index__headind-symbol index__headind-symbol--catalog">и</span>
+              <ul class="index__list index__list--catalog">
                 <li class="index__item"><a href="#" class="index__link">Израиль</a></li>
                 <li class="index__item"><a href="#" class="index__link">Индия</a></li>
                 <li class="index__item"><a href="#" class="index__link">Индонезия</a></li>
@@ -321,9 +322,9 @@
                 <li class="index__item"><a href="#" class="index__link">Италия</a></li>
               </ul>
             </li>
-            <li class="index__choise-item" data-heading="к">
-              <span class="index__headind-symbol">к</span>
-              <ul class="index__list">
+            <li class="index__choise-item index__choise-item--open" data-heading="к">
+              <span class="index__headind-symbol index__headind-symbol--catalog">к</span>
+              <ul class="index__list index__list--catalog">
                 <li class="index__item"><a href="#" class="index__link">Кабо-Верде</a></li>
                 <li class="index__item"><a href="#" class="index__link">Казахстан</a></li>
                 <li class="index__item"><a href="#" class="index__link">Камбоджа</a></li>
@@ -338,9 +339,9 @@
                 <li class="index__item"><a href="#" class="index__link">Колумбия</a></li>
               </ul>
             </li>
-            <li class="index__choise-item" data-heading="л">
-              <span class="index__headind-symbol">л</span>
-              <ul class="index__list">
+            <li class="index__choise-item index__choise-item--open" data-heading="л">
+              <span class="index__headind-symbol index__headind-symbol--catalog">л</span>
+              <ul class="index__list index__list--catalog">
                 <li class="index__item"><a href="#" class="index__link">Лаос</a></li>
                 <li class="index__item"><a href="#" class="index__link">Латвия</a></li>
                 <li class="index__item"><a href="#" class="index__link">Лесото</a></li>
@@ -352,9 +353,9 @@
                 <li class="index__item"><a href="#" class="index__link">Люксембург</a></li>
               </ul>
             </li>
-            <li class="index__choise-item" data-heading="м">
-              <span class="index__headind-symbol">м</span>
-              <ul class="index__list">
+            <li class="index__choise-item index__choise-item--open" data-heading="м">
+              <span class="index__headind-symbol index__headind-symbol--catalog">м</span>
+              <ul class="index__list index__list--catalog">
                 <li class="index__item"><a href="#" class="index__link">Маврикий</a></li>
                 <li class="index__item"><a href="#" class="index__link">Мавритания</a></li>
                 <li class="index__item"><a href="#" class="index__link">Мадагаскар</a></li>
@@ -366,9 +367,9 @@
                 <li class="index__item"><a href="#" class="index__link">Марокко</a></li>
               </ul>
             </li>
-            <li class="index__choise-item" data-heading="н">
-              <span class="index__headind-symbol">н</span>
-              <ul class="index__list">
+            <li class="index__choise-item index__choise-item--open" data-heading="н">
+              <span class="index__headind-symbol index__headind-symbol--catalog">н</span>
+              <ul class="index__list index__list--catalog">
                 <li class="index__item"><a href="#" class="index__link">Намибия</a></li>
                 <li class="index__item"><a href="#" class="index__link">Науру</a></li>
                 <li class="index__item"><a href="#" class="index__link">Непал</a></li>
@@ -380,16 +381,16 @@
                 <li class="index__item"><a href="#" class="index__link">Норвегия</a></li>
               </ul>
             </li>
-            <li class="index__choise-item" data-heading="о">
-              <span class="index__headind-symbol">о</span>
-              <ul class="index__list">
+            <li class="index__choise-item index__choise-item--open" data-heading="о">
+              <span class="index__headind-symbol index__headind-symbol--catalog">о</span>
+              <ul class="index__list index__list--catalog">
                 <li class="index__item"><a href="#" class="index__link">ОАЭ</a></li>
                 <li class="index__item"><a href="#" class="index__link">Оман</a></li>
               </ul>
             </li>
-            <li class="index__choise-item" data-heading="п">
-              <span class="index__headind-symbol">п</span>
-              <ul class="index__list">
+            <li class="index__choise-item index__choise-item--open" data-heading="п">
+              <span class="index__headind-symbol index__headind-symbol--catalog">п</span>
+              <ul class="index__list index__list--catalog">
                 <li class="index__item"><a href="#" class="index__link">Пакистан</a></li>
                 <li class="index__item"><a href="#" class="index__link">Палау</a></li>
                 <li class="index__item"><a href="#" class="index__link">Панама</a></li>
@@ -401,17 +402,17 @@
                 <li class="index__item"><a href="#" class="index__link">Португалия</a></li>
               </ul>
             </li>
-            <li class="index__choise-item" data-heading="р">
-              <span class="index__headind-symbol">р</span>
-              <ul class="index__list">
+            <li class="index__choise-item index__choise-item--open" data-heading="р">
+              <span class="index__headind-symbol index__headind-symbol--catalog">р</span>
+              <ul class="index__list index__list--catalog">
                 <li class="index__item"><a href="#" class="index__link">Руанда</a></li>
                 <li class="index__item"><a href="#" class="index__link">Румыния</a></li>
                 <li class="index__item"><a href="#" class="index__link">Россия</a></li>
               </ul>
             </li>
-            <li class="index__choise-item" data-heading="с">
-              <span class="index__headind-symbol">с</span>
-              <ul class="index__list">
+            <li class="index__choise-item index__choise-item--open" data-heading="с">
+              <span class="index__headind-symbol index__headind-symbol--catalog">с</span>
+              <ul class="index__list index__list--catalog">
                 <li class="index__item"><a href="#" class="index__link">Сальвадор</a></li>
                 <li class="index__item"><a href="#" class="index__link">Самоа</a></li>
                 <li class="index__item"><a href="#" class="index__link">Сан-Марино</a></li>
@@ -426,9 +427,9 @@
                 <li class="index__item"><a href="#" class="index__link">США</a></li>
               </ul>
             </li>
-            <li class="index__choise-item" data-heading="т">
-              <span class="index__headind-symbol">т</span>
-              <ul class="index__list">
+            <li class="index__choise-item index__choise-item--open" data-heading="т">
+              <span class="index__headind-symbol index__headind-symbol--catalog">т</span>
+              <ul class="index__list index__list--catalog">
                 <li class="index__item"><a href="#" class="index__link">Таджикистан</a></li>
                 <li class="index__item"><a href="#" class="index__link">Таиланд</a></li>
                 <li class="index__item"><a href="#" class="index__link">Танзания</a></li>
@@ -441,50 +442,50 @@
                 <li class="index__item"><a href="#" class="index__link">Турция</a></li>
               </ul>
             </li>
-            <li class="index__choise-item" data-heading="у">
-              <span class="index__headind-symbol">у</span>
-              <ul class="index__list">
+            <li class="index__choise-item index__choise-item--open" data-heading="у">
+              <span class="index__headind-symbol index__headind-symbol--catalog">у</span>
+              <ul class="index__list index__list--catalog">
                 <li class="index__item"><a href="#" class="index__link">Уганда</a></li>
                 <li class="index__item"><a href="#" class="index__link">Узбекистан</a></li>
                 <li class="index__item"><a href="#" class="index__link">Украина</a></li>
                 <li class="index__item"><a href="#" class="index__link">Уругвай</a></li>
               </ul>
             </li>
-            <li class="index__choise-item" data-heading="ф">
-              <span class="index__headind-symbol">ф</span>
-              <ul class="index__list">
+            <li class="index__choise-item index__choise-item--open" data-heading="ф">
+              <span class="index__headind-symbol index__headind-symbol--catalog">ф</span>
+              <ul class="index__list index__list--catalog">
                 <li class="index__item"><a href="#" class="index__link">Фиджи</a></li>
                 <li class="index__item"><a href="#" class="index__link">Филипины</a></li>
                 <li class="index__item"><a href="#" class="index__link">Финляндия</a></li>
                 <li class="index__item"><a href="#" class="index__link">Франция</a></li>
               </ul>
             </li>
-            <li class="index__choise-item" data-heading="х">
-              <span class="index__headind-symbol">х</span>
-              <ul class="index__list">
+            <li class="index__choise-item index__choise-item--open" data-heading="х">
+              <span class="index__headind-symbol index__headind-symbol--catalog">х</span>
+              <ul class="index__list index__list--catalog">
                 <li class="index__item"><a href="#" class="index__link">Хорватия</a></li>
               </ul>
             </li>
-            <li class="index__choise-item" data-heading="ч">
-              <span class="index__headind-symbol">ч</span>
-              <ul class="index__list">
+            <li class="index__choise-item index__choise-item--open" data-heading="ч">
+              <span class="index__headind-symbol index__headind-symbol--catalog">ч</span>
+              <ul class="index__list index__list--catalog">
                 <li class="index__item"><a href="#" class="index__link">Чад</a></li>
                 <li class="index__item"><a href="#" class="index__link">Черногория</a></li>
                 <li class="index__item"><a href="#" class="index__link">Чехия</a></li>
                 <li class="index__item"><a href="#" class="index__link">Чили</a></li>
               </ul>
             </li>
-            <li class="index__choise-item" data-heading="ш">
-              <span class="index__headind-symbol">ш</span>
-              <ul class="index__list">
+            <li class="index__choise-item index__choise-item--open" data-heading="ш">
+              <span class="index__headind-symbol index__headind-symbol--catalog">ш</span>
+              <ul class="index__list index__list--catalog">
                 <li class="index__item"><a href="#" class="index__link">Швейцария</a></li>
                 <li class="index__item"><a href="#" class="index__link">Швеция</a></li>
                 <li class="index__item"><a href="#" class="index__link">Шри-Ланка</a></li>
               </ul>
             </li>
-            <li class="index__choise-item" data-heading="э">
-              <span class="index__headind-symbol">э</span>
-              <ul class="index__list">
+            <li class="index__choise-item index__choise-item--open" data-heading="э">
+              <span class="index__headind-symbol index__headind-symbol--catalog">э</span>
+              <ul class="index__list index__list--catalog">
                 <li class="index__item"><a href="#" class="index__link">Эквадор</a></li>
                 <li class="index__item"><a href="#" class="index__link">Эритрея</a></li>
                 <li class="index__item"><a href="#" class="index__link">Эсватини</a></li>
@@ -492,16 +493,16 @@
                 <li class="index__item"><a href="#" class="index__link">Эфиопия</a></li>
               </ul>
             </li>
-            <li class="index__choise-item" data-heading="ю">
-              <span class="index__headind-symbol">ю</span>
-              <ul class="index__list">
+            <li class="index__choise-item index__choise-item--open" data-heading="ю">
+              <span class="index__headind-symbol index__headind-symbol--catalog">ю</span>
+              <ul class="index__list index__list--catalog">
                 <li class="index__item"><a href="#" class="index__link">ЮАР</a></li>
                 <li class="index__item"><a href="#" class="index__link">Южный Судан</a></li>
               </ul>
             </li>
-            <li class="index__choise-item" data-heading="я">
-              <span class="index__headind-symbol">я</span>
-              <ul class="index__list">
+            <li class="index__choise-item index__choise-item--open" data-heading="я">
+              <span class="index__headind-symbol index__headind-symbol--catalog">я</span>
+              <ul class="index__list index__list--catalog">
                 <li class="index__item"><a href="#" class="index__link">Ямайка</a></li>
                 <li class="index__item"><a href="#" class="index__link">Япония</a></li>
               </ul>
@@ -509,420 +510,401 @@
           </ul>
         </section>
 
-        <button type="button" class="filter__hide-countries button-filter"><span
-            class="button-filter__text">Свернуть</span></button>
+        <button type="button" class="filter__hide-button">Свернуть</button>
       </section>
-
-      <form action="https://echo.htmlacademy.ru/" method="GET" target="_blank"
-        class="filter__form form-travelers page-wrapper">
-        <h3 class="form-travelers__title">Подберите идеального попутчика</h3>
-
-        <fieldset class="form-travelers__group">
-          <ul class="form-travelers__interests-menu menu-interests">
-            <li class="menu-interests__item">
-              <h4 class="form-travelers__subtitle">Хобби</h4>
-              <ul class="menu-interests__submenu">
-                <li class="menu-interests__submenu-item">
-                  <input id="menu-interests-gym" type="checkbox" class="menu-interests__field visually-hidden"
-                    name="gym" checked />
-                  <label for="menu-interests-gym" class="menu-interests__label">Спортзал</label>
-                </li>
-                <li class="menu-interests__submenu-item">
-                  <input id="menu-interests-hookah" type="checkbox" class="menu-interests__field visually-hidden"
-                    name="hookax" />
-                  <label for="menu-interests-hookah" class="menu-interests__label">Кальян</label>
-                </li>
-                <li class="menu-interests__submenu-item">
-                  <input id="menu-interests-sofa" type="checkbox" class="menu-interests__field visually-hidden"
-                    name="sofa" />
-                  <label for="menu-interests-sofa" class="menu-interests__label">Диван</label>
-                </li>
-              </ul>
-            </li>
-            <li class="menu-interests__item">
-              <h4 class="form-travelers__subtitle">Музыка</h4>
-              <ul class="menu-interests__submenu">
-                <li class="menu-interests__submenu-item">
-                  <input id="menu-interests-hard-rock" type="checkbox" class="menu-interests__field visually-hidden"
-                    name="hard-rock" checked />
-                  <label for="menu-interests-hard-rock" class="menu-interests__label">Тяжелый рок</label>
-                </li>
-                <li class="menu-interests__submenu-item">
-                  <input id="menu-interests-russian-rap" type="checkbox" class="menu-interests__field visually-hidden"
-                    name="russian-rap" />
-                  <label for="menu-interests-russian-rap" class="menu-interests__label">Русский рэп</label>
-                </li>
-                <li class="menu-interests__submenu-item">
-                  <input id="menu-interests-euro-dance" type="checkbox" class="menu-interests__field visually-hidden"
-                    name="euro-dance" />
-                  <label for="menu-interests-euro-dance" class="menu-interests__label">Евроденс</label>
-                </li>
-              </ul>
-            </li>
-            <li class="menu-interests__item">
-              <h4 class="form-travelers__subtitle">Еда</h4>
-              <ul class="menu-interests__submenu">
-                <li class="menu-interests__submenu-item">
-                  <input id="menu-interests-meat" type="checkbox" class="menu-interests__field visually-hidden"
-                    name="meat" checked />
-                  <label for="menu-interests-meat" class="menu-interests__label">Мясоед</label>
-                </li>
-                <li class="menu-interests__submenu-item">
-                  <input id="menu-interests-pp" type="checkbox" class="menu-interests__field visually-hidden"
-                    name="pp" />
-                  <label for="menu-interests-pp" class="menu-interests__label">Сидит на ПП</label>
-                </li>
-                <li class="menu-interests__submenu-item">
-                  <input id="menu-interests-vegan" type="checkbox" class="menu-interests__field visually-hidden"
-                    name="vegan" />
-                  <label for="menu-interests-vegan" class="menu-interests__label">Веган-сыроед</label>
-                </li>
-              </ul>
-            </li>
-          </ul>
-        </fieldset>
-
-        <fieldset class="form-travelers__group">
-          <h4 class="form-travelers__subtitle">Транспорт</h4>
-
-          <ul class="form-travelers__transports transport-list">
-            <li class="transport-list__item">
-              <input id="transport-list-avia" type="checkbox" class="transport-list__field visually-hidden" name="avia"
-                aria-label="Авиаперелет" title="Авиаперелет" checked />
-              <label for="transport-list-avia" class="transport-list__label"></label>
-            </li>
-            <li class="transport-list__item">
-              <input id="transport-list-auto" type="checkbox" class="transport-list__field visually-hidden" name="auto"
-                aria-label="Автотранспорт" title="Автотранспорт" checked />
-              <label for="transport-list-auto" class="transport-list__label"></label>
-            </li>
-            <li class="transport-list__item">
-              <input id="transport-list-bicycle" type="checkbox" class="transport-list__field visually-hidden"
-                name="bicycle" aria-label="Велосипед" title="Велосипед" />
-              <label for="transport-list-bicycle" class="transport-list__label"></label>
-            </li>
-            <li class="transport-list__item">
-              <input id="transport-list-run" type="checkbox" class="transport-list__field visually-hidden" name="run"
-                aria-label="Пешком" title="Пешком" checked />
-              <label for="transport-list-run" class="transport-list__label"></label>
-            </li>
-          </ul>
-        </fieldset>
-
-        <fieldset class="form-travelers__group">
-          <h4 class="form-travelers__subtitle">Левел</h4>
-          <div class="range-filter">
-            <div class="range-filter__price-controls">
-              <label class="range-filter__price-label">
-                <input type="text" class="range-filter__price-field" aria-label="Минимальный уровень"
-                  value="30"></label>
-              <label class="range-filter__price-label">
-                <input type="text" class="range-filter__price-field" aria-label="Максимальный уровень"
-                  value="100"></label>
-            </div>
-
-            <div class="range-filter__range-controls">
-              <div class="range-filter__scale">
-                <div class="range-filter__bar"></div>
-              </div>
-              <div class="range-filter__toggle range-filter__toggle--min" aria-label="Минимальный уровень"
-                title="Минимальный уровень" tabindex="0"></div>
-              <div class="range-filter__toggle range-filter__toggle--max" aria-label="Максимальный уровень"
-                title="Максимальный уровень" tabindex="0"></div>
-            </div>
-          </div>
-        </fieldset>
-
-        <button type="submit" class="form-travelers__submit" aria-label="Отправить">Показать</button>
-      </form>
     </section>
 
-    <!-- секция попутчики -->
-    <section class="peoples">
-      <div class="page-wrapper">
+
+    <div class="main__row">
+      <section class="form-travelers">
+        <h3 class="form-travelers__title">Подберите идеального попутчика</h3>
+        <form action="https://echo.htmlacademy.ru/" method="GET" target="_blank" class="form-travelers__form">
+
+          <fieldset class="form-travelers__group">
+            <ul class="form-travelers__interests-menu menu-interests">
+              <li class="menu-interests__item">
+                <h4 class="form-travelers__subtitle">Хобби</h4>
+                <ul class="menu-interests__submenu">
+                  <li class="menu-interests__submenu-item">
+                    <input id="menu-interests-gym" type="checkbox" class="menu-interests__field visually-hidden" name="gym" checked />
+                    <label for="menu-interests-gym" class="menu-interests__label">Спортзал</label>
+                  </li>
+                  <li class="menu-interests__submenu-item">
+                    <input id="menu-interests-hookah" type="checkbox" class="menu-interests__field visually-hidden" name="hookax" />
+                    <label for="menu-interests-hookah" class="menu-interests__label">Кальян</label>
+                  </li>
+                  <li class="menu-interests__submenu-item">
+                    <input id="menu-interests-sofa" type="checkbox" class="menu-interests__field visually-hidden" name="sofa" />
+                    <label for="menu-interests-sofa" class="menu-interests__label">Диван</label>
+                  </li>
+                </ul>
+              </li>
+              <li class="menu-interests__item">
+                <h4 class="form-travelers__subtitle">Музыка</h4>
+                <ul class="menu-interests__submenu">
+                  <li class="menu-interests__submenu-item">
+                    <input id="menu-interests-hard-rock" type="checkbox" class="menu-interests__field visually-hidden" name="hard-rock" checked />
+                    <label for="menu-interests-hard-rock" class="menu-interests__label">Тяжелый рок</label>
+                  </li>
+                  <li class="menu-interests__submenu-item">
+                    <input id="menu-interests-russian-rap" type="checkbox" class="menu-interests__field visually-hidden" name="russian-rap" />
+                    <label for="menu-interests-russian-rap" class="menu-interests__label">Русский рэп</label>
+                  </li>
+                  <li class="menu-interests__submenu-item">
+                    <input id="menu-interests-euro-dance" type="checkbox" class="menu-interests__field visually-hidden" name="euro-dance" />
+                    <label for="menu-interests-euro-dance" class="menu-interests__label">Евроденс</label>
+                  </li>
+                </ul>
+              </li>
+              <li class="menu-interests__item">
+                <h4 class="form-travelers__subtitle">Еда</h4>
+                <ul class="menu-interests__submenu">
+                  <li class="menu-interests__submenu-item">
+                    <input id="menu-interests-meat" type="checkbox" class="menu-interests__field visually-hidden" name="meat" checked />
+                    <label for="menu-interests-meat" class="menu-interests__label">Мясоед</label>
+                  </li>
+                  <li class="menu-interests__submenu-item">
+                    <input id="menu-interests-pp" type="checkbox" class="menu-interests__field visually-hidden" name="pp" />
+                    <label for="menu-interests-pp" class="menu-interests__label">Сидит на ПП</label>
+                  </li>
+                  <li class="menu-interests__submenu-item">
+                    <input id="menu-interests-vegan" type="checkbox" class="menu-interests__field visually-hidden" name="vegan" />
+                    <label for="menu-interests-vegan" class="menu-interests__label">Веган-сыроед</label>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </fieldset>
+
+          <fieldset class="form-travelers__group form-travelers__group--transport">
+            <h4 class="form-travelers__subtitle">Транспорт</h4>
+
+            <ul class="form-travelers__transports transport-list">
+              <li class="transport-list__item">
+                <input id="transport-list-avia" type="checkbox" class="transport-list__field visually-hidden" name="avia" checked />
+                <label for="transport-list-avia" class="transport-list__label transport-list__label--avia"
+                  aria-label="Авиаперелет" title="Авиаперелет"></label>
+              </li>
+              <li class="transport-list__item">
+                <input id="transport-list-auto" type="checkbox" class="transport-list__field visually-hidden" name="auto" checked />
+                <label for="transport-list-auto" class="transport-list__label transport-list__label--auto"
+                  aria-label="Автотранспорт" title="Автотранспорт"></label>
+              </li>
+              <li class="transport-list__item">
+                <input id="transport-list-bicycle" type="checkbox" class="transport-list__field visually-hidden" name="bicycle"  />
+                <label for="transport-list-bicycle" class="transport-list__label transport-list__label--bicycle"
+                  aria-label="Велосипед" title="Велосипед"></label>
+              </li>
+              <li class="transport-list__item">
+                <input id="transport-list-run" type="checkbox" class="transport-list__field visually-hidden" name="run" checked />
+                <label for="transport-list-run" class="transport-list__label transport-list__label--run"
+                  aria-label="Пешком" title="Пешком"></label>
+              </li>
+            </ul>
+          </fieldset>
+
+          <fieldset class="form-travelers__group form-travelers__group--range">
+            <h4 class="form-travelers__subtitle">Левел</h4>
+            <div class="range-filter">
+              <div class="range-filter__price-controls">
+                <label class="range-filter__price-label">
+                  <input type="text" class="range-filter__price-field" aria-label="Минимальный уровень" value="30"></label>
+                <label class="range-filter__price-label">
+                  <input type="text" class="range-filter__price-field" aria-label="Максимальный уровень" value="100"></label>
+              </div>
+
+              <div class="range-filter__range-controls">
+                <div class="range-filter__scale">
+                  <div class="range-filter__bar"></div>
+                </div>
+                <div class="range-filter__toggle range-filter__toggle--min" aria-label="Минимальный уровень"
+                  title="Минимальный уровень" tabindex="0"></div>
+                <div class="range-filter__toggle range-filter__toggle--max" aria-label="Максимальный уровень"
+                  title="Максимальный уровень" tabindex="0"></div>
+              </div>
+            </div>
+          </fieldset>
+
+          <button type="submit" class="form-travelers__submit" aria-label="Отправить">Показать</button>
+        </form>
+      </section>
+
+      <!-- секция попутчики -->
+      <section class="peoples">
         <h2 class="visually-hidden">Список попутчиков</h2>
 
         <ul class="peoples__list">
-          <li class="peoples__item">
-            <article class="peoples__card">
-              <img src="img/travelers1.png" alt="Татьяна Фирсова, плавающая в океане" class="peoples__image" width="70"
-                height="70" />
-              <h3 class="peoples__title">Таня<br />Фирсова</h3>
-              <p class="peoples__likes-counter">
-                <button type="button" class="peoples__likes-button peoples__likes-button--active"></button>
-                <span class="visually-hidden">Количество лайков</span>1,5м
-              </p>
+            <li class="peoples__item">
+              <article class="peoples__card">
+                <img src="img/travelers1.png" alt="Татьяна Фирсова, плавающая в океане" class="peoples__image" width="70" height="70" />
+                <h3 class="peoples__title"><span class="peoples__title-text">Таня Фирсова</span></h3>
+                <p class="peoples__likes-counter">
+                  <span class="visually-hidden">Количество лайков</span>1,5м
+                  <button type="button" class="peoples__likes-button peoples__likes-button--active"></button>
+                </p>
 
-              <ul class="peoples__hashtags hashtags">
-                <li class="hashtags__item">#ЗОЖ</li>
-                <li class="hashtags__item">#ПП</li>
-                <li class="hashtags__item">#Фитнес</li>
-                <li class="hashtags__item">#пляж</li>
-                <li class="hashtags__item">#авокадо</li>
-                <li class="hashtags__item">#смузи</li>
-              </ul>
+                <ul class="peoples__hashtags hashtags">
+                  <li class="hashtags__item">#ЗОЖ</li>
+                  <li class="hashtags__item">#ПП</li>
+                  <li class="hashtags__item">#Фитнес</li>
+                  <li class="hashtags__item">#пляж</li>
+                  <li class="hashtags__item">#авокадо</li>
+                  <li class="hashtags__item">#смузи</li>
+                </ul>
 
-              <h4 class="peoples__subtitle peoples__subtitle--places">хочет посетить:</h4>
-              <ul class="peoples__countries">
-                <li class="peoples__countries-item">
-                  <img src="img/sri-lanka.png" alt="Флаг Шри-Ланки" class="peoples__countries-image" width="26"
-                    height="18" />
-                  <p class="peoples__country-name">Шри-Ланка</p>
-                </li>
-                <li class="peoples__countries-item">
-                  <img src="img/thailand.png" alt="Флаг Таиланда" class="peoples__countries-image" width="26"
-                    height="18" />
-                  <p class="peoples__country-name">Таиланд</p>
-                </li>
-                <li class="peoples__countries-item">
-                  <img src="img/seychelles.png" alt="Флаг Сейшельских островов" class="peoples__countries-image"
-                    width="26" height="18" />
-                  <p class="peoples__country-name">Сейшелы</p>
-                </li>
-              </ul>
+                <h4 class="peoples__subtitle peoples__subtitle--places">хочет посетить:</h4>
+                <ul class="peoples__countries">
+                  <li class="peoples__countries-item">
+                    <img src="img/sri-lanka.png" alt="Флаг Шри-Ланки" class="peoples__countries-image" width="26" height="18" />
+                    <p class="peoples__country-name">Шри-Ланка</p>
+                  </li>
+                  <li class="peoples__countries-item">
+                    <img src="img/thailand.png" alt="Флаг Таиланда" class="peoples__countries-image" width="26" height="18" />
+                    <p class="peoples__country-name">Таиланд</p>
+                  </li>
+                  <li class="peoples__countries-item">
+                    <img src="img/seychelles.png" alt="Флаг Сейшельских островов" class="peoples__countries-image" width="26" height="18" />
+                    <p class="peoples__country-name">Сейшелы</p>
+                  </li>
+                </ul>
 
-              <h4 class="peoples__subtitle peoples__subtitle--transport">транспорт:</h4>
-              <ul class="peoples__transports transports" aria-label="Используемые виды трансопрта">
-                <li class="transports__item transports__item--rounded transports__item--gray
-                      transports__item--avia transports__item-active" aria-label="Авиаперелет"></li>
-                <li class="transports__item transports__item--rounded transports__item--gray
-                      transports__item--auto" aria-label="Автотранспорт"></li>
-                <li class="transports__item transports__item--rounded transports__item--gray
-                      transports__item--bicycle" aria-label="Велосипед"></li>
-                <li class="transports__item transports__item--rounded transports__item--gray
-                      transports__item--run" aria-label="Пешком"></li>
-              </ul>
+                <h4 class="peoples__subtitle peoples__subtitle--transport">транспорт:</h4>
+                <ul class="peoples__transports transports" aria-label="Используемые виды трансопрта">
+                  <li class="transports__item transports__item--small transports__item--rounded transports__item--gray
+                    transports__item--avia transports__item--active" aria-label="Авиаперелет"></li>
+                  <li class="transports__item transports__item--small transports__item--rounded transports__item--gray
+                    transports__item--auto" aria-label="Автотранспорт"></li>
+                  <li class="transports__item transports__item--small transports__item--rounded transports__item--gray
+                    transports__item--bicycle" aria-label="Велосипед"></li>
+                  <li class="transports__item transports__item--small transports__item--rounded transports__item--gray
+                    transports__item--run" aria-label="Пешком"></li>
+                </ul>
 
-              <h4 class="peoples__subtitle peoples__subtitle--level">левел:</h4>
-              <div class="peoples__level-container level level--firsova">
-                <span class="level__counter level__counter--light level__counter--small"
-                  aria-label="У Тани Фирсовой 99 уровень">99</span>
-                <span class="level__text level__text--small level__text--hidden">level</span>
-              </div>
+                <h4 class="peoples__subtitle peoples__subtitle--level">левел:</h4>
+                <div class="peoples__level-container level level--firsova">
+                  <span class="level__counter level__counter--no-bordered level__counter--light level__counter--small"
+                    aria-label="У Тани Фирсовой 99 уровень">99</span>
+                  <span class="level__text level__text--gray level__text--small level__text--hidden">level</span>
+                </div>
 
-              <a href="blank.html" class="peoples__link">Позвать</a>
-            </article>
-          </li>
-          <li class="peoples__item">
-            <article class="peoples__card">
-              <img src="img/travelers2.png" alt="Петр Демин в черной шапке на фоне снега" class="peoples__image"
-                width="70" height="70" />
-              <h3 class="peoples__title">Петя<br />Демин</h3>
-              <p class="peoples__likes-counter">
-                <span class="visually-hidden">Количество лайков</span>1500
-                <button type="button" class="peoples__likes-button"></button>
-              </p>
+                <a href="blank.html" class="peoples__link">Позвать</a>
+              </article>
+            </li>
+            <li class="peoples__item">
+              <article class="peoples__card">
+                <img src="img/travelers2.png" alt="Петр Демин в черной шапке на фоне снега" class="peoples__image"
+                  width="70" height="70" />
+                <h3 class="peoples__title"><span class="peoples__title-text">Петя Демин</span></h3>
+                <p class="peoples__likes-counter">
+                  <span class="visually-hidden">Количество лайков</span>1500
+                  <button type="button" class="peoples__likes-button"></button>
+                </p>
 
-              <ul class="peoples__hashtags hashtags">
-                <li class="hashtags__item">#бургер</li>
-                <li class="hashtags__item">#бар</li>
-                <li class="hashtags__item">#футбол</li>
-                <li class="hashtags__item">#концерт</li>
-                <li class="hashtags__item">#крафт</li>
-              </ul>
+                <ul class="peoples__hashtags hashtags">
+                  <li class="hashtags__item">#бургер</li>
+                  <li class="hashtags__item">#бар</li>
+                  <li class="hashtags__item">#футбол</li>
+                  <li class="hashtags__item">#концерт</li>
+                  <li class="hashtags__item">#крафт</li>
+                </ul>
 
-              <h4 class="peoples__subtitle peoples__subtitle--places">хочет посетить:</h4>
-              <ul class="peoples__countries">
-                <li class="peoples__countries-item">
-                  <img src="img/belgium.png" alt="Флаг Бельгии" class="peoples__countries-image" width="26"
-                    height="18" />
-                  <p class="peoples__country-name">Бельгия</p>
-                </li>
-                <li class="peoples__countries-item">
-                  <img src="img/czech.png" alt="Флаг Чехии" class="peoples__countries-image" width="26" height="18" />
-                  <p class="peoples__country-name">Чехия</p>
-                </li>
-              </ul>
+                <h4 class="peoples__subtitle peoples__subtitle--places">хочет посетить:</h4>
+                <ul class="peoples__countries">
+                  <li class="peoples__countries-item">
+                    <img src="img/belgium.png" alt="Флаг Бельгии" class="peoples__countries-image" width="26"
+                      height="18" />
+                    <p class="peoples__country-name">Бельгия</p>
+                  </li>
+                  <li class="peoples__countries-item">
+                    <img src="img/czech.png" alt="Флаг Чехии" class="peoples__countries-image" width="26" height="18" />
+                    <p class="peoples__country-name">Чехия</p>
+                  </li>
+                </ul>
 
-              <h4 class="peoples__subtitle peoples__subtitle--transport">транспорт:</h4>
-              <ul class="peoples__transports transports" aria-label="Используемые виды трансопрта">
-                <li class="transports__item transports__item--rounded transports__item--gray
-                      transports__item--avia transports__item-active" aria-label="Авиаперелет"></li>
-                <li class="transports__item transports__item--rounded transports__item--gray
-                      transports__item--auto transports__item-active" aria-label="Автотранспорт"></li>
-                <li class="transports__item transports__item--rounded transports__item--gray
-                      transports__item--bicycle" aria-label="Велосипед"></li>
-                <li class="transports__item transports__item--rounded transports__item--gray
-                      transports__item--run transports__item-active" aria-label="Пешком"></li>
-              </ul>
+                <h4 class="peoples__subtitle peoples__subtitle--transport">транспорт:</h4>
+                <ul class="peoples__transports transports" aria-label="Используемые виды трансопрта">
+                  <li class="transports__item transports__item--small transports__item--rounded transports__item--gray
+                    transports__item--avia transports__item--active" aria-label="Авиаперелет"></li>
+                  <li class="transports__item transports__item--small transports__item--rounded transports__item--gray
+                    transports__item--auto transports__item--active" aria-label="Автотранспорт"></li>
+                  <li class="transports__item transports__item--small transports__item--rounded transports__item--gray
+                    transports__item--bicycle" aria-label="Велосипед"></li>
+                  <li class="transports__item transports__item--small transports__item--rounded transports__item--gray
+                    transports__item--run transports__item--active" aria-label="Пешком"></li>
+                </ul>
 
-              <h4 class="peoples__subtitle peoples__subtitle--level">левел:</h4>
-              <div class="peoples__level-container level level--demin">
-                <span class="level__counter level__counter--light level__counter--small"
-                  aria-label="У Пети Демина 80 уровень">80</span>
-                <span class="level__text level__text--small level__text--hidden">level</span>
-              </div>
+                <h4 class="peoples__subtitle peoples__subtitle--level">левел:</h4>
+                <div class="peoples__level-container level level--demin">
+                  <span class="level__counter level__counter--no-bordered level__counter--light level__counter--small"
+                    aria-label="У Пети Демина 80 уровень">80</span>
+                  <span class="level__text level__text--gray level__text--small level__text--hidden">level</span>
+                </div>
 
-              <a href="blank.html" class="peoples__link">Позвать</a>
-            </article>
-          </li>
-          <li class="peoples__item">
-            <article class="peoples__card">
-              <img src="img/travelers3.png" alt="Марк Смолов в черной кепке, сидящий на крыше машыны"
-                class="peoples__image" width="70" height="70" />
-              <h3 class="peoples__title">Марк<br />Смолов</h3>
-              <p class="peoples__likes-counter">
-                <span class="visually-hidden">Количество лайков</span>170
-                <button type="button" class="peoples__likes-button"></button>
-              </p>
+                <a href="blank.html" class="peoples__link">Позвать</a>
+              </article>
+            </li>
+            <li class="peoples__item">
+              <article class="peoples__card">
+                <img src="img/travelers3.png" alt="Марк Смолов в черной кепке, сидящий на крыше машыны"
+                  class="peoples__image" width="70" height="70" />
+                <h3 class="peoples__title"><span class="peoples__title-text">Марк Смолов</span></h3>
+                <p class="peoples__likes-counter">
+                  <span class="visually-hidden">Количество лайков</span>170
+                  <button type="button" class="peoples__likes-button"></button>
+                </p>
 
-              <ul class="peoples__hashtags hashtags">
-                <li class="hashtags__item">#рэп</li>
-                <li class="hashtags__item">#тату</li>
-                <li class="hashtags__item">#хайпбист</li>
-                <li class="hashtags__item">#кроссовки</li>
-                <li class="hashtags__item">#суприм</li>
-              </ul>
+                <ul class="peoples__hashtags hashtags">
+                  <li class="hashtags__item">#рэп</li>
+                  <li class="hashtags__item">#тату</li>
+                  <li class="hashtags__item">#хайпбист</li>
+                  <li class="hashtags__item">#кроссовки</li>
+                  <li class="hashtags__item">#суприм</li>
+                </ul>
 
-              <h4 class="peoples__subtitle peoples__subtitle--places">хочет посетить:</h4>
-              <ul class="peoples__countries">
-                <li class="peoples__countries-item">
-                  <img src="img/usa.png" alt="Флаг США" class="peoples__countries-image" width="26" height="18" />
-                  <p class="peoples__country-name">США</p>
-                </li>
-                <li class="peoples__countries-item">
-                  <img src="img/australia.png" alt="Флаг Австралии" class="peoples__countries-image" width="26"
-                    height="18" />
-                  <p class="peoples__country-name">Австралия</p>
-                </li>
-                <li class="peoples__countries-item">
-                  <img src="img/dominica.png" alt="Флаг Доминики" class="peoples__countries-image" width="26"
-                    height="18" />
-                  <p class="peoples__country-name">Доминика</p>
-                </li>
-              </ul>
+                <h4 class="peoples__subtitle peoples__subtitle--places">хочет посетить:</h4>
+                <ul class="peoples__countries">
+                  <li class="peoples__countries-item">
+                    <img src="img/usa.png" alt="Флаг США" class="peoples__countries-image" width="26" height="18" />
+                    <p class="peoples__country-name">США</p>
+                  </li>
+                  <li class="peoples__countries-item">
+                    <img src="img/australia.png" alt="Флаг Австралии" class="peoples__countries-image" width="26"
+                      height="18" />
+                    <p class="peoples__country-name">Австралия</p>
+                  </li>
+                  <li class="peoples__countries-item">
+                    <img src="img/dominica.png" alt="Флаг Доминики" class="peoples__countries-image" width="26"
+                      height="18" />
+                    <p class="peoples__country-name">Доминика</p>
+                  </li>
+                </ul>
 
-              <h4 class="peoples__subtitle peoples__subtitle--transport">транспорт:</h4>
-              <ul class="peoples__transports transports" aria-label="Используемые виды трансопрта">
-                <li class="transports__item transports__item--rounded transports__item--gray
-                      transports__item--avia transports__item-active" aria-label="Авиаперелет"></li>
-                <li class="transports__item transports__item--rounded transports__item--gray
-                      transports__item--auto" aria-label="Автотранспорт"></li>
-                <li class="transports__item transports__item--rounded transports__item--gray
-                      transports__item--bicycle transports__item-active" aria-label="Велосипед"></li>
-                <li class="transports__item transports__item--rounded transports__item--gray
-                      transports__item--run" aria-label="Пешком"></li>
-              </ul>
+                <h4 class="peoples__subtitle peoples__subtitle--transport">транспорт:</h4>
+                <ul class="peoples__transports transports" aria-label="Используемые виды трансопрта">
+                  <li class="transports__item transports__item--small transports__item--rounded transports__item--gray
+                    transports__item--avia transports__item--active" aria-label="Авиаперелет"></li>
+                  <li class="transports__item transports__item--small transports__item--rounded transports__item--gray
+                    transports__item--auto" aria-label="Автотранспорт"></li>
+                  <li class="transports__item transports__item--small transports__item--rounded transports__item--gray
+                    transports__item--bicycle transports__item--active" aria-label="Велосипед"></li>
+                  <li class="transports__item transports__item--small transports__item--rounded transports__item--gray
+                    transports__item--run" aria-label="Пешком"></li>
+                </ul>
 
-              <h4 class="peoples__subtitle peoples__subtitle--level">левел:</h4>
-              <div class="peoples__level-container level level--smolov">
-                <span class="level__counter level__counter--light level__counter--small"
-                  aria-label="У Марка Смолова 25 уровень">25</span>
-                <span class="level__text level__text--small level__text--hidden">level</span>
-              </div>
+                <h4 class="peoples__subtitle peoples__subtitle--level">левел:</h4>
+                <div class="peoples__level-container level level--smolov">
+                  <span class="level__counter level__counter--no-bordered level__counter--light level__counter--small"
+                    aria-label="У Марка Смолова 25 уровень">25</span>
+                  <span class="level__text level__text--gray level__text--small level__text--hidden">level</span>
+                </div>
 
-              <a href="blank.html" class="peoples__link">Позвать</a>
-            </article>
-          </li>
-          <li class="peoples__item">
-            <article class="peoples__card">
-              <img src="img/travelers4.png" alt="Лариса Роговая в синем деловом костюме" class="peoples__image"
-                width="70" height="70" />
-              <h3 class="peoples__title">Лариса<br />Роговая</h3>
-              <p class="peoples__likes-counter">
-                <span class="visually-hidden">Количество лайков</span>23
-                <button type="button" class="peoples__likes-button"></button>
-              </p>
+                <a href="blank.html" class="peoples__link">Позвать</a>
+              </article>
+            </li>
+            <li class="peoples__item">
+              <article class="peoples__card">
+                <img src="img/travelers4.png" alt="Лариса Роговая в синем деловом костюме" class="peoples__image"
+                  width="70" height="70" />
+                <h3 class="peoples__title peoples__title--green">
+                  <span class="peoples__title-text peoples__title-text--green">Лариса Роговая</span></h3>
+                <p class="peoples__likes-counter">
+                  <span class="visually-hidden">Количество лайков</span>23
+                  <button type="button" class="peoples__likes-button"></button>
+                </p>
 
-              <ul class="peoples__hashtags hashtags">
-                <li class="hashtags__item">#образование</li>
-                <li class="hashtags__item">#карьера</li>
-                <li class="hashtags__item">#учеба</li>
-                <li class="hashtags__item">#линкедин</li>
-              </ul>
+                <ul class="peoples__hashtags hashtags">
+                  <li class="hashtags__item">#образование</li>
+                  <li class="hashtags__item">#карьера</li>
+                  <li class="hashtags__item">#учеба</li>
+                  <li class="hashtags__item">#линкедин</li>
+                </ul>
 
-              <h4 class="peoples__subtitle peoples__subtitle--places">хочет посетить:</h4>
-              <ul class="peoples__countries">
-                <li class="peoples__countries-item">
-                  <img src="img/united-kingdom.png" alt="Флаг Великобритании" class="peoples__countries-image"
-                    width="26" height="18" />
-                  <p class="peoples__country-name">Великобритания</p>
-                </li>
-                <li class="peoples__countries-item">
-                  <img src="img/germany.png" alt="Флаг Германии" class="peoples__countries-image" width="26"
-                    height="18" />
-                  <p class="peoples__country-name">Германия</p>
-                </li>
-              </ul>
+                <h4 class="peoples__subtitle peoples__subtitle--places">хочет посетить:</h4>
+                <ul class="peoples__countries">
+                  <li class="peoples__countries-item">
+                    <img src="img/united-kingdom.png" alt="Флаг Великобритании" class="peoples__countries-image"
+                      width="26" height="18" />
+                    <p class="peoples__country-name">Великобритания</p>
+                  </li>
+                  <li class="peoples__countries-item">
+                    <img src="img/germany.png" alt="Флаг Германии" class="peoples__countries-image" width="26"
+                      height="18" />
+                    <p class="peoples__country-name">Германия</p>
+                  </li>
+                </ul>
 
-              <h4 class="peoples__subtitle peoples__subtitle--transport">транспорт:</h4>
-              <ul class="peoples__transports transports" aria-label="Используемые виды трансопрта">
-                <li class="transports__item transports__item--rounded transports__item--gray
-                      transports__item--avia transports__item-active" aria-label="Авиаперелет"></li>
-                <li class="transports__item transports__item--rounded transports__item--gray
-                      transports__item--auto transports__item-active" aria-label="Автотранспорт"></li>
-                <li class="transports__item transports__item--rounded transports__item--gray
-                      transports__item--bicycle" aria-label="Велосипед"></li>
-                <li class="transports__item transports__item--rounded transports__item--gray
-                      transports__item--run" aria-label="Пешком"></li>
-              </ul>
+                <h4 class="peoples__subtitle peoples__subtitle--transport">транспорт:</h4>
+                <ul class="peoples__transports transports" aria-label="Используемые виды трансопрта">
+                  <li class="transports__item transports__item--small transports__item--rounded transports__item--gray
+                    transports__item--avia transports__item--active" aria-label="Авиаперелет"></li>
+                  <li class="transports__item transports__item--small transports__item--rounded transports__item--gray
+                    transports__item--auto transports__item--active" aria-label="Автотранспорт"></li>
+                  <li class="transports__item transports__item--small transports__item--rounded transports__item--gray
+                    transports__item--bicycle" aria-label="Велосипед"></li>
+                  <li class="transports__item transports__item--small transports__item--rounded transports__item--gray
+                    transports__item--run" aria-label="Пешком"></li>
+                </ul>
 
-              <h4 class="peoples__subtitle peoples__subtitle--level">левел:</h4>
-              <div class="peoples__level-container level level--yarovaya">
-                <span class="level__counter level__counter--light level__counter--small"
-                  aria-label="У Ларисы Роговой 50 уровень">50</span>
-                <span class="level__text level__text--small level__text--hidden">level</span>
-              </div>
+                <h4 class="peoples__subtitle peoples__subtitle--level">левел:</h4>
+                <div class="peoples__level-container level level--yarovaya">
+                  <span class="level__counter level__counter--no-bordered level__counter--light level__counter--small"
+                    aria-label="У Ларисы Роговой 50 уровень">50</span>
+                  <span class="level__text level__text--gray level__text--small level__text--hidden">level</span>
+                </div>
 
-              <a href="blank.html" class="peoples__link">Позвать</a>
-            </article>
-          </li>
+                <a href="blank.html" class="peoples__link">Позвать</a>
+              </article>
+            </li>
         </ul>
 
         <a href="blank.html" class="peoples__add-traveler">Показать еще</a>
 
         <footer class="peoples__footer travelers-footer">
-          <ul class="travelers-footer__list">
-            <li class="travelers-footer__item"><a
-                class="travelers-footer__pages-link travelers-footer__pages-link__current" aria-label="Страница 1">1</a>
-            </li>
-            <li class="travelers-footer__item"><a href="blank.html" class="travelers-footer__pages-link"
-                aria-label="Страница 2">2</a></li>
-            <li class="travelers-footer__item"><a href="blank.html" class="travelers-footer__pages-link"
-                aria-label="Страница 3">3</a></li>
-            <li class="travelers-footer__item"><a href="blank.html" class="travelers-footer__pages-link"
-                aria-label="Страница 4">4</a></li>
-          </ul>
-          <div class="travelers-footer__wrapper">
-            <a class="travelers-footer__link travelers-footer__link--back travelers-footer__link--disabled"
-              aria-label="Предыдущая страница с попутчиками" title="Предыдущая страница с попутчиками"></a>
-            <a href="balnk.html" class="travelers-footer__link travelers-footer__link--forward travelers-footer__link"
-              aria-label="Следующая страница с попутчиками" title="Следующая страница с попутчиками"></a>
-          </div>
+            <ul class="travelers-footer__list">
+              <li class="travelers-footer__item">
+                <a class="travelers-footer__pages-link travelers-footer__pages-link--current" aria-label="Страница 1">1</a></li>
+              <li class="travelers-footer__item"><a href="blank.html" class="travelers-footer__pages-link" aria-label="Страница 2">2</a></li>
+              <li class="travelers-footer__item"><a href="blank.html" class="travelers-footer__pages-link" aria-label="Страница 3">3</a></li>
+              <li class="travelers-footer__item"><a href="blank.html" class="travelers-footer__pages-link" aria-label="Страница 4">4</a></li>
+            </ul>
+            <div class="travelers-footer__wrapper">
+              <a class="travelers-footer__link travelers-footer__link--back travelers-footer__link--disabled"
+                aria-label="Предыдущая страница с попутчиками" title="Предыдущая страница с попутчиками"></a>
+              <a href="balnk.html" class="travelers-footer__link travelers-footer__link--forward travelers-footer__link"
+                aria-label="Следующая страница с попутчиками" title="Следующая страница с попутчиками"></a>
+            </div>
         </footer>
+      </section>
+    </div>
 
-      </div>
-    </section>
+
 
   </main>
 
   <footer class="page-footer">
     <div class="page-footer__wrapper page-wrapper">
-      <a class="page-footer__link">
-        <img src="img/pognali-logo_dark.png" alt="Логотип Погнали" class="page-footer__logo page-logo" width="96"
-          height="15" />
-      </a>
+      <a href="index.html" class="page-footer__link">
+        <img src="img/pognali-logo_dark.png" alt="Логотип Погнали" class="page-footer__logo page-logo" width="96" height="15" /></a>
 
       <ul class="page-footer__socials-list socials">
         <li class="socials__item socials__item--yellow">
           <a href="https://ru-ru.facebook.com/" class="socials__link" aria-label="Наша страница в facebook">
-            <img src="img/facebook-logo.svg" alt="Логотип facebook" class="socials__logo"></a>
+            <img src="img/facebook-logo.svg" alt="Логотип facebook" class="socials__logo socials__logo--facebook" width="11" height="21"></a>
         </li>
         <li class="socials__item socials__item--yellow">
           <a href="https://vk.com/" class="socials__link" aria-label="Наша страница в ВКонтакте">
-            <img src="img/vkcom-logo.svg" alt="логотип ВКонтакте" class="socials__logo"></a>
+            <img src="img/vkcom-logo.svg" alt="логотип ВКонтакте" class="socials__logo socials__logo--vk" width="23" height="12"></a>
         </li>
         <li class="socials__item socials__item--yellow">
           <a href="https://www.instagram.com/" class="socials__link" aria-label="Наша страница в Instagram">
-            <img src="img/instagram-logo.svg" alt="Логотип Instagram" class="socials__logo"></a>
+            <img src="img/instagram-logo.svg" alt="Логотип Instagram" class="socials__logo socials__logo--instagram" width="18" height="14"></a>
         </li>
       </ul>
 
       <div class="page-footer__copyright-container">
         <p class="page-footer__copyright">Разработано</p>
         <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__study-link">
-          <img src="img/htmlacademy.svg" alt="Логотип HTML Academy" class="page-footer__study-center" width="27"
-            height="34">
+          <img src="img/htmlacademy.svg" alt="Логотип HTML Academy" class="page-footer__study-center" width="27"height="34">
         </a>
       </div>
     </div>

@@ -58,7 +58,7 @@
   font-size: 38px;
   line-height: 38px;
   position: relative;
-  border-bottom: 1px solid rgba(($special_gray), 0.3);
+  border-bottom: 1px solid rgba(($basic_white), 0.3);
   margin-bottom: 6%;
 
   &--light {
@@ -70,7 +70,6 @@
   }
 
   &--small {
-    border: none;
     font-weight: bold;
     font-size: 24px;
     line-height: 24px;
@@ -79,6 +78,14 @@
   &--form {
     @media (min-width: $desktop_width) {
       color: $basic_white;
+    }
+  }
+
+  &--no-bordered {
+    border-bottom: 1px solid rgba(($basic_black), 0.1);
+
+    @media (max-width: $mobile_width_only) {
+      border: none;
     }
   }
 }
@@ -90,7 +97,9 @@
   color: $special_gray;
 
   &--hidden {
-    display: none;
+    @media (max-width: $mobile_width_only) {
+      display: none;
+    }
   }
 
   &--white {
@@ -106,5 +115,9 @@
     @media (min-width: $desktop_width) {
       color: $basic_white;
     }
+  }
+
+  &--gray {
+    color: rgba($basic_black, 0.4);
   }
 }

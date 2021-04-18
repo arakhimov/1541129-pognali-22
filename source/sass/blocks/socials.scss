@@ -1,4 +1,5 @@
 $socials-icon: 45px;
+$socials-icon-tablet: 60px;
 
 .socials {
   list-style-type: none;
@@ -15,4 +16,41 @@ $socials-icon: 45px;
   height: $socials-icon;
   border-radius: 50%;
   background-color: $basic_yellow;
+
+  @media (min-width: $tablet_width) {
+    width: $socials-icon-tablet;
+    height: $socials-icon-tablet;
+  }
+}
+
+.socials__logo {
+  &--facebook {
+    width: 11px;
+    height: 21px;
+
+    @media (min-width: $tablet_width) {
+      width: 14px;
+      height: 26px;
+    }
+  }
+
+  &--vk {
+    width: 23px;
+    height: 12px;
+
+    @media (min-width: $tablet_width) {
+      width: 28px;
+      height: 18px;
+    }
+  }
+
+  &--instagram {
+    width: 18px;
+    height: 14px;
+
+    @media (min-width: $tablet_width) {
+      width: 22px;
+      height: 22px;
+    }
+  }
 }
