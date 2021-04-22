@@ -91,6 +91,8 @@
 
   &--catalog {
     margin-bottom: 15px;
+    padding-left: 25px;
+    padding-right: 25px;
 
     @media (min-width: $tablet_width) {
       width: 346px;
@@ -160,6 +162,7 @@
   letter-spacing: 0.1em;
   text-transform: uppercase;
   border: none;
+  padding: 0;
 
   &--active {
     background-color: $basic_gray_light;
@@ -186,6 +189,7 @@
       font-size: 60px;
       line-height: 60px;
       margin-bottom: 10px;
+      justify-content: flex-start;
     }
   }
 
@@ -215,6 +219,8 @@
     padding: 0;
     width: auto;
     background-color: transparent;
+    padding-left: 25px;
+    padding-right: 25px;
   }
 }
 

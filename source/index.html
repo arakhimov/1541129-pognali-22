@@ -19,9 +19,15 @@
   <header class="page-header">
     <div class="page-header__container page-header__container--nojs page-header__container--opened">
       <div class="page-header__row">
-        <a class="page-header__link">
-          <img src="img/pognali-logo_dark.png" alt="Логотип сервиса Погнали" class="page-header__logo page-header__logo--dark" width="96" height="15" />
-          <img src="img/pognali-logo_white.png" alt="Логотип сервиса Погнали" class="page-header__logo page-header__logo--white" width="96" height="15" />
+        <a href="index.html" class="page-header__link">
+          <picture class="page-header__logo page-header__logo--white">
+            <source media="(min-width: 768px)" srcset="img/pognali-logo_dark_desktop.png">
+            <img src="img/pognali-logo_white.png" alt="Логотип сервиса Погнали" class="page-header__logo-image" width="96" height="15" />
+          </picture>
+          <picture class="page-header__logo page-header__logo--dark">
+            <source media="(min-width: 768px)" srcset="img/pognali-logo_white_tablet.png">
+            <img src="img/pognali-logo_dark.png" alt="Логотип сервиса Погнали" class="page-header__logo-image" width="96" height="15" />
+          </picture>
         </a>
         <button type="button" class="page-header__toggle-menu page-header__toggle-menu--opened" aria-label="Открыть мобильное меню"></button>
         <a href="blank.html" class="page-header__authorization page-header__authorization--opened button-autorization">авторизация</a>

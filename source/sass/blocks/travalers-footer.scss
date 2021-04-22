@@ -1,5 +1,4 @@
 .travelers-footer {
-  width: 100%;
   min-height: 50px;
   display: flex;
   background-color: $basic_white;
@@ -8,8 +7,6 @@
   @media (min-width: $tablet_width) {
     width: calc(100% - 80px);
     min-height: 100px;
-    padding-left: 28px;
-    padding-right: 35px;
     justify-content: space-between;
   }
 

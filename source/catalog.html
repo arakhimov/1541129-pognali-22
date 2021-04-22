@@ -16,82 +16,55 @@
 </head>
 
 <body class="page__body">
-  <header class="page-header page-header--lighten page-header--form">
-    <div class="page-wrapper">
-      <div class="page-header__container">
+  <header class="page-header">
+    <div class="page-header__container page-header__container--nojs page-header__container--opened page-header__container--ligthen page-header__container--catalog page-header__container--form">
+      <div class="page-header__row">
         <a href="index.html" class="page-header__link">
-          <img src="img/pognali-logo_white.png" alt="Логотип Погнали" class="page-header__logo page-logo" width="96"
-            height="15" />
+          <picture class="page-header__logo page-header__logo--white">
+            <source media="(min-width: 768px)" srcset="img/pognali-logo_dark_desktop.png">
+            <img src="img/pognali-logo_white.png" alt="Логотип сервиса Погнали" class="page-header__logo-image" width="96" height="15" />
+          </picture>
+          <picture class="page-header__logo page-header__logo--dark">
+            <source media="(min-width: 768px)" srcset="img/pognali-logo_white_tablet.png">
+            <img src="img/pognali-logo_dark.png" alt="Логотип сервиса Погнали" class="page-header__logo-image" width="96" height="15" />
+          </picture>
         </a>
+        <button type="button" class="page-header__toggle-menu page-header__toggle-menu--opened" aria-label="Открыть мобильное меню"></button>
+        <a href="blank.html" class="page-header__authorization page-header__authorization--opened button-autorization">авторизация</a>
+      </div>
 
-        <button type="button" class="page-header__open-menu desktop-none" aria-label="Открыть мобильное меню"></button>
-
-        <nav class="page-header__navigation navigation">
+      <div class="page-header__popup page-header__popup--opened">
+        <nav class="page-header__navigation page-header__navigation--opened navigation">
           <ul class="navigation__list">
-            <li class="navigation__item"><a href="blank.html" class="navigation__link">О сервисе</a></li>
-            <li class="navigation__item"><a href="form.html" class="navigation__link">Направления</a></li>
-            <li class="navigation__item"><a href="catalog.html" class="navigation__link">Попутчики</a></li>
+            <li class="navigation__item"><a href="blank.html" class="navigation__link navigation__link--dark">О сервисе</a></li>
+            <li class="navigation__item"><a href="form.html" class="navigation__link navigation__link--dark">Направления</a></li>
+            <li class="navigation__item"><a href="catalog.html" class="navigation__link navigation__link--dark">Попутчики</a></li>
           </ul>
         </nav>
 
-        <div class="page-menu">
-          <a href="tel:+78005558628" class="page-menu__phone"
-            aria-label="Позвоните нам по номеру телефона: 8 800 555-86-28"></a>
-          <a href="mailto:mail@htmlacademy.ru" class="page-menu__email"
-            aria-label="Напишите нам на почтовый ящик: mail@htmlacademy.ru"></a>
-          <a href="blank.html" class="page-header__authorization button-autorization">авторизация</a>
+        <div class="page-menu page-menu--opened">
+          <a href="tel:+78005558628" class="page-menu__phone page-menu__phone--dark" aria-label="Позвоните нам по номеру телефона: 8 800 555-86-28">
+            <span class="page-menu__link-text">8 800 555-86-28</span></a>
+          <a href="mailto:mail@htmlacademy.ru" class="page-menu__email page-menu__email--dark" aria-label="Напишите нам на почтовый ящик: mail@htmlacademy.ru">
+            <span class="page-menu__link-text">mail@htmlacademy.ru</span></a>
+          <a href="blank.html" class="page-menu__authorization page-header__authorization button-autorization">авторизация</a>
         </div>
+
+        <ul class="page-header__socials-list socials socials--popup">
+          <li class="socials__item">
+            <a href="https://ru-ru.facebook.com/" class="socials__link" aria-label="Наша страница в facebook">
+              <img src="img/facebook-logo.svg" alt="Логотип facebook" class="socials__logo socials__logo--facebook" width="11" height="21"></a>
+          </li>
+          <li class="socials__item">
+            <a href="https://vk.com/" class="socials__link" aria-label="Наша страница в ВКонтакте">
+              <img src="img/vkcom-logo.svg" alt="логотип ВКонтакте" class="socials__logo socials__logo--vk" width="23" height="12"></a>
+          </li>
+          <li class="socials__item">
+            <a href="https://www.instagram.com/" class="socials__link" aria-label="Наша страница в Instagram">
+              <img src="img/instagram-logo.svg" alt="Логотип Instagram" class="socials__logo socials__logo--instagram" width="18" height="18"></a>
+          </li>
+        </ul>
       </div>
-
-      <section class="page-header__popup popup-menu">
-        <div class="page-wrapper">
-          <div class="popup-menu__header">
-            <a class="page-header__link">
-              <img src="img/pognali-logo_dark.png" alt="Логотип Погнали" class="page-header__logo page-logo" width="96"
-                height="15" />
-            </a>
-            <button type="button" class="popup-menu__close-menu" aria-label="Закрыть мобильное меню"></button>
-            <a href="blank.html" class="popup-menu__authorization button-autorization">авторизация</a>
-          </div>
-
-          <nav class="popup-menu__navigation">
-            <ul class="popup-menu__list">
-              <li class="popup-menu__item"><a href="blank.html" class="popup-menu__link">О сервисе</a></li>
-              <li class="popup-menu__item"><a href="form.html" class="popup-menu__link">Направления</a></li>
-              <li class="popup-menu__item"><a href="catalog.html" class="popup-menu__link">Попутчики</a></li>
-            </ul>
-          </nav>
-
-          <a href="blank.html"
-            class="popup-menu__authorization popup-menu__authorization--popup button-autorization">авторизация</a>
-
-          <ul class="popup-menu__contacts-list list-contacts">
-            <li class="list-contacts__item">
-              <a href="tel:+78005558628" class="list-contacts__telephone list-contacts__telephone--dark"
-                aria-label="Позвоните нам по номеру телефона: 8 800 555-86-28">8 800 555-86-28</a>
-            </li>
-            <li class="list-contacts__item">
-              <a href="mailto:mail@htmlacademy.ru" class="list-contacts__email list-contacts__email--dark"
-                aria-label="Напишите нам на почтовый ящик: mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-            </li>
-          </ul>
-
-          <ul class="popup-menu__socials-list socials">
-            <li class="socials__item">
-              <a href="https://ru-ru.facebook.com/" class="socials__link" aria-label="Наша страница в facebook">
-                <img src="img/facebook-logo.svg" alt="Логотип facebook" class="socials__logo"></a>
-            </li>
-            <li class="socials__item">
-              <a href="https://vk.com/" class="socials__link" aria-label="Наша страница в ВКонтакте">
-                <img src="img/vkcom-logo.svg" alt="логотип ВКонтакте" class="socials__logo"></a>
-            </li>
-            <li class="socials__item">
-              <a href="https://www.instagram.com/" class="socials__link" aria-label="Наша страница в Instagram">
-                <img src="img/instagram-logo.svg" alt="Логотип Instagram" class="socials__logo"></a>
-            </li>
-          </ul>
-        </div>
-      </section>
     </div>
   </header>
 
@@ -104,41 +77,21 @@
 
     <!-- секция фильтр -->
     <section class="filter">
-      <header class="filter__header">
-        <div class="filter__wrapper">
-          <h2 class="filter__title">Фильтрация по странам:</h2>
-          <ul class="filter__countries-group-list group-countries">
-            <li class="group-countries__item">
-              <a href="#" class="group-counries__link group-counries__link--active">Европа</a>
-            </li>
-            <li class="group-countries__item"><a href="#" class="group-counries__link">Азия</a></li>
-            <li class="group-countries__item"><a href="#" class="group-counries__link">Америка</a></li>
-            <li class="group-countries__item"><a href="#" class="group-counries__link">Острова</a></li>
-          </ul>
-          <button type="button" class="filter__button filter__button--show" aria-label="Показать список стран" title="Показать список стран">
-            <span class="filter__button-text">Показать все</span></button>
-        </div>
-      </header>
+      <section class="filter__header">
+        <h2 class="filter__title">Фильтрация по странам:</h2>
+        <ul class="filter__countries-group-list group-countries">
+          <li class="group-countries__item">
+            <a href="#" class="group-counries__link group-counries__link--active">Европа</a>
+          </li>
+          <li class="group-countries__item"><a href="#" class="group-counries__link">Азия</a></li>
+          <li class="group-countries__item"><a href="#" class="group-counries__link">Америка</a></li>
+          <li class="group-countries__item"><a href="#" class="group-counries__link">Острова</a></li>
+        </ul>
+        <button type="button" class="filter__button filter__button--show" aria-label="Cписок стран" title="Cписок стран">
+      </section>
 
-      <section class="filter__popup filter__popup--opened">
-        <header class="filter__header">
-          <div class="filter__wrapper">
-            <h2 class="filter__title">Фильтрация по странам:</h2>
-            <ul class="filter__countries-group-list group-countries group-countries--popup">
-              <li class="group-countries__item group-countries__item--popup">
-                <a href="#" class="group-counries__link group-counries__link--active">Европа</a>
-              </li>
-              <li class="group-countries__item group-countries__item--popup"><a href="#" class="group-counries__link">Азия</a></li>
-              <li class="group-countries__item group-countries__item--popup"><a href="#" class="group-counries__link">Америка</a></li>
-              <li class="group-countries__item group-countries__item--popup"><a href="#" class="group-counries__link">Острова</a></li>
-            </ul>
-            <button type="button" class="filter__button filter__button--hide" aria-label="Свернуть список стран" title="Свернуть список стран">
-              <span class="filter__button-text">Свернуть</span></button>
-          </div>
-        </header>
-
-        <section class="filter__index index index--catalog">
-          <ul class="index__headind-list index__headind-list--catalog">
+      <section class="filter__index index index--catalog">
+        <ul class="index__headind-list index__headind-list--catalog">
             <li class="index__heading-item index__heading-item--catalog">
               <button type="button" class="index__button index__button--catalog index__button--catalog-active" value="a" aria-pressed="true">а</button>
             </li>
@@ -214,9 +167,9 @@
             <li class="index__heading-item index__heading-item--catalog">
               <button type="button" class="index__button index__button--catalog" value="я">я</button>
             </li>
-          </ul>
+        </ul>
 
-          <ul class="index__choise-list index__choise-list--catalog">
+        <ul class="index__choise-list index__choise-list--catalog">
             <li class="index__choise-item index__choise-item--open index__choise-item--active" data-heading="а">
               <span class="index__headind-symbol index__headind-symbol--catalog">а</span>
               <ul class="index__list index__list--catalog">
@@ -507,11 +460,11 @@
                 <li class="index__item"><a href="#" class="index__link">Япония</a></li>
               </ul>
             </li>
-          </ul>
-        </section>
+        </ul>
 
         <button type="button" class="filter__hide-button">Свернуть</button>
       </section>
+
     </section>
 
 
@@ -860,25 +813,22 @@
         <a href="blank.html" class="peoples__add-traveler">Показать еще</a>
 
         <footer class="peoples__footer travelers-footer">
-            <ul class="travelers-footer__list">
-              <li class="travelers-footer__item">
-                <a class="travelers-footer__pages-link travelers-footer__pages-link--current" aria-label="Страница 1">1</a></li>
-              <li class="travelers-footer__item"><a href="blank.html" class="travelers-footer__pages-link" aria-label="Страница 2">2</a></li>
-              <li class="travelers-footer__item"><a href="blank.html" class="travelers-footer__pages-link" aria-label="Страница 3">3</a></li>
-              <li class="travelers-footer__item"><a href="blank.html" class="travelers-footer__pages-link" aria-label="Страница 4">4</a></li>
-            </ul>
-            <div class="travelers-footer__wrapper">
-              <a class="travelers-footer__link travelers-footer__link--back travelers-footer__link--disabled"
-                aria-label="Предыдущая страница с попутчиками" title="Предыдущая страница с попутчиками"></a>
-              <a href="balnk.html" class="travelers-footer__link travelers-footer__link--forward travelers-footer__link"
-                aria-label="Следующая страница с попутчиками" title="Следующая страница с попутчиками"></a>
-            </div>
+          <ul class="travelers-footer__list">
+            <li class="travelers-footer__item">
+              <a class="travelers-footer__pages-link travelers-footer__pages-link--current" aria-label="Страница 1">1</a></li>
+            <li class="travelers-footer__item"><a href="blank.html" class="travelers-footer__pages-link" aria-label="Страница 2">2</a></li>
+            <li class="travelers-footer__item"><a href="blank.html" class="travelers-footer__pages-link" aria-label="Страница 3">3</a></li>
+            <li class="travelers-footer__item"><a href="blank.html" class="travelers-footer__pages-link" aria-label="Страница 4">4</a></li>
+          </ul>
+          <div class="travelers-footer__wrapper">
+            <a class="travelers-footer__link travelers-footer__link--back travelers-footer__link--disabled"
+              aria-label="Предыдущая страница с попутчиками" title="Предыдущая страница с попутчиками"></a>
+            <a href="balnk.html" class="travelers-footer__link travelers-footer__link--forward travelers-footer__link"
+              aria-label="Следующая страница с попутчиками" title="Следующая страница с попутчиками"></a>
+          </div>
         </footer>
       </section>
     </div>
-
-
-
   </main>
 
   <footer class="page-footer">
@@ -909,6 +859,8 @@
       </div>
     </div>
   </footer>
-</body>
 
+  <script src="js/open-popup.js"></script>
+  <script src="js/open-filter.js"></script>
+</body>
 </html>

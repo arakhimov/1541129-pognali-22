@@ -20,7 +20,7 @@
 .main__container {
   display: flex;
   justify-content: space-between;
-  background-color: $basic_blue_light;
+  background-color: $special_blue_half-dark;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   padding: 62px 25px 0;
@@ -158,5 +158,6 @@
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
+    box-sizing: border-box;
   }
 }
