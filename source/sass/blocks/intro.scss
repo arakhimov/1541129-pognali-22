@@ -5,8 +5,13 @@
   box-sizing: border-box;
 
   @media (min-width: $tablet_width) {
-    background-color: $basic_blue_light;
-    padding-top: 9.375%;
+    padding-top: 0;
+    background-color: $special_blue_half-dark;
+    background-image: url("../../img/intro_bcg_man_tablet.png"),
+      url("../../img/intro_bcg_tablet.jpg");
+    background-repeat: no-repeat;
+    background-position: 75% 46%, center 55%;
+    background-size: 372px 451px, contain;
   }
 
   @media (min-width: $desktop_width) {
@@ -14,17 +19,26 @@
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: repeat(3, min-content);
-    padding-top: 7.6389%;
+    background-image: url("../../img/intro_bcg_man_desktop.png"),
+      url("../../img/intro_bcg_desktop.png");
+    background-position: 60% 25%, center -75px;
+    background-size: 460px 640px, contain;
+    padding-top: 110px;
   }
 }
 
 .intro__wrapper {
-  // background-image: url("../../img/intro_bcg_man.png"),
-  //   url("../../img/intro_bcg.png");
-  // background-size: 192px 255px, 320px 569px;
-  // background-position: center bottom, 50% 50%;
-  // background-repeat: no-repeat;
+  background-image: url("../../img/intro_bcg_man.png"),
+    url("../../img/intro_bcg.png");
+  background-size: 192px 255px, 100% auto;
+  background-position: center bottom, 50% 50%;
+  background-repeat: no-repeat;
   padding-bottom: 265px;
+
+  @media (min-width: $tablet_width) {
+    background-image: none;
+    padding-bottom: 0;
+  }
 
   @media (min-width: $desktop_width) {
     justify-self: flex-start;
@@ -44,6 +58,7 @@
     width: 52%;
     font-size: 60px;
     line-height: 70px;
+    margin-bottom: 86px;
   }
 
   @media (min-width: $desktop_width) {
@@ -65,13 +80,15 @@
   background-color: $basic_blue;
 
   @media (min-width: $tablet_width) {
-    background-color: $basic_blue_light;
+    background-color: transparent;
+    margin-bottom: 210px;
   }
 
   @media (min-width: $desktop_width) {
     background-color: $basic_blue;
     justify-self: flex-end;
     padding-right: 60px;
+    margin-bottom: 116px;
   }
 }
 

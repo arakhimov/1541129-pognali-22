@@ -6,6 +6,12 @@ $socials-icon-tablet: 60px;
   display: flex;
   padding: 0;
   margin: 0;
+
+  &--popup {
+    @media (min-width: $desktop_width) {
+      display: none;
+    }
+  }
 }
 
 .socials__link {
@@ -23,6 +29,10 @@ $socials-icon-tablet: 60px;
   }
 }
 
+.socials--popup .socials__link {
+  background-color: transparent;
+}
+
 .socials__logo {
   &--facebook {
     width: 11px;
@@ -30,7 +40,7 @@ $socials-icon-tablet: 60px;
 
     @media (min-width: $tablet_width) {
       width: 14px;
-      height: 26px;
+      height: 28px;
     }
   }
 
@@ -39,8 +49,8 @@ $socials-icon-tablet: 60px;
     height: 12px;
 
     @media (min-width: $tablet_width) {
-      width: 28px;
-      height: 18px;
+      width: 31px;
+      height: 16px;
     }
   }
 
@@ -49,8 +59,8 @@ $socials-icon-tablet: 60px;
     height: 14px;
 
     @media (min-width: $tablet_width) {
-      width: 22px;
-      height: 22px;
+      width: 24px;
+      height: 24px;
     }
   }
 }
