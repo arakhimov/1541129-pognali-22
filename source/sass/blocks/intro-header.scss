@@ -3,7 +3,9 @@
   color: $basic_blue;
 
   @media (max-width: $mobile_width_only) {
-    background-color: $basic_blue;
+    background-color: transparent;
+    position: relative;
+    transform: translateY(-50%);
   }
 
   @media (min-width: $tablet_width) {

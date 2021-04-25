@@ -1,8 +1,16 @@
 $add-travelers-icon: 18px;
-$level-icon: 60px;
 
 .peoples {
-  padding-bottom: 76px;
+  padding-bottom: 75px;
+
+  @media (min-width: $tablet_width) {
+    padding-bottom: 105px;
+  }
+
+  @media (min-width: $desktop_width) {
+    padding-bottom: 105px;
+    margin-right: 85px;
+  }
 }
 
 .peoples__list {
@@ -10,10 +18,33 @@ $level-icon: 60px;
   margin: 0;
   margin-bottom: 20px;
   list-style-type: none;
+  width: calc(100% - 50px);
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet_width) {
+    width: calc(100% - 80px);
+    margin-bottom: 46px;
+  }
+
+  @media (min-width: $desktop_width) {
+    width: 950px;
+    margin: 0;
+    margin-bottom: 62px;
+  }
 }
 
 .peoples__item:not(:last-of-type) {
   margin-bottom: 10px;
+
+  @media (min-width: $tablet_width) {
+    margin-bottom: 40px;
+  }
+
+  @media (min-width: $desktop_width) {
+    margin-bottom: 30px;
+  }
 }
 
 .peoples__card {
@@ -25,15 +56,47 @@ $level-icon: 60px;
   overflow: hidden;
   padding: 15px 0;
   box-sizing: border-box;
+
+  @media (min-width: $tablet_width) {
+    grid-template-columns: 35px min-content min-content 1fr min-content 25px;
+    grid-template-rows: repeat(4, min-content);
+    padding: 35px 0 26px;
+  }
+
+  @media (min-width: $desktop_width) {
+    padding: 0;
+    padding-right: 45px;
+    grid-template-columns: min-content min-content 1fr min-content min-content;
+    grid-template-rows: 45px repeat(3, min-content) 42px;
+  }
 }
 
 .peoples__image {
-  margin-left: 18px;
   grid-column: 1 / 2;
   grid-row: 1 / 2;
   border-radius: 50%;
+  margin-left: 18px;
   margin-bottom: 13px;
   margin-right: 12px;
+
+  @media (min-width: $tablet_width) {
+    grid-column: 2 / 3;
+    width: 190px;
+    height: 190px;
+    border-radius: 20px;
+    grid-row: 1 / 4;
+    margin: 0;
+    margin-right: 35px;
+  }
+
+  @media (min-width: $desktop_width) {
+    grid-column: 1 / 2;
+    grid-row: 1 / -1;
+    width: 285px;
+    height: 285px;
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+  }
 }
 
 .peoples__title {
@@ -44,6 +107,8 @@ $level-icon: 60px;
   line-height: 20px;
   color: $basic_blue_light;
   margin: 0;
+  margin-right: 25px;
+  padding-right: 25%;
   position: relative;
 
   &::after {
@@ -55,7 +120,73 @@ $level-icon: 60px;
     right: 0;
     border-radius: 50%;
     background-color: $special_red_dark;
-    margin-right: 22px;
+
+    @media (min-width: $tablet_width) {
+      display: none;
+    }
+  }
+
+  &--green {
+    &::after {
+      background-color: $special_green;
+    }
+  }
+
+  @media (min-width: $tablet_width) {
+    grid-column: 3 / -3;
+    width: auto;
+    font-size: 30px;
+    line-height: 30px;
+    margin-right: 0;
+    padding-right: 0;
+    align-self: flex-start;
+  }
+
+  @media (min-width: $desktop_width) {
+    grid-column: 2 / 4;
+    grid-row: 2 / 3;
+  }
+}
+
+.peoples__title-text {
+  position: relative;
+
+  @media (min-width: $desktop_width) {
+    padding-left: 8px;
+  }
+
+  &::after {
+    content: "";
+    width: 6px;
+    height: 6px;
+    position: absolute;
+    top: 10px;
+    right: 0;
+    border-radius: 50%;
+    background-color: $special_red_dark;
+
+    @media (max-width: $mobile_width_only) {
+      display: none;
+    }
+
+    @media (min-width: $tablet_width) {
+      top: 50%;
+      transform: translateY(-50%);
+      right: -25px;
+    }
+
+    @media (min-width: $desktop_width) {
+      top: 50%;
+      transform: translateY(-50%);
+      left: -10px;
+      right: auto;
+    }
+  }
+
+  &--green {
+    &::after {
+      background-color: $special_green;
+    }
   }
 }
 
@@ -69,6 +200,23 @@ $level-icon: 60px;
   text-transform: uppercase;
   color: $basic_blue;
   position: relative;
+
+  @media (min-width: $tablet_width) {
+    align-self: center;
+    grid-column: 4 / 5;
+    grid-row: 3 / 4;
+    font-size: 20px;
+    line-height: 20px;
+    display: flex;
+    align-items: center;
+    margin: 0;
+    padding-left: 55px;
+  }
+
+  @media (min-width: $desktop_width) {
+    grid-column: 3 / 4;
+    grid-row: 4 / 5;
+  }
 }
 
 .peoples__likes-button {
@@ -84,11 +232,20 @@ $level-icon: 60px;
   background-image: url("../../img/likes.svg");
   background-repeat: no-repeat;
   background-position: center;
+  background-size: 12px 11px;
   cursor: pointer;
 
   &--active {
     background-color: $special_red_light;
     background-image: url("../../img/likes_active.svg");
+  }
+
+  @media (min-width: $tablet_width) {
+    width: 50px;
+    height: 50px;
+    background-size: 20px 17px;
+    padding: 0;
+    left: 0;
   }
 }
 
@@ -98,6 +255,21 @@ $level-icon: 60px;
   grid-column: 1 / -1;
   margin-bottom: 16px;
   box-sizing: border-box;
+
+  @media (min-width: $tablet_width) {
+    align-self: flex-start;
+    grid-column: 3 / -3;
+    grid-row: 2 / 3;
+    padding: 0;
+    margin: 0;
+  }
+
+  @media (min-width: $desktop_width) {
+    width: 240px;
+    grid-column: 2 / 4;
+    grid-row: 3 / 4;
+    padding-bottom: 10px;
+  }
 }
 
 .peoples__subtitle {
@@ -110,36 +282,66 @@ $level-icon: 60px;
   color: $special_gray;
   position: relative;
   white-space: nowrap;
-}
 
-.peoples__subtitle--places {
-  grid-column: 1 / -1;
-  margin-bottom: 19px;
-}
+  &--places,
+  &--transport {
+    position: relative;
+    padding-left: 10%;
 
-.peoples__subtitle--places,
-.peoples__subtitle--transport {
-  position: relative;
-  padding-left: 10%;
+    &::before {
+      content: "";
+      width: 7%;
+      height: 1px;
+      position: absolute;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      background-color: $basic_gray_light;
+    }
 
-  &::before {
-    content: "";
-    width: 7%;
-    height: 1px;
-    position: absolute;
-    left: 0;
-    top: 50%;
-    transform: translateY(-50%);
-    background-color: $basic_gray_light;
+    &::after {
+      content: "";
+      flex-grow: 1;
+      height: 1px;
+      background-color: $basic_gray_light;
+      margin-left: 10px;
+      transform: translateY(100%);
+    }
   }
 
-  &::after {
-    content: "";
-    flex-grow: 1;
-    height: 1px;
-    background-color: $basic_gray_light;
-    margin-left: 10px;
-    transform: translateY(100%);
+  &--transport {
+    grid-column: 1 / -1;
+    grid-row: 5 / 6;
+
+    @media (min-width: $tablet_width) {
+      display: none;
+    }
+  }
+
+  &--level {
+    grid-column: 2 / -1;
+    grid-row: 5 / 6;
+    justify-self: flex-end;
+    margin-right: 10%;
+    padding: 0 10px;
+    background-color: $basic_white;
+
+    @media (min-width: $tablet_width) {
+      display: none;
+    }
+  }
+
+  &--places {
+    grid-column: 1 / -1;
+    margin-bottom: 19px;
+
+    @media (min-width: $tablet_width) {
+      margin: 22px 0 19px;
+    }
+
+    @media (min-width: $desktop_width) {
+      display: none;
+    }
   }
 }
 
@@ -149,6 +351,18 @@ $level-icon: 60px;
   list-style-type: none;
   margin-bottom: 12px;
   padding: 0 25px;
+
+  @media (min-width: $tablet_width) {
+    grid-column: 2 / -2;
+    display: flex;
+  }
+
+  @media (min-width: $desktop_width) {
+    grid-column: -3 / -2;
+    grid-row: 2 / 4;
+    flex-direction: column;
+    padding: 0;
+  }
 }
 
 .peoples__countries-item {
@@ -157,11 +371,28 @@ $level-icon: 60px;
 
   &:not(:last-of-type) {
     margin-bottom: 10px;
+
+    @media (min-width: $tablet_width) {
+      margin-bottom: 0;
+      margin-right: 25px;
+    }
+
+    @media (min-width: $desktop_width) {
+      margin-bottom: 14px;
+      margin-right: 0;
+    }
   }
 }
 
 .peoples__countries-image {
   margin-right: 14px;
+  width: 26px;
+  height: auto;
+
+  @media (min-width: $tablet_width) {
+    width: 35px;
+    margin-right: 11px;
+  }
 }
 
 .peoples__country-name {
@@ -171,29 +402,62 @@ $level-icon: 60px;
   line-height: 16px;
   text-transform: uppercase;
   color: $basic_blue_light;
+  white-space: nowrap;
+
+  @media (min-width: $tablet_width) {
+    font-size: 20px;
+    line-height: 20px;
+  }
 }
 
-.peoples__subtitle--transport {
+.peoples__transports {
+  justify-self: flex-start;
   grid-column: 1 / -1;
-  grid-row: 5 / 6;
-}
+  grid-row: 6 / 7;
+  padding-left: 25px;
 
-.peoples__subtitle--level {
-  grid-column: 2 / -1;
-  grid-row: 5 / 6;
-  justify-self: flex-end;
-  margin-right: 10%;
-  padding: 0 10px;
-  background-color: $basic_white;
+  @media (min-width: $tablet_width) {
+    flex-direction: column;
+    grid-column: -3 / -2;
+    grid-row: 1 / 3;
+    padding: 0;
+    justify-self: center;
+    align-self: flex-start;
+  }
+
+  @media (min-width: $desktop_width) {
+    grid-column: -3 / -2;
+    grid-row: 4 / 5;
+    flex-direction: row;
+    align-self: center;
+    justify-self: flex-start;
+  }
 }
 
 .peoples__level-container {
+  grid-column: 2 / -1;
+  grid-row: 6 / 7;
   margin-top: 10px;
   justify-self: flex-end;
-  width: $level-icon;
-  height: $level-icon;
+  width: 45px;
+  height: 45px;
   margin-right: 11%;
   margin-bottom: 13px;
+
+  @media (min-width: $tablet_width) {
+    grid-column: -3 / -2;
+    grid-row: 3 / 4;
+    margin: 0;
+    padding: 0;
+    align-self: center;
+    width: 60px;
+    height: 60px;
+  }
+
+  @media (min-width: $desktop_width) {
+    grid-column: -2 / -1;
+    grid-row: 4 / 5;
+  }
 }
 
 .peoples__link {
@@ -214,6 +478,21 @@ $level-icon: 60px;
   text-transform: uppercase;
   text-decoration: none;
   color: $basic_blue;
+
+  @media (min-width: $tablet_width) {
+    align-self: center;
+    width: 150px;
+    min-height: 50px;
+    margin: 0;
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+    padding: 0;
+  }
+
+  @media (min-width: $desktop_width) {
+    grid-column: 2 / 3;
+    grid-row: 4 / 5;
+  }
 }
 
 .peoples__add-traveler {
@@ -233,6 +512,36 @@ $level-icon: 60px;
     width: $add-travelers-icon;
     height: $add-travelers-icon;
     background-image: url("../../img/icon_plus_more.svg");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
     margin-right: 15px;
+
+    @media (min-width: $tablet_width) {
+      width: 26px;
+      height: 26px;
+    }
+  }
+
+  @media (min-width: $tablet_width) {
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 52px;
+  }
+
+  @media (min-width: $desktop_width) {
+    margin-bottom: 71px;
+  }
+}
+
+.peoples__footer {
+  width: calc(100% - 50px);
+  margin-left: auto;
+  margin-right: auto;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet_width) {
+    padding-left: 28px;
+    padding-right: 35px;
   }
 }

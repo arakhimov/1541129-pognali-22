@@ -1,19 +1,6 @@
 .page-header {
   background-color: $basic_blue;
-  padding-top: 19px;
   position: relative;
-
-  @media (min-width: $tablet_width) {
-    padding-top: 40px;
-    padding-bottom: 72px;
-    background-color: $basic_blue_light;
-  }
-
-  @media (min-width: $desktop_width) {
-    padding-top: 46px;
-    padding-bottom: 11px;
-    background-color: $basic_blue;
-  }
 
   &--lighten {
     background-color: $basic_blue_light;
@@ -28,29 +15,189 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  padding-top: 19px;
+  padding-left: 25px;
+  padding-right: 25px;
+  box-sizing: border-box;
+  min-height: 50px;
+
+  @media (max-width: $tablet_width_only) {
+    flex-direction: column;
+  }
+
+  @media (min-width: $tablet_width) {
+    padding-top: 40px;
+    padding-bottom: 72px;
+    padding-left: 40px;
+    padding-right: 40px;
+    min-height: 100px;
+
+    &--form,
+    &--catalog {
+      padding-bottom: 0;
+    }
+  }
+
+  @media (min-width: $desktop_width) {
+    padding-top: 46px;
+    padding-bottom: 11px;
+    background-color: $basic_blue;
+    padding-left: 60px;
+    padding-right: 60px;
+
+    &--ligthen {
+      background-color: $special_blue_half-dark;
+    }
+  }
+
+  &--opened {
+    @media (max-width: $tablet_width_only) {
+      background-color: $basic_white;
+    }
+  }
+
+  &--closed {
+    @media (min-width: $tablet_width) and (max-width: $tablet_width_only) {
+      background-color: $special_blue_half-dark;
+    }
+  }
+}
+
+.page-header__row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  min-height: 20px;
+
+  @media (max-width: $tablet_width_only) {
+    width: 100%;
+  }
 }
 
 .page-header__logo {
   @media (min-width: $tablet_width) {
     margin-right: 40px;
   }
+
+  &--dark {
+    @media (min-width: $desktop_width) {
+      display: none;
+    }
+  }
 }
 
-.page-header__open-menu {
+.page-header__logo-image {
+  width: 95px;
+  height: 14px;
+
+  @media (min-width: $tablet_width) {
+    width: 168px;
+    height: 42px;
+  }
+
+  @media (min-width: $desktop_width) {
+    width: 200px;
+    height: 52px;
+  }
+}
+
+.page-header__toggle-menu {
   background-color: transparent;
   border: none;
   cursor: pointer;
+  padding: 0;
+  align-self: center;
 
   &::after {
     content: "";
-    display: inline-block;
-    vertical-align: top;
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+
+  &--opened::after {
     width: 25px;
     height: 11px;
     background-image: url("../../img/icon_menu_mobile.svg");
+  }
+
+  &--closed::after {
+    width: 19px;
+    height: 19px;
+    background-image: url("../../img/icon_close.svg");
+  }
+
+  @media (min-width: $desktop_width) {
+    display: none;
+  }
+}
+
+.page-header__container .page-header__authorization--opened {
+  display: none;
+
+  @media (min-width: $tablet_width) and (max-width: $tablet_width_only) {
+    display: flex;
+  }
+}
+
+.page-header__popup {
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
+
+  &--opened {
+    box-sizing: border-box;
+
+    @media (max-width: $tablet_width_only) {
+      background-color: $basic_white;
+      position: absolute;
+      z-index: 1000;
+      top: 100px;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      padding: 98px 40px 93px;
+    }
+
+    @media (max-width: $mobile_width_only) {
+      padding: 75px 25px 40px;
+      top: 50px;
+    }
   }
 }
 
 .page-header__navigation {
   flex-grow: 1;
+
+  &--opened {
+    @media (max-width: $tablet_width_only) {
+      margin-bottom: 51px;
+    }
+
+    @media (min-width: $tablet_width) and (max-width: $tablet_width_only) {
+      margin-bottom: 144px;
+    }
+  }
+}
+
+@media (max-width: $tablet_width_only) {
+  .page-header__container--closed .page-header__popup {
+    display: none;
+  }
+
+  .page-header__container--opened .page-header__logo--white {
+    display: none;
+  }
+
+  .page-header__container--closed .page-header__logo--dark {
+    display: none;
+  }
+
+  .page-header__container--nojs .page-header__popup--opened {
+    position: static;
+    padding-left: 0;
+    padding-right: 0;
+  }
 }

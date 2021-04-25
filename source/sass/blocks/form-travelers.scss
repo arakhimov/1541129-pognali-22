@@ -3,6 +3,19 @@
   background-color: $basic_yellow;
   box-sizing: border-box;
   padding: 25px 25px 22px;
+  margin: 0 25px 28px;
+
+  @media (min-width: $tablet_width) {
+    margin: 0 40px 40px;
+    padding: 37px 35px;
+  }
+
+  @media (min-width: $desktop_width) {
+    width: 285px;
+    padding: 48px;
+    order: 2;
+    margin: 0;
+  }
 }
 
 .form-travelers__title {
@@ -12,11 +25,51 @@
   letter-spacing: 0.02em;
   color: $basic_blue_light;
   margin: 0 0 23px;
+
+  @media (min-width: $tablet_width) {
+    font-size: 30px;
+    line-height: 30px;
+    margin-bottom: 38px;
+  }
+
+  @media (min-width: $desktop_width) {
+    margin-bottom: 34px;
+  }
 }
 
 .form-travelers__group {
   border: none;
   padding: 0;
+  margin: 0;
+
+  &--transport {
+    border-top: 1px solid $special_orange_light;
+    margin-bottom: 20px;
+
+    @media (min-width: $tablet_width) {
+      border: none;
+      margin-bottom: 30px;
+    }
+
+    @media (min-width: $desktop_width) {
+      margin-bottom: 35px;
+    }
+  }
+
+  &--range {
+    @media (max-width: $mobile_width_only) {
+      border-top: 1px solid $special_orange_light;
+    }
+
+    @media (min-width: $tablet_width) and (max-width: $tablet_width_only) {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-bottom: 1px solid $special_orange_light;
+      margin-bottom: 36px;
+      padding-bottom: 36px;
+    }
+  }
 }
 
 .form-travelers__subtitle {
@@ -30,7 +83,6 @@
   text-transform: uppercase;
   color: $basic_blue_light;
   margin: 0;
-  border-top: 1px solid $special_orange_light;
 
   &::after {
     content: "";
@@ -40,6 +92,20 @@
     vertical-align: top;
     background-image: url("../../img/arrow-interests_down.svg");
     background-repeat: no-repeat;
+
+    @media (min-width: $tablet_width) and (max-width: $tablet_width_only) {
+      display: none;
+    }
+  }
+
+  @media (min-width: $tablet_width) {
+    font-size: 20px;
+    line-height: 20px;
+    width: 130px;
+  }
+
+  @media (min-width: $desktop_width) {
+    width: auto;
   }
 }
 

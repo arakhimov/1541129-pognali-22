@@ -1,66 +1,66 @@
-.popup-menu {
-  display: none;
-  width: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 100;
-  box-sizing: border-box;
-  background-color: $basic_white;
-}
+// .popup-menu {
+//   display: none;
+//   width: 100%;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   z-index: 100;
+//   box-sizing: border-box;
+//   background-color: $basic_white;
+// }
 
-.popup-menu__header {
-  display: flex;
-  justify-content: space-between;
-  padding-top: 19px;
-  margin-bottom: 76px;
-}
+// .popup-menu__header {
+//   display: flex;
+//   justify-content: space-between;
+//   padding-top: 19px;
+//   margin-bottom: 76px;
+// }
 
-.popup-menu__close-menu {
-  background-color: transparent;
-  border: none;
-  cursor: pointer;
+// .popup-menu__close-menu {
+//   background-color: transparent;
+//   border: none;
+//   cursor: pointer;
 
-  &::after {
-    content: "";
-    display: inline-block;
-    vertical-align: top;
-    width: 19px;
-    height: 19px;
-    background-image: url("../../img/icon-close.svg");
-  }
-}
+//   &::after {
+//     content: "";
+//     display: inline-block;
+//     vertical-align: top;
+//     width: 19px;
+//     height: 19px;
+//     background-image: url("../../img/icon-close.svg");
+//   }
+// }
 
-.popup-menu__navigation {
-  margin-bottom: 51px;
-}
+// .popup-menu__navigation {
+//   margin-bottom: 51px;
+// }
 
-.popup-menu__list {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-}
+// .popup-menu__list {
+//   display: flex;
+//   flex-direction: column;
+//   align-items: center;
+//   padding: 0;
+//   margin: 0;
+//   list-style-type: none;
+// }
 
-.popup-menu__link {
-  color: $special_blue;
-  font-family: inherit;
-  font-style: inherit;
-  font-weight: 500;
-  font-size: 30px;
-  line-height: 35px;
-  text-transform: uppercase;
-  text-decoration: none;
-}
+// .popup-menu__link {
+//   color: $special_blue;
+//   font-family: inherit;
+//   font-style: inherit;
+//   font-weight: 500;
+//   font-size: 30px;
+//   line-height: 35px;
+//   text-transform: uppercase;
+//   text-decoration: none;
+// }
 
-.popup-menu__authorization {
-  display: none;
-}
+// .popup-menu__authorization {
+//   display: none;
+// }
 
-.popup-menu__authorization--popup {
-  width: 100%;
-  display: flex;
-  margin-bottom: 51px;
-}
+// .popup-menu__authorization--popup {
+//   width: 100%;
+//   display: flex;
+//   margin-bottom: 51px;
+// }

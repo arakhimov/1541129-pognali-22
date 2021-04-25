@@ -17,81 +17,54 @@
 
 <body class="page__body">
   <header class="page-header">
-    <div class="page-wrapper">
-      <div class="page-header__container">
-        <a class="page-header__link">
-          <img src="img/pognali-logo_white.png" alt="Логотип Погнали" class="page-header__logo page-logo" width="96"
-            height="15" />
+    <div class="page-header__container page-header__container--nojs page-header__container--opened">
+      <div class="page-header__row">
+        <a href="index.html" class="page-header__link">
+          <picture class="page-header__logo page-header__logo--white">
+            <source media="(min-width: 768px)" srcset="img/pognali-logo_dark_desktop.png">
+            <img src="img/pognali-logo_white.png" alt="Логотип сервиса Погнали" class="page-header__logo-image" width="96" height="15" />
+          </picture>
+          <picture class="page-header__logo page-header__logo--dark">
+            <source media="(min-width: 768px)" srcset="img/pognali-logo_white_tablet.png">
+            <img src="img/pognali-logo_dark.png" alt="Логотип сервиса Погнали" class="page-header__logo-image" width="96" height="15" />
+          </picture>
         </a>
+        <button type="button" class="page-header__toggle-menu page-header__toggle-menu--opened" aria-label="Открыть мобильное меню"></button>
+        <a href="blank.html" class="page-header__authorization page-header__authorization--opened button-autorization">авторизация</a>
+      </div>
 
-        <button type="button" class="page-header__open-menu desktop-none" aria-label="Открыть мобильное меню"></button>
-
-        <nav class="page-header__navigation navigation">
+      <div class="page-header__popup page-header__popup--opened">
+        <nav class="page-header__navigation page-header__navigation--opened navigation">
           <ul class="navigation__list">
-            <li class="navigation__item"><a href="blank.html" class="navigation__link">О сервисе</a></li>
-            <li class="navigation__item"><a href="form.html" class="navigation__link">Направления</a></li>
-            <li class="navigation__item"><a href="catalog.html" class="navigation__link">Попутчики</a></li>
+            <li class="navigation__item"><a href="blank.html" class="navigation__link navigation__link--dark">О сервисе</a></li>
+            <li class="navigation__item"><a href="form.html" class="navigation__link navigation__link--dark">Направления</a></li>
+            <li class="navigation__item"><a href="catalog.html" class="navigation__link navigation__link--dark">Попутчики</a></li>
           </ul>
         </nav>
 
-        <div class="page-menu">
-          <a href="tel:+78005558628" class="page-menu__phone"
-            aria-label="Позвоните нам по номеру телефона: 8 800 555-86-28"></a>
-          <a href="mailto:mail@htmlacademy.ru" class="page-menu__email"
-            aria-label="Напишите нам на почтовый ящик: mail@htmlacademy.ru"></a>
-          <a href="blank.html" class="page-header__authorization button-autorization">авторизация</a>
+        <div class="page-menu page-menu--opened">
+          <a href="tel:+78005558628" class="page-menu__phone page-menu__phone--dark" aria-label="Позвоните нам по номеру телефона: 8 800 555-86-28">
+            <span class="page-menu__link-text">8 800 555-86-28</span></a>
+          <a href="mailto:mail@htmlacademy.ru" class="page-menu__email page-menu__email--dark" aria-label="Напишите нам на почтовый ящик: mail@htmlacademy.ru">
+            <span class="page-menu__link-text">mail@htmlacademy.ru</span></a>
+          <a href="blank.html" class="page-menu__authorization page-header__authorization button-autorization">авторизация</a>
         </div>
+
+        <ul class="page-header__socials-list socials socials--popup">
+          <li class="socials__item">
+            <a href="https://ru-ru.facebook.com/" class="socials__link" aria-label="Наша страница в facebook">
+              <img src="img/facebook-logo.svg" alt="Логотип facebook" class="socials__logo socials__logo--facebook" width="11" height="21"></a>
+          </li>
+          <li class="socials__item">
+            <a href="https://vk.com/" class="socials__link" aria-label="Наша страница в ВКонтакте">
+              <img src="img/vkcom-logo.svg" alt="логотип ВКонтакте" class="socials__logo socials__logo--vk" width="23" height="12"></a>
+          </li>
+          <li class="socials__item">
+            <a href="https://www.instagram.com/" class="socials__link" aria-label="Наша страница в Instagram">
+              <img src="img/instagram-logo.svg" alt="Логотип Instagram" class="socials__logo socials__logo--instagram" width="18" height="18"></a>
+          </li>
+        </ul>
       </div>
-
-      <section class="page-header__popup popup-menu">
-        <div class="page-wrapper">
-          <div class="popup-menu__header">
-            <a class="page-header__link">
-              <img src="img/pognali-logo_dark.png" alt="Логотип Погнали" class="page-header__logo page-logo" width="96"
-                height="15" />
-            </a>
-            <button type="button" class="popup-menu__close-menu" aria-label="Закрыть мобильное меню"></button>
-            <a href="blank.html" class="popup-menu__authorization button-autorization">авторизация</a>
-          </div>
-
-          <nav class="popup-menu__navigation">
-            <ul class="popup-menu__list">
-              <li class="popup-menu__item"><a href="blank.html" class="popup-menu__link">О сервисе</a></li>
-              <li class="popup-menu__item"><a href="form.html" class="popup-menu__link">Направления</a></li>
-              <li class="popup-menu__item"><a href="catalog.html" class="popup-menu__link">Попутчики</a></li>
-            </ul>
-          </nav>
-
-          <a href="blank.html"
-            class="popup-menu__authorization popup-menu__authorization--popup button-autorization">авторизация</a>
-
-          <ul class="popup-menu__contacts-list list-contacts">
-            <li class="list-contacts__item">
-              <a href="tel:+78005558628" class="list-contacts__telephone list-contacts__telephone--dark"
-                aria-label="Позвоните нам по номеру телефона: 8 800 555-86-28">8 800 555-86-28</a>
-            </li>
-            <li class="list-contacts__item">
-              <a href="mailto:mail@htmlacademy.ru" class="list-contacts__email list-contacts__email--dark"
-                aria-label="Напишите нам на почтовый ящик: mail@htmlacademy.ru">mail@htmlacademy.ru</a>
-            </li>
-          </ul>
-
-          <ul class="popup-menu__socials-list socials">
-            <li class="socials__item">
-              <a href="https://ru-ru.facebook.com/" class="socials__link" aria-label="Наша страница в facebook">
-                <img src="img/facebook-logo.svg" alt="Логотип facebook" class="socials__logo"></a>
-            </li>
-            <li class="socials__item">
-              <a href="https://vk.com/" class="socials__link" aria-label="Наша страница в ВКонтакте">
-                <img src="img/vkcom-logo.svg" alt="логотип ВКонтакте" class="socials__logo"></a>
-            </li>
-            <li class="socials__item">
-              <a href="https://www.instagram.com/" class="socials__link" aria-label="Наша страница в Instagram">
-                <img src="img/instagram-logo.svg" alt="Логотип Instagram" class="socials__logo"></a>
-            </li>
-          </ul>
-        </div>
-      </section>
     </div>
   </header>
 
@@ -107,24 +80,18 @@
       <header class="intro__header intro-header">
         <div class="intro-header__wrapper page-wrapper">
           <a class="intro-header__link">
-            <img src="img/pognali-logo_dark.png" alt="Логотип Погнали" class="intro-header__logo page-logo" width="96"
-              height="15" />
+            <img src="img/pognali-logo_dark.png" alt="Логотип Погнали" class="intro-header__logo page-logo" width="96" height="15" />
           </a>
-          <nav class="intro-header__navigation navigation">
+          <nav class="intro-header__navigation navigation navigation--hidden">
             <ul class="navigation__list navigation__list--dark">
-              <li class="navigation__item"><a href="blank.html" class="navigation__link navigation__link--dark">О
-                  сервисе</a></li>
-              <li class="navigation__item"><a href="form.html"
-                  class="navigation__link navigation__link--dark">Направления</a></li>
-              <li class="navigation__item"><a href="catalog.html"
-                  class="navigation__link navigation__link--dark">Попутчики</a></li>
+              <li class="navigation__item"><a href="blank.html" class="navigation__link navigation__link--dark">О сервисе</a></li>
+              <li class="navigation__item"><a href="form.html" class="navigation__link navigation__link--dark">Направления</a></li>
+              <li class="navigation__item"><a href="catalog.html" class="navigation__link navigation__link--dark">Попутчики</a></li>
             </ul>
           </nav>
           <div class="page-menu page-menu--visible">
-            <a href="tel:+78005558628" class="page-menu__phone"
-              aria-label="Позвоните нам по номеру телефона: 8 800 555-86-28"></a>
-            <a href="mailto:mail@htmlacademy.ru" class="page-menu__email"
-              aria-label="Напишите нам на почтовый ящик: mail@htmlacademy.ru"></a>
+            <a href="tel:+78005558628" class="page-menu__phone" aria-label="Позвоните нам по номеру телефона: 8 800 555-86-28"></a>
+            <a href="mailto:mail@htmlacademy.ru" class="page-menu__email" aria-label="Напишите нам на почтовый ящик: mail@htmlacademy.ru"></a>
             <a href="blank.html" class="intro-header__authorization button-autorization">авторизация</a>
           </div>
         </div>
@@ -357,34 +324,33 @@
   <footer class="page-footer">
     <div class="page-footer__wrapper page-wrapper">
       <a class="page-footer__link">
-        <img src="img/pognali-logo_dark.png" alt="Логотип Погнали" class="page-footer__logo page-logo" width="96"
-          height="15" />
-      </a>
+        <img src="img/pognali-logo_dark.png" alt="Логотип Погнали" class="page-footer__logo page-logo" width="96" height="15" /></a>
 
       <ul class="page-footer__socials-list socials">
         <li class="socials__item socials__item--yellow">
           <a href="https://ru-ru.facebook.com/" class="socials__link" aria-label="Наша страница в facebook">
-            <img src="img/facebook-logo.svg" alt="Логотип facebook" class="socials__logo"></a>
+            <img src="img/facebook-logo.svg" alt="Логотип facebook" class="socials__logo socials__logo--facebook" width="11" height="21"></a>
         </li>
         <li class="socials__item socials__item--yellow">
           <a href="https://vk.com/" class="socials__link" aria-label="Наша страница в ВКонтакте">
-            <img src="img/vkcom-logo.svg" alt="логотип ВКонтакте" class="socials__logo"></a>
+            <img src="img/vkcom-logo.svg" alt="логотип ВКонтакте" class="socials__logo socials__logo--vk" width="23" height="12"></a>
         </li>
         <li class="socials__item socials__item--yellow">
           <a href="https://www.instagram.com/" class="socials__link" aria-label="Наша страница в Instagram">
-            <img src="img/instagram-logo.svg" alt="Логотип Instagram" class="socials__logo"></a>
+            <img src="img/instagram-logo.svg" alt="Логотип Instagram" class="socials__logo socials__logo--instagram" width="18" height="14"></a>
         </li>
       </ul>
 
       <div class="page-footer__copyright-container">
         <p class="page-footer__copyright">Разработано</p>
-        <a a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__study-link">
-          <img src="img/htmlacademy.svg" alt="Логотип HTML Academy" class="page-footer__study-center" width="27"
-            height="34">
+        <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__study-link">
+          <img src="img/htmlacademy.svg" alt="Логотип HTML Academy" class="page-footer__study-center" width="27"height="34">
         </a>
       </div>
     </div>
   </footer>
+
+  <script src="js/open-popup.js"></script>
 </body>
 
 </html>
