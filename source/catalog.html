@@ -20,13 +20,13 @@
     <div class="page-header__container page-header__container--nojs page-header__container--opened page-header__container--ligthen page-header__container--catalog page-header__container--form">
       <div class="page-header__row">
         <a href="index.html" class="page-header__link">
-          <picture class="page-header__logo page-header__logo--white">
+          <picture class="page-header__logo page-header__logo--white page-logo page-logo--white">
             <source media="(min-width: 768px)" srcset="img/pognali-logo_dark_desktop.png">
-            <img src="img/pognali-logo_white.png" alt="Логотип сервиса Погнали" class="page-header__logo-image" width="96" height="15" />
+            <img src="img/pognali-logo_white.png" alt="Логотип сервиса Погнали" class="page-logo__image" width="96" height="15" />
           </picture>
-          <picture class="page-header__logo page-header__logo--dark">
+          <picture class="page-header__logo page-header__logo--dark page-logo page-logo--dark">
             <source media="(min-width: 768px)" srcset="img/pognali-logo_white_tablet.png">
-            <img src="img/pognali-logo_dark.png" alt="Логотип сервиса Погнали" class="page-header__logo-image" width="96" height="15" />
+            <img src="img/pognali-logo_dark.png" alt="Логотип сервиса Погнали" class="page-logo__image" width="96" height="15" />
           </picture>
         </a>
         <button type="button" class="page-header__toggle-menu page-header__toggle-menu--opened" aria-label="Открыть мобильное меню"></button>
@@ -36,18 +36,25 @@
       <div class="page-header__popup page-header__popup--opened">
         <nav class="page-header__navigation page-header__navigation--opened navigation">
           <ul class="navigation__list">
-            <li class="navigation__item"><a href="blank.html" class="navigation__link navigation__link--dark">О сервисе</a></li>
-            <li class="navigation__item"><a href="form.html" class="navigation__link navigation__link--dark">Направления</a></li>
-            <li class="navigation__item"><a href="catalog.html" class="navigation__link navigation__link--dark">Попутчики</a></li>
+            <li class="navigation__item">
+              <a href="blank.html" class="navigation__link navigation__link--dark"><span class="navigation__link-text" data-hover="О сервисе">О сервисе</span></a></li>
+            <li class="navigation__item">
+              <a href="form.html" class="navigation__link navigation__link--dark"><span class="navigation__link-text" data-hover="Направления">Направления</span></a></li>
+            <li class="navigation__item">
+              <a href="catalog.html" class="navigation__link navigation__link--dark"><span class="navigation__link-text" data-hover="Попутчики">Попутчики</span></a></li>
           </ul>
         </nav>
 
         <div class="page-menu page-menu--opened">
-          <a href="tel:+78005558628" class="page-menu__phone page-menu__phone--dark" aria-label="Позвоните нам по номеру телефона: 8 800 555-86-28">
-            <span class="page-menu__link-text">8 800 555-86-28</span></a>
+          <a href="tel:+78005558628" class="page-menu__phone" aria-label="Позвоните нам по номеру телефона: 8 800 555-86-28">
+            <span class="page-menu__phone-logo page-menu__phone-logo--dark"></span>
+            <span class="page-menu__link-text">8 800 555-86-28</span>
+          </a>
           <a href="mailto:mail@htmlacademy.ru" class="page-menu__email page-menu__email--dark" aria-label="Напишите нам на почтовый ящик: mail@htmlacademy.ru">
-            <span class="page-menu__link-text">mail@htmlacademy.ru</span></a>
-          <a href="blank.html" class="page-menu__authorization page-header__authorization button-autorization">авторизация</a>
+            <span class="page-menu__email-logo page-menu__email-logo--dark"></span>
+            <span class="page-menu__link-text">mail@htmlacademy.ru</span>
+          </a>
+          <a href="blank.html" class="page-menu__authorization page-header__authorization button-autorization"><span class="button-autorization__text">авторизация</span></a>
         </div>
 
         <ul class="page-header__socials-list socials socials--popup">
@@ -92,374 +99,349 @@
 
       <section class="filter__index index index--catalog">
         <ul class="index__headind-list index__headind-list--catalog">
-            <li class="index__heading-item index__heading-item--catalog">
-              <button type="button" class="index__button index__button--catalog index__button--catalog-active" value="a" aria-pressed="true">а</button>
-            </li>
-            <li class="index__heading-item index__heading-item--catalog">
-              <button type="button" class="index__button index__button--catalog" value="б">б</button>
-            </li>
-            <li class="index__heading-item index__heading-item--catalog">
-              <button type="button" class="index__button index__button--catalog" value="в">в</button>
-            </li>
-            <li class="index__heading-item index__heading-item--catalog">
-              <button type="button" class="index__button index__button--catalog" value="г">г</button>
-            </li>
-            <li class="index__heading-item index__heading-item--catalog">
-              <button type="button" class="index__button index__button--catalog" value="д">д</button>
-            </li>
-            <li class="index__heading-item index__heading-item--catalog">
-              <button type="button" class="index__button index__button--catalog" value="е">е</button>
-            </li>
-            <li class="index__heading-item index__heading-item--catalog">
-              <button type="button" class="index__button index__button--catalog" value="з">з</button>
-            </li>
-            <li class="index__heading-item index__heading-item--catalog">
-              <button type="button" class="index__button index__button--catalog" value="и">и</button>
-            </li>
-            <li class="index__heading-item index__heading-item--catalog">
-              <button type="button" class="index__button index__button--catalog" value="к">к</button>
-            </li>
-            <li class="index__heading-item index__heading-item--catalog">
-              <button type="button" class="index__button index__button--catalog" value="л">л</button>
-            </li>
-            <li class="index__heading-item index__heading-item--catalog">
-              <button type="button" class="index__button index__button--catalog" value="м">м</button>
-            </li>
-            <li class="index__heading-item index__heading-item--catalog">
-              <button type="button" class="index__button index__button--catalog" value="н">н</button>
-            </li>
-            <li class="index__heading-item index__heading-item--catalog">
-              <button type="button" class="index__button index__button--catalog" value="о">о</button>
-            </li>
-            <li class="index__heading-item index__heading-item--catalog">
-              <button type="button" class="index__button index__button--catalog" value="п">п</button>
-            </li>
-            <li class="index__heading-item index__heading-item--catalog">
-              <button type="button" class="index__button index__button--catalog" value="р">р</button>
-            </li>
-            <li class="index__heading-item index__heading-item--catalog">
-              <button type="button" class="index__button index__button--catalog" value="с">с</button>
-            </li>
-            <li class="index__heading-item index__heading-item--catalog">
-              <button type="button" class="index__button index__button--catalog" value="т">т</button>
-            </li>
-            <li class="index__heading-item index__heading-item--catalog">
-              <button type="button" class="index__button index__button--catalog" value="у">у</button>
-            </li>
-            <li class="index__heading-item index__heading-item--catalog">
-              <button type="button" class="index__button index__button--catalog" value="ф">ф</button>
-            </li>
-            <li class="index__heading-item index__heading-item--catalog">
-              <button type="button" class="index__button index__button--catalog" value="х">х</button>
-            </li>
-            <li class="index__heading-item index__heading-item--catalog">
-              <button type="button" class="index__button index__button--catalog" value="ч">ч</button>
-            </li>
-            <li class="index__heading-item index__heading-item--catalog">
-              <button type="button" class="index__button index__button--catalog" value="ш">ш</button>
-            </li>
-            <li class="index__heading-item index__heading-item--catalog">
-              <button type="button" class="index__button index__button--catalog" value="э">э</button>
-            </li>
-            <li class="index__heading-item index__heading-item--catalog">
-              <button type="button" class="index__button index__button--catalog" value="ю">ю</button>
-            </li>
-            <li class="index__heading-item index__heading-item--catalog">
-              <button type="button" class="index__button index__button--catalog" value="я">я</button>
-            </li>
+          <li class="index__heading-item index__heading-item--catalog">
+            <button type="button" class="index__button index__button--catalog index__button--catalog-active" value="a" aria-pressed="true">а</button></li>
+          <li class="index__heading-item index__heading-item--catalog">
+            <button type="button" class="index__button index__button--catalog" value="б">б</button></li>
+          <li class="index__heading-item index__heading-item--catalog">
+            <button type="button" class="index__button index__button--catalog" value="в">в</button></li>
+          <li class="index__heading-item index__heading-item--catalog">
+            <button type="button" class="index__button index__button--catalog" value="г">г</button></li>
+          <li class="index__heading-item index__heading-item--catalog">
+            <button type="button" class="index__button index__button--catalog" value="д">д</button></li>
+          <li class="index__heading-item index__heading-item--catalog">
+            <button type="button" class="index__button index__button--catalog" value="е">е</button></li>
+          <li class="index__heading-item index__heading-item--catalog">
+            <button type="button" class="index__button index__button--catalog" value="з">з</button></li>
+          <li class="index__heading-item index__heading-item--catalog">
+            <button type="button" class="index__button index__button--catalog" value="и">и</button></li>
+          <li class="index__heading-item index__heading-item--catalog">
+            <button type="button" class="index__button index__button--catalog" value="к">к</button></li>
+          <li class="index__heading-item index__heading-item--catalog">
+            <button type="button" class="index__button index__button--catalog" value="л">л</button></li>
+          <li class="index__heading-item index__heading-item--catalog">
+            <button type="button" class="index__button index__button--catalog" value="м">м</button></li>
+          <li class="index__heading-item index__heading-item--catalog">
+            <button type="button" class="index__button index__button--catalog" value="н">н</button></li>
+          <li class="index__heading-item index__heading-item--catalog">
+            <button type="button" class="index__button index__button--catalog" value="о">о</button></li>
+          <li class="index__heading-item index__heading-item--catalog">
+            <button type="button" class="index__button index__button--catalog" value="п">п</button></li>
+          <li class="index__heading-item index__heading-item--catalog">
+            <button type="button" class="index__button index__button--catalog" value="р">р</button></li>
+          <li class="index__heading-item index__heading-item--catalog">
+            <button type="button" class="index__button index__button--catalog" value="с">с</button></li>
+          <li class="index__heading-item index__heading-item--catalog">
+            <button type="button" class="index__button index__button--catalog" value="т">т</button></li>
+          <li class="index__heading-item index__heading-item--catalog">
+            <button type="button" class="index__button index__button--catalog" value="у">у</button></li>
+          <li class="index__heading-item index__heading-item--catalog">
+            <button type="button" class="index__button index__button--catalog" value="ф">ф</button></li>
+          <li class="index__heading-item index__heading-item--catalog">
+            <button type="button" class="index__button index__button--catalog" value="х">х</button></li>
+          <li class="index__heading-item index__heading-item--catalog">
+            <button type="button" class="index__button index__button--catalog" value="ч">ч</button></li>
+          <li class="index__heading-item index__heading-item--catalog">
+            <button type="button" class="index__button index__button--catalog" value="ш">ш</button></li>
+          <li class="index__heading-item index__heading-item--catalog">
+            <button type="button" class="index__button index__button--catalog" value="э">э</button></li>
+          <li class="index__heading-item index__heading-item--catalog">
+            <button type="button" class="index__button index__button--catalog" value="ю">ю</button></li>
+          <li class="index__heading-item index__heading-item--catalog">
+            <button type="button" class="index__button index__button--catalog" value="я">я</button></li>
         </ul>
 
         <ul class="index__choise-list index__choise-list--catalog">
-            <li class="index__choise-item index__choise-item--open index__choise-item--active" data-heading="а">
-              <span class="index__headind-symbol index__headind-symbol--catalog">а</span>
-              <ul class="index__list index__list--catalog">
-                <li class="index__item"><a href="#" class="index__link">Австралия</a></li>
-                <li class="index__item"><a href="#" class="index__link">Австрия</a></li>
-                <li class="index__item"><a href="#" class="index__link">Азербайджан</a></li>
-                <li class="index__item"><a href="#" class="index__link">Албания</a></li>
-                <li class="index__item"><a href="#" class="index__link">Алжир</a></li>
-                <li class="index__item"><a href="#" class="index__link">Ангола</a></li>
-                <li class="index__item"><a href="#" class="index__link">Андорра</a></li>
-                <li class="index__item"><a href="#" class="index__link">Антигуа и Барбуда</a></li>
-                <li class="index__item"><a href="#" class="index__link">Аргентина</a></li>
-                <li class="index__item"><a href="#" class="index__link">Армения</a></li>
-                <li class="index__item"><a href="#" class="index__link">Афганистан</a></li>
-              </ul>
-            </li>
-            <li class="index__choise-item index__choise-item--open" data-heading="б">
-              <span class="index__headind-symbol index__headind-symbol--catalog">б</span>
-              <ul class="index__list index__list--catalog">
-                <li class="index__item"><a href="#" class="index__link">Багамские острова</a></li>
-                <li class="index__item"><a href="#" class="index__link">Бангладеш</a></li>
-                <li class="index__item"><a href="#" class="index__link">Барбадос</a></li>
-                <li class="index__item"><a href="#" class="index__link">Бахрейн</a></li>
-                <li class="index__item"><a href="#" class="index__link">Белоруссия</a></li>
-                <li class="index__item"><a href="#" class="index__link">Белиз</a></li>
-                <li class="index__item"><a href="#" class="index__link">Бельгия</a></li>
-                <li class="index__item"><a href="#" class="index__link">Бенин</a></li>
-                <li class="index__item"><a href="#" class="index__link">Болгария</a></li>
-                <li class="index__item"><a href="#" class="index__link">Боливия</a></li>
-                <li class="index__item"><a href="#" class="index__link">Босния и Герцеговина</a>
-                </li>
-                <li class="index__item"><a href="#" class="index__link">Ботсвана</a></li>
-                <li class="index__item"><a href="#" class="index__link">Бразилия</a></li>
-                <li class="index__item"><a href="#" class="index__link">Бруней</a></li>
-                <li class="index__item"><a href="#" class="index__link">Буркина-Фасо</a></li>
-                <li class="index__item"><a href="#" class="index__link">Бурунди</a></li>
-                <li class="index__item"><a href="#" class="index__link">Бутан</a></li>
-              </ul>
-            </li>
-            <li class="index__choise-item index__choise-item--open" data-heading="в">
-              <span class="index__headind-symbol index__headind-symbol--catalog">в</span>
-              <ul class="index__list index__list--catalog">
-                <li class="index__item"><a href="#" class="index__link">Вануату</a></li>
-                <li class="index__item"><a href="#" class="index__link">Великобритания</a></li>
-                <li class="index__item"><a href="#" class="index__link">Венгрия</a></li>
-                <li class="index__item"><a href="#" class="index__link">Венисуэла</a></li>
-                <li class="index__item"><a href="#" class="index__link">Восточный Тимор</a></li>
-                <li class="index__item"><a href="#" class="index__link">Вьетнам</a></li>
-              </ul>
-            </li>
-            <li class="index__choise-item index__choise-item--open" data-heading="г">
-              <span class="index__headind-symbol index__headind-symbol--catalog">г</span>
-              <ul class="index__list index__list--catalog">
-                <li class="index__item"><a href="#" class="index__link">Габон</a></li>
-                <li class="index__item"><a href="#" class="index__link">Гаити</a></li>
-                <li class="index__item"><a href="#" class="index__link">Гайана</a></li>
-                <li class="index__item"><a href="#" class="index__link">Гамбия</a></li>
-                <li class="index__item"><a href="#" class="index__link">Гана</a></li>
-                <li class="index__item"><a href="#" class="index__link">Гватемала</a></li>
-                <li class="index__item"><a href="#" class="index__link">Гвинея</a></li>
-                <li class="index__item"><a href="#" class="index__link">Гвинея-Бисау</a></li>
-                <li class="index__item"><a href="#" class="index__link">Германия</a></li>
-                <li class="index__item"><a href="#" class="index__link">Гондурас</a></li>
-                <li class="index__item"><a href="#" class="index__link">Гренада</a></li>
-                <li class="index__item"><a href="#" class="index__link">Греция</a></li>
-                <li class="index__item"><a href="#" class="index__link">Грузия</a></li>
-              </ul>
-            </li>
-            <li class="index__choise-item index__choise-item--open" data-heading="д">
-              <span class="index__headind-symbol index__headind-symbol--catalog">д</span>
-              <ul class="index__list index__list--catalog">
-                <li class="index__item"><a href="#" class="index__link">Дания</a></li>
-                <li class="index__item"><a href="#" class="index__link">Джибути</a></li>
-                <li class="index__item"><a href="#" class="index__link">Доминика</a></li>
-                <li class="index__item"><a href="#" class="index__link">Доминикана</a></li>
-              </ul>
-            </li>
-            <li class="index__choise-item index__choise-item--open" data-heading="е">
-              <span class="index__headind-symbol index__headind-symbol--catalog">е</span>
-              <ul class="index__list index__list--catalog">
-                <li class="index__item"><a href="#" class="index__link">Египед</a></li>
-              </ul>
-            </li>
-            <li class="index__choise-item index__choise-item--open" data-heading="з">
-              <span class="index__headind-symbol index__headind-symbol--catalog">з</span>
-              <ul class="index__list index__list--catalog">
-                <li class="index__item"><a href="#" class="index__link">Замбия</a></li>
-                <li class="index__item"><a href="#" class="index__link">Зимбабве</a></li>
-              </ul>
-            </li>
-            <li class="index__choise-item index__choise-item--open" data-heading="и">
-              <span class="index__headind-symbol index__headind-symbol--catalog">и</span>
-              <ul class="index__list index__list--catalog">
-                <li class="index__item"><a href="#" class="index__link">Израиль</a></li>
-                <li class="index__item"><a href="#" class="index__link">Индия</a></li>
-                <li class="index__item"><a href="#" class="index__link">Индонезия</a></li>
-                <li class="index__item"><a href="#" class="index__link">Иордания</a></li>
-                <li class="index__item"><a href="#" class="index__link">Ирак</a></li>
-                <li class="index__item"><a href="#" class="index__link">Иран</a></li>
-                <li class="index__item"><a href="#" class="index__link">Ирландия</a></li>
-                <li class="index__item"><a href="#" class="index__link">Исладндия</a></li>
-                <li class="index__item"><a href="#" class="index__link">Испания</a></li>
-                <li class="index__item"><a href="#" class="index__link">Италия</a></li>
-              </ul>
-            </li>
-            <li class="index__choise-item index__choise-item--open" data-heading="к">
-              <span class="index__headind-symbol index__headind-symbol--catalog">к</span>
-              <ul class="index__list index__list--catalog">
-                <li class="index__item"><a href="#" class="index__link">Кабо-Верде</a></li>
-                <li class="index__item"><a href="#" class="index__link">Казахстан</a></li>
-                <li class="index__item"><a href="#" class="index__link">Камбоджа</a></li>
-                <li class="index__item"><a href="#" class="index__link">Камерун</a></li>
-                <li class="index__item"><a href="#" class="index__link">Канада</a></li>
-                <li class="index__item"><a href="#" class="index__link">Катар</a></li>
-                <li class="index__item"><a href="#" class="index__link">Кения</a></li>
-                <li class="index__item"><a href="#" class="index__link">Кипр</a></li>
-                <li class="index__item"><a href="#" class="index__link">Киргизия</a></li>
-                <li class="index__item"><a href="#" class="index__link">Кирибати</a></li>
-                <li class="index__item"><a href="#" class="index__link">Китай</a></li>
-                <li class="index__item"><a href="#" class="index__link">Колумбия</a></li>
-              </ul>
-            </li>
-            <li class="index__choise-item index__choise-item--open" data-heading="л">
-              <span class="index__headind-symbol index__headind-symbol--catalog">л</span>
-              <ul class="index__list index__list--catalog">
-                <li class="index__item"><a href="#" class="index__link">Лаос</a></li>
-                <li class="index__item"><a href="#" class="index__link">Латвия</a></li>
-                <li class="index__item"><a href="#" class="index__link">Лесото</a></li>
-                <li class="index__item"><a href="#" class="index__link">Либерия</a></li>
-                <li class="index__item"><a href="#" class="index__link">Ливан</a></li>
-                <li class="index__item"><a href="#" class="index__link">Ливия</a></li>
-                <li class="index__item"><a href="#" class="index__link">Литва</a></li>
-                <li class="index__item"><a href="#" class="index__link">Лихтеншейн</a></li>
-                <li class="index__item"><a href="#" class="index__link">Люксембург</a></li>
-              </ul>
-            </li>
-            <li class="index__choise-item index__choise-item--open" data-heading="м">
-              <span class="index__headind-symbol index__headind-symbol--catalog">м</span>
-              <ul class="index__list index__list--catalog">
-                <li class="index__item"><a href="#" class="index__link">Маврикий</a></li>
-                <li class="index__item"><a href="#" class="index__link">Мавритания</a></li>
-                <li class="index__item"><a href="#" class="index__link">Мадагаскар</a></li>
-                <li class="index__item"><a href="#" class="index__link">Малави</a></li>
-                <li class="index__item"><a href="#" class="index__link">Малайзия</a></li>
-                <li class="index__item"><a href="#" class="index__link">Мали</a></li>
-                <li class="index__item"><a href="#" class="index__link">Мальдивы</a></li>
-                <li class="index__item"><a href="#" class="index__link">Мальта</a></li>
-                <li class="index__item"><a href="#" class="index__link">Марокко</a></li>
-              </ul>
-            </li>
-            <li class="index__choise-item index__choise-item--open" data-heading="н">
-              <span class="index__headind-symbol index__headind-symbol--catalog">н</span>
-              <ul class="index__list index__list--catalog">
-                <li class="index__item"><a href="#" class="index__link">Намибия</a></li>
-                <li class="index__item"><a href="#" class="index__link">Науру</a></li>
-                <li class="index__item"><a href="#" class="index__link">Непал</a></li>
-                <li class="index__item"><a href="#" class="index__link">Нигер</a></li>
-                <li class="index__item"><a href="#" class="index__link">Нигерия</a></li>
-                <li class="index__item"><a href="#" class="index__link">Нидерланды</a></li>
-                <li class="index__item"><a href="#" class="index__link">Никорагуа</a></li>
-                <li class="index__item"><a href="#" class="index__link">Новая Зеландия</a></li>
-                <li class="index__item"><a href="#" class="index__link">Норвегия</a></li>
-              </ul>
-            </li>
-            <li class="index__choise-item index__choise-item--open" data-heading="о">
-              <span class="index__headind-symbol index__headind-symbol--catalog">о</span>
-              <ul class="index__list index__list--catalog">
-                <li class="index__item"><a href="#" class="index__link">ОАЭ</a></li>
-                <li class="index__item"><a href="#" class="index__link">Оман</a></li>
-              </ul>
-            </li>
-            <li class="index__choise-item index__choise-item--open" data-heading="п">
-              <span class="index__headind-symbol index__headind-symbol--catalog">п</span>
-              <ul class="index__list index__list--catalog">
-                <li class="index__item"><a href="#" class="index__link">Пакистан</a></li>
-                <li class="index__item"><a href="#" class="index__link">Палау</a></li>
-                <li class="index__item"><a href="#" class="index__link">Панама</a></li>
-                <li class="index__item"><a href="#" class="index__link">Папуа-Новая Гвинея</a>
-                </li>
-                <li class="index__item"><a href="#" class="index__link">Парагвай</a></li>
-                <li class="index__item"><a href="#" class="index__link">Перу</a></li>
-                <li class="index__item"><a href="#" class="index__link">Польша</a></li>
-                <li class="index__item"><a href="#" class="index__link">Португалия</a></li>
-              </ul>
-            </li>
-            <li class="index__choise-item index__choise-item--open" data-heading="р">
-              <span class="index__headind-symbol index__headind-symbol--catalog">р</span>
-              <ul class="index__list index__list--catalog">
-                <li class="index__item"><a href="#" class="index__link">Руанда</a></li>
-                <li class="index__item"><a href="#" class="index__link">Румыния</a></li>
-                <li class="index__item"><a href="#" class="index__link">Россия</a></li>
-              </ul>
-            </li>
-            <li class="index__choise-item index__choise-item--open" data-heading="с">
-              <span class="index__headind-symbol index__headind-symbol--catalog">с</span>
-              <ul class="index__list index__list--catalog">
-                <li class="index__item"><a href="#" class="index__link">Сальвадор</a></li>
-                <li class="index__item"><a href="#" class="index__link">Самоа</a></li>
-                <li class="index__item"><a href="#" class="index__link">Сан-Марино</a></li>
-                <li class="index__item"><a href="#" class="index__link">Саудовская Аравия</a></li>
-                <li class="index__item"><a href="#" class="index__link">Сейшелы</a></li>
-                <li class="index__item"><a href="#" class="index__link">Сенегал</a></li>
-                <li class="index__item"><a href="#" class="index__link">Сербия</a></li>
-                <li class="index__item"><a href="#" class="index__link">Сингапур</a></li>
-                <li class="index__item"><a href="#" class="index__link">Сирия</a></li>
-                <li class="index__item"><a href="#" class="index__link">Словакия</a></li>
-                <li class="index__item"><a href="#" class="index__link">Словения</a></li>
-                <li class="index__item"><a href="#" class="index__link">США</a></li>
-              </ul>
-            </li>
-            <li class="index__choise-item index__choise-item--open" data-heading="т">
-              <span class="index__headind-symbol index__headind-symbol--catalog">т</span>
-              <ul class="index__list index__list--catalog">
-                <li class="index__item"><a href="#" class="index__link">Таджикистан</a></li>
-                <li class="index__item"><a href="#" class="index__link">Таиланд</a></li>
-                <li class="index__item"><a href="#" class="index__link">Танзания</a></li>
-                <li class="index__item"><a href="#" class="index__link">Того</a></li>
-                <li class="index__item"><a href="#" class="index__link">Тонга</a></li>
-                <li class="index__item"><a href="#" class="index__link">Тринидад и Тобаго</a></li>
-                <li class="index__item"><a href="#" class="index__link">Тувалу</a></li>
-                <li class="index__item"><a href="#" class="index__link">Тунис</a></li>
-                <li class="index__item"><a href="#" class="index__link">Туркмения</a></li>
-                <li class="index__item"><a href="#" class="index__link">Турция</a></li>
-              </ul>
-            </li>
-            <li class="index__choise-item index__choise-item--open" data-heading="у">
-              <span class="index__headind-symbol index__headind-symbol--catalog">у</span>
-              <ul class="index__list index__list--catalog">
-                <li class="index__item"><a href="#" class="index__link">Уганда</a></li>
-                <li class="index__item"><a href="#" class="index__link">Узбекистан</a></li>
-                <li class="index__item"><a href="#" class="index__link">Украина</a></li>
-                <li class="index__item"><a href="#" class="index__link">Уругвай</a></li>
-              </ul>
-            </li>
-            <li class="index__choise-item index__choise-item--open" data-heading="ф">
-              <span class="index__headind-symbol index__headind-symbol--catalog">ф</span>
-              <ul class="index__list index__list--catalog">
-                <li class="index__item"><a href="#" class="index__link">Фиджи</a></li>
-                <li class="index__item"><a href="#" class="index__link">Филипины</a></li>
-                <li class="index__item"><a href="#" class="index__link">Финляндия</a></li>
-                <li class="index__item"><a href="#" class="index__link">Франция</a></li>
-              </ul>
-            </li>
-            <li class="index__choise-item index__choise-item--open" data-heading="х">
-              <span class="index__headind-symbol index__headind-symbol--catalog">х</span>
-              <ul class="index__list index__list--catalog">
-                <li class="index__item"><a href="#" class="index__link">Хорватия</a></li>
-              </ul>
-            </li>
-            <li class="index__choise-item index__choise-item--open" data-heading="ч">
-              <span class="index__headind-symbol index__headind-symbol--catalog">ч</span>
-              <ul class="index__list index__list--catalog">
-                <li class="index__item"><a href="#" class="index__link">Чад</a></li>
-                <li class="index__item"><a href="#" class="index__link">Черногория</a></li>
-                <li class="index__item"><a href="#" class="index__link">Чехия</a></li>
-                <li class="index__item"><a href="#" class="index__link">Чили</a></li>
-              </ul>
-            </li>
-            <li class="index__choise-item index__choise-item--open" data-heading="ш">
-              <span class="index__headind-symbol index__headind-symbol--catalog">ш</span>
-              <ul class="index__list index__list--catalog">
-                <li class="index__item"><a href="#" class="index__link">Швейцария</a></li>
-                <li class="index__item"><a href="#" class="index__link">Швеция</a></li>
-                <li class="index__item"><a href="#" class="index__link">Шри-Ланка</a></li>
-              </ul>
-            </li>
-            <li class="index__choise-item index__choise-item--open" data-heading="э">
-              <span class="index__headind-symbol index__headind-symbol--catalog">э</span>
-              <ul class="index__list index__list--catalog">
-                <li class="index__item"><a href="#" class="index__link">Эквадор</a></li>
-                <li class="index__item"><a href="#" class="index__link">Эритрея</a></li>
-                <li class="index__item"><a href="#" class="index__link">Эсватини</a></li>
-                <li class="index__item"><a href="#" class="index__link">Эстония</a></li>
-                <li class="index__item"><a href="#" class="index__link">Эфиопия</a></li>
-              </ul>
-            </li>
-            <li class="index__choise-item index__choise-item--open" data-heading="ю">
-              <span class="index__headind-symbol index__headind-symbol--catalog">ю</span>
-              <ul class="index__list index__list--catalog">
-                <li class="index__item"><a href="#" class="index__link">ЮАР</a></li>
-                <li class="index__item"><a href="#" class="index__link">Южный Судан</a></li>
-              </ul>
-            </li>
-            <li class="index__choise-item index__choise-item--open" data-heading="я">
-              <span class="index__headind-symbol index__headind-symbol--catalog">я</span>
-              <ul class="index__list index__list--catalog">
-                <li class="index__item"><a href="#" class="index__link">Ямайка</a></li>
-                <li class="index__item"><a href="#" class="index__link">Япония</a></li>
-              </ul>
-            </li>
+          <li class="index__choise-item index__choise-item--open index__choise-item--active" data-heading="а">
+            <span class="index__headind-symbol index__headind-symbol--catalog">а</span>
+            <ul class="index__list index__list--catalog">
+              <li class="index__item"><a href="#" class="index__link">Австралия</a></li>
+              <li class="index__item"><a href="#" class="index__link">Австрия</a></li>
+              <li class="index__item"><a href="#" class="index__link">Азербайджан</a></li>
+              <li class="index__item"><a href="#" class="index__link">Албания</a></li>
+              <li class="index__item"><a href="#" class="index__link">Алжир</a></li>
+              <li class="index__item"><a href="#" class="index__link">Ангола</a></li>
+              <li class="index__item"><a href="#" class="index__link">Андорра</a></li>
+              <li class="index__item"><a href="#" class="index__link">Антигуа и Барбуда</a></li>
+              <li class="index__item"><a href="#" class="index__link">Аргентина</a></li>
+              <li class="index__item"><a href="#" class="index__link">Армения</a></li>
+              <li class="index__item"><a href="#" class="index__link">Афганистан</a></li>
+            </ul>
+          </li>
+          <li class="index__choise-item index__choise-item--open" data-heading="б">
+            <span class="index__headind-symbol index__headind-symbol--catalog">б</span>
+            <ul class="index__list index__list--catalog">
+              <li class="index__item"><a href="#" class="index__link">Багамские острова</a></li>
+              <li class="index__item"><a href="#" class="index__link">Бангладеш</a></li>
+              <li class="index__item"><a href="#" class="index__link">Барбадос</a></li>
+              <li class="index__item"><a href="#" class="index__link">Бахрейн</a></li>
+              <li class="index__item"><a href="#" class="index__link">Белоруссия</a></li>
+              <li class="index__item"><a href="#" class="index__link">Белиз</a></li>
+              <li class="index__item"><a href="#" class="index__link">Бельгия</a></li>
+              <li class="index__item"><a href="#" class="index__link">Бенин</a></li>
+              <li class="index__item"><a href="#" class="index__link">Болгария</a></li>
+              <li class="index__item"><a href="#" class="index__link">Боливия</a></li>
+              <li class="index__item"><a href="#" class="index__link">Босния и Герцеговина</a>
+              </li>
+              <li class="index__item"><a href="#" class="index__link">Ботсвана</a></li>
+              <li class="index__item"><a href="#" class="index__link">Бразилия</a></li>
+              <li class="index__item"><a href="#" class="index__link">Бруней</a></li>
+              <li class="index__item"><a href="#" class="index__link">Буркина-Фасо</a></li>
+              <li class="index__item"><a href="#" class="index__link">Бурунди</a></li>
+              <li class="index__item"><a href="#" class="index__link">Бутан</a></li>
+            </ul>
+          </li>
+          <li class="index__choise-item index__choise-item--open" data-heading="в">
+            <span class="index__headind-symbol index__headind-symbol--catalog">в</span>
+            <ul class="index__list index__list--catalog">
+              <li class="index__item"><a href="#" class="index__link">Вануату</a></li>
+              <li class="index__item"><a href="#" class="index__link">Великобритания</a></li>
+              <li class="index__item"><a href="#" class="index__link">Венгрия</a></li>
+              <li class="index__item"><a href="#" class="index__link">Венисуэла</a></li>
+              <li class="index__item"><a href="#" class="index__link">Восточный Тимор</a></li>
+              <li class="index__item"><a href="#" class="index__link">Вьетнам</a></li>
+            </ul>
+          </li>
+          <li class="index__choise-item index__choise-item--open" data-heading="г">
+            <span class="index__headind-symbol index__headind-symbol--catalog">г</span>
+            <ul class="index__list index__list--catalog">
+              <li class="index__item"><a href="#" class="index__link">Габон</a></li>
+              <li class="index__item"><a href="#" class="index__link">Гаити</a></li>
+              <li class="index__item"><a href="#" class="index__link">Гайана</a></li>
+              <li class="index__item"><a href="#" class="index__link">Гамбия</a></li>
+              <li class="index__item"><a href="#" class="index__link">Гана</a></li>
+              <li class="index__item"><a href="#" class="index__link">Гватемала</a></li>
+              <li class="index__item"><a href="#" class="index__link">Гвинея</a></li>
+              <li class="index__item"><a href="#" class="index__link">Гвинея-Бисау</a></li>
+              <li class="index__item"><a href="#" class="index__link">Германия</a></li>
+              <li class="index__item"><a href="#" class="index__link">Гондурас</a></li>
+              <li class="index__item"><a href="#" class="index__link">Гренада</a></li>
+              <li class="index__item"><a href="#" class="index__link">Греция</a></li>
+              <li class="index__item"><a href="#" class="index__link">Грузия</a></li>
+            </ul>
+          </li>
+          <li class="index__choise-item index__choise-item--open" data-heading="д">
+            <span class="index__headind-symbol index__headind-symbol--catalog">д</span>
+            <ul class="index__list index__list--catalog">
+              <li class="index__item"><a href="#" class="index__link">Дания</a></li>
+              <li class="index__item"><a href="#" class="index__link">Джибути</a></li>
+              <li class="index__item"><a href="#" class="index__link">Доминика</a></li>
+              <li class="index__item"><a href="#" class="index__link">Доминикана</a></li>
+            </ul>
+          </li>
+          <li class="index__choise-item index__choise-item--open" data-heading="е">
+            <span class="index__headind-symbol index__headind-symbol--catalog">е</span>
+            <ul class="index__list index__list--catalog">
+              <li class="index__item"><a href="#" class="index__link">Египед</a></li>
+            </ul>
+          </li>
+          <li class="index__choise-item index__choise-item--open" data-heading="з">
+            <span class="index__headind-symbol index__headind-symbol--catalog">з</span>
+            <ul class="index__list index__list--catalog">
+              <li class="index__item"><a href="#" class="index__link">Замбия</a></li>
+              <li class="index__item"><a href="#" class="index__link">Зимбабве</a></li>
+            </ul>
+          </li>
+          <li class="index__choise-item index__choise-item--open" data-heading="и">
+            <span class="index__headind-symbol index__headind-symbol--catalog">и</span>
+            <ul class="index__list index__list--catalog">
+              <li class="index__item"><a href="#" class="index__link">Израиль</a></li>
+              <li class="index__item"><a href="#" class="index__link">Индия</a></li>
+              <li class="index__item"><a href="#" class="index__link">Индонезия</a></li>
+              <li class="index__item"><a href="#" class="index__link">Иордания</a></li>
+              <li class="index__item"><a href="#" class="index__link">Ирак</a></li>
+              <li class="index__item"><a href="#" class="index__link">Иран</a></li>
+              <li class="index__item"><a href="#" class="index__link">Ирландия</a></li>
+              <li class="index__item"><a href="#" class="index__link">Исладндия</a></li>
+              <li class="index__item"><a href="#" class="index__link">Испания</a></li>
+              <li class="index__item"><a href="#" class="index__link">Италия</a></li>
+            </ul>
+          </li>
+          <li class="index__choise-item index__choise-item--open" data-heading="к">
+            <span class="index__headind-symbol index__headind-symbol--catalog">к</span>
+            <ul class="index__list index__list--catalog">
+              <li class="index__item"><a href="#" class="index__link">Кабо-Верде</a></li>
+              <li class="index__item"><a href="#" class="index__link">Казахстан</a></li>
+              <li class="index__item"><a href="#" class="index__link">Камбоджа</a></li>
+              <li class="index__item"><a href="#" class="index__link">Камерун</a></li>
+              <li class="index__item"><a href="#" class="index__link">Канада</a></li>
+              <li class="index__item"><a href="#" class="index__link">Катар</a></li>
+              <li class="index__item"><a href="#" class="index__link">Кения</a></li>
+              <li class="index__item"><a href="#" class="index__link">Кипр</a></li>
+              <li class="index__item"><a href="#" class="index__link">Киргизия</a></li>
+              <li class="index__item"><a href="#" class="index__link">Кирибати</a></li>
+              <li class="index__item"><a href="#" class="index__link">Китай</a></li>
+              <li class="index__item"><a href="#" class="index__link">Колумбия</a></li>
+            </ul>
+          </li>
+          <li class="index__choise-item index__choise-item--open" data-heading="л">
+            <span class="index__headind-symbol index__headind-symbol--catalog">л</span>
+            <ul class="index__list index__list--catalog">
+              <li class="index__item"><a href="#" class="index__link">Лаос</a></li>
+              <li class="index__item"><a href="#" class="index__link">Латвия</a></li>
+              <li class="index__item"><a href="#" class="index__link">Лесото</a></li>
+              <li class="index__item"><a href="#" class="index__link">Либерия</a></li>
+              <li class="index__item"><a href="#" class="index__link">Ливан</a></li>
+              <li class="index__item"><a href="#" class="index__link">Ливия</a></li>
+              <li class="index__item"><a href="#" class="index__link">Литва</a></li>
+              <li class="index__item"><a href="#" class="index__link">Лихтеншейн</a></li>
+              <li class="index__item"><a href="#" class="index__link">Люксембург</a></li>
+            </ul>
+          </li>
+          <li class="index__choise-item index__choise-item--open" data-heading="м">
+            <span class="index__headind-symbol index__headind-symbol--catalog">м</span>
+            <ul class="index__list index__list--catalog">
+              <li class="index__item"><a href="#" class="index__link">Маврикий</a></li>
+              <li class="index__item"><a href="#" class="index__link">Мавритания</a></li>
+              <li class="index__item"><a href="#" class="index__link">Мадагаскар</a></li>
+              <li class="index__item"><a href="#" class="index__link">Малави</a></li>
+              <li class="index__item"><a href="#" class="index__link">Малайзия</a></li>
+              <li class="index__item"><a href="#" class="index__link">Мали</a></li>
+              <li class="index__item"><a href="#" class="index__link">Мальдивы</a></li>
+              <li class="index__item"><a href="#" class="index__link">Мальта</a></li>
+              <li class="index__item"><a href="#" class="index__link">Марокко</a></li>
+            </ul>
+          </li>
+          <li class="index__choise-item index__choise-item--open" data-heading="н">
+            <span class="index__headind-symbol index__headind-symbol--catalog">н</span>
+            <ul class="index__list index__list--catalog">
+              <li class="index__item"><a href="#" class="index__link">Намибия</a></li>
+              <li class="index__item"><a href="#" class="index__link">Науру</a></li>
+              <li class="index__item"><a href="#" class="index__link">Непал</a></li>
+              <li class="index__item"><a href="#" class="index__link">Нигер</a></li>
+              <li class="index__item"><a href="#" class="index__link">Нигерия</a></li>
+              <li class="index__item"><a href="#" class="index__link">Нидерланды</a></li>
+              <li class="index__item"><a href="#" class="index__link">Никорагуа</a></li>
+              <li class="index__item"><a href="#" class="index__link">Новая Зеландия</a></li>
+              <li class="index__item"><a href="#" class="index__link">Норвегия</a></li>
+            </ul>
+          </li>
+          <li class="index__choise-item index__choise-item--open" data-heading="о">
+            <span class="index__headind-symbol index__headind-symbol--catalog">о</span>
+            <ul class="index__list index__list--catalog">
+              <li class="index__item"><a href="#" class="index__link">ОАЭ</a></li>
+              <li class="index__item"><a href="#" class="index__link">Оман</a></li>
+            </ul>
+          </li>
+          <li class="index__choise-item index__choise-item--open" data-heading="п">
+            <span class="index__headind-symbol index__headind-symbol--catalog">п</span>
+            <ul class="index__list index__list--catalog">
+              <li class="index__item"><a href="#" class="index__link">Пакистан</a></li>
+              <li class="index__item"><a href="#" class="index__link">Палау</a></li>
+              <li class="index__item"><a href="#" class="index__link">Панама</a></li>
+              <li class="index__item"><a href="#" class="index__link">Папуа-Новая Гвинея</a>
+              </li>
+              <li class="index__item"><a href="#" class="index__link">Парагвай</a></li>
+              <li class="index__item"><a href="#" class="index__link">Перу</a></li>
+              <li class="index__item"><a href="#" class="index__link">Польша</a></li>
+              <li class="index__item"><a href="#" class="index__link">Португалия</a></li>
+            </ul>
+          </li>
+          <li class="index__choise-item index__choise-item--open" data-heading="р">
+            <span class="index__headind-symbol index__headind-symbol--catalog">р</span>
+            <ul class="index__list index__list--catalog">
+              <li class="index__item"><a href="#" class="index__link">Руанда</a></li>
+              <li class="index__item"><a href="#" class="index__link">Румыния</a></li>
+              <li class="index__item"><a href="#" class="index__link">Россия</a></li>
+            </ul>
+          </li>
+          <li class="index__choise-item index__choise-item--open" data-heading="с">
+            <span class="index__headind-symbol index__headind-symbol--catalog">с</span>
+            <ul class="index__list index__list--catalog">
+              <li class="index__item"><a href="#" class="index__link">Сальвадор</a></li>
+              <li class="index__item"><a href="#" class="index__link">Самоа</a></li>
+              <li class="index__item"><a href="#" class="index__link">Сан-Марино</a></li>
+              <li class="index__item"><a href="#" class="index__link">Саудовская Аравия</a></li>
+              <li class="index__item"><a href="#" class="index__link">Сейшелы</a></li>
+              <li class="index__item"><a href="#" class="index__link">Сенегал</a></li>
+              <li class="index__item"><a href="#" class="index__link">Сербия</a></li>
+              <li class="index__item"><a href="#" class="index__link">Сингапур</a></li>
+              <li class="index__item"><a href="#" class="index__link">Сирия</a></li>
+              <li class="index__item"><a href="#" class="index__link">Словакия</a></li>
+              <li class="index__item"><a href="#" class="index__link">Словения</a></li>
+              <li class="index__item"><a href="#" class="index__link">США</a></li>
+            </ul>
+          </li>
+          <li class="index__choise-item index__choise-item--open" data-heading="т">
+            <span class="index__headind-symbol index__headind-symbol--catalog">т</span>
+            <ul class="index__list index__list--catalog">
+              <li class="index__item"><a href="#" class="index__link">Таджикистан</a></li>
+              <li class="index__item"><a href="#" class="index__link">Таиланд</a></li>
+              <li class="index__item"><a href="#" class="index__link">Танзания</a></li>
+              <li class="index__item"><a href="#" class="index__link">Того</a></li>
+              <li class="index__item"><a href="#" class="index__link">Тонга</a></li>
+              <li class="index__item"><a href="#" class="index__link">Тринидад и Тобаго</a></li>
+              <li class="index__item"><a href="#" class="index__link">Тувалу</a></li>
+              <li class="index__item"><a href="#" class="index__link">Тунис</a></li>
+              <li class="index__item"><a href="#" class="index__link">Туркмения</a></li>
+              <li class="index__item"><a href="#" class="index__link">Турция</a></li>
+            </ul>
+          </li>
+          <li class="index__choise-item index__choise-item--open" data-heading="у">
+            <span class="index__headind-symbol index__headind-symbol--catalog">у</span>
+            <ul class="index__list index__list--catalog">
+              <li class="index__item"><a href="#" class="index__link">Уганда</a></li>
+              <li class="index__item"><a href="#" class="index__link">Узбекистан</a></li>
+              <li class="index__item"><a href="#" class="index__link">Украина</a></li>
+              <li class="index__item"><a href="#" class="index__link">Уругвай</a></li>
+            </ul>
+          </li>
+          <li class="index__choise-item index__choise-item--open" data-heading="ф">
+            <span class="index__headind-symbol index__headind-symbol--catalog">ф</span>
+            <ul class="index__list index__list--catalog">
+              <li class="index__item"><a href="#" class="index__link">Фиджи</a></li>
+              <li class="index__item"><a href="#" class="index__link">Филипины</a></li>
+              <li class="index__item"><a href="#" class="index__link">Финляндия</a></li>
+              <li class="index__item"><a href="#" class="index__link">Франция</a></li>
+            </ul>
+          </li>
+          <li class="index__choise-item index__choise-item--open" data-heading="х">
+            <span class="index__headind-symbol index__headind-symbol--catalog">х</span>
+            <ul class="index__list index__list--catalog">
+              <li class="index__item"><a href="#" class="index__link">Хорватия</a></li>
+            </ul>
+          </li>
+          <li class="index__choise-item index__choise-item--open" data-heading="ч">
+            <span class="index__headind-symbol index__headind-symbol--catalog">ч</span>
+            <ul class="index__list index__list--catalog">
+              <li class="index__item"><a href="#" class="index__link">Чад</a></li>
+              <li class="index__item"><a href="#" class="index__link">Черногория</a></li>
+              <li class="index__item"><a href="#" class="index__link">Чехия</a></li>
+              <li class="index__item"><a href="#" class="index__link">Чили</a></li>
+            </ul>
+          </li>
+          <li class="index__choise-item index__choise-item--open" data-heading="ш">
+            <span class="index__headind-symbol index__headind-symbol--catalog">ш</span>
+            <ul class="index__list index__list--catalog">
+              <li class="index__item"><a href="#" class="index__link">Швейцария</a></li>
+              <li class="index__item"><a href="#" class="index__link">Швеция</a></li>
+              <li class="index__item"><a href="#" class="index__link">Шри-Ланка</a></li>
+            </ul>
+          </li>
+          <li class="index__choise-item index__choise-item--open" data-heading="э">
+            <span class="index__headind-symbol index__headind-symbol--catalog">э</span>
+            <ul class="index__list index__list--catalog">
+              <li class="index__item"><a href="#" class="index__link">Эквадор</a></li>
+              <li class="index__item"><a href="#" class="index__link">Эритрея</a></li>
+              <li class="index__item"><a href="#" class="index__link">Эсватини</a></li>
+              <li class="index__item"><a href="#" class="index__link">Эстония</a></li>
+              <li class="index__item"><a href="#" class="index__link">Эфиопия</a></li>
+            </ul>
+          </li>
+          <li class="index__choise-item index__choise-item--open" data-heading="ю">
+            <span class="index__headind-symbol index__headind-symbol--catalog">ю</span>
+            <ul class="index__list index__list--catalog">
+              <li class="index__item"><a href="#" class="index__link">ЮАР</a></li>
+              <li class="index__item"><a href="#" class="index__link">Южный Судан</a></li>
+            </ul>
+          </li>
+          <li class="index__choise-item index__choise-item--open" data-heading="я">
+            <span class="index__headind-symbol index__headind-symbol--catalog">я</span>
+            <ul class="index__list index__list--catalog">
+              <li class="index__item"><a href="#" class="index__link">Ямайка</a></li>
+              <li class="index__item"><a href="#" class="index__link">Япония</a></li>
+            </ul>
+          </li>
         </ul>
 
         <button type="button" class="filter__hide-button">Свернуть</button>
@@ -608,15 +590,15 @@
                 <h4 class="peoples__subtitle peoples__subtitle--places">хочет посетить:</h4>
                 <ul class="peoples__countries">
                   <li class="peoples__countries-item">
-                    <img src="img/sri-lanka.png" alt="Флаг Шри-Ланки" class="peoples__countries-image" width="26" height="18" />
+                    <img src="img/sri-lanka.svg" alt="Флаг Шри-Ланки" class="peoples__countries-image" width="26" height="18" />
                     <p class="peoples__country-name">Шри-Ланка</p>
                   </li>
                   <li class="peoples__countries-item">
-                    <img src="img/thailand.png" alt="Флаг Таиланда" class="peoples__countries-image" width="26" height="18" />
+                    <img src="img/thailand.svg" alt="Флаг Таиланда" class="peoples__countries-image" width="26" height="18" />
                     <p class="peoples__country-name">Таиланд</p>
                   </li>
                   <li class="peoples__countries-item">
-                    <img src="img/seychelles.png" alt="Флаг Сейшельских островов" class="peoples__countries-image" width="26" height="18" />
+                    <img src="img/seychelles.svg" alt="Флаг Сейшельских островов" class="peoples__countries-image" width="26" height="18" />
                     <p class="peoples__country-name">Сейшелы</p>
                   </li>
                 </ul>
@@ -664,12 +646,12 @@
                 <h4 class="peoples__subtitle peoples__subtitle--places">хочет посетить:</h4>
                 <ul class="peoples__countries">
                   <li class="peoples__countries-item">
-                    <img src="img/belgium.png" alt="Флаг Бельгии" class="peoples__countries-image" width="26"
+                    <img src="img/belgium.svg" alt="Флаг Бельгии" class="peoples__countries-image" width="26"
                       height="18" />
                     <p class="peoples__country-name">Бельгия</p>
                   </li>
                   <li class="peoples__countries-item">
-                    <img src="img/czech.png" alt="Флаг Чехии" class="peoples__countries-image" width="26" height="18" />
+                    <img src="img/czech.svg" alt="Флаг Чехии" class="peoples__countries-image" width="26" height="18" />
                     <p class="peoples__country-name">Чехия</p>
                   </li>
                 </ul>
@@ -834,7 +816,11 @@
   <footer class="page-footer">
     <div class="page-footer__wrapper page-wrapper">
       <a href="index.html" class="page-footer__link">
-        <img src="img/pognali-logo_dark.png" alt="Логотип Погнали" class="page-footer__logo page-logo" width="96" height="15" /></a>
+        <picture class="page-footer__logo page-logo page-logo--dark">
+          <source media="(min-width: 768px)" srcset="img/pognali-logo_white_tablet.png">
+          <img src="img/pognali-logo_dark.png" alt="Логотип сервиса Погнали" class="page-logo__image" width="96" height="15" />
+        </picture>
+      </a>
 
       <ul class="page-footer__socials-list socials">
         <li class="socials__item socials__item--yellow">

@@ -1,20 +1,34 @@
 .travelers {
   background-color: $special_blue;
-  border-bottom-left-radius: 40px;
-  border-bottom-right-radius: 40px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
   padding: 62px 25px 31px;
   position: relative;
   box-sizing: border-box;
+  position: relative;
+  background-repeat: no-repeat;
+  background-image: url("../../img/smolov-back-mobile.png"),
+    url("../../img/rogovaya-back-mobile.png");
+  background-position: 152px 34px, left 24%;
+  background-size: 143px 143px, 64px 71px;
+
 
   @media (min-width: $tablet_width) {
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
     padding: 70px 70px 87px;
+    background-image: url("../../img/smolov-back-desktop.png"),
+    url("../../img/rogovaya-back-desktop.png");
+    background-position: 40px 340px, 410px 70px;
+    background-size: 143px 143px, 285px 285px;
   }
 
   @media (min-width: $desktop_width) {
-    padding: 70px 60px 134px 130px;
+    padding: 125px 60px 134px 100px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: repeat(3, min-content);
+    grid-template-rows: repeat(4, min-content);
+    background-position: 517px 135px, 160px 385px;
   }
 
   &::before {
@@ -27,12 +41,38 @@
     height: 60px;
     background-color: $special_blue;
   }
+
+  &::after {
+    content: "";
+    width: 113px;
+    height: 132px;
+    position: absolute;
+    top: 34px;
+    left: 0;
+    background-color: $basic_blue;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+
+    @media (min-width: $tablet_width) {
+      top: 70px;
+      left: 40px;
+      width: 212px;
+      height: 212px;
+      border-radius: 20px;
+    }
+
+    @media (min-width: $desktop_width) {
+      left: 30px;
+    }
+  }
 }
 
 .travelers__title {
   padding: 0 25px;
   margin: 0;
   margin-bottom: 19px;
+  position: relative;
+  z-index: 10;
 
   @media (min-width: $tablet_width) {
     padding: 0;
@@ -44,6 +84,8 @@
   padding: 0 25px;
   margin: 0;
   margin-bottom: 25px;
+  position: relative;
+  z-index: 10;
 
   @media (min-width: $tablet_width) {
     width: 70%;
@@ -51,13 +93,12 @@
     margin-bottom: 39px;
   }
 
-  @media (min-width: $desktop_width) {
-    padding: 0;
-    margin-bottom: 42px;
-  }
-
   &:not(:last-of-type) {
     margin-bottom: 25px;
+
+    @media (min-width: $desktop_width) {
+      margin-bottom: 42px;
+    }
   }
 
   &:last-of-type {
@@ -71,11 +112,30 @@
       margin-bottom: 85px;
     }
   }
+
+  &--strong {
+    @media (min-width: $tablet_width) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
 }
 
 .travelers__list {
   padding: 0;
   margin: 0;
-  list-style-type: none;
   margin-bottom: 20px;
+  list-style-type: none;
+  grid-column: 2 / 3;
+  grid-row: 1 / -1;
+  position: relative;
+  z-index: 10;
+
+  @media (min-width: $tablet_width) {
+    margin-bottom: 80px;
+  }
+
+  @media (min-width: $desktop_width) {
+    margin-bottom: 0;
+  }
 }

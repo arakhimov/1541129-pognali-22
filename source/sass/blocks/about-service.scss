@@ -1,7 +1,8 @@
 .about-service {
-  // background-image: url("../../img/about-mobile.png"),
-  //   url("../../img/about_bcg_mobile.png");
-  background-position: center, top left;
+  min-height: 353px;
+  background-image: url("../../img/about-mobile.png"),
+    url("../../img/about_bcg_mobile.png");
+  background-position: 80% top, left top;
   background-repeat: no-repeat;
   background-color: $special_blue;
   padding: 33px 25px 42px;
@@ -11,11 +12,17 @@
 
   @media (min-width: $tablet_width) {
     padding: 40px 75px 90px;
+    background-image: url("../../img/about_tablet.png"),
+      url("../../img/about_bcg_tablet.png");
+    background-position: 98% 40%, center top;
   }
 
   @media (min-width: $desktop_width) {
     min-height: 665px;
     padding: 42px 130px 163px;
+    background-image: url("../../img/about_desktop.png"),
+      url("../../img/about_bcg_desktop.png");
+    background-position: 94% 40%, 5% top;
   }
 }
 
@@ -37,7 +44,7 @@
 
 .about-service__text {
   padding: 0 25px;
-  width: 85%;
+  width: 80%;
   margin: 0 0 20px;
 
   @media (min-width: $tablet_width) {

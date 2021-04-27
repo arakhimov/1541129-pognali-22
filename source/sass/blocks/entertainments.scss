@@ -1,5 +1,13 @@
 .entertainments {
   padding-bottom: 17px;
+
+  @media (min-width: $tablet_width) {
+    padding-bottom: 53px;
+  }
+
+  @media (min-width: $desktop_width) {
+    padding-bottom: 103px;
+  }
 }
 
 .entertainments__list {
@@ -7,6 +15,11 @@
   padding: 0;
   list-style-type: none;
   padding-bottom: 22px;
+
+  @media (min-width: $tablet_width) {
+    padding-top: 27px;
+    border-top: 1px solid rgba($basic_gray, 0.3);
+  }
 }
 
 .entertainments__item {
@@ -21,6 +34,7 @@
     width: 17px;
     height: 287px;
     position: absolute;
+    z-index: 10;
     left: -17px;
     top: 10px;
     background-image: url("../../img/line-mobile.svg");
@@ -32,19 +46,26 @@
       left: auto;
     }
   }
+
+  @media (min-width: $desktop_width) {
+    width: 765px;
+    box-sizing: border-box;
+  }
 }
 
 .entertainments__title {
-  margin: 0;
   padding-left: 10px;
+  margin: 0;
   white-space: nowrap;
   font-weight: 500;
   font-size: 18px;
   line-height: 18px;
   color: $basic_blue_light;
+  background-color: transparent;
   grid-column: 1 / -1;
   grid-row: 1 / 2;
   position: relative;
+  align-self: center;
 
   &::after {
     content: "";
@@ -55,20 +76,31 @@
     left: 0;
     background-image: linear-gradient(to right, transparent 65%, $basic_white 75%);
   }
+
+  @media (min-width: $tablet_width) {
+    font-size: 30px;
+    line-height: 30px;
+    margin: 0;
+  }
 }
 
 .entertainments__image-flag {
+  width: 35px;
+  height: 24px;
   justify-self: flex-end;
   grid-column: 2 / -1;
   grid-row: 1 / 2;
   z-index: 10;
 
   @media (min-width: $tablet_width) {
-    margin-right: 25px;
+    margin-right: 36px;
+    width: 70px;
+    height: 47px;
   }
 }
 
 .entertainments__description {
+  margin: 0;
   grid-column: 1 / -1;
   min-height: 220px;
   border: 1px solid $basic_gray;
@@ -77,20 +109,36 @@
   resize: none;
   margin-top: 13px;
   margin-bottom: 25px;
-  padding: 11px 14px;
+  padding: 10px 14px;
+  height: 100px;
 
   &:not(:last-of-type) {
     margin-bottom: 27px;
   }
 
   &::placeholder {
+    font-size: 16px;
     font-weight: normal;
     line-height: 22px;
     color: $special_gray;
     opacity: 0.3;
+
+    @media (min-width: $tablet_width) {
+      font-size: 20px;
+      line-height: 20px;
+    }
   }
 
   @media (min-width: $tablet_width) {
+    width: 500px;
+    min-height: 142px;
+    margin-top: 30px;
     margin-right: 25px;
+    padding: 19px 18px;
+  }
+
+  @media (min-width: $desktop_width) {
+    width: auto;
+    margin-right: 52px;
   }
 }

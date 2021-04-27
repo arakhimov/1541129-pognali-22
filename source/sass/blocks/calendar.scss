@@ -1,7 +1,3 @@
-.calendar {
-  padding-bottom: 22px;
-}
-
 .calendar__change-month {
   min-height: 42px;
   display: flex;
@@ -27,6 +23,7 @@
   background-image: url("../../img/more_less.svg");
   background-repeat: no-repeat;
   background-size: contain;
+  opacity: 0.4;
 
   @media (min-width: $tablet_width) {
     width: 19px;
@@ -41,6 +38,14 @@
   &--more {
     transform: rotate(180deg);
   }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.1;
+  }
 }
 
 .calendar__month-field {
@@ -51,6 +56,11 @@
   line-height: 20px;
   text-align: center;
   border: none;
+
+  @media (min-width: $tablet_width) {
+    font-size: 36px;
+    line-height: 36px;
+  }
 }
 
 .calendar__days {
@@ -59,6 +69,10 @@
   list-style-type: none;
   display: flex;
   margin-bottom: 10px;
+
+  @media (min-width: $desktop_width) {
+    margin-bottom: 19px;
+  }
 }
 
 .calendar__days-item {
@@ -73,6 +87,15 @@
   &--weekend {
     color: $special_orange-dark;
   }
+
+  @media (min-width: $tablet_width) {
+    font-size: 18px;
+  }
+
+  @media (min-width: $desktop_width) {
+    justify-content: flex-start;
+    padding: 0 15px;
+  }
 }
 
 .calendar__dates {
@@ -85,8 +108,8 @@
 
 .calendar__dates-item {
   border: 1px solid $basic_gray;
-  color: $basic_gray;
   box-sizing: border-box;
+  min-height: 32px;
 
   &:not(:nth-of-type(7n)) {
     border-right: none;
@@ -96,21 +119,25 @@
     border-bottom: none;
   }
 
-  &--active {
-    color: $basic_white;
-    background-color: $basic_blue_light;
+  @media (min-width: $tablet_width) {
+    min-height: 70px;
   }
 
-  &--dark {
-    color: $basic_blue_light;
-    background-color: $basic_gray_light;
+  @media (min-width: $desktop_width) {
+    min-height: 76px;
+  }
+
+  &:hover {
+    outline: 4px solid $special_orange-dark;
+    outline-offset: -2px;
+    z-index: 10;
   }
 }
 
 .calendar__button {
   color: inherit;
   width: 100%;
-  min-height: 32px;
+  height: 100%;
   background-color: transparent;
   display: flex;
   align-items: center;
@@ -120,17 +147,76 @@
   font-size: 14px;
   line-height: 18px;
   border: none;
+  color: $basic_blue_light;
+  background-color: $basic_gray_light;
+  padding: 0;
+  margin: 0;
+
+  &--active {
+    color: $basic_white;
+    background-color: $basic_blue_light;
+  }
+
+  &--disabled {
+    color: $basic_gray;
+    background-color: $basic_white;
+  }
 
   @media (min-width: $tablet_width) {
-    min-height: 70px;
     font-size: 18px;
     line-height: 18px;
   }
 
+  @media (min-width: $tablet_width) and (max-width: $tablet_width_only) {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 20px;
+
+    &--disabled {
+      font-weight: normal;
+      font-size: 18px;
+      line-height: 18px;
+    }
+  }
+
   @media (min-width: $desktop_width) {
-    min-height: 76px;
     align-items: flex-start;
     justify-content: flex-start;
     padding: 15px;
+    color: $special_gray;
+
+    &--active {
+      color: $basic_white;
+    }
+
+    &--disabled {
+      color: $basic_gray;
+    }
+
+    &--arrival,
+    &--back {
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+
+    &--arrival {
+      &::after {
+        content: 'Заезд';
+      }
+    }
+
+    &--back {
+      &::after {
+        content: 'Выезд';
+      }
+    }
+
+    &--next-month {
+      &::after {
+        content: 'апр';
+        margin-left: 5px;
+      }
+    }
   }
 }

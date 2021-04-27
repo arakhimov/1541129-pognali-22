@@ -14,7 +14,19 @@
     z-index: -1;
     top: 0;
     left: 0;
-    background-color: $special_blue-light;
+    background-color: $special_blue_half_light;
+  }
+
+  @media (min-width: $tablet_width) {
+    border-top-left-radius: 30px;
+    border-top-right-radius: 30px;
+    padding-top: 53px;
+  }
+
+  @media (min-width: $desktop_width) {
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+    padding-top: 55px;
   }
 }
 
@@ -35,6 +47,14 @@
   justify-content: space-between;
   align-items: center;
   padding-bottom: 29px;
+
+  @media (min-width: $tablet_width) {
+    padding-bottom: 56px;
+  }
+
+  @media (min-width: $desktop_width) {
+    padding-bottom: 54px;
+  }
 }
 
 .add-plan__group-header {
@@ -60,7 +80,7 @@
     display: block;
     grid-column: 2 / 3;
     grid-row: 1 / -1;
-    width: 250px;
+    width: 245px;
   }
 }
 
@@ -69,11 +89,19 @@
   background-color: $basic_white;
   border: none;
   border-radius: 10px;
-  padding: 25px;
+  padding: 24px 25px 23px;
   box-sizing: border-box;
 
   &:not(:last-of-type) {
     margin-bottom: 10px;
+
+    @media (min-width: $tablet_width) {
+      margin-bottom: 39px;
+    }
+
+    @media (min-width: $desktop_width) {
+      margin-bottom: 43px;
+    }
   }
 
   @media (min-width: $tablet_width) {
@@ -118,6 +146,7 @@
 .add-plan__description {
   font-size: 16px;
   line-height: 22px;
+  margin: 0;
   margin-bottom: 20px;
 
   @media (min-width: $tablet_width) {
@@ -129,35 +158,38 @@
   @media (min-width: $desktop_width) {
     border-bottom: none;
     margin: 0;
-    margin-bottom: 62px;
+    margin-bottom: 55px;
   }
 }
 
 .add-plan__container {
+  @media (min-width: $tablet_width) {
+    border-top: 1px solid rgba($basic_gray, 0.3);
+    padding-top: 26px;
+  }
+
   @media (min-width: $desktop_width) {
     display: flex;
     justify-content: space-between;
     margin-bottom: 33px;
+    padding-top: 30px;
   }
-}
-
-.add-plan__childrens-wrapper {
-  padding-top: 30px;
 }
 
 .add-plan__childrens-label {
   display: inline-block;
   vertical-align: top;
   margin-bottom: 24px;
-  position: relative;
-  padding-left: 52px;
   cursor: pointer;
   font-weight: normal;
   font-size: 15px;
   line-height: 15px;
+  display: flex;
+  align-items: center;
+  position: relative;
+  color: $basic_blue_light;
 
   @media (min-width: $tablet_width) {
-    padding-left: 62px;
     font-weight: 500;
     font-size: 20px;
     line-height: 20px;
@@ -167,18 +199,17 @@
 
   &::before {
     content: "";
-    position: absolute;
-    left: 0;
-    top: 0;
-    transform: translateY(-25%);
+    display: block;
     width: 26px;
     height: 26px;
     border: 1px solid $basic_gray;
     border-radius: 4px;
+    margin-right: 13px;
 
     @media (min-width: $tablet_width) {
       width: 36px;
       height: 36px;
+      margin-right: 23px;
     }
   }
 
@@ -209,12 +240,37 @@
   vertical-align: top;
 }
 
+.add-plan__childrens-field:hover ~ .add-plan__childrens-label::before {
+  border: 1px solid $basic_gray__half_dark;
+}
+
+.add-plan__childrens-label:active::before {
+  border: none;
+  background-color: $basic_half_gray;
+}
+
+.add-plan__childrens-label:active::after {
+  opacity: 0.5;
+}
+
 .add-plan__month-control {
   margin-bottom: 22px;
 }
 
-.add-plan__list-routes {
+.add-plan__calendar {
   margin-bottom: 22px;
+
+  @media (min-width: $tablet_width) {
+    margin-bottom: 47px;
+  }
+
+  @media (min-width: $desktop_width) {
+    margin-bottom: 57px;
+  }
+}
+
+.add-plan__list-routes {
+  margin-bottom: 25px;
 
   @media (min-width: $tablet_width) {
     margin-bottom: 50px;
@@ -224,3 +280,132 @@
     margin-bottom: 58px;
   }
 }
+
+.add-plan__link-wrapper {
+  @media (min-width: $tablet_width) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+
+.add-plan__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 40px;
+  background-color: $basic_yellow;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $basic_blue_light;
+  border-radius: 20px;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet_width) {
+    width: 284px;
+    min-height: 80px;
+    text-transform: none;
+  }
+
+  &--back {
+    background-color: $basic_white;
+  }
+
+  &:hover {
+    background-color: $special_yellow-dark;
+  }
+
+  &--back:hover {
+    background-color: $basic_white;
+  }
+}
+
+.add-plan__link-text {
+  @media (min-width: $tablet_width) {
+    width: 284px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 35px;
+    font-size: 24px;
+    line-height: 24px;
+
+    &::after {
+      content: "";
+      display: inline-block;
+      vertical-align: top;
+      width: 14px;
+      height: 14px;
+      background-image: url("../../img/link_arrow.svg");
+      background-size: 14px 14px;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &--back {
+    width: auto;
+    white-space: nowrap;
+    margin-top: 13px;
+    padding: 0;
+
+    @media (min-width: $tablet_width) {
+      margin-top: 0;
+
+      &::after {
+        order: -1;
+        transform: rotate(180deg);
+        margin-right: 19px;
+      }
+    }
+  }
+}
+
+.add-plan__link--back:hover .add-plan__link-text {
+  opacity: 0.7;
+}
+
+.add-plan__link:active .add-plan__link-text {
+  opacity: 0.3;
+}
+
+.add-plan__submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  min-height: 40px;
+  background-color: $basic_yellow;
+  font-weight: bold;
+  font-size: 17px;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: $basic_blue_light;
+  border-radius: 20px;
+  border: none;
+  cursor: pointer;
+
+  @media (min-width: $tablet_width) {
+    width: 284px;
+    min-height: 80px;
+    text-transform: none;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 24px;
+    line-height: 24px;
+  }
+
+  &:hover {
+    background-color: $special_yellow-dark;
+  }
+}
+
+.add-plan__submit:active .add-plan__link-text {
+  opacity: 0.3;
+}
+

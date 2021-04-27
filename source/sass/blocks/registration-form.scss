@@ -1,7 +1,7 @@
 .registration-form {
   position: relative;
   display: flex;
-  height: 62px;
+  min-height: 62px;
   border-radius: 10px;
   overflow: hidden;
 
@@ -15,6 +15,11 @@
     width: 60px;
     height: 62px;
     background-color: $basic_white;
+  }
+
+  @media (min-width: $tablet_width) {
+    min-height: 80px;
+    border-radius: 20px;
   }
 }
 
@@ -31,6 +36,11 @@
     font-weight: bold;
     font-size: 18px;
     line-height: 18px;
+
+    @media (min-width: $tablet_width) {
+      font-size: 24px;
+      line-height: 24px;
+    }
   }
 }
 
@@ -46,7 +56,7 @@
   z-index: 10;
   cursor: pointer;
 
-  &::before {
+  &::after {
     content: "";
     display: inline-block;
     vertical-align: top;
@@ -54,9 +64,34 @@
     height: 16px;
     background-image: url("../../img/link_arrow.svg");
     background-repeat: no-repeat;
+    background-position: center;
+    background-size: 14px 13px;
+  }
+
+  @media (min-width: $tablet_width) {
+    width: 80px;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
+  @media (min-width: $desktop_width) {
+    width: 330px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 40px;
+    padding-right: 35px;
   }
 }
 
 .registration-form__text {
   display: none;
+
+  @media (min-width: $desktop_width) {
+    display: block;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 24px;
+    color: $basic_blue_light;
+  }
 }

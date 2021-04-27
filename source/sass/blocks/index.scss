@@ -1,15 +1,24 @@
 .index {
   background-color: $basic_white;
+  display: none;
 
   @media (min-width: $tablet_width) {
-    display: grid;
-    grid-template-columns: auto auto;
+    display: none;
+    grid-template-columns: auto 1fr;
     grid-template-rows: min-content min-content;
     box-shadow: 0 8px 16px rgba(54, 80, 148, 0.18);
   }
 
   @media (min-width: $desktop_width) {
-    margin-right: 232px;
+    width: 768px;
+  }
+
+  &--open {
+    display: block;
+
+    @media (min-width: $tablet_width) {
+      display: grid;
+    }
   }
 
   &--catalog {
@@ -17,6 +26,7 @@
     box-shadow: none;
 
     @media (min-width: $desktop_width) {
+      width: auto;
       display: block;
       margin: 0;
       background-color: transparent;
@@ -76,7 +86,7 @@
   @media (min-width: $tablet_width) {
     width: 382px;
     grid-template-columns: repeat(5, 55px);
-    border-right: 1px solid $basic_gray;
+    border-right: 1px solid rgba($basic_gray, 0.3);
     padding-top: 35px;
     padding-bottom: 35px;
     padding-left: 25px;
@@ -140,6 +150,10 @@
     }
   }
 
+  @media (min-width: $desktop_width) {
+    border-radius: 4px;
+  }
+
   &--catalog {
     @media (min-width: $tablet_width) {
       border: none;
@@ -166,6 +180,11 @@
 
   &--active {
     background-color: $basic_gray_light;
+
+    @media (min-width: $tablet_width) {
+      background-color: $basic_blue_light;
+      color: $basic_white;
+    }
   }
 
   @media (min-width: $tablet_width) {
@@ -206,7 +225,6 @@
 
 .index__choise-list {
   margin: 0;
-  padding: 0 35px;
   list-style-type: none;
 
   @media (min-width: $desktop_width) {
@@ -243,11 +261,6 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
-  padding-bottom: 20px;
-
-  @media (min-width: $tablet_width) {
-    padding-left: 25px;
-  }
 
   &--catalog {
     @media (min-width: $desktop_width) {

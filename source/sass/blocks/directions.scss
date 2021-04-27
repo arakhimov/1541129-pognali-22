@@ -6,14 +6,19 @@
 
   @media (min-width: $tablet_width) {
     padding: 73px 70px 80px;
+    background-image: url("../../img/flags-back.png");
+    background-repeat: no-repeat;
+    background-size: 287px 575px;
+    background-position: 90% 80px;
   }
 
   @media (min-width: $desktop_width) {
-    padding: 87px 130px;
+    padding: 160px 130px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(3, min-content);
     column-gap: 170px;
+    background-position: 1094px 88px;
   }
 }
 
@@ -28,8 +33,9 @@
 }
 
 .directions__text {
-  width: 80%;
+  width: 95%;
   padding: 0 25px;
+  margin: 0;
   margin-bottom: 60px;
   box-sizing: border-box;
 

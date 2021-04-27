@@ -3,10 +3,23 @@ $counter-icon-adv: 68px;
 
 .profile {
   padding-top: 53px;
-  border-bottom-left-radius: 40px;
-  border-bottom-right-radius: 40px;
+  padding-bottom: 35px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
   background-color: $basic_gray_light;
   box-sizing: border-box;
+
+  @media (min-width: $tablet_width) {
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    padding-top: 75px;
+    padding-bottom: 39px;
+  }
+
+  @media (min-width: $desktop_width) {
+    padding-bottom: 140px;
+    padding-top: 105px;
+  }
 }
 
 .profile__wrapper {
@@ -19,14 +32,22 @@ $counter-icon-adv: 68px;
   @media (min-width: $tablet_width) {
     padding-left: 0;
   }
+
+  @media (min-width: $desktop_width) {
+    padding-left: 70px;
+  }
 }
 
 .profile__title {
-  margin-bottom: 56px;
+  margin: 0;
+  display: flex;
+  align-items: center;
+
 
   @media (min-width: $tablet_width) {
+    justify-self: center;
     grid-column: 1 / -1;
-    text-align: center;
+    margin-bottom: 32px;
   }
 }
 
@@ -42,6 +63,8 @@ $counter-icon-adv: 68px;
     grid-row: 3 / 4;
     padding-right: 49px;
     z-index: 10;
+    position: relative;
+    top: -26px;
   }
 
   @media (min-width: $desktop_width) {
@@ -50,6 +73,9 @@ $counter-icon-adv: 68px;
     align-self: center;
     width: 198px;
     height: 198px;
+    position: static;
+    padding-right: 0;
+    padding-right: 75px;
   }
 }
 
@@ -58,12 +84,41 @@ $counter-icon-adv: 68px;
   grid-row: 2 / 3;
   padding: 0;
   margin: 0;
-  margin-bottom: 31px;
+  padding-top: 30px;
+  margin-bottom: 30px;
+
+  @media (min-width: $tablet_width) {
+    padding-top: 51px;
+    padding-bottom: 51px;
+    margin-bottom: 0;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 198px;
+      height: 100%;
+      background-color: $special_gray_light;
+      border-radius: 20px;
+    }
+  }
+
+  @media (min-width: $desktop_width) {
+    margin-right: 186px;
+
+    &::after {
+      width: 446px;
+    }
+  }
 }
 
 .profile__list-wrapper {
   min-height: 65px;
   box-sizing: border-box;
+  position: relative;
+  z-index: 10;
 
   &:last-of-type {
     border-bottom: 1px solid $special_gray_light;
@@ -75,10 +130,6 @@ $counter-icon-adv: 68px;
 
   @media (min-width: $tablet_width) {
     display: flex;
-  }
-
-  @media (min-width: $desktop_width) {
-    margin-right: 150px;
   }
 }
 
@@ -101,6 +152,11 @@ $counter-icon-adv: 68px;
     line-height: 28px;
     padding: 20px 0;
     margin-left: 90px;
+  }
+
+  @media (min-width: $desktop_width) {
+    width: auto;
+    flex-grow: 1;
   }
 
   &--third {
@@ -160,32 +216,7 @@ $counter-icon-adv: 68px;
     font-size: 28px;
     line-height: 28px;
     white-space: nowrap;
-    background-color: $special_gray_light;
     position: relative;
-
-    &--first::after {
-      content: "";
-      width: 100%;
-      height: 41px;
-      background-color: inherit;
-      position: absolute;
-      left: 0;
-      top: -41px;
-      border-top-left-radius: 20px;
-      border-top-right-radius: 20px;
-    }
-
-    &--third::after {
-      content: "";
-      width: 100%;
-      height: 45px;
-      background-color: inherit;
-      position: absolute;
-      left: 0;
-      bottom: -45px;
-      border-bottom-left-radius: 20px;
-      border-bottom-right-radius: 20px;
-    }
   }
 
   @media (min-width: $desktop_width) {
@@ -202,12 +233,30 @@ $counter-icon-adv: 68px;
   font-weight: 700;
   font-size: 16px;
   line-height: 16px;
-  margin-bottom: 38px;
 
   @media (min-width: $tablet_width) {
     grid-column: 1 / 2;
     grid-row: 3 / 4;
     align-self: center;
-    margin: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: -26px;
+    font-size: 20px;
+    line-height: 20px;
+
+    &::before {
+      content: "";
+      display: block;
+      width: 68px;
+      height: 68px;
+      border-radius: 50%;
+      background-color: $basic_half_gray;
+      margin-right: 21px;
+      background-image: url("../../img/icon_businessman.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 27px 27px;
+    }
   }
 }

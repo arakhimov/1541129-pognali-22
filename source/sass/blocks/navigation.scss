@@ -31,6 +31,7 @@
 
   @media (max-width: $tablet_width_only) {
     flex-direction: column;
+    align-items: flex-start;
     width: 100%;
   }
 }
@@ -49,6 +50,13 @@
   text-decoration: none;
   color: $basic_white;
 
+  @media (min-width: $desktop_width) {
+    height: 20px;
+    overflow: hidden;
+    display: inline-block;
+    vertical-align: top;
+  }
+
   &--dark {
     @media (max-width: $tablet_width_only) {
       color: $basic_blue;
@@ -60,6 +68,41 @@
     @media (min-width: $tablet_width) and (max-width: $tablet_width_only) {
       font-size: 60px;
       line-height: 71px;
+    }
+  }
+
+  &--intro {
+    color: $basic_blue;
+  }
+}
+
+.navigation__link-text {
+  @media (max-width: $tablet_width_only) {
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+
+  @media (min-width: $desktop_width) {
+    position: relative;
+    display: inline-block;
+    vertical-align: top;
+    transition: transform 0.3s;
+
+    &::before {
+      content: attr(data-hover);
+      position: absolute;
+      top: 100%;
+      transform: translate3d(0, 0, 0);
+      color: $basic_yellow;
+    }
+
+    &:hover {
+      transform: translateY(-100%);
+    }
+
+    &:active {
+      opacity: 0.3;
     }
   }
 }

@@ -21,9 +21,9 @@
     grid-template-rows: repeat(3, min-content);
     background-image: url("../../img/intro_bcg_man_desktop.png"),
       url("../../img/intro_bcg_desktop.png");
-    background-position: 60% 25%, center -75px;
-    background-size: 460px 640px, contain;
-    padding-top: 110px;
+    background-position: 60% 0%, center -75px;
+    background-size: 460px 640px, 100% auto;
+    padding-top: 100px;
   }
 }
 
@@ -64,6 +64,7 @@
   @media (min-width: $desktop_width) {
     padding-left: 70px;
     width: 420px;
+    margin-bottom: 100px;
   }
 }
 
@@ -99,7 +100,8 @@
   color: $basic_blue;
   list-style-type: none;
   position: relative;
-  background-image: linear-gradient(to bottom, $basic_blue 80px, $basic_blue_light 80px);
+  background-image: linear-gradient(to bottom, $basic_blue 80px, $special_blue 80px);
+  counter-reset: section;
 
   @media (min-width: $tablet_width) {
     background-image: none;
@@ -117,34 +119,59 @@
 
 .intro__item {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
+  align-items: flex-start;
   width: calc(100% - 50px);
   min-height: 80px;
-  padding-left: 24px;
+  padding: 22px 25px 0;
   box-sizing: border-box;
-  margin: 0;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto;
   font-weight: bold;
   font-size: 18px;
   line-height: 18px;
+  position: relative;
+
+  &::after {
+    counter-increment: section;
+    content: counter(section);
+    color: $basic_white;
+
+    @media (min-width: $tablet_width) {
+      margin-top: 10px;
+    }
+
+    @media (min-width: $desktop_width) {
+      margin-top: 0;
+    }
+  }
+
+  @media (max-width: $mobile_width_only) {
+    &::before {
+      content: "";
+      width: 100%;
+      height: 10px;
+      position: absolute;
+      bottom: -10px;
+      left: 0;
+      z-index: 5;
+      background-color: inherit;
+    }
+  }
+
+  @media (max-width: $mobile_width_only) {
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
 
   &:first-of-type {
     background-color: $special_orange;
-    position: relative;
     z-index: 10;
-
-    @media (max-width: $mobile_width_only) {
-      border-top-left-radius: 10px;
-      border-top-right-radius: 10px;
-    }
 
     @media (min-width: $tablet_width) {
       border-top-left-radius: 20px;
-      position: relative;
       z-index: 10;
 
-      &::after {
+      &::before {
         content: "";
         width: 40px;
         height: 100%;
@@ -160,15 +187,18 @@
   &:nth-of-type(2) {
     background-color: $basic_orange;
 
+    @media (max-width: $mobile_width_only) {
+      z-index: 20;
+    }
+
     @media (min-width: $tablet_width) {
       border-top-left-radius: 20px;
       border-top-right-radius: 20px;
-      position: relative;
       z-index: 20;
     }
 
     @media (min-width: $desktop_width) {
-      &::after {
+      &::before {
         content: "";
         width: 40px;
         height: 100%;
@@ -184,12 +214,15 @@
   &:nth-of-type(3) {
     background-color: $special_yellow-dark;
 
+    @media (max-width: $mobile_width_only) {
+      z-index: 30;
+    }
+
     @media (min-width: $tablet_width) {
       border-bottom-left-radius: 20px;
-      position: relative;
       z-index: 30;
 
-      &::after {
+      &::before {
         content: "";
         width: 40px;
         height: 100%;
@@ -207,13 +240,17 @@
 
     @media (max-width: $mobile_width_only) {
       border-bottom-left-radius: 10px;
-      order-bottom-right-radius: 10px;
+      border-bottom-right-radius: 10px;
+      z-index: 40;
+
+      &::before {
+        display: none;
+      }
     }
 
     @media (min-width: $tablet_width) {
       border-bottom-left-radius: 20px;
       border-bottom-right-radius: 20px;
-      position: relative;
       z-index: 40;
     }
   }
@@ -222,12 +259,22 @@
     width: calc((100% - 80px) / 2);
     min-height: 140px;
     margin: 0;
-  }
+    padding: 30px 34px 0;
+    font-size: 24px;
+    line-height: 24px;
+    flex-direction: column;
+    justify-content: flex-start;  }
 
   @media (min-width: $desktop_width) {
     width: calc((100% - 120px) / 4);
-    min-height: 140px;
+    min-height: 108px;
     margin: 0;
     border-radius: 20px;
+    flex-direction: row;
+    justify-content: space-between;
   }
+}
+
+.intro-header__navigation {
+  flex-grow: 1;
 }

@@ -14,4 +14,13 @@
   text-transform: uppercase;
   text-decoration: none;
   border-radius: 25px;
+
+  &:hover {
+    background-color: $special_yellow-dark;
+  }
+}
+
+
+.button-autorization:active .button-autorization__text {
+  opacity: 0.3;
 }

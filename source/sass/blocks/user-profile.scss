@@ -52,7 +52,7 @@
 .user-profile__change-photo {
   min-height: 40px;
   grid-column: 2 / -2;
-  background-color: $special_blue_light;
+  background-color: $special_blue_half_light;
   border-radius: 20px;
   border: none;
   cursor: pointer;
@@ -79,15 +79,29 @@
     min-height: 48px;
     letter-spacing: 0;
   }
-}
 
-.user-profile__change-photo-text {
-  @media (min-width: $desktop_width) {
-    display: none;
+  &:hover {
+    background-color: $special_gray_half_light;
   }
 }
 
+.user-profile__change-photo-text {
+  &--hidden {
+    @media (min-width: $desktop_width) {
+      display: none;
+    }
+  }
+}
+
+.user-profile__change-photo:active .user-profile__change-photo-text {
+  opacity: 0.3;
+}
+
 .user-profile__hashtags {
+  padding: 0;
+  margin: 0;
+  border: 1px solid $basic_gray;
+  border-radius: 10px;
   grid-column: 2 / -2;
   margin-bottom: 18px;
   display: flex;
@@ -99,6 +113,32 @@
     grid-column: 2 / 3;
     grid-row: 3 / 4;
     margin-bottom: 65px;
+  }
+}
+
+.user-profile__hashtags-field {
+  height: 100%;
+  border: none;
+  padding: 0;
+  margin: 0;
+  background-color: transparent;
+  padding: 27px 25px;
+  resize: none;
+  vertical-align: middle;
+  overflow: hidden;
+  cursor: pointer;
+
+  &::placeholder {
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 18px;
+    color: $special_gray;
+    opacity: 0.6;
+
+    @media (min-width: $tablet_width) {
+      font-size: 20px;
+      line-height: 22px;
+    }
   }
 }
 
@@ -134,16 +174,9 @@
   }
 }
 
-.user-profile__hashtag-list {
-  padding: 27px 25px;
-  border: 1px solid $basic_gray;
-  margin: 0;
-  display: flex;
-  flex-wrap: wrap;
-  border-radius: 10px;
-}
-
 .user-profile__transports {
+  padding: 0;
+  margin: 0;
   grid-column: 2 / -2;
   position: relative;
   border: 1px solid $basic_gray;
@@ -160,5 +193,16 @@
     grid-column: 4 / 5;
     grid-row: 3 / 4;
     margin-bottom: 65px;
+  }
+}
+
+.user-profile__transports-list {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 60px;
+
+  @media (min-width: $tablet_width) {
+    min-height: 100px;
   }
 }
