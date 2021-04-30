@@ -85,10 +85,12 @@
       height: 45px;
       background-color: $basic_blue;
       margin-right: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
       &::before {
-        background-size: 18px 17px;
-        background-image: url("../../img/icon_telephone.svg");
+        display: none;
       }
     }
 
@@ -96,25 +98,21 @@
       width: 68px;
       height: 68px;
       margin-right: 23px;
-
-      &::before {
-        background-size: 27px 26px;
-      }
     }
   }
 }
 
-@media (max-width: $tablet_width_only) {
-  .page-menu__phone:hover .page-menu__link-text {
-    opacity: 0.7;
+.page-menu__telephone-logo-image {
+  width: 19px;
+  height: 17px;
+
+  @media (min-width: $tablet_width) {
+    width: 27px;
+    height: 26px;
   }
 
-  .page-menu__phone:hover .page-menu__phone-logo--dark{
-    background-color: $basic_blue;
-  }
-
-  .page-menu__phone:hover .page-menu__phone-logo--dark::before {
-    background-image: url("../../img/icon_telephone_dark.svg");
+  @media (min-width: $desktop_width) {
+    display: none;
   }
 }
 
@@ -166,10 +164,12 @@
       height: 45px;
       background-color: $basic_blue;
       margin-right: 18px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
 
       &::before {
-        background-size: 18px 17px;
-        background-image: url("../../img/icon_email.svg");
+        display: none;
       }
     }
 
@@ -177,25 +177,45 @@
       width: 68px;
       height: 68px;
       margin-right: 23px;
-
-      &::before {
-        background-size: 27px 26px;
-      }
     }
   }
 }
 
-@media (max-width: $tablet_width_only) {
-  .page-menu__email:hover .page-menu__link-text {
-    opacity: 0.7;
+.page-menu__email-logo-image {
+  width: 19px;
+  height: 13px;
+
+  @media (min-width: $tablet_width) {
+    width: 28px;
+    height: 19px;
   }
 
-  .page-menu__email:hover .page-menu__email-logo--dark{
+  @media (min-width: $desktop_width) {
+    display: none;
+  }
+}
+
+@media (max-width: $tablet_width_only) {
+  .page-menu__phone:hover .page-menu__link-text,
+  .page-menu__email:hover .page-menu__link-text {
+    opacity: 0.8;
+  }
+
+  .page-menu__phone:hover .page-menu__phone-logo--dark,
+  .page-menu__email:hover .page-menu__email-logo--dark {
     background-color: $basic_blue;
   }
 
-  .page-menu__email:hover .page-menu__email-logo--dark::before {
-    background-image: url("../../img/icon_email_dark.svg");
+  .page-menu__phone:hover .page-menu__telephone-logo-path,
+  .page-menu__email:hover .page-menu__email-logo-path {
+    fill: $special_yellow-dark;
+  }
+
+  .page-menu__phone:active .page-menu__link-text,
+  .page-menu__phone:active .page-menu__telephone-logo-image,
+  .page-menu__email:active .page-menu__link-text,
+  .page-menu__email:active .page-menu__email-logo-image {
+    opacity: 0.3;
   }
 }
 

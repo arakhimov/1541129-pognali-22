@@ -49,6 +49,16 @@
 
   &--current {
     background-color: $basic_yellow;
+    pointer-events: none;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 1;
+    background-color: $basic_yellow;
   }
 }
 
@@ -88,17 +98,26 @@
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
     background-repeat: no-repeat;
   }
 
   &--back::before {
-    background-image: url("../../img/page-arrows_prev.svg");
+    background-image: url("../../img/page-arrows_next.svg");
     background-position: left center;
+    transform: translate(-50%, -50%) rotate(180deg);
   }
 
   &--forward::before {
     background-image: url("../../img/page-arrows_next.svg");
     background-position: right center;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }

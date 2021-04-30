@@ -5,7 +5,6 @@
   padding: 62px 25px 31px;
   position: relative;
   box-sizing: border-box;
-  position: relative;
   background-repeat: no-repeat;
   background-image: url("../../img/smolov-back-mobile.png"),
     url("../../img/rogovaya-back-mobile.png");
@@ -18,7 +17,7 @@
     border-bottom-right-radius: 60px;
     padding: 70px 70px 87px;
     background-image: url("../../img/smolov-back-desktop.png"),
-    url("../../img/rogovaya-back-desktop.png");
+      url("../../img/rogovaya-back-desktop.png");
     background-position: 40px 340px, 410px 70px;
     background-size: 143px 143px, 285px 285px;
   }

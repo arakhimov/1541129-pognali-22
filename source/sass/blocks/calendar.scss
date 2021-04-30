@@ -135,10 +135,8 @@
 }
 
 .calendar__button {
-  color: inherit;
   width: 100%;
   height: 100%;
-  background-color: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -202,19 +200,19 @@
 
     &--arrival {
       &::after {
-        content: 'Заезд';
+        content: "Заезд";
       }
     }
 
     &--back {
       &::after {
-        content: 'Выезд';
+        content: "Выезд";
       }
     }
 
     &--next-month {
       &::after {
-        content: 'апр';
+        content: "апр";
         margin-left: 5px;
       }
     }

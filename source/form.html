@@ -88,7 +88,7 @@
           <span class="level__counter level__counter--form" aria-label="У Пети Демина 80 уровень">80</span>
           <span class="level__text level__text--form">level</span>
         </div>
-        <img src="img/travelers2.png" alt="Фотография Пети Демина" class="user-profile__image" width="100" height="100">
+        <img src="img/travelers2_index.png" alt="Фотография Пети Демина" class="user-profile__image" width="100" height="100">
         <button type="button" class="user-profile__change-photo">
           <span class="user-profile__change-photo-text user-profile__change-photo-text--hidden">Сменить </span>
           <span class="user-profile__change-photo-text">фото</span></button>
@@ -770,12 +770,18 @@
                 <h4 class="entertainments__title">Босния и Герцеговина</h4>
                 <img class="entertainments__image-flag" src="img/bosnia-and-herzegovina.png"
                   alt="Флаг Боснии и Герцеговины" width="35" height="24">
-                <textarea class="entertainments__description" name="bosnia-and-herzegovina-description" placeholder="План действий"></textarea>
+                <div class="entertaments__wrapper">
+                  <textarea class="entertainments__description" name="bosnia-and-herzegovina-description" placeholder="План действий"></textarea>
+                  <span class="entertainments__invalid-text">Это поле должно быть заполнено</span>
+                </div>
               </li>
               <li class="entertainments__item">
                 <h4 class="entertainments__title">Чехия</h4>
                 <img class="entertainments__image-flag" src="img/czech.svg" alt="Флаг Чехии" width="35" height="24">
-                <textarea class="entertainments__description" name="czech-description" placeholder="План действий"></textarea>
+                <div class="entertaments__wrapper">
+                  <textarea class="entertainments__description" name="czech-description" placeholder="План действий"></textarea>
+                  <span class="entertainments__invalid-text">Это поле должно быть заполнено</span>
+                </div>
               </li>
             </ul>
 
@@ -799,16 +805,16 @@
       </a>
 
       <ul class="page-footer__socials-list socials">
-        <li class="socials__item socials__item--yellow">
-          <a href="https://ru-ru.facebook.com/" class="socials__link" aria-label="Наша страница в facebook">
+        <li class="socials__item socials__item--bg">
+          <a href="https://ru-ru.facebook.com/" class="socials__link socials__link--bg" target="_blank" aria-label="Наша страница в facebook">
             <img src="img/facebook-logo.svg" alt="Логотип facebook" class="socials__logo socials__logo--facebook" width="11" height="21"></a>
         </li>
-        <li class="socials__item socials__item--yellow">
-          <a href="https://vk.com/" class="socials__link" aria-label="Наша страница в ВКонтакте">
+        <li class="socials__item socials__item--bg">
+          <a href="https://vk.com/" class="socials__link socials__link--bg" target="_blank" aria-label="Наша страница в ВКонтакте">
             <img src="img/vkcom-logo.svg" alt="логотип ВКонтакте" class="socials__logo socials__logo--vk" width="23" height="12"></a>
         </li>
-        <li class="socials__item socials__item--yellow">
-          <a href="https://www.instagram.com/" class="socials__link" aria-label="Наша страница в Instagram">
+        <li class="socials__item socials__item--bg">
+          <a href="https://www.instagram.com/" class="socials__link socials__link--bg" target="_blank" aria-label="Наша страница в Instagram">
             <img src="img/instagram-logo.svg" alt="Логотип Instagram" class="socials__logo socials__logo--instagram" width="18" height="14"></a>
         </li>
       </ul>
@@ -824,6 +830,7 @@
 
   <script src="js/open-popup.js"></script>
   <script src="js/open-select.js"></script>
+  <script src="js/form-submit.js"></script>
 </body>
 
 </html>

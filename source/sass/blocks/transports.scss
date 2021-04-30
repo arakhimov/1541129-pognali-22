@@ -68,3 +68,7 @@
     height: 30px;
   }
 }
+
+.transports__item:hover .transports__tooltip {
+  display: block;
+}

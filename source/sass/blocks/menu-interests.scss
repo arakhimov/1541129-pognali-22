@@ -59,6 +59,7 @@
   line-height: 20px;
   color: $basic_black;
   position: relative;
+  cursor: pointer;
 
   &::before {
     content: "";
@@ -87,9 +88,29 @@
     font-size: 20px;
     line-height: 20px;
   }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
+.menu-interests__label:hover .menu-interests__label-text {
+  opacity: 0.6;
 }
 
 .menu-interests__field:checked ~ .menu-interests__label::after {
   display: inline-block;
   vertical-align: top;
+}
+
+.menu-interests__item:hover .menu-interests__title {
+  opacity: 0.6;
+}
+
+.menu-interests__item:focus-within .menu-interests__title {
+  opacity: 0.6;
+}
+
+.menu-interests__item:active .menu-interests__title {
+  opacity: 0.3;
 }

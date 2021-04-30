@@ -49,10 +49,12 @@
     @media (min-width: $tablet_width) {
       border: none;
       margin-bottom: 30px;
+      display: flex;
     }
 
     @media (min-width: $desktop_width) {
       margin-bottom: 35px;
+      display: block;
     }
   }
 
@@ -109,6 +111,18 @@
   }
 }
 
+.form-travelers__group--transport:hover .form-travelers__subtitle,
+.form-travelers__group--range:hover .form-travelers__subtitle,
+.form-travelers__group--transport:focus-within .form-travelers__subtitle,
+.form-travelers__group--range:focus-within .form-travelers__subtitle {
+  opacity: 0.6;
+}
+
+.form-travelers__group--transport:active .form-travelers__subtitle,
+.form-travelers__group--range:active .form-travelers__subtitle {
+  opacity: 0.3;
+}
+
 .form-travelers__submit {
   width: 100%;
   min-height: 40px;
@@ -122,4 +136,13 @@
   text-transform: uppercase;
   color: $basic_blue;
   cursor: pointer;
+
+  &:hover {
+    box-shadow: 0 4px 9px rgba($basic_black, 0.16);
+  }
+
+  &:active {
+    background-color: $special_yellow-dark;
+    opacity: 0.3;
+  }
 }

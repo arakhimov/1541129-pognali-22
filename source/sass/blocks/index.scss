@@ -148,15 +148,29 @@
     &:not(:nth-of-type(n + 21)) {
       border-bottom: none;
     }
+
+    &:hover {
+      border: none;
+      outline: 1px solid $basic_gray__half_dark;
+      z-index: 10;
+    }
   }
 
   @media (min-width: $desktop_width) {
     border-radius: 4px;
   }
 
+  &:hover {
+    border-color: $basic_gray__half_dark;
+  }
+
   &--catalog {
     @media (min-width: $tablet_width) {
       border: none;
+    }
+
+    &:hover {
+      outline: none;
     }
   }
 }
@@ -197,6 +211,11 @@
     border-radius: 4px;
   }
 
+  &:active {
+    background-color: $basic_blue_light;
+    color: $basic_white;
+  }
+
   &--catalog {
     color: $basic_blue_light;
     background-color: $basic_white;
@@ -209,6 +228,16 @@
       line-height: 60px;
       margin-bottom: 10px;
       justify-content: flex-start;
+
+      &:hover {
+        color: $basic_blue;
+      }
+
+      &:active {
+        color: $basic_blue;
+        opacity: 0.1;
+        background-color: transparent;
+      }
     }
   }
 
@@ -309,5 +338,14 @@
   @media (min-width: $tablet_width) {
     font-size: 20px;
     line-height: 20px;
+  }
+
+  &:hover {
+    color: $basic_blue_light;
+  }
+
+  &:active {
+    color: $basic_blue_light;
+    opacity: 0.3;
   }
 }

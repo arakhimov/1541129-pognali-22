@@ -150,6 +150,14 @@
   @media (max-width: $mobile_width_only) {
     display: none;
   }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
 .main__row {

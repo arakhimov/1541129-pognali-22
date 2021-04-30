@@ -41,6 +41,7 @@
 .range-filter__price-label {
   flex-grow: 1;
   box-sizing: border-box;
+  cursor: pointer;
 
   &:first-of-type {
     border-right: 1px solid $basic_gray;
@@ -55,6 +56,11 @@
   border: none;
   text-align: center;
   box-sizing: border-box;
+  cursor: pointer;
+
+  &:hover {
+    box-shadow: inset 0 0 2px $special_gray_dark;
+  }
 }
 
 .range-filter__range-controls {
@@ -94,6 +100,16 @@
   top: 50%;
   transform: translateY(-50%);
   cursor: pointer;
+
+  @media (min-width: $tablet_width) {
+    width: 13px;
+    height: 13px;
+  }
+
+  &:hover {
+    width: 19px;
+    height: 19px;
+  }
 }
 
 .range-filter__toggle--min {

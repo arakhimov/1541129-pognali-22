@@ -54,6 +54,17 @@
 
 .contacts__autorization {
   color: $basic_yellow;
+  text-decoration: none;
+  box-shadow: 0 2px 0 $basic_yellow;
+
+  &:hover {
+    color: $special_orange;
+    box-shadow: 0 2px 0 $special_orange;
+  }
+
+  &:active {
+    opacity: 0.5;
+  }
 }
 
 .contacts__registration {
@@ -150,10 +161,9 @@
     width: 45px;
     height: 45px;
     border-radius: 50%;
-    background-color: $spetial_dark;
+    background-color: $special_dark;
     background-size: 21px 21px;
     background-image: url("../../img/icon_location.svg");
-    background-color: $spetial_dark;
     background-repeat: no-repeat;
     background-position: center;
     margin-right: 18px;
@@ -186,17 +196,48 @@
   }
 }
 
-.contacts__route {
+.contacts__link {
+  min-height: 62px;
   width: auto;
   flex-grow: 1;
+  border: 3px solid $special_blue;
+  border-radius: 10px;
+  box-sizing: border-box;
+  padding: 0 25px;
+  text-decoration: none;
+  background-color: $basic_yellow;
+  color: $basic_blue_light;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 18px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
   @media (min-width: $tablet_width) {
+    min-height: 80px;
+    font-size: 24px;
+    line-height: 24px;
   }
 
   @media (min-width: $desktop_width) {
     width: 324px;
     flex-grow: 0;
   }
+
+  &:hover {
+    background-color: $basic_blue;
+    color: $basic_white;
+  }
+}
+
+.contacts__link:hover .contacts__link-logo-path {
+  fill: $basic_white;
+}
+
+.contacts__link:active .contacts__link-logo-path,
+.contacts__link:active .contacts__link-text {
+  opacity: 0.3;
 }
 
 .contacts__iframe {

@@ -53,7 +53,6 @@ $add-travelers-icon: 18px;
   grid-template-rows: repeat(7, min-content);
   background-color: $basic_white;
   border-radius: 30px;
-  overflow: hidden;
   padding: 15px 0;
   box-sizing: border-box;
 
@@ -68,6 +67,10 @@ $add-travelers-icon: 18px;
     padding-right: 45px;
     grid-template-columns: min-content min-content 1fr min-content min-content;
     grid-template-rows: 45px repeat(3, min-content) 42px;
+  }
+
+  &:hover {
+    box-shadow: 0 4px 9px rgba($basic_black, 0.16);
   }
 }
 
@@ -97,6 +100,10 @@ $add-travelers-icon: 18px;
     border-top-right-radius: 0;
     border-bottom-right-radius: 0;
   }
+}
+
+.peoples__card:hover .peoples__image {
+  transform: scale(1.01);
 }
 
 .peoples__title {
@@ -146,10 +153,20 @@ $add-travelers-icon: 18px;
     grid-column: 2 / 4;
     grid-row: 2 / 3;
   }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
 }
 
-.peoples__title-text {
+.peoples__title-link {
   position: relative;
+  text-decoration: none;
+  color: $basic_blue_light;
 
   @media (min-width: $desktop_width) {
     padding-left: 8px;
@@ -228,25 +245,58 @@ $add-travelers-icon: 18px;
   border: none;
   width: 30px;
   height: 30px;
-  background-color: $basic_half_gray;
-  background-image: url("../../img/likes.svg");
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 12px 11px;
+  background-color: transparent;
   cursor: pointer;
-
-  &--active {
-    background-color: $special_red_light;
-    background-image: url("../../img/likes_active.svg");
-  }
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   @media (min-width: $tablet_width) {
     width: 50px;
     height: 50px;
-    background-size: 20px 17px;
     padding: 0;
     left: 0;
   }
+
+  &:hover {
+    background-color: $basic_half_gray;
+  }
+
+  &--active {
+    background-color: $special_red_light;
+
+    &:hover {
+      background-color: $special_red_half_dark;
+    }
+  }
+}
+
+.peoples__likes-button-image {
+  width: 12px;
+  height: 12px;
+  opacity: 0.6;
+
+  @media (min-width: $tablet_width) {
+    width: 20px;
+    height: 18px;
+  }
+}
+
+.peoples__likes-button--active .peoples__likes-button-image {
+  opacity: 1;
+}
+
+.peoples__likes-button--active .peoples__likes-button-path {
+  fill: $basic_red_light;
+  stroke: none;
+}
+
+.peoples__likes-button:hover .peoples__likes-button-image {
+  opacity: 1;
+}
+
+.peoples__likes-button:active .peoples__likes-button-image {
+  opacity: 0.3;
 }
 
 .peoples__hashtags {
@@ -493,6 +543,14 @@ $add-travelers-icon: 18px;
     grid-column: 2 / 3;
     grid-row: 4 / 5;
   }
+
+  &:hover {
+    background-color: $special_yellow-dark;
+  }
+}
+
+.peoples__link:active .peoples__link-text {
+  opacity: 0.3;
 }
 
 .peoples__add-traveler {
@@ -506,6 +564,22 @@ $add-travelers-icon: 18px;
   text-decoration: none;
   color: $basic_blue_light;
   margin-bottom: 18px;
+
+  @media (min-width: $tablet_width) {
+    font-size: 20px;
+    line-height: 20px;
+    margin-bottom: 52px;
+  }
+
+  @media (min-width: $desktop_width) {
+    margin-bottom: 71px;
+  }
+}
+
+.peoples__add-traveler-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &::before {
     content: "";
@@ -522,16 +596,14 @@ $add-travelers-icon: 18px;
       height: 26px;
     }
   }
+}
 
-  @media (min-width: $tablet_width) {
-    font-size: 20px;
-    line-height: 20px;
-    margin-bottom: 52px;
-  }
+.peoples__add-traveler:hover .peoples__add-traveler-text::before {
+  opacity: 0.6;
+}
 
-  @media (min-width: $desktop_width) {
-    margin-bottom: 71px;
-  }
+.peoples__add-traveler:active .peoples__add-traveler-text::before {
+  opacity: 0.3;
 }
 
 .peoples__footer {
@@ -541,6 +613,7 @@ $add-travelers-icon: 18px;
   box-sizing: border-box;
 
   @media (min-width: $tablet_width) {
+    width: auto;
     padding-left: 28px;
     padding-right: 35px;
   }

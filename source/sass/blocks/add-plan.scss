@@ -177,8 +177,6 @@
 }
 
 .add-plan__childrens-label {
-  display: inline-block;
-  vertical-align: top;
   margin-bottom: 24px;
   cursor: pointer;
   font-weight: normal;
@@ -313,6 +311,7 @@
 
   &--back {
     background-color: $basic_white;
+    width: auto;
   }
 
   &:hover {
@@ -326,7 +325,7 @@
 
 .add-plan__link-text {
   @media (min-width: $tablet_width) {
-    width: 284px;
+    width: 100%;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -408,4 +407,3 @@
 .add-plan__submit:active .add-plan__link-text {
   opacity: 0.3;
 }
-

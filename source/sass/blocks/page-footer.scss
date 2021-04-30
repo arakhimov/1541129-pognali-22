@@ -76,6 +76,16 @@
   }
 }
 
+.page-footer__study-link {
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
+  }
+}
+
 .page-footer__study-center {
   width: 27px;
   height: 34px;
