@@ -96,7 +96,7 @@
           <li class="group-countries__item"><a href="#" class="group-counries__link">Америка</a></li>
           <li class="group-countries__item"><a href="#" class="group-counries__link">Острова</a></li>
         </ul>
-        <button type="button" class="filter__button filter__button--show" aria-label="Cписок стран" title="Cписок стран">
+        <button type="button" class="filter__button filter__button--show" aria-label="Cписок стран" title="Cписок стран"></button>
       </section>
 
       <section class="filter__index index index--catalog">
@@ -582,8 +582,12 @@
         <ul class="peoples__list">
             <li class="peoples__item">
               <article class="peoples__card">
-                <img class="peoples__image" alt="Татьяна Фирсова, плавающая в океане" src="img/peoples-firsova.png"
-                  srcset="img/peoples-firsova@2x.png 2x" width="70" height="70" />
+                <picture class="peoples__image">
+                  <source media="(min-width: 1440px)" srcset="img/peoples-firsova-desktop.png 1x, img/peoples-firsova-desktop@2x.png 2x" />
+                  <source media="(min-width: 768px)" srcset="img/peoples-firsova-tablet.png 1x, img/peoples-firsova-tablet@2x.png 2x" />
+                  <img class="peoples__image" alt="Татьяна Фирсова, плавающая в океане" src="img/peoples-firsova.png"
+                    srcset="img/peoples-firsova@2x.png 2x" width="70" height="70" />
+                </picture>
                 <h3 class="peoples__title"><a href="#" class="peoples__title-link">Таня Фирсова</a></h3>
                 <p class="peoples__likes-counter">
                   <span class="visually-hidden">Количество лайков</span>1,5м
@@ -656,8 +660,12 @@
             </li>
             <li class="peoples__item">
               <article class="peoples__card">
-                <img class="peoples__image" alt="Петр Демин в черной шапке на фоне снега" src="img/peoples-demin.png"
-                  srcset="img/peoples-demin@2x.png 2x"width="70" height="70" />
+                <picture class="peoples__image">
+                  <source media="(min-width: 1440px)" srcset="img/peoples-demin-desktop.png 1x, img/peoples-demin-desktop@2x.png 2x" />
+                  <source media="(min-width: 768px)" srcset="img/peoples-demin-tablet.png 1x, img/peoples-demin-tablet@2x.png 2x" />
+                  <img class="peoples__image" alt="Петр Демин в черной шапке на фоне снега" src="img/peoples-demin.png"
+                    srcset="img/peoples-demin@2x.png 2x" width="70" height="70" />
+                </picture>
                 <h3 class="peoples__title"><a href="#" class="peoples__title-link">Петя Демин</a></h3>
                 <p class="peoples__likes-counter">
                   <span class="visually-hidden">Количество лайков</span>1500
@@ -726,8 +734,12 @@
             </li>
             <li class="peoples__item">
               <article class="peoples__card">
-                <img class="peoples__image" alt="Марк Смолов в черной кепке, сидящий на крыше машины" src="img/peoples-smolov.png"
-                  srcset="img/peoples-smolov@2x.png 2x" width="70" height="70" />
+                <picture class="peoples__image">
+                  <source media="(min-width: 1440px)" srcset="img/peoples-smolov-desktop.png 1x, img/peoples-smolov-desktop@2x.png 2x" />
+                  <source media="(min-width: 768px)" srcset="img/peoples-smolov-tablet.png 1x, img/peoples-smolov-tablet@2x.png 2x" />
+                  <img class="peoples__image" alt="Марк Смолов в черной кепке, сидящий на крыше машины" src="img/peoples-smolov.png"
+                    srcset="img/peoples-smolov@2x.png 2x" width="70" height="70" />
+                </picture>
                 <h3 class="peoples__title"><a href="#" class="peoples__title-link">Марк Смолов</a></h3>
                 <p class="peoples__likes-counter">
                   <span class="visually-hidden">Количество лайков</span>170
@@ -801,8 +813,12 @@
             </li>
             <li class="peoples__item">
               <article class="peoples__card">
-                <img class="peoples__image" alt="Лариса Роговая в синем деловом костюме" src="img/peoples-rogovaya.png"
-                  srcset="img/peoples-rogovaya@2x.png 2x" width="70" height="70" />
+                <picture class="peoples__image">
+                  <source media="(min-width: 1440px)" srcset="img/peoples-rogovaya-desktop.png 1x, img/peoples-rogovaya-desktop@2x.png 2x" />
+                  <source media="(min-width: 768px)" srcset="img/peoples-rogovaya-tablet.png 1x, img/peoples-rogovaya-tablet@2x.png 2x" />
+                  <img class="peoples__image" alt="Лариса Роговая в синем деловом костюме" src="img/peoples-rogovaya.png"
+                    srcset="img/peoples-rogovaya@2x.png 2x" width="70" height="70" />
+                </picture>
                 <h3 class="peoples__title peoples__title--green">
                   <a href="#" class="peoples__title-link peoples__title-link--green">Лариса Роговая</a></h3>
                 <p class="peoples__likes-counter">
@@ -920,7 +936,7 @@
       <div class="page-footer__copyright-container">
         <p class="page-footer__copyright">Разработано</p>
         <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__study-link">
-          <img src="img/htmlacademy.svg" alt="Логотип HTML Academy" class="page-footer__study-center" width="27"height="34">
+          <img src="img/htmlacademy.svg" alt="Логотип HTML Academy" class="page-footer__study-center" width="27" height="34">
         </a>
       </div>
     </div>

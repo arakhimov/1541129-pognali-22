@@ -241,6 +241,8 @@
 }
 
 .contacts__iframe {
+  width: 100%;
+
   @media (min-width: $tablet_width) {
     min-height: 584px;
   }
