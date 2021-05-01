@@ -1,5 +1,4 @@
 // Global
-@import "global/normalize.scss";
 @import "global/fonts.scss";
 @import "global/variables.scss";
 @import "global/global.scss";
@@ -17,10 +16,10 @@
 @import "blocks/intro.scss";
 @import "blocks/intro-header.scss";
 @import "blocks/quote-intro.scss";
+@import "blocks/page-link.scss";
 @import "blocks/about-service.scss";
 @import "blocks/page-title.scss";
 @import "blocks/page-text.scss";
-@import "blocks/page-link.scss";
 @import "blocks/directions.scss";
 @import "blocks/list-directions.scss";
 @import "blocks/travelers.scss";

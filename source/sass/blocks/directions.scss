@@ -10,6 +10,12 @@
     background-repeat: no-repeat;
     background-size: 287px 575px;
     background-position: 90% 80px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/flags-back@2x.png");
+    }
   }
 
   @media (min-width: $desktop_width) {

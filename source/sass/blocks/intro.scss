@@ -7,11 +7,14 @@
   @media (min-width: $tablet_width) {
     padding-top: 0;
     background-color: $special_blue_half-dark;
-    background-image: url("../../img/intro_bcg_man_tablet.png"),
-      url("../../img/intro_bcg_tablet.jpg");
+    background-image: url("../../img/intro-tablet.png");
     background-repeat: no-repeat;
-    background-position: 75% 46%, center 55%;
-    background-size: 372px 451px, contain;
+    background-position: center;
+    background-size: contain;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/intro-tablet@2x.png");
+    }
   }
 
   @media (min-width: $desktop_width) {
@@ -19,21 +22,27 @@
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: repeat(3, min-content);
-    background-image: url("../../img/intro_bcg_man_desktop.png"),
-      url("../../img/intro_bcg_desktop.png");
-    background-position: 60% 0%, center -75px;
-    background-size: 460px 640px, 100% auto;
+    background-image: url("../../img/intro-desktop.png");
+    background-position: left -105px;
+    background-size: 100% auto;
     padding-top: 100px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/intro-desktop@2x.png");
+    }
   }
 }
 
 .intro__wrapper {
-  background-image: url("../../img/intro_bcg_man.png"),
-    url("../../img/intro_bcg.png");
-  background-size: 192px 255px, 100% auto;
-  background-position: center bottom, 50% 50%;
+  background-image: url("../../img/intro-mobile.png");
+  background-position: center;
+  background-size: 100% auto;
   background-repeat: no-repeat;
   padding-bottom: 265px;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/intro-mobile@2x.png");
+  }
 
   @media (min-width: $tablet_width) {
     background-image: none;

@@ -2,24 +2,46 @@
   background-color: $special_blue;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
-  padding: 62px 25px 31px;
+  padding: 90px 25px 31px;
   position: relative;
   box-sizing: border-box;
   background-repeat: no-repeat;
-  background-image: url("../../img/smolov-back-mobile.png"),
-    url("../../img/rogovaya-back-mobile.png");
-  background-position: 152px 34px, left 24%;
-  background-size: 143px 143px, 64px 71px;
+  background-image: url("../../img/directions-mobile.png");
+  background-size: 297px 344px;
+  background-position: left 4%;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/directions-mobile@2x.png");
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: -30px;
+    z-index: -1;
+    width: 100%;
+    height: 30px;
+    background-color: $special_blue;
+
+    @media (min-width: $tablet_width) {
+      top: -60px;
+      height: 60px;
+    }
+  }
 
 
   @media (min-width: $tablet_width) {
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
-    padding: 70px 70px 87px;
-    background-image: url("../../img/smolov-back-desktop.png"),
-      url("../../img/rogovaya-back-desktop.png");
-    background-position: 40px 340px, 410px 70px;
-    background-size: 143px 143px, 285px 285px;
+    padding: 130px 70px 87px;
+    background-image: url("../../img/directions-tablet.png");
+    background-size: 654px 498px;
+    background-position: 35% 10%;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/directions-tablet@2x.png");
+    }
   }
 
   @media (min-width: $desktop_width) {
@@ -27,41 +49,12 @@
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(4, min-content);
-    background-position: 517px 135px, 160px 385px;
-  }
+    background-image: url("../../img/directions-desktop.png");
+    background-size: 630px 601px;
+    background-position: 5% 50%;
 
-  &::before {
-    content: "";
-    position: absolute;
-    left: 0;
-    top: -60px;
-    z-index: -1;
-    width: 100%;
-    height: 60px;
-    background-color: $special_blue;
-  }
-
-  &::after {
-    content: "";
-    width: 113px;
-    height: 132px;
-    position: absolute;
-    top: 34px;
-    left: 0;
-    background-color: $basic_blue;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-
-    @media (min-width: $tablet_width) {
-      top: 70px;
-      left: 40px;
-      width: 212px;
-      height: 212px;
-      border-radius: 20px;
-    }
-
-    @media (min-width: $desktop_width) {
-      left: 30px;
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/directions-desktop@2x.png");
     }
   }
 }

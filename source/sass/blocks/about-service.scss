@@ -1,8 +1,7 @@
 .about-service {
   min-height: 353px;
-  background-image: url("../../img/about-mobile.png"),
-    url("../../img/about_bcg_mobile.png");
-  background-position: 80% top, left top;
+  background-image: url("../../img/about-mobile.png");
+  background-position: top left;
   background-repeat: no-repeat;
   background-color: $special_blue;
   padding: 33px 25px 42px;
@@ -10,19 +9,32 @@
   border-bottom-right-radius: 40px;
   box-sizing: border-box;
 
+  @media (min-resolution: 2dppx) {
+    background-image: url("../../img/about-mobile@2x.png");
+    background-size: contain;
+  }
+
   @media (min-width: $tablet_width) {
     padding: 40px 75px 90px;
-    background-image: url("../../img/about_tablet.png"),
-      url("../../img/about_bcg_tablet.png");
-    background-position: 98% 40%, center top;
+    background-image: url("../../img/about-tablet.png");
+    background-position: 95% top;
+    background-size: 720px 596px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/about-tablet@2x.png");
+    }
   }
 
   @media (min-width: $desktop_width) {
     min-height: 665px;
     padding: 42px 130px 163px;
-    background-image: url("../../img/about_desktop.png"),
-      url("../../img/about_bcg_desktop.png");
-    background-position: 94% 40%, 5% top;
+    background-image: url("../../img/about-desktop.png");
+    background-position: 40% bottom;
+    background-size: 1320px 680px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../../img/about-desktop@2x.png");
+    }
   }
 }
 
@@ -73,5 +85,7 @@
 }
 
 .about-service__link {
-  width: 50%;
+  @media (max-width: $mobile_width_only) {
+    display: none;
+  }
 }
