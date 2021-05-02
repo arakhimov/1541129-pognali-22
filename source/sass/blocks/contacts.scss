@@ -231,11 +231,11 @@
   }
 }
 
-.contacts__link:hover .contacts__link-logo-path {
+.contacts__link:hover .contacts__link-logo-image {
   fill: $basic_white;
 }
 
-.contacts__link:active .contacts__link-logo-path,
+.contacts__link:active .contacts__link-logo-image,
 .contacts__link:active .contacts__link-text {
   opacity: 0.3;
 }

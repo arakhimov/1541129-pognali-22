@@ -4,17 +4,10 @@ const filterHeader = document.querySelector('.filter__header');
 const filterIndex = document.querySelector('.filter__index');
 
 filterButton.addEventListener('click', (event) => {
-  if (event.target.classList.contains('filter__button--show')) {
-    filterHeader.classList.add('filter__header--open');
-    event.target.classList.remove('filter__button--show');
-    event.target.classList.add('filter__button--hide');
-    filterIndex.classList.add('filter__index--open');
-  } else {
-    filterHeader.classList.remove('filter__header--open');
-    event.target.classList.add('filter__button--show');
-    event.target.classList.remove('filter__button--hide');
-    filterIndex.classList.remove('filter__index--open');
-  }
+  filterHeader.classList.toggle('filter__header--open');
+  event.target.classList.toggle('filter__button--show');
+  event.target.classList.toggle('filter__button--hide');
+  filterIndex.classList.toggle('filter__index--open');
 })
 
 hideButton.addEventListener('click', () => {

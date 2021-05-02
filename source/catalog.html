@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="ru" class="page">
-
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -21,12 +20,18 @@
       <div class="page-header__row">
         <a href="index.html" class="page-header__link">
           <picture class="page-header__logo page-header__logo--white page-logo page-logo--white">
-            <source media="(min-width: 768px)" srcset="img/pognali-logo_white_desktop.png 1x, img/pognali-logo_white_desktop@2x.png 2x">
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="img/pognali-logo_white_desktop.webp 1x, img/pognali-logo_white_desktop@2x.webp 2x" />
+            <source type="image/webp" srcset="img/pognali-logo_white.webp 1x, img/pognali-logo_white@2x.png 2x" />
+            <source media="(min-width: 768px)" srcset="img/pognali-logo_white_desktop.png 1x, img/pognali-logo_white_desktop@2x.png 2x" />
             <img class="page-logo__image" alt="Логотип сервиса Погнали" src="img/pognali-logo_white.png"
               srcset="img/pognali-logo_white@2x.png 2x" width="96" height="15" />
           </picture>
-          <picture class="page-header__logo page-header__logo--dark page-logo page-logo--dark">
-            <source media="(min-width: 768px)" srcset="img/pognali-logo_dark_desktop.png 1x, img/pognali-logo_dark_desktop@2x.png 2x">
+          <picture class="page-header__logo page-header__logo--dark page-logo page-logo--dark" style="display: none;">
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="img/pognali-logo_dark_desktop.webp 1x, img/pognali-logo_dark_desktop@2x.webp 2x" />
+            <source type="image/webp" srcset="img/pognali-logo_dark.webp 1x, img/pognali-logo_dark@2x.png 2x" />
+            <source media="(min-width: 768px)" srcset="img/pognali-logo_dark_desktop.png 1x, img/pognali-logo_dark_desktop@2x.png 2x" />
             <img class="page-logo__image" alt="Логотип сервиса Погнали" src="img/pognali-logo_dark.png"
               srcset="img/pognali-logo_dark@2x.png 2x" width="96" height="15" />
           </picture>
@@ -49,11 +54,19 @@
 
         <div class="page-menu page-menu--opened">
           <a href="tel:+78005558628" class="page-menu__phone" aria-label="Позвоните нам по номеру телефона: 8 800 555-86-28">
-            <span class="page-menu__phone-logo page-menu__phone-logo--dark"></span>
+            <span class="page-menu__phone-logo page-menu__phone-logo--dark">
+              <svg class="page-menu__telephone-logo-image" width="19" height="17" fill="#FFD74B">
+                <use xlink:href="img/sprite.svg#telephone-icon"></use>
+              </svg>
+            </span>
             <span class="page-menu__link-text">8 800 555-86-28</span>
           </a>
           <a href="mailto:mail@htmlacademy.ru" class="page-menu__email page-menu__email--dark" aria-label="Напишите нам на почтовый ящик: mail@htmlacademy.ru">
-            <span class="page-menu__email-logo page-menu__email-logo--dark"></span>
+            <span class="page-menu__email-logo page-menu__email-logo--dark">
+              <svg class="page-menu__email-logo-image" width="19" height="13" fill="#FFD74B">
+                <use xlink:href="img/sprite.svg#email-icon"></use>
+              </svg>
+            </span>
             <span class="page-menu__link-text">mail@htmlacademy.ru</span>
           </a>
           <a href="blank.html" class="page-menu__authorization page-header__authorization button-autorization"><span class="button-autorization__text">авторизация</span></a>
@@ -583,6 +596,11 @@
             <li class="peoples__item">
               <article class="peoples__card">
                 <picture class="peoples__image">
+                  <source type="image/webp" media="(min-width: 1440px)"
+                    srcset="img/peoples-firsova-desktop.webp 1x, img/peoples-firsova-desktop@2x.webp 2x" />
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/peoples-firsova-tablet.webp 1x, img/peoples-firsova-tablet@2x.webp 2x" />
+                  <source type="image/webp" srcset="img/peoples-firsova.webp 1x, img/peoples-firsova@2x.webp 2x" />
                   <source media="(min-width: 1440px)" srcset="img/peoples-firsova-desktop.png 1x, img/peoples-firsova-desktop@2x.png 2x" />
                   <source media="(min-width: 768px)" srcset="img/peoples-firsova-tablet.png 1x, img/peoples-firsova-tablet@2x.png 2x" />
                   <img class="peoples__image" alt="Татьяна Фирсова, плавающая в океане" src="img/peoples-firsova.png"
@@ -592,13 +610,8 @@
                 <p class="peoples__likes-counter">
                   <span class="visually-hidden">Количество лайков</span>1,5м
                   <button type="button" class="peoples__likes-button peoples__likes-button--active">
-                    <svg class="peoples__likes-button-image peoples__likes-button-image--active" width="14" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path class="peoples__likes-button-path" d="M3.25536 1.47406C4.94813 1.47406 6.31919 2.82156 6.31919 4.48385C6.31919
-                        2.82156 7.69025 1.47406 9.38302 1.47406C11.0758 1.47406 12.4469 2.82156 12.4469 4.48385C12.4469 6.98919 9.96974
-                        7.87293 6.61945 11.8609C6.58256 11.9047 6.53658 11.9399 6.48472 11.9641C6.43286 11.9882 6.37637 12.0007 6.31919
-                        12.0007C6.26201 12.0007 6.20552 11.9882 6.15366 11.9641C6.1018 11.9399 6.05582 11.9047 6.01893 11.8609C2.66864
-                        7.87293 0.191528 6.98919 0.191528 4.48385C0.191528 2.82156 1.56259 1.47406 3.25536 1.47406Z" fill="#transparent"
-                        stroke="#192144" />
+                    <svg class="peoples__likes-button-image peoples__likes-button-image--active" width="14" height="13" fill="none" stroke="#192144">
+                      <use xlink:href="img/sprite.svg#like-icon"></use>
                     </svg>
                   </button>
                 </p>
@@ -661,6 +674,11 @@
             <li class="peoples__item">
               <article class="peoples__card">
                 <picture class="peoples__image">
+                  <source type="image/webp" media="(min-width: 1440px)"
+                    srcset="img/peoples-demin-desktop.webp 1x, img/peoples-demin-desktop@2x.webp 2x" />
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/peoples-demin-tablet.webp 1x, img/peoples-demin-tablet@2x.webp 2x" />
+                  <source type="image/webp" srcset="img/peoples-demin.webp 1x, img/peoples-demin@2x.webp 2x" />
                   <source media="(min-width: 1440px)" srcset="img/peoples-demin-desktop.png 1x, img/peoples-demin-desktop@2x.png 2x" />
                   <source media="(min-width: 768px)" srcset="img/peoples-demin-tablet.png 1x, img/peoples-demin-tablet@2x.png 2x" />
                   <img class="peoples__image" alt="Петр Демин в черной шапке на фоне снега" src="img/peoples-demin.png"
@@ -670,13 +688,8 @@
                 <p class="peoples__likes-counter">
                   <span class="visually-hidden">Количество лайков</span>1500
                   <button type="button" class="peoples__likes-button">
-                    <svg class="peoples__likes-button-image" width="14" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path class="peoples__likes-button-path" d="M3.25536 1.47406C4.94813 1.47406 6.31919 2.82156 6.31919 4.48385C6.31919
-                        2.82156 7.69025 1.47406 9.38302 1.47406C11.0758 1.47406 12.4469 2.82156 12.4469 4.48385C12.4469 6.98919 9.96974
-                        7.87293 6.61945 11.8609C6.58256 11.9047 6.53658 11.9399 6.48472 11.9641C6.43286 11.9882 6.37637 12.0007 6.31919
-                        12.0007C6.26201 12.0007 6.20552 11.9882 6.15366 11.9641C6.1018 11.9399 6.05582 11.9047 6.01893 11.8609C2.66864
-                        7.87293 0.191528 6.98919 0.191528 4.48385C0.191528 2.82156 1.56259 1.47406 3.25536 1.47406Z" fill="#transparent"
-                        stroke="#192144" />
+                    <svg class="peoples__likes-button-image" width="14" height="13" fill="none" stroke="#192144">
+                      <use xlink:href="img/sprite.svg#like-icon"></use>
                     </svg>
                   </button>
                 </p>
@@ -735,6 +748,11 @@
             <li class="peoples__item">
               <article class="peoples__card">
                 <picture class="peoples__image">
+                  <source type="image/webp" media="(min-width: 1440px)"
+                    srcset="img/peoples-smolov-desktop.webp 1x, img/peoples-smolov-desktop@2x.webp 2x" />
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/peoples-smolov-tablet.webp 1x, img/peoples-smolov-tablet@2x.webp 2x" />
+                  <source type="image/webp" srcset="img/peoples-smolov.webp 1x, img/peoples-smolov@2x.webp 2x" />
                   <source media="(min-width: 1440px)" srcset="img/peoples-smolov-desktop.png 1x, img/peoples-smolov-desktop@2x.png 2x" />
                   <source media="(min-width: 768px)" srcset="img/peoples-smolov-tablet.png 1x, img/peoples-smolov-tablet@2x.png 2x" />
                   <img class="peoples__image" alt="Марк Смолов в черной кепке, сидящий на крыше машины" src="img/peoples-smolov.png"
@@ -744,13 +762,8 @@
                 <p class="peoples__likes-counter">
                   <span class="visually-hidden">Количество лайков</span>170
                   <button type="button" class="peoples__likes-button">
-                    <svg class="peoples__likes-button-image" width="14" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path class="peoples__likes-button-path" d="M3.25536 1.47406C4.94813 1.47406 6.31919 2.82156 6.31919 4.48385C6.31919
-                        2.82156 7.69025 1.47406 9.38302 1.47406C11.0758 1.47406 12.4469 2.82156 12.4469 4.48385C12.4469 6.98919 9.96974
-                        7.87293 6.61945 11.8609C6.58256 11.9047 6.53658 11.9399 6.48472 11.9641C6.43286 11.9882 6.37637 12.0007 6.31919
-                        12.0007C6.26201 12.0007 6.20552 11.9882 6.15366 11.9641C6.1018 11.9399 6.05582 11.9047 6.01893 11.8609C2.66864
-                        7.87293 0.191528 6.98919 0.191528 4.48385C0.191528 2.82156 1.56259 1.47406 3.25536 1.47406Z" fill="#transparent"
-                        stroke="#192144" />
+                    <svg class="peoples__likes-button-image" width="14" height="13" fill="none" stroke="#192144">
+                      <use xlink:href="img/sprite.svg#like-icon"></use>
                     </svg>
                   </button>
                 </p>
@@ -814,6 +827,11 @@
             <li class="peoples__item">
               <article class="peoples__card">
                 <picture class="peoples__image">
+                  <source type="image/webp" media="(min-width: 1440px)"
+                    srcset="img/peoples-rogovaya-desktop.webp 1x, img/peoples-rogovaya-desktop@2x.webp 2x" />
+                  <source type="image/webp" media="(min-width: 768px)"
+                    srcset="img/peoples-rogovaya-tablet.webp 1x, img/peoples-rogovaya-tablet@2x.webp 2x" />
+                  <source type="image/webp" srcset="img/peoples-rogovaya.webp 1x, img/peoples-rogovaya@2x.webp 2x" />
                   <source media="(min-width: 1440px)" srcset="img/peoples-rogovaya-desktop.png 1x, img/peoples-rogovaya-desktop@2x.png 2x" />
                   <source media="(min-width: 768px)" srcset="img/peoples-rogovaya-tablet.png 1x, img/peoples-rogovaya-tablet@2x.png 2x" />
                   <img class="peoples__image" alt="Лариса Роговая в синем деловом костюме" src="img/peoples-rogovaya.png"
@@ -824,13 +842,8 @@
                 <p class="peoples__likes-counter">
                   <span class="visually-hidden">Количество лайков</span>23
                   <button type="button" class="peoples__likes-button">
-                    <svg class="peoples__likes-button-image" width="14" height="13" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
-                      <path class="peoples__likes-button-path" d="M3.25536 1.47406C4.94813 1.47406 6.31919 2.82156 6.31919 4.48385C6.31919
-                        2.82156 7.69025 1.47406 9.38302 1.47406C11.0758 1.47406 12.4469 2.82156 12.4469 4.48385C12.4469 6.98919 9.96974
-                        7.87293 6.61945 11.8609C6.58256 11.9047 6.53658 11.9399 6.48472 11.9641C6.43286 11.9882 6.37637 12.0007 6.31919
-                        12.0007C6.26201 12.0007 6.20552 11.9882 6.15366 11.9641C6.1018 11.9399 6.05582 11.9047 6.01893 11.8609C2.66864
-                        7.87293 0.191528 6.98919 0.191528 4.48385C0.191528 2.82156 1.56259 1.47406 3.25536 1.47406Z" fill="#transparent"
-                        stroke="#192144" />
+                    <svg class="peoples__likes-button-image" width="14" height="13" fill="none" stroke="#192144">
+                      <use xlink:href="img/sprite.svg#like-icon"></use>
                     </svg>
                   </button>
                 </p>
@@ -912,7 +925,10 @@
     <div class="page-footer__wrapper page-wrapper">
       <a href="index.html" class="page-footer__link">
         <picture class="page-footer__logo page-logo page-logo--dark">
-          <source media="(min-width: 768px)" srcset="img/pognali-logo_dark_desktop.png 1x, img/pognali-logo_dark_desktop@2x.png 2x">
+          <source type="image/webp" media="(min-width: 768px)"
+            srcset="img/pognali-logo_dark_desktop.webp 1x, img/pognali-logo_dark_desktop@2x.webp 2x" />
+          <source type="image/webp" srcset="img/pognali-logo_dark.webp 1x, img/pognali-logo_dark@2x.png 2x" />
+          <source media="(min-width: 768px)" srcset="img/pognali-logo_dark_desktop.png 1x, img/pognali-logo_dark_desktop@2x.png 2x" />
           <img class="page-logo__image" alt="Логотип сервиса Погнали" src="img/pognali-logo_dark.png"
             srcset="img/pognali-logo_dark@2x.png 2x" width="96" height="15" />
         </picture>

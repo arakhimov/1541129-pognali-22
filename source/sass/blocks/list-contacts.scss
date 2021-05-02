@@ -61,11 +61,11 @@
   }
 }
 
-.list-contacts__telephone:hover .list-contacts__telephone-logo-path {
+.list-contacts__telephone:hover .list-contacts__telephone-logo-image {
   fill: $special_yellow-dark;
 }
 
-.list-contacts__telephone:active .list-contacts__telephone-logo-path,
+.list-contacts__telephone:active .list-contacts__telephone-logo-image,
 .list-contacts__telephone:active .list-contacts__telephone-text {
   opacity: 0.3;
 }
@@ -98,11 +98,11 @@
   }
 }
 
-.list-contacts__email:hover .list-contacts__email-logo-path {
+.list-contacts__email:hover .list-contacts__email-logo-image {
   fill: $special_yellow-dark;
 }
 
-.list-contacts__email:active .list-contacts__email-logo-path,
+.list-contacts__email:active .list-contacts__email-logo-image,
 .list-contacts__email:active .list-contacts__email-text {
   opacity: 0.3;
 }

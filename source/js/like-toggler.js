@@ -6,10 +6,5 @@ for (let toggler of likeTogglers) {
 
 function toggleLikes(event) {
   const likeButton = event.target.closest(".peoples__likes-button");
-
-  if (likeButton.classList.contains("peoples__likes-button--active")) {
-    likeButton.classList.remove("peoples__likes-button--active");
-  } else {
-    likeButton.classList.add("peoples__likes-button--active");
-  }
+  likeButton.classList.toggle("peoples__likes-button--active");
 }
