@@ -139,6 +139,7 @@
   border: 1px solid $basic_gray;
   text-align: center;
   color: $basic_blue_light;
+  display: flex;
 
   @media (max-width: $tablet_width_only) {
     &:not(:nth-of-type(5n)) {
