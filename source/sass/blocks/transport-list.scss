@@ -38,19 +38,19 @@
   }
 
   &--avia::after {
-    background-image: url("../../img/avia.svg");
+    background-image: url("../img/avia.svg");
   }
 
   &--auto::after {
-    background-image: url("../../img/auto.svg");
+    background-image: url("../img/auto.svg");
   }
 
   &--bicycle::after {
-    background-image: url("../../img/bicycle.svg");
+    background-image: url("../img/bicycle.svg");
   }
 
   &--run::after {
-    background-image: url("../../img/run.svg");
+    background-image: url("../img/run.svg");
   }
 
   @media (min-width: $tablet_width) {

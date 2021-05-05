@@ -6,7 +6,7 @@
 
   @media (min-width: $tablet_width) {
     padding: 73px 70px 80px;
-    background-image: url("../../img/flags-back.png");
+    background-image: url("../img/flags-back.png");
     background-repeat: no-repeat;
     background-size: 287px 575px;
     background-position: 90% 80px;
@@ -14,7 +14,7 @@
     border-bottom-right-radius: 60px;
 
     @media (min-resolution: 2dppx) {
-      background-image: url("../../img/flags-back@2x.png");
+      background-image: url("../img/flags-back@2x.png");
     }
   }
 

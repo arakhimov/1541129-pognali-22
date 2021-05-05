@@ -71,7 +71,7 @@
     height: 10px;
     display: inline-block;
     vertical-align: baseline;
-    background-image: url("../../img/icon_filter.svg");
+    background-image: url("../img/icon_filter.svg");
     margin-right: 12px;
 
     @media (min-width: $tablet_width) {
@@ -137,11 +137,11 @@
   }
 
   &--show::after {
-    background-image: url("../../img/filter-expand.svg");
+    background-image: url("../img/filter-expand.svg");
   }
 
   &--hide::after {
-    background-image: url("../../img/filter_icon_close.svg");
+    background-image: url("../img/filter_icon_close.svg");
   }
 
   &--hide {
@@ -238,7 +238,7 @@
     background-repeat: no-repeat;
     background-size: contain;
     margin-right: 11px;
-    background-image: url("../../img/filter_icon_close.svg");
+    background-image: url("../img/filter_icon_close.svg");
 
     @media (min-width: $tablet_width) {
       width: 22px;

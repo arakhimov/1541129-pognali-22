@@ -107,13 +107,13 @@
   &--opened::after {
     width: 25px;
     height: 11px;
-    background-image: url("../../img/icon_menu_mobile.svg");
+    background-image: url("../img/icon_menu_mobile.svg");
   }
 
   &--closed::after {
     width: 19px;
     height: 19px;
-    background-image: url("../../img/icon_close.svg");
+    background-image: url("../img/icon_close.svg");
   }
 
   @media (min-width: $desktop_width) {
@@ -178,15 +178,6 @@
 
   .page-header__container--opened .page-header__logo--white {
     display: none;
-  }
-
-  // Т.к. логотип является контентным изображением вставляю его при помощи тега <picture>, но с другой стороны
-  // цвет логотипа изменяется в зависимости от того открыто мобильное меню или нет. Поэтому для вставки
-  // логотипов разных цветов использую два тега <picture>. Также для оптимизации загрузки для того чтобы
-  // при первоначальной загрузке html не загружался логотип другого цвета в разметке ипользую атрибут
-  // style="display: none;". Для изменению значения display: none в стилях использую ключевое слово important.
-  .page-header__container--opened .page-header__logo--dark {
-    display: block !important;
   }
 
   .page-header__container--closed .page-header__logo--dark {

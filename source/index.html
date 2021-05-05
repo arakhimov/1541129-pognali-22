@@ -12,7 +12,9 @@
   <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="img/favicon/180x180.png" />
   <link rel="manifest" href="manifest.webmanifest" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.min.css" />
+  <link rel="preload" href="../fonts/bloggersans-lightitalic.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+  <link rel="preload" href="../fonts/bloggersans-lightitalic.woff"" as="font" type="font/woff" crossorigin="anonymous" />
 </head>
 
 <body class="page__body">
@@ -28,7 +30,7 @@
             <img class="page-logo__image" alt="Логотип сервиса Погнали" src="img/pognali-logo_white.png"
               srcset="img/pognali-logo_white@2x.png 2x" width="96" height="15" />
           </picture>
-          <picture class="page-header__logo page-header__logo--dark page-logo page-logo--dark" style="display: none;" />
+          <picture class="page-header__logo page-header__logo--dark page-logo page-logo--dark">
             <source type="image/webp" media="(min-width: 768px)"
               srcset="img/pognali-logo_dark_desktop.webp 1x, img/pognali-logo_dark_desktop@2x.webp 2x" />
             <source type="image/webp" srcset="img/pognali-logo_dark.webp 1x, img/pognali-logo_dark@2x.png 2x">
@@ -57,7 +59,7 @@
           <a href="tel:+78005558628" class="page-menu__phone" aria-label="Позвоните нам по номеру телефона: 8 800 555-86-28">
             <span class="page-menu__phone-logo page-menu__phone-logo--dark">
               <svg class="page-menu__telephone-logo-image" width="19" height="17" fill="#FFD74B">
-                <use xlink:href="img/sprite.svg#telephone-icon"></use>
+                <use href="img/sprite.svg#telephone-icon"></use>
               </svg>
             </span>
             <span class="page-menu__link-text">8 800 555-86-28</span>
@@ -65,7 +67,7 @@
           <a href="mailto:mail@htmlacademy.ru" class="page-menu__email page-menu__email--dark" aria-label="Напишите нам на почтовый ящик: mail@htmlacademy.ru">
             <span class="page-menu__email-logo page-menu__email-logo--dark">
               <svg class="page-menu__email-logo-image" width="19" height="13" fill="#FFD74B">
-                <use xlink:href="img/sprite.svg#email-icon"></use>
+                <use href="img/sprite.svg#email-icon"></use>
               </svg>
             </span>
             <span class="page-menu__link-text">mail@htmlacademy.ru</span>
@@ -105,8 +107,8 @@
           <a class="intro-header__link">
             <picture class="intro__logo page-logo page-logo--white">
               <source type="image/webp" media="(min-width: 768px)"
-                srcset="img/pognali-logo_white_desktop.webp 1x, img/pognali-logo_white_desktop@2x.webp 2x" />
-              <source type="image/webp" srcset="img/pognali-logo_white.webp 1x, img/pognali-logo_white@2x.png 2x" />
+                srcset="img/pognali-logo_dark_desktop.webp 1x, img/pognali-logo_dark_desktop@2x.webp 2x" />
+              <source type="image/webp" srcset="img/pognali-logo_dark.webp 1x, img/pognali-logo_dark@2x.png 2x">
               <source media="(min-width: 768px)" srcset="img/pognali-logo_dark_desktop.png 1x, img/pognali-logo_dark_desktop@2x.png 2x" />
               <img class="page-logo__image" alt="Логотип сервиса Погнали" src="img/pognali-logo_dark.png"
                 srcset="img/pognali-logo_dark@2x.png 2x" width="96" height="15" />
@@ -174,10 +176,10 @@
                   srcset="img/thailand-desktop.webp 1x, img/thailand-desktop@2x.webp 2x" />
                 <source type="image/webp" srcset="img/directions-thailand_mobile.webp 1x, img/directions-thailand_mobile@2x.webp 2x" />
                 <source media="(min-width: 768px)" srcset="img/thailand-desktop.png 1x, img/thailand-desktop@2x.png 2x" />
-                <img class="list-directions__image" alt="Острова Таиланда, покрытые зеленью и голубое море"
+                <img class="list-directions__image" alt="Острова Таиланда, покрытые зеленью и голубое море" loading="lazy"
                   src="img/directions-thailand_mobile.png" srcset="img/directions-thailand_mobile@2x.png 2x" width="270" height="110">
               </picture>
-              <img class="list-directions__flag-image" src="img/thailand.svg" alt="Флаг Таиланда" width="35" height="24" />
+              <img class="list-directions__flag-image" src="img/thailand.svg" alt="Флаг Таиланда" width="35" height="24" loading="lazy" />
             </div>
             <div class="list-directions__container">
               <h3 class="list-directions__title">Таиланд</h3>
@@ -194,10 +196,10 @@
                   srcset="img/france-desktop.webp 1x, img/france-desktop@2x.webp 2x" />
                 <source type="image/webp" srcset="img/directions-france_mobile.webp 1x, img/directions-france_mobile@2x.webp 2x" />
                 <source media="(min-width: 768px)" srcset="img/france-desktop.png 1x, img/france-desktop@2x.png 2x" />
-                <img class="list-directions__image" alt="Бульвар в городе во Франции и деревья"
-                  src=src="img/directions-france_mobile.png" srcset="img/directions-france_mobile@2x.png 2x" width="270" height="110">
+                <img class="list-directions__image" alt="Бульвар в городе во Франции и деревья" loading="lazy"
+                  src="img/directions-france_mobile.png" srcset="img/directions-france_mobile@2x.png 2x" width="270" height="110">
               </picture>
-              <img class="list-directions__flag-image" src="img/france.svg" alt="Флаг Франции" width="35" height="24" />
+              <img class="list-directions__flag-image" src="img/france.svg" alt="Флаг Франции" width="35" height="24" loading="lazy" />
             </div>
             <div class="list-directions__container">
               <h3 class="list-directions__title">Франция</h3>
@@ -214,10 +216,10 @@
                   srcset="img/czech-desktop.webp 1x, img/czech-desktop@2x.webp 2x" />
                 <source type="image/webp" srcset="img/directions-czech_mobile.webp 1x, img/directions-czech_mobile@2x.webp 2x" />
                 <source media="(min-width: 768px)" srcset="img/czech-desktop.png 1x, img/czech-desktop@2x.png 2x" />
-                <img class="list-directions__image" alt="Речной трамвайчик, идущий по реке в городе Чехии"
+                <img class="list-directions__image" alt="Речной трамвайчик, идущий по реке в городе Чехии" loading="lazy"
                   src="img/directions-czech_mobile.png" srcset="img/directions-czech_mobile@2x.png 2x" width="270" height="110">
               </picture>
-              <img src="img/czech.svg" alt="Флаг Чехии" class="list-directions__flag-image" width="35" height="24" />
+              <img src="img/czech.svg" alt="Флаг Чехии" class="list-directions__flag-image" width="35" height="24" loading="lazy" />
             </div>
             <div class="list-directions__container">
               <h3 class="list-directions__title">Чехия</h3>
@@ -242,23 +244,27 @@
       <ul class="travelers__list list-travelers">
         <li class="list-travelers__item">
           <article class="list-travelers__card">
-            <img class="list-travelers__image" alt="Татьяна Фирсова, плавающая в океане" src="img/travelers-firsova.png"
-              srcset="img/travelers-firsova@2x.png 2x" width="270" height="270" />
+            <picture class="list-travelers__image">
+              <source type="image/webp" srcset="img/travelers-firsova.webp 1x, img/travelers-firsova@2x.webp 2x" />
+              <img class="list-travelers__image" alt="Татьяна Фирсова, плавающая в океане" src="img/travelers-firsova.png"
+                srcset="img/travelers-firsova@2x.png 2x" width="270" height="270" loading="lazy" />
+            </picture>
+
             <div class="list-travelers__level-container level level--bg-dark level--firsova-rounded">
               <span class="level__counter level__counter--small level__counter--white" aria-label="У Тани Фирсовой 99 уровень">99</span>
               <span class="level__text level__text--small level__text--white">level</span>
             </div>
             <ul class="list-travelers__countries countries-list">
               <li class="countries-list__item">
-                <img src="img/sri-lanka.svg" alt="Шри-Ланка" class="countries-list__image" width="35" height="25">
+                <img src="img/sri-lanka.svg" alt="Шри-Ланка" class="countries-list__image" width="35" height="25" loading="lazy" />
                 <div class="tooltip countries-list__tooltip"><span class="tooltip--text" data-hover="Шри-Ланка"></span></div>
               </li>
               <li class="countries-list__item">
-                <img src="img/thailand.svg" alt="Таиланд" class="countries-list__image" width="35" height="25">
+                <img src="img/thailand.svg" alt="Таиланд" class="countries-list__image" width="35" height="25" loading="lazy" />
                 <div class="tooltip countries-list__tooltip"><span class="tooltip--text" data-hover="Таиланд"></span></div>
               </li>
               <li class="countries-list__item">
-                <img src="img/seychelles.svg" alt="Сейшельские острова" class="countries-list__image" width="35" height="25">
+                <img src="img/seychelles.svg" alt="Сейшельские острова" class="countries-list__image" width="35" height="25" loading="lazy" />
                 <div class="tooltip countries-list__tooltip"><span class="tooltip--text" data-hover="Сейшельские острова"></span></div>
               </li>
             </ul>
@@ -289,19 +295,22 @@
         </li>
         <li class="list-travelers__item">
           <article class="list-travelers__card">
-            <img class="list-travelers__image" alt="Петр Демин в черной шапке на фоне снега" src="img/travelers-demin.png"
-              srcset="img/travelers-demin@2x.png 2x" width="270" height="270" />
+            <picture class="list-travelers__image">
+              <source type="image/webp" srcset="img/travelers-demin.webp 1x, img/travelers-demin@2x.webp 2x" />
+              <img class="list-travelers__image" alt="Татьяна Фирсова, плавающая в океане" src="img/travelers-demin.png"
+                srcset="img/travelers-demin@2x.png 2x" width="270" height="270" loading="lazy" />
+            </picture>
             <div class="list-travelers__level-container level level--bg-dark level--demin-rounded">
               <span class="level__counter level__counter--small level__counter--white" aria-label="У Пети Демина 80 уровень">80</span>
               <span class="level__text level__text--small level__text--white">level</span>
             </div>
             <ul class="list-travelers__countries countries-list">
               <li class="countries-list__item">
-                <img src="img/belgium.svg" alt="Бельгия" class="countries-list__image" width="35" height="25">
+                <img src="img/belgium.svg" alt="Бельгия" class="countries-list__image" width="35" height="25" loading="lazy" />
                 <div class="tooltip countries-list__tooltip"><span class="tooltip--text" data-hover="Бельгия"></span></div>
               </li>
               <li class="countries-list__item">
-                <img src="img/czech.svg" alt="Чехия" class="countries-list__image" width="35" height="25">
+                <img src="img/czech.svg" alt="Чехия" class="countries-list__image" width="35" height="25" loading="lazy" />
                 <div class="tooltip countries-list__tooltip"><span class="tooltip--text" data-hover="Чехия"></span></div>
               </li>
             </ul>
@@ -408,7 +417,7 @@
             <a href="tel:+78005558628" class="list-contacts__telephone" aria-label="Позвоните нам по номеру телефона: 8 800 555-86-28">
               <span class="list-contacts__telephone-logo">
                 <svg class="list-contacts__telephone-logo-image" width="19" height="17" fill="#FFD74B">
-                  <use xlink:href="img/sprite.svg#telephone-icon"></use>
+                  <use href="img/sprite.svg#telephone-icon"></use>
                 </svg>
               </span>
               <span class="list-contacts__telephone-text">8 800 555-86-28</span>
@@ -418,7 +427,7 @@
             <a href="mailto:mail@htmlacademy.ru" class="list-contacts__email" aria-label="Напишите нам на почтовый ящик: mail@htmlacademy.ru">
               <span class="list-contacts__email-logo">
                 <svg class="list-contacts__email-logo-image" width="19" height="13" fill="#FFD74B">
-                  <use xlink:href="img/sprite.svg#email-icon"></use>
+                  <use href="img/sprite.svg#email-icon"></use>
                 </svg>
               </span>
               <span class="list-contacts__email-text">mail@htmlacademy.ru</span>
@@ -432,13 +441,14 @@
         <a href="https://www.google.ru/maps" class="contacts__link">
           <span class="contacts__link-text">Проложить маршрут</span>
           <svg class="contacts__link-logo-image" width="11" height="14" fill="#1D2E5B">
-            <use xlink:href="img/sprite.svg#arrow-forward"></use>
+            <use href="img/sprite.svg#arrow-forward"></use>
           </svg>
         </a>
       </div>
 
       <iframe class="contacts__iframe" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533207!2d30.320858716352063!3d59.938716481876256!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1616776865597!5m2!1sru!2sru"
-        width="320" height="450" style="border: 0;" allowfullscreen="" loading="lazy"></iframe>
+        width="320" height="450" style="border: 0;" allowfullscreen="" loading="lazy"
+        aria-label="Сервис находится по адресу Санкт-Петербург, ул. Большая Конюшенная, 19/8"></iframe>
     </section>
   </main>
 
@@ -451,37 +461,37 @@
           <source type="image/webp" srcset="img/pognali-logo_dark.webp 1x, img/pognali-logo_dark@2x.png 2x" />
           <source media="(min-width: 768px)" srcset="img/pognali-logo_dark_desktop.png 1x, img/pognali-logo_dark_desktop@2x.png 2x" />
           <img class="page-logo__image" alt="Логотип сервиса Погнали" src="img/pognali-logo_dark.png"
-            srcset="img/pognali-logo_dark@2x.png 2x" width="96" height="15" />
+            srcset="img/pognali-logo_dark@2x.png 2x" width="96" height="15" loading="lazy" />
         </picture>
       </a>
 
       <ul class="page-footer__socials-list socials">
         <li class="socials__item socials__item--bg">
           <a href="https://ru-ru.facebook.com/" class="socials__link socials__link--bg" target="_blank" aria-label="Наша страница в facebook">
-            <img src="img/facebook-logo.svg" alt="Логотип facebook" class="socials__logo socials__logo--facebook" width="11" height="21"></a>
+            <img src="img/facebook-logo.svg" alt="Логотип facebook" class="socials__logo socials__logo--facebook" width="11" height="21" loading="lazy" /></a>
         </li>
         <li class="socials__item socials__item--bg">
           <a href="https://vk.com/" class="socials__link socials__link--bg" target="_blank" aria-label="Наша страница в ВКонтакте">
-            <img src="img/vkcom-logo.svg" alt="логотип ВКонтакте" class="socials__logo socials__logo--vk" width="23" height="12"></a>
+            <img src="img/vkcom-logo.svg" alt="логотип ВКонтакте" class="socials__logo socials__logo--vk" width="23" height="12" loading="lazy" /></a>
         </li>
         <li class="socials__item socials__item--bg">
           <a href="https://www.instagram.com/" class="socials__link socials__link--bg" target="_blank" aria-label="Наша страница в Instagram">
-            <img src="img/instagram-logo.svg" alt="Логотип Instagram" class="socials__logo socials__logo--instagram" width="18" height="14"></a>
+            <img src="img/instagram-logo.svg" alt="Логотип Instagram" class="socials__logo socials__logo--instagram" width="18" height="14" loading="lazy" /></a>
         </li>
       </ul>
 
       <div class="page-footer__copyright-container">
         <p class="page-footer__copyright">Разработано</p>
         <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__study-link">
-          <img src="img/htmlacademy.svg" alt="Логотип HTML Academy" class="page-footer__study-center" width="22" height="24">
+          <img src="img/htmlacademy.svg" alt="Логотип HTML Academy" class="page-footer__study-center" width="22" height="24" loading="lazy" />
         </a>
       </div>
     </div>
   </footer>
 
-  <script src="js/open-popup.js"></script>
-  <script src="js/open-modal.js"></script>
-  <script src="js/email-autorization.js"></script>
+  <script src="js/open-popup.min.js"></script>
+  <script src="js/open-modal.min.js"></script>
+  <script src="js/email-autorization.min.js"></script>
 </body>
 
 </html>

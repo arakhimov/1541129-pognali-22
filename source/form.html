@@ -12,7 +12,7 @@
   <link rel="icon" href="img/favicon/icon.svg" type="image/svg+xml" />
   <link rel="apple-touch-icon" href="img/favicon/180x180.png" />
   <link rel="manifest" href="manifest.webmanifest" />
-  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/style.min.css" />
 </head>
 
 <body class="page__body">
@@ -28,7 +28,7 @@
             <img class="page-logo__image" alt="Логотип сервиса Погнали" src="img/pognali-logo_white.png"
               srcset="img/pognali-logo_white@2x.png 2x" width="96" height="15" />
           </picture>
-          <picture class="page-header__logo page-header__logo--dark page-logo page-logo--dark" style="display: none;">
+          <picture class="page-header__logo page-header__logo--dark page-logo page-logo--dark">
             <source type="image/webp" media="(min-width: 768px)"
               srcset="img/pognali-logo_dark_desktop.webp 1x, img/pognali-logo_dark_desktop@2x.webp 2x" />
             <source type="image/webp" srcset="img/pognali-logo_dark.webp 1x, img/pognali-logo_dark@2x.png 2x" />
@@ -77,15 +77,15 @@
         <ul class="page-header__socials-list socials socials--popup">
           <li class="socials__item">
             <a href="https://ru-ru.facebook.com/" class="socials__link" aria-label="Наша страница в facebook">
-              <img src="img/facebook-logo.svg" alt="Логотип facebook" class="socials__logo socials__logo--facebook" width="11" height="21"></a>
+               <img src="img/facebook-logo.svg" alt="Логотип facebook" class="socials__logo socials__logo--facebook" width="11" height="21" /></a>
           </li>
           <li class="socials__item">
             <a href="https://vk.com/" class="socials__link" aria-label="Наша страница в ВКонтакте">
-              <img src="img/vkcom-logo.svg" alt="логотип ВКонтакте" class="socials__logo socials__logo--vk" width="23" height="12"></a>
+              <img src="img/vkcom-logo.svg" alt="логотип ВКонтакте" class="socials__logo socials__logo--vk" width="23" height="12" /></a>
           </li>
           <li class="socials__item">
             <a href="https://www.instagram.com/" class="socials__link" aria-label="Наша страница в Instagram">
-              <img src="img/instagram-logo.svg" alt="Логотип Instagram" class="socials__logo socials__logo--instagram" width="18" height="18"></a>
+              <img src="img/instagram-logo.svg" alt="Логотип Instagram" class="socials__logo socials__logo--instagram" width="18" height="18" /></a>
           </li>
         </ul>
       </div>
@@ -105,8 +105,11 @@
           <span class="level__counter level__counter--form" aria-label="У Пети Демина 80 уровень">80</span>
           <span class="level__text level__text--form">level</span>
         </div>
-        <img class="user-profile__image" alt="Петр Демин в черной шапке на фоне снега" src="img/travelers-demin.png"
-          srcset="img/travelers-demin@2x.png 2x" width="100" height="100" />
+        <picture class="user-profile__image">
+          <source type="image/webp" srcset="img/travelers-demin.webp 1x, img/travelers-demin@2x.webp 2x">
+          <img class="user-profile__image" alt="Петр Демин в черной шапке на фоне снега" src="img/travelers-demin.png"
+            srcset="img/travelers-demin@2x.png 2x" width="100" height="100" />
+        </picture>
         <button type="button" class="user-profile__change-photo">
           <span class="user-profile__change-photo-text user-profile__change-photo-text--hidden">Сменить </span>
           <span class="user-profile__change-photo-text">фото</span></button>
@@ -380,7 +383,7 @@
                 </h4>
                 <input type="hidden" class="routes__country-field" name="counrties" value="Босния и Герцеговина">
                 <div class="routes__flag-wrapper">
-                  <img src="img/bosnia-and-herzegovina.png" alt="Флаг Боснии и Герцеговины" class="routes__country-flag" width="35" height="24">
+                  <img src="img/bosnia-and-herzegovina.png" alt="Флаг Боснии и Герцеговины" class="routes__country-flag" width="35" height="24" loading="lazy" />
                 </div>
                 <button type="button" class="routes__delete-country" aria-label="Удалить страну" title="Удалить страну"></button>
               </li>
@@ -391,7 +394,7 @@
                 </h4>
                 <input type="hidden" class="routes__country-field" name="counrties" value="Чехия">
                 <div class="routes__flag-wrapper">
-                  <img src="img/czech.svg" alt="Флаг Чехии" class="routes__country-flag" width="35" height="24">
+                  <img src="img/czech.svg" alt="Флаг Чехии" class="routes__country-flag" width="35" height="24" loading="lazy" />
                 </div>
                 <button type="button" class="routes__delete-country" aria-label="Удалить страну" title="Удалить страну"></button>
               </li>
@@ -787,7 +790,7 @@
               <li class="entertainments__item entertainments__item--add-line">
                 <h4 class="entertainments__title">Босния и Герцеговина</h4>
                 <img class="entertainments__image-flag" src="img/bosnia-and-herzegovina.png"
-                  alt="Флаг Боснии и Герцеговины" width="35" height="24">
+                  alt="Флаг Боснии и Герцеговины" width="35" height="24" loading="lazy" />
                 <div class="entertaments__wrapper">
                   <textarea class="entertainments__description" name="bosnia-and-herzegovina-description" placeholder="План действий"></textarea>
                   <span class="entertainments__invalid-text">Это поле должно быть заполнено</span>
@@ -795,7 +798,7 @@
               </li>
               <li class="entertainments__item">
                 <h4 class="entertainments__title">Чехия</h4>
-                <img class="entertainments__image-flag" src="img/czech.svg" alt="Флаг Чехии" width="35" height="24">
+                <img class="entertainments__image-flag" src="img/czech.svg" alt="Флаг Чехии" width="35" height="24" loading="lazy" />
                 <div class="entertaments__wrapper">
                   <textarea class="entertainments__description" name="czech-description" placeholder="План действий"></textarea>
                   <span class="entertainments__invalid-text">Это поле должно быть заполнено</span>
@@ -822,37 +825,37 @@
           <source type="image/webp" srcset="img/pognali-logo_dark.webp 1x, img/pognali-logo_dark@2x.png 2x" />
           <source media="(min-width: 768px)" srcset="img/pognali-logo_dark_desktop.png 1x, img/pognali-logo_dark_desktop@2x.png 2x" />
           <img class="page-logo__image" alt="Логотип сервиса Погнали" src="img/pognali-logo_dark.png"
-            srcset="img/pognali-logo_dark@2x.png 2x" width="96" height="15" />
+            srcset="img/pognali-logo_dark@2x.png 2x" width="96" height="15" loading="lazy" />
         </picture>
       </a>
 
       <ul class="page-footer__socials-list socials">
         <li class="socials__item socials__item--bg">
           <a href="https://ru-ru.facebook.com/" class="socials__link socials__link--bg" target="_blank" aria-label="Наша страница в facebook">
-            <img src="img/facebook-logo.svg" alt="Логотип facebook" class="socials__logo socials__logo--facebook" width="11" height="21"></a>
+            <img src="img/facebook-logo.svg" alt="Логотип facebook" class="socials__logo socials__logo--facebook" width="11" height="21" loading="lazy" /></a>
         </li>
         <li class="socials__item socials__item--bg">
           <a href="https://vk.com/" class="socials__link socials__link--bg" target="_blank" aria-label="Наша страница в ВКонтакте">
-            <img src="img/vkcom-logo.svg" alt="логотип ВКонтакте" class="socials__logo socials__logo--vk" width="23" height="12"></a>
+            <img src="img/vkcom-logo.svg" alt="логотип ВКонтакте" class="socials__logo socials__logo--vk" width="23" height="12" loading="lazy" /></a>
         </li>
         <li class="socials__item socials__item--bg">
           <a href="https://www.instagram.com/" class="socials__link socials__link--bg" target="_blank" aria-label="Наша страница в Instagram">
-            <img src="img/instagram-logo.svg" alt="Логотип Instagram" class="socials__logo socials__logo--instagram" width="18" height="14"></a>
+            <img src="img/instagram-logo.svg" alt="Логотип Instagram" class="socials__logo socials__logo--instagram" width="18" height="14" loading="lazy" /></a>
         </li>
       </ul>
 
       <div class="page-footer__copyright-container">
         <p class="page-footer__copyright">Разработано</p>
         <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__study-link">
-          <img src="img/htmlacademy.svg" alt="Логотип HTML Academy" class="page-footer__study-center" width="27" height="34">
+          <img src="img/htmlacademy.svg" alt="Логотип HTML Academy" class="page-footer__study-center" width="27" height="34" loading="lazy" />
         </a>
       </div>
     </div>
   </footer>
 
-  <script src="js/open-popup.js"></script>
-  <script src="js/open-select.js"></script>
-  <script src="js/form-submit.js"></script>
+  <script src="js/open-popup.min.js"></script>
+  <script src="js/open-select.min.js"></script>
+  <script src="js/form-submit.min.js"></script>
 </body>
 
 </html>

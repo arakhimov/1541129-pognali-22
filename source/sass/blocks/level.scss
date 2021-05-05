@@ -18,35 +18,35 @@
     position: absolute;
     top: 0;
     left: 0;
-    background-image: url("../../img/demin_level.svg");
+    background-image: url("../img/demin_level.svg");
     background-size: contain;
     background-repeat: no-repeat;
   }
 
   &--firsova-rounded::after {
-    background-image: url("../../img/99.svg");
+    background-image: url("../img/99.svg");
   }
 
   &--demin-rounded::after {
-    background-image: url("../../img/80.svg");
+    background-image: url("../img/80.svg");
   }
 
   &--firsova::after {
-    background-image: url("../../img/99_small.svg");
+    background-image: url("../img/99_small.svg");
   }
 
   &--demin::after {
-    background-image: url("../../img/80_small.svg");
+    background-image: url("../img/80_small.svg");
   }
 
   &--smolov::after {
-    background-image: url("../../img/25_small.svg");
+    background-image: url("../img/25_small.svg");
     background-size: 50%;
     background-position: top right;
   }
 
   &--yarovaya::after {
-    background-image: url("../../img/50_small.svg");
+    background-image: url("../img/50_small.svg");
     background-size: 50%;
     background-position: top right;
   }

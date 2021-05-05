@@ -283,12 +283,9 @@ $add-travelers-icon: 18px;
 }
 
 .peoples__likes-button--active .peoples__likes-button-image {
-  opacity: 1;
-}
-
-.peoples__likes-button--active .peoples__likes-button-image {
   fill: $basic_red_light;
   stroke: none;
+  opacity: 1;
 }
 
 .peoples__likes-button:hover .peoples__likes-button-image {
@@ -585,7 +582,7 @@ $add-travelers-icon: 18px;
     content: "";
     width: $add-travelers-icon;
     height: $add-travelers-icon;
-    background-image: url("../../img/icon_plus_more.svg");
+    background-image: url("../img/icon_plus_more.svg");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;

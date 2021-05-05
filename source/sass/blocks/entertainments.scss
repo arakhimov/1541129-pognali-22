@@ -37,11 +37,11 @@
     z-index: 10;
     left: -17px;
     top: 10px;
-    background-image: url("../../img/line-mobile.svg");
+    background-image: url("../img/line-mobile.svg");
     background-repeat: no-repeat;
 
     @media (min-width: $tablet_width) {
-      background-image: url("../../img/line_country.svg");
+      background-image: url("../img/line_country.svg");
       right: 0;
       left: auto;
     }
