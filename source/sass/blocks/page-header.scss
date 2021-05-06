@@ -15,9 +15,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 19px;
-  padding-left: 25px;
-  padding-right: 25px;
+  padding: 19px 25px 0;
   box-sizing: border-box;
   min-height: 50px;
 
@@ -26,10 +24,7 @@
   }
 
   @media (min-width: $tablet_width) {
-    padding-top: 40px;
-    padding-bottom: 72px;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding: 40px 40px 68px;
     min-height: 100px;
 
     &--form,
@@ -114,6 +109,10 @@
     width: 19px;
     height: 19px;
     background-image: url("../img/icon_close.svg");
+  }
+
+  @media (min-width: $tablet_width) {
+    padding-right: 20px;
   }
 
   @media (min-width: $desktop_width) {

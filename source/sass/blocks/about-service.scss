@@ -5,8 +5,8 @@
   background-repeat: no-repeat;
   background-color: $special_blue;
   padding: 33px 25px 42px;
-  border-bottom-left-radius: 40px;
-  border-bottom-right-radius: 40px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
   box-sizing: border-box;
 
   @media (min-resolution: 2dppx) {
@@ -15,10 +15,12 @@
   }
 
   @media (min-width: $tablet_width) {
-    padding: 40px 75px 90px;
+    padding: 38px 75px 90px;
     background-image: url("../img/about-tablet.png");
-    background-position: 95% top;
+    background-position: 84% top;
     background-size: 720px 596px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/about-tablet@2x.png");
@@ -46,7 +48,7 @@
   @media (min-width: $tablet_width) {
     padding: 0;
     width: 50%;
-    margin-bottom: 40px;
+    margin-bottom: 42px;
   }
 
   @media (min-width: $desktop_width) {
@@ -62,10 +64,13 @@
   @media (min-width: $tablet_width) {
     padding: 0;
     width: 50%;
-    margin-bottom: 31px;
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: column;
   }
 
   @media (min-width: $desktop_width) {
+    display: block;
     margin-bottom: 38px;
     width: 55%;
   }

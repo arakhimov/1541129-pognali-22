@@ -2,13 +2,13 @@
   background-color: $special_blue;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
-  padding: 90px 25px 31px;
+  padding: 66px 25px 31px;
   position: relative;
   box-sizing: border-box;
   background-repeat: no-repeat;
   background-image: url("../img/directions-mobile.png");
   background-size: 297px 344px;
-  background-position: left 4%;
+  background-position: left 3.5%;
 
   @media (min-resolution: 2dppx) {
     background-image: url("../img/directions-mobile@2x.png");
@@ -34,7 +34,7 @@
   @media (min-width: $tablet_width) {
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
-    padding: 130px 70px 87px;
+    padding: 138px 74px 87px;
     background-image: url("../img/directions-tablet.png");
     background-size: 654px 498px;
     background-position: 35% 10%;
@@ -62,20 +62,19 @@
 .travelers__title {
   padding: 0 25px;
   margin: 0;
-  margin-bottom: 19px;
+  margin-bottom: 20px;
   position: relative;
   z-index: 10;
 
   @media (min-width: $tablet_width) {
     padding: 0;
-    margin-bottom: 55px;
+    margin-bottom: 60px;
   }
 }
 
 .travelers__text {
   padding: 0 25px;
   margin: 0;
-  margin-bottom: 25px;
   position: relative;
   z-index: 10;
 
@@ -83,13 +82,15 @@
     width: 70%;
     padding: 0;
     margin-bottom: 39px;
+    display: flex;
+    flex-direction: column;
   }
 
   &:not(:last-of-type) {
-    margin-bottom: 25px;
+    margin-bottom: 21px;
 
-    @media (min-width: $desktop_width) {
-      margin-bottom: 42px;
+    @media (min-width: $tablet_width) {
+      margin-bottom: 40px;
     }
   }
 
@@ -102,13 +103,6 @@
 
     @media (min-width: $desktop_width) {
       margin-bottom: 85px;
-    }
-  }
-
-  &--strong {
-    @media (min-width: $tablet_width) {
-      display: flex;
-      flex-direction: column;
     }
   }
 }

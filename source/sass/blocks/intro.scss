@@ -1,7 +1,7 @@
 .intro {
   background-color: $basic_blue;
   color: $basic_white;
-  padding-top: 18.75%;
+  padding-top: 13%;
   box-sizing: border-box;
 
   @media (min-width: $tablet_width) {
@@ -9,7 +9,7 @@
     background-color: $special_blue_half-dark;
     background-image: url("../img/intro-tablet.png");
     background-repeat: no-repeat;
-    background-position: center;
+    background-position: 50% 49%;
     background-size: contain;
 
     @media (min-resolution: 2dppx) {
@@ -67,7 +67,7 @@
     width: 52%;
     font-size: 60px;
     line-height: 70px;
-    margin-bottom: 86px;
+    margin-bottom: 80px;
   }
 
   @media (min-width: $desktop_width) {
@@ -85,13 +85,16 @@
 .intro__quote {
   padding: 0;
   padding-left: 50px;
+  padding-top: 8px;
   margin: 0;
   margin-bottom: 29px;
   background-color: $basic_blue;
 
   @media (min-width: $tablet_width) {
     background-color: transparent;
-    margin-bottom: 210px;
+    margin-bottom: 212px;
+    padding-left: 75px;
+    padding-right: 75px;
   }
 
   @media (min-width: $desktop_width) {
@@ -147,6 +150,8 @@
 
     @media (min-width: $tablet_width) {
       margin-top: 10px;
+      font-size: 30px;
+      line-height: 30px;
     }
 
     @media (min-width: $desktop_width) {

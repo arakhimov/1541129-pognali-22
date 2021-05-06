@@ -1,4 +1,4 @@
-$level-icon: 56px;
+$level-icon: 60px;
 
 .list-travelers {
   @media (min-width: 560px) {
@@ -28,18 +28,18 @@ $level-icon: 56px;
 
 .list-travelers__card {
   min-height: 428px;
-  height: 100%;
   box-sizing: border-box;
   background-color: $basic_white;
-  border-radius: 20px;
+  border-radius: 10px;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(5, min-content);
   justify-items: center;
-  padding-bottom: 22px;
+  padding-bottom: 15px;
 
   @media (min-width: $tablet_width) {
     padding-bottom: 30px;
+    border-radius: 20px;
   }
 
   &:hover {
@@ -87,12 +87,13 @@ $level-icon: 56px;
 }
 
 .list-travelers__countries {
-  transform: translateY(-50%);
+  transform: translateY(-38%);
 }
 
 .list-travelers__title {
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
+  padding-right: 12px;
   font-weight: bold;
   font-size: 21px;
   line-height: 21px;
@@ -108,6 +109,20 @@ $level-icon: 56px;
     height: 6px;
     border-radius: 50%;
     margin-right: 10px;
+  }
+
+  @media (min-width: $tablet_width) {
+    justify-self: flex-start;
+    padding: 0 44px;
+    margin-bottom: 25px;
+    font-size: 24px;
+    line-height: 22px;
+
+    &::before {
+      width: 8px;
+      height: 8px;
+      margin-right: 14px;
+    }
   }
 
   &--red::before {
@@ -133,7 +148,12 @@ $level-icon: 56px;
 }
 
 .list-travelers__hashtags {
-  padding: 0 25px;
+  width: 68%;
   justify-content: center;
-  margin-bottom: 14px;
+  padding: 0;
+  margin-bottom: 15px;
+
+  @media (min-width: $tablet_width) {
+    width: 80%;
+  }
 }

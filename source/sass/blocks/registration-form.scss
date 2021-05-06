@@ -12,7 +12,7 @@
     position: absolute;
     top: 0;
     right: 0;
-    width: 60px;
+    width: 72px;
     height: 62px;
     background-color: $basic_white;
   }
@@ -104,7 +104,7 @@
 }
 
 .registration-form__submit {
-  width: 60px;
+  width: 72px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -124,7 +124,7 @@
     background-image: url("../img/link_arrow.svg");
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 14px 13px;
+    background-size: contain;
   }
 
   @media (min-width: $tablet_width) {

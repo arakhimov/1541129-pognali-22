@@ -15,8 +15,8 @@
 
   &::after {
     content: "";
-    width: 17px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -61,11 +61,6 @@
       width: 23px;
       height: 22px;
     }
-  }
-
-  &--small {
-    width: 30px;
-    height: 30px;
   }
 }
 

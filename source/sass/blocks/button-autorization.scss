@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   width: 188px;
-  min-height: 50px;
+  min-height: 40px;
   background-color: $basic_yellow;
   color: $special_blue;
   font-family: inherit;
@@ -17,6 +17,12 @@
 
   &:hover {
     background-color: $special_yellow-dark;
+  }
+
+  @media (min-width: $tablet_width) {
+    min-height: 50px;
+    font-size: 20px;
+    line-height: 20px;
   }
 }
 
