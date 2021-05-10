@@ -6,6 +6,15 @@
   @media (min-width: $tablet_width) and (max-width: $tablet_width_only) {
     border-top: 1px solid $special_orange_light;
   }
+
+  @media (min-width: $tablet_width) {
+    padding-top: 26px;
+    margin-bottom: 15px;
+  }
+
+  @media (min-width: $desktop_width) {
+    margin-bottom: 6px;
+  }
 }
 
 .menu-interests__item {
@@ -18,6 +27,16 @@
 
   @media (min-width: $tablet_width) {
     border: none;
+
+    &:not(:last-of-type) {
+      margin-bottom: 10px;
+    }
+  }
+
+  @media (min-width: $tablet_width) {
+    &:not(:last-of-type) {
+      margin-bottom: 0;
+    }
   }
 }
 
@@ -25,7 +44,7 @@
   padding: 0;
   margin: 0;
   list-style-type: none;
-  margin-bottom: 21px;
+  margin-bottom: 18px;
 
   @media (min-width: $tablet_width) and (max-width: $tablet_width_only) {
     display: flex;
@@ -33,6 +52,10 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop_width) {
+    padding-top: 18px;
   }
 }
 
@@ -43,11 +66,20 @@
     @media (min-width: $tablet_width) and (max-width: $tablet_width_only) {
       margin-bottom: 0;
     }
+
+    @media (min-width: $desktop_width) {
+      margin-bottom: 16px;
+    }
   }
 
   @media (min-width: $tablet_width) and (max-width: $tablet_width_only) {
     margin-bottom: 0;
-    width: calc(100% / 3);
+    width: 30%;
+
+    &:first-of-type,
+    &:nth-of-type(2) {
+      width: 35%;
+    }
   }
 }
 
@@ -69,6 +101,10 @@
     background-color: $basic_white;
     border-radius: 4px;
     margin-right: 9px;
+
+    @media (min-width: $desktop_width) {
+      margin-right: 12px;
+    }
   }
 
   &::after {
@@ -87,6 +123,16 @@
   @media (min-width: $tablet_width) {
     font-size: 20px;
     line-height: 20px;
+
+    &::before {
+      width: 24px;
+      height: 24px;
+    }
+
+    &::after {
+      width: 14px;
+      height: 14px;
+    }
   }
 
   &:active {

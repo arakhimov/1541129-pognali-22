@@ -1,10 +1,14 @@
 .markers {
   margin: 0;
-  padding: 0;
   list-style-type: none;
 
   &--no-text {
     display: flex;
+    padding-right: 18px;
+
+    @media (min-width: $tablet_width) {
+      padding-right: 0;
+    }
   }
 }
 
@@ -21,6 +25,17 @@
     vertical-align: top;
     background-color: $basic_blue_light;
     opacity: 0.3;
+
+    @media (min-width: $tablet_width) {
+      width: 6px;
+      height: 6px;
+    }
+  }
+
+  &:not(:last-of-type) {
+    @media (min-width: $desktop_width) {
+      margin-bottom: 20px;
+    }
   }
 
   &--current::before {
@@ -29,6 +44,14 @@
 
   &--no-text:not(:last-of-type) {
     margin-right: 16px;
+
+    @media (min-width: $tablet_width) {
+      margin-right: 29px;
+    }
+
+    @media (min-width: $desktop_width) {
+      margin-bottom: 0;
+    }
   }
 }
 

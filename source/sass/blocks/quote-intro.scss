@@ -28,6 +28,10 @@
     font-size: 21px;
     line-height: 25px;
   }
+
+  @media (min-width: $tablet_width) {
+    width: 285px;
+  }
 }
 
 .quote-inro__author-name,

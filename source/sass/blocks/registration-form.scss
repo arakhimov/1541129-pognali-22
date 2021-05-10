@@ -33,7 +33,7 @@
   height: 100%;
   border: none;
   outline: none;
-  padding-left: 25px;
+  padding: 20px 25px;
   font-weight: bold;
   font-size: 18px;
   line-height: 18px;
@@ -47,6 +47,7 @@
     line-height: 24px;
     border-top-left-radius: 20px;
     border-bottom-left-radius: 20px;
+    padding: 26px 36px;
   }
 
   &::placeholder {
@@ -114,6 +115,7 @@
   position: relative;
   z-index: 10;
   cursor: pointer;
+  font-family: inherit;
 
   &::after {
     content: "";
@@ -134,11 +136,11 @@
   }
 
   @media (min-width: $desktop_width) {
-    width: 330px;
+    width: 320px;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding-left: 40px;
+    padding-left: 35px;
     padding-right: 35px;
   }
 

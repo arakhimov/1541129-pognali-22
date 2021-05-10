@@ -25,7 +25,12 @@
   }
 
   @media (min-width: $tablet_width) {
+    padding-top: 2px;
     padding-bottom: 32px;
+  }
+
+  @media (min-width: $desktop_width) {
+    padding-top: 6px;
   }
 }
 
@@ -46,6 +51,18 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+  }
+}
+
+.page-footer__socials-list {
+  margin: 0;
+
+  @media (min-width: $tablet_width) {
+    margin-right: 54px;
+  }
+
+  @media (min-width: $desktop_width) {
+    margin-right: 84px;
   }
 }
 

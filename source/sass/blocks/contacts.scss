@@ -17,13 +17,13 @@
   }
 
   @media (min-width: $tablet_width) {
-    padding: 75px 75px 60px;
+    padding: 74px 75px 50px;
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
   }
 
   @media (min-width: $desktop_width) {
-    padding: 110px 135px 105px;
+    padding: 105px 135px 95px;
   }
 }
 
@@ -34,6 +34,10 @@
 
   @media (min-width: $tablet_width) {
     margin-bottom: 60px;
+  }
+
+  @media (min-width: $desktop_width) {
+    margin-bottom: 58px;
   }
 }
 
@@ -51,7 +55,16 @@
     font-size: 28px;
     line-height: 32px;
     width: 100%;
-    margin-bottom: 65px;
+    margin-bottom: 68px;
+    text-align: start;
+    text-indent: 38px;
+    padding: 0 5px;
+  }
+
+  @media (min-width: $desktop_width) {
+    width: 52%;
+    padding-left: 25px;
+    margin-bottom: 60px;
   }
 }
 
@@ -62,7 +75,7 @@
 
   &:hover {
     color: $special_orange;
-    box-shadow: 0 2px 0 $special_orange;
+    box-shadow: 0 1px 0 $special_orange;
   }
 
   &:active {
@@ -74,7 +87,11 @@
   margin-bottom: 29px;
 
   @media (min-width: $tablet_width) {
-    margin-bottom: 60px;
+    margin-bottom: 55px;
+  }
+
+  @media (min-width: $desktop_width) {
+    margin-bottom: 67px;
   }
 }
 
@@ -87,9 +104,13 @@
   @media (min-width: $tablet_width) {
     width: 100%;
     margin-bottom: 40px;
+    padding: 0 5px;
   }
 
   @media (min-width: $desktop_width) {
+    display: flex;
+    justify-content: center;
+    width: auto;
     margin-bottom: 43px;
   }
 }
@@ -111,9 +132,10 @@
   }
 
   @media (min-width: $desktop_width) {
-    padding: 55px 135px 25px 285px;
+    padding: 50px 135px 0 285px;
     flex-direction: row;
     justify-content: space-between;
+    align-items: center;
   }
 
   &::before {
@@ -169,30 +191,41 @@
     background-image: url("../img/icon_location.svg");
     background-repeat: no-repeat;
     background-position: center;
-    margin-right: 18px;
+    margin-right: 17px;
   }
 
   @media (min-width: $tablet_width) {
     font-size: 28px;
     line-height: 28px;
+    margin-bottom: 45px;
 
     &::before {
       width: 68px;
       height: 68px;
       background-size: 32px 32px;
-      margin-right: 23px;
+      margin-right: 25px;
     }
   }
 
   @media (min-width: $desktop_width) {
     margin-bottom: 0;
+    position: relative;
+    top: 5px;
+    z-index: 10;
+
+    &::before {
+      width: 90px;
+      height: 90px;
+      background-size: 42px;
+      margin-right: 31px;
+    }
   }
 }
 
 .contacts__adress-text {
   width: 60%;
   display: inline-block;
-  vertical-align: top;
+  vertical-align: baseline;
 
   @media (min-width: $tablet_width) {
     width: auto;
@@ -218,14 +251,19 @@
   justify-content: space-between;
 
   @media (min-width: $tablet_width) {
-    min-height: 80px;
+    height: 80px;
     font-size: 24px;
     line-height: 24px;
+    border-radius: 20px;
+    padding: 0 35px;
   }
 
   @media (min-width: $desktop_width) {
     width: 324px;
     flex-grow: 0;
+    position: relative;
+    top: 5px;
+    z-index: 10;
   }
 
   &:hover {
@@ -248,6 +286,10 @@
   height: 320px;
 
   @media (min-width: $tablet_width) {
-    min-height: 584px;
+    min-height: 564px;
+  }
+
+  @media (min-width: $desktop_width) {
+    min-height: 494px;
   }
 }

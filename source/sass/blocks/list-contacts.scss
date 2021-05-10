@@ -24,12 +24,14 @@
     line-height: 28px;
   }
 
-  @media (min-width: $desktop_width) {
-    margin-right: 110px;
-  }
-
   &:hover {
     color: $special_yellow-dark;
+  }
+}
+
+.list-contacts__telephone {
+  @media (min-width: $desktop_width) {
+    margin-right: 110px;
   }
 }
 
@@ -38,7 +40,7 @@
   height: 45px;
   border-radius: 50%;
   background-color: $basic_blue;
-  margin-right: 18px;
+  margin-right: 16px;
   position: relative;
   display: flex;
   align-items: center;
@@ -49,6 +51,12 @@
     height: 68px;
     margin-right: 23px;
   }
+
+  @media (min-width: $desktop_width) {
+    width: 90px;
+    height: 90px;
+    margin-right: 31px;
+  }
 }
 
 .list-contacts__telephone-logo-image {
@@ -58,6 +66,11 @@
   @media (min-width: $tablet_width) {
     width: 27px;
     height: 26px;
+  }
+
+  @media (min-width: $desktop_width) {
+    width: 36px;
+    height: 34px;
   }
 }
 
@@ -86,6 +99,12 @@
     height: 68px;
     margin-right: 23px;
   }
+
+  @media (min-width: $desktop_width) {
+    width: 90px;
+    height: 90px;
+    margin-right: 31px;
+  }
 }
 
 .list-contacts__email-logo-image {
@@ -95,6 +114,11 @@
   @media (min-width: $tablet_width) {
     width: 28px;
     height: 19px;
+  }
+
+  @media (min-width: $desktop_width) {
+    width: 37px;
+    height: 25px;
   }
 }
 

@@ -14,7 +14,7 @@
   <link rel="manifest" href="manifest.webmanifest" />
   <link rel="stylesheet" href="css/style.min.css" />
   <link rel="preload" href="../fonts/bloggersans-lightitalic.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
-  <link rel="preload" href="../fonts/bloggersans-lightitalic.woff"" as="font" type="font/woff" crossorigin="anonymous" />
+  <link rel="preload" href="../fonts/bloggersans-lightitalic.woff" as="font" type="font/woff" crossorigin="anonymous" />
 </head>
 
 <body class="page__body">
@@ -72,7 +72,7 @@
             </span>
             <span class="page-menu__link-text">mail@htmlacademy.ru</span>
           </a>
-          <a href="blank.html" class="page-menu__authorization page-header__authorization button-autorization"><span class="button-autorization__text">авторизация</span></a>
+          <a href="blank.html" class="page-menu__authorization page-header__authorization button-autorization button-autorization--popup"><span class="button-autorization__text">авторизация</span></a>
         </div>
 
         <ul class="page-header__socials-list socials socials--popup">
@@ -408,9 +408,9 @@
         </p>
 
         <form action="https://echo.htmlacademy.ru/" method="POST" name="registration"
-          class="contacts__registration registration-form">
+          class="contacts__registration registration-form" target="_blank">
           <div class="registration-form__wrapper">
-            <input type="email" class="registration-form__email" placeholder="E-mail" aria-label="Введите ваш email" />
+            <input type="email" class="registration-form__email" name="email" placeholder="E-mail" aria-label="Введите ваш email" />
             <span class="registration-form__explanation-text">Введите e-mail</span>
           </div>
           <button type="submit" class="registration-form__submit" aria-label="Регистрация" title="Регистрация">
@@ -446,7 +446,7 @@
 
       <div class="contacts__wrapper">
         <address class="contacts__adress"><span class="contacts__adress-text">ул. Большая Конюшенная, 19/8</span></address>
-        <a href="https://www.google.ru/maps" class="contacts__link">
+        <a href="https://www.google.ru/maps" class="contacts__link" target="_blank">
           <span class="contacts__link-text">Проложить маршрут</span>
           <svg class="contacts__link-logo-image" width="11" height="14" fill="#1D2E5B">
             <use href="img/sprite.svg#arrow-forward"></use>
@@ -490,7 +490,7 @@
 
       <div class="page-footer__copyright-container">
         <p class="page-footer__copyright">Разработано</p>
-        <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__study-link">
+        <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__study-link" target="_blank">
           <img src="img/htmlacademy.svg" alt="Логотип HTML Academy" class="page-footer__study-center" width="22" height="24" loading="lazy" />
         </a>
       </div>

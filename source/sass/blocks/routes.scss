@@ -1,6 +1,5 @@
 .routes__list {
   padding: 0;
-  padding-top: 20px;
   list-style-type: none;
   color: $basic_blue_light;
   font-weight: normal;
@@ -17,7 +16,6 @@
 
   @media (min-width: $desktop_width) {
     padding-top: 62px;
-    margin-top: 0;
   }
 
   &::after {
@@ -27,12 +25,12 @@
       width: 1px;
       position: absolute;
       top: 0;
-      right: 129px;
+      right: 139px;
       background-color: rgba($basic_gray, 0.3);
     }
 
     @media (min-width: $desktop_width) {
-      right: 245px;
+      right: 225px;
     }
   }
 }
@@ -41,15 +39,15 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  min-height: 42px;
+  height: 42px;
   position: relative;
   box-sizing: border-box;
 
   &:not(:last-of-type) {
-    margin-bottom: 22px;
+    margin-bottom: 23px;
 
     @media (min-width: $tablet_width) {
-      margin-bottom: 16px;
+      margin-bottom: 15px;
     }
 
     @media (min-width: $desktop_width) {
@@ -62,7 +60,7 @@
     width: 8px;
     height: 8px;
     position: absolute;
-    right: 58px;
+    right: 53px;
     top: 50%;
     z-index: 100;
     transform: translate(50%, -50%);
@@ -74,11 +72,11 @@
     @media (min-width: $tablet_width) {
       width: 14px;
       height: 14px;
-      right: 130px;
+      right: 139px;
     }
 
     @media (min-width: $desktop_width) {
-      right: 245px;
+      right: 225px;
     }
   }
 
@@ -87,7 +85,7 @@
     width: 8px;
     height: 11px;
     position: absolute;
-    right: 58px;
+    right: 53px;
     bottom: -6px;
     transform: translate(50%, 100%);
     z-index: 100;
@@ -133,6 +131,10 @@
       display: none;
     }
   }
+
+  @media (min-width: $tablet_width) {
+    height: 70px;
+  }
 }
 
 .routes__country-name {
@@ -173,17 +175,20 @@
 
   &--select,
   &--add {
-    @media (min-width: $mobile_width_only) {
-      border: none;
-    }
+    height: 42px;
+    padding: 0 15px;
 
     @media (min-width: $tablet_width) {
       border: 1px solid $basic_gray;
-      margin-right: 156px;
+      margin-right: 164px;
+      height: 70px;
+      padding: 0 25px;
     }
   }
 
   &--add {
+    border: none;
+
     @media (min-width: $tablet_width) {
       background-color: $basic_gray_light;
     }
@@ -262,18 +267,18 @@
   border-left: none;
   margin: 0;
   box-sizing: border-box;
-  padding: 11px;
+  padding: 10px 8px;
   border-radius: 4px;
 
   @media (min-width: $tablet_width) {
     border: none;
     padding-left: 52px;
-    padding-right: 34px;
+    padding-right: 42px;
   }
 
   @media (min-width: $desktop_width) {
-    padding-left: 33px;
-    padding-right: 135px;
+    padding-left: 53px;
+    padding-right: 115px;
   }
 }
 
@@ -347,7 +352,7 @@
 
   @media (min-width: $tablet_width) {
     background-size: 24px;
-    right: 33.5%;
+    right: 35.5%;
   }
 
   @media (min-width: $desktop_width) {
@@ -406,14 +411,15 @@
 .routes__popup {
   background-color: $basic_white;
   position: absolute;
+  top: 42px;
   left: 0;
   right: 0;
-  top: 36px;
   z-index: 1000;
   display: none;
 
   @media (min-width: $tablet_width) {
     top: 72px;
+    width: 576px;
   }
 
   @media (min-width: $desktop_width) {
@@ -423,7 +429,7 @@
 
 .routes__choise-list {
   text-transform: none;
-  padding: 20px;
+  padding: 16px 20px;
 
   @media (max-width: $mobile_width_only) {
     border: 1px solid $basic_gray;
@@ -433,6 +439,6 @@
   }
 
   @media (min-width: $tablet_width) {
-    padding: 35px 0  0 20px;
+    padding: 32px 0  0 24px;
   }
 }

@@ -23,9 +23,9 @@
     grid-template-columns: auto auto;
     grid-template-rows: repeat(3, min-content);
     background-image: url("../img/intro-desktop.png");
-    background-position: left -105px;
+    background-position: left -115px;
     background-size: 100% auto;
-    padding-top: 100px;
+    padding-top: 90px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/intro-desktop@2x.png");
@@ -71,7 +71,8 @@
   }
 
   @media (min-width: $desktop_width) {
-    padding-left: 70px;
+    text-align: start;
+    padding-left: 68px;
     width: 420px;
     margin-bottom: 100px;
   }
@@ -98,8 +99,8 @@
   }
 
   @media (min-width: $desktop_width) {
-    background-color: $basic_blue;
     justify-self: flex-end;
+    padding-top: 12px;
     padding-right: 60px;
     margin-bottom: 116px;
   }
@@ -156,6 +157,8 @@
 
     @media (min-width: $desktop_width) {
       margin-top: 0;
+      font-size: 24px;
+      line-height: 24px;
     }
   }
 
@@ -281,12 +284,28 @@
   }
 
   @media (min-width: $desktop_width) {
-    width: calc((100% - 120px) / 4);
     min-height: 108px;
     margin: 0;
+    padding: 28px 32px 0;
     border-radius: 20px;
     flex-direction: row;
     justify-content: space-between;
+
+    &:nth-of-type(1) {
+      width: 315px;
+    }
+
+    &:nth-of-type(2) {
+      width: 345px;
+    }
+
+    &:nth-of-type(3) {
+      width: 345px;
+    }
+
+    &:nth-of-type(4) {
+      width: 315px;
+    }
   }
 }
 

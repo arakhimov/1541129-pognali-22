@@ -30,6 +30,10 @@
 .travelers-footer__item {
   &:not(:last-of-type) {
     margin-right: 4px;
+
+    @media (min-width: $tablet_width) {
+      margin-right: 0;
+    }
   }
 }
 
@@ -79,7 +83,12 @@
   }
 
   @media (min-width: $tablet_width) {
-    width: 55px;
+    width: 80px;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop_width) {
+    width: 96px;
   }
 }
 
@@ -91,13 +100,18 @@
   cursor: pointer;
   position: relative;
 
+  @media (min-width: $tablet_width) {
+    width: 10px;
+    justify-content: space-between;
+  }
+
   &::before {
     content: "";
     width: 20px;
     height: 20px;
     position: absolute;
     top: 50%;
-    left: 50%;
+    left: 45%;
     background-repeat: no-repeat;
   }
 

@@ -84,12 +84,12 @@
   box-sizing: border-box;
 
   @media (min-width: $tablet_width) {
-    width: 382px;
-    grid-template-columns: repeat(5, 55px);
+    width: 370px;
+    grid-template-columns: repeat(5, 52px);
     border-right: 1px solid rgba($basic_gray, 0.3);
-    padding-top: 35px;
+    padding-top: 32px;
     padding-bottom: 35px;
-    padding-left: 25px;
+    padding-left: 28px;
   }
 
   @media (min-width: $desktop_width) {
@@ -105,11 +105,11 @@
     padding-right: 25px;
 
     @media (min-width: $tablet_width) {
-      width: 346px;
+      width: 392px;
       border: none;
       padding: 0;
       grid-template-columns: repeat(auto-fill, calc(100% / 5));
-      margin-bottom: 78px;
+      margin-right: 30px;
     }
 
     @media (min-width: $desktop_width) {
@@ -179,12 +179,13 @@
 .index__button {
   color: inherit;
   width: 100%;
-  min-height: 42px;
+  height: 40px;
   background-color: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  font-family: inherit;
   font-weight: 500;
   font-size: 14px;
   line-height: 18px;
@@ -192,6 +193,7 @@
   text-transform: uppercase;
   border: none;
   padding: 0;
+  box-sizing: border-box;
 
   &--active {
     background-color: $basic_gray_light;
@@ -203,7 +205,7 @@
   }
 
   @media (min-width: $tablet_width) {
-    min-height: 70px;
+    min-height: 68px;
     font-size: 20px;
     line-height: 20px;
   }
@@ -227,7 +229,7 @@
       font-weight: bold;
       font-size: 60px;
       line-height: 60px;
-      margin-bottom: 10px;
+      margin-bottom: 14px;
       justify-content: flex-start;
 
       &:hover {
@@ -269,6 +271,16 @@
     background-color: transparent;
     padding-left: 25px;
     padding-right: 25px;
+    margin-bottom: 28px;
+
+    @media (min-width: $tablet_width) {
+      padding-top: 4px;
+    }
+
+    @media (min-width: $desktop_width) {
+      padding-top: 12px;
+      margin-bottom: 22px;
+    }
   }
 }
 
@@ -282,7 +294,7 @@
   &--open {
     @media (min-width: $desktop_width) {
       display: block;
-      margin-bottom: 50px;
+      margin-bottom: 54px;
     }
   }
 }
@@ -312,7 +324,7 @@
       line-height: 60px;
       text-transform: uppercase;
       color: $basic_blue;
-      margin-bottom: 30px;
+      margin-bottom: 36px;
     }
   }
 }
@@ -324,6 +336,14 @@
 
   @media (min-width: $tablet_width) {
     &:not(:last-of-type) {
+      margin-bottom: 9px;
+    }
+  }
+
+  &--catalog:not(:last-of-type) {
+    margin-bottom: 0;
+
+    @media (min-width: $tablet_width) {
       margin-bottom: 10px;
     }
   }
@@ -333,6 +353,7 @@
   font-weight: normal;
   font-size: 16px;
   line-height: 22px;
+  letter-spacing: 0;
   color: $special_gray;
   text-decoration: none;
 

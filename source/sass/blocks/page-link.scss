@@ -20,13 +20,13 @@
   }
 
   @media (min-width: $tablet_width) {
-    min-height: 80px;
+    height: 80px;
     border-radius: 20px;
     padding: 0 32px;
   }
 
   @media (min-width: $desktop_width) {
-    width: 276px;
+    width: 280px;
   }
 
   &:hover {

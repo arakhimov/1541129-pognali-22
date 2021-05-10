@@ -53,9 +53,15 @@
     }
   }
 
+  &--small {
+    &::after {
+      background-size: 14px 16px;
+    }
+  }
+
   @media (min-width: $tablet_width) {
-    width: 43px;
-    height: 43px;
+    width: 34px;
+    height: 34px;
 
     &::after {
       width: 23px;

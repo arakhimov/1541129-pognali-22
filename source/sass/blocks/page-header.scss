@@ -144,12 +144,12 @@
       display: flex;
       flex-direction: column;
       width: 100%;
-      padding: 98px 97px 90px;
+      padding: 80px 97px 60px;
       align-items: flex-start;
     }
 
     @media (max-width: $mobile_width_only) {
-      padding: 75px 25px 40px;
+      padding: 65px 25px 12px;
       top: 50px;
       align-items: center;
     }
@@ -161,11 +161,11 @@
 
   &--opened {
     @media (max-width: $tablet_width_only) {
-      margin-bottom: 51px;
+      margin-bottom: 55px;
     }
 
     @media (min-width: $tablet_width) and (max-width: $tablet_width_only) {
-      margin-bottom: 144px;
+      margin-bottom: 135px;
     }
   }
 }

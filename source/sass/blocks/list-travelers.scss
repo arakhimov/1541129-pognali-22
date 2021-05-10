@@ -38,7 +38,7 @@ $level-icon: 60px;
   padding-bottom: 15px;
 
   @media (min-width: $tablet_width) {
-    padding-bottom: 30px;
+    padding-bottom: 24px;
     border-radius: 20px;
   }
 
@@ -155,5 +155,6 @@ $level-icon: 60px;
 
   @media (min-width: $tablet_width) {
     width: 80%;
+    margin-bottom: 20px;
   }
 }

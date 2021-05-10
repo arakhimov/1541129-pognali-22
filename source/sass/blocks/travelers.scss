@@ -45,13 +45,13 @@
   }
 
   @media (min-width: $desktop_width) {
-    padding: 125px 60px 134px 100px;
+    padding: 125px 60px 134px 130px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(4, min-content);
     background-image: url("../img/directions-desktop.png");
     background-size: 630px 601px;
-    background-position: 5% 50%;
+    background-position: 7.5% 48%;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/directions-desktop@2x.png");
@@ -122,6 +122,8 @@
   }
 
   @media (min-width: $desktop_width) {
+    width: 630px;
+    padding-top: 10px;
     margin-bottom: 0;
   }
 }

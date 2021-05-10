@@ -27,4 +27,11 @@
       line-height: 60px;
     }
   }
+
+  &--small {
+    @media (min-width: $tablet_width) {
+      font-size: 36px;
+      line-height: 36px;
+    }
+  }
 }

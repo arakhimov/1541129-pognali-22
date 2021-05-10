@@ -1,7 +1,7 @@
 .add-plan {
   background-color: $special_blue_light;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
   padding-top: 30px;
   padding-bottom: 73px;
   position: relative;
@@ -9,7 +9,7 @@
   &::before {
     content: "";
     width: 100%;
-    height: 20px;
+    height: 60px;
     position: absolute;
     z-index: -1;
     top: 0;
@@ -20,13 +20,15 @@
   @media (min-width: $tablet_width) {
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
-    padding-top: 53px;
+    padding-top: 51px;
+    padding-bottom: 106px;
   }
 
   @media (min-width: $desktop_width) {
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
     padding-top: 55px;
+    padding-bottom: 116px;
   }
 }
 
@@ -47,6 +49,8 @@
   justify-content: space-between;
   align-items: center;
   padding-bottom: 29px;
+  position: relative;
+  top: -3px;
 
   @media (min-width: $tablet_width) {
     padding-bottom: 56px;
@@ -69,18 +73,20 @@
   margin: 0;
 
   @media (min-width: $desktop_width) {
-    padding-left: 65px;
+    padding-left: 70px;
   }
 }
 
 .add-plan__markers {
   display: none;
+  padding: 0;
 
   @media (min-width: $desktop_width) {
     display: block;
     grid-column: 2 / 3;
     grid-row: 1 / -1;
-    width: 245px;
+    width: 228px;
+    padding-top: 6px;
   }
 }
 
@@ -89,10 +95,11 @@
   background-color: $basic_white;
   border: none;
   border-radius: 10px;
-  padding: 24px 25px 23px;
+  padding: 22px 25px 23px;
   box-sizing: border-box;
+  margin: 0;
 
-  &:not(:last-of-type) {
+  &--dates {
     margin-bottom: 10px;
 
     @media (min-width: $tablet_width) {
@@ -100,18 +107,45 @@
     }
 
     @media (min-width: $desktop_width) {
-      margin-bottom: 43px;
+      margin-bottom: 44px;
     }
   }
 
+  &--routes {
+    padding-bottom: 6px;
+    margin-bottom: 10px;
+
+    @media (min-width: $tablet_width) {
+      margin-bottom: 51px;
+    }
+  }
+
+  &--entertainments {
+    padding-bottom: 6px;
+  }
+
   @media (min-width: $tablet_width) {
-    padding: 48px 40px 56px;
+    padding: 45px 40px 56px;
     border-radius: 30px;
+
+    &--routes {
+      padding: 45px 42px 52px;
+      margin-bottom: 51px;
+    }
+
+    &--entertainments {
+      padding: 45px 39px 52px 44px;
+    }
   }
 
   @media (min-width: $desktop_width) {
     padding: 100px 160px 106px;
-    border-radius: 40px;
+    border-radius: 60px;
+
+    &--routes {
+      padding: 96px 160px 104px;
+      margin-bottom: 42px;
+    }
   }
 }
 
@@ -133,7 +167,7 @@
 
   @media (min-width: $desktop_width) {
     flex-direction: row;
-    margin-bottom: 55px;
+    margin-bottom: 34px;
   }
 }
 
@@ -150,22 +184,47 @@
   margin-bottom: 20px;
 
   @media (min-width: $tablet_width) {
+    width: 95%;
     font-size: 20px;
     line-height: 24px;
-    margin-bottom: 42px;
+    margin-bottom: 40px;
+
+    &--routes {
+      width: 80%;
+      margin-bottom: 34px;
+    }
+
+    &--entertainments {
+      margin-bottom: 34px;
+    }
   }
 
   @media (min-width: $desktop_width) {
+    width: 76%;
     border-bottom: none;
     margin: 0;
     margin-bottom: 55px;
+
+    &--routes {
+      width: 55%;
+      margin-bottom: 44px;
+    }
+
+    &--entertainments {
+      width: 65%;
+    }
   }
 }
 
 .add-plan__container {
+  @media (min-width: $tablet_width) and (max-width: $tablet_width_only) {
+    display: flex;
+    flex-direction: column;
+  }
+
   @media (min-width: $tablet_width) {
     border-top: 1px solid rgba($basic_gray, 0.3);
-    padding-top: 26px;
+    padding-top: 24px;
   }
 
   @media (min-width: $desktop_width) {
@@ -176,8 +235,33 @@
   }
 }
 
+.add-plan__parametres {
+  @media (min-width: $tablet_width) and (max-width: $tablet_width_only) {
+    display: contents;
+  }
+}
+
+.add-plan__parametres-item--last {
+  @media (min-width: $tablet_width) and (max-width: $tablet_width_only) {
+    order: 3;
+    margin-bottom: 37px;
+  }
+}
+
+.add-plan__childrens-wrapper {
+  @media (min-width: $tablet_width) and (max-width: $tablet_width_only) {
+    order: 2;
+    border-bottom: 1px solid rgba($basic_gray, 0.3);
+    margin-bottom: 24px;
+  }
+
+  @media (min-width: $desktop_width) {
+    margin-top: 16px;
+  }
+}
+
 .add-plan__childrens-label {
-  margin-bottom: 24px;
+  margin-bottom: 22px;
   cursor: pointer;
   font-weight: normal;
   font-size: 15px;
@@ -193,16 +277,18 @@
     line-height: 20px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
+    margin-bottom: 28px;
   }
 
   &::before {
     content: "";
     display: block;
     width: 26px;
-    height: 26px;
+    height: 28px;
     border: 1px solid $basic_gray;
     border-radius: 4px;
     margin-right: 13px;
+    box-sizing: border-box;
 
     @media (min-width: $tablet_width) {
       width: 36px;
@@ -259,7 +345,7 @@
   margin-bottom: 22px;
 
   @media (min-width: $tablet_width) {
-    margin-bottom: 47px;
+    margin-bottom: 45px;
   }
 
   @media (min-width: $desktop_width) {
@@ -271,11 +357,11 @@
   margin-bottom: 25px;
 
   @media (min-width: $tablet_width) {
-    margin-bottom: 50px;
+    margin-bottom: 43px;
   }
 
   @media (min-width: $desktop_width) {
-    margin-bottom: 58px;
+    margin-bottom: 56px;
   }
 }
 
@@ -294,6 +380,7 @@
   width: 100%;
   min-height: 40px;
   background-color: $basic_yellow;
+  font-family: inherit;
   font-weight: bold;
   font-size: 17px;
   line-height: 30px;
@@ -312,6 +399,7 @@
   &--back {
     background-color: $basic_white;
     width: auto;
+    margin-top: 6px;
   }
 
   &:hover {
@@ -329,7 +417,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 35px;
+    padding: 0 31px;
     font-size: 24px;
     line-height: 24px;
 
@@ -349,7 +437,6 @@
   &--back {
     width: auto;
     white-space: nowrap;
-    margin-top: 13px;
     padding: 0;
 
     @media (min-width: $tablet_width) {
@@ -358,8 +445,12 @@
       &::after {
         order: -1;
         transform: rotate(180deg);
-        margin-right: 19px;
+        margin-right: 22px;
       }
+    }
+
+    @media (min-width: $desktop_width) {
+      padding-bottom: 5px;
     }
   }
 }
@@ -379,6 +470,7 @@
   width: 100%;
   min-height: 40px;
   background-color: $basic_yellow;
+  font-family: inherit;
   font-weight: bold;
   font-size: 17px;
   line-height: 30px;

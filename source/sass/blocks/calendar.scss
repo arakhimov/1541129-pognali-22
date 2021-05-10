@@ -6,11 +6,20 @@
   border-top: 1px solid $basic_gray;
   border-bottom: 1px solid $basic_gray;
   box-sizing: border-box;
-  padding: 11px 0;
+  padding: 9px 0;
   margin-bottom: 22px;
 
   @media (min-width: $tablet_width) {
     min-height: 86px;
+    padding-left: 18px;
+    padding-right: 18px;
+    margin-bottom: 38px;
+  }
+
+  @media (min-width: $desktop_width) {
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 18px;
   }
 }
 
@@ -56,6 +65,9 @@
   line-height: 20px;
   text-align: center;
   border: none;
+  padding: 0;
+  padding-left: 2px;
+  font-family: inherit;
 
   @media (min-width: $tablet_width) {
     font-size: 36px;
@@ -68,7 +80,7 @@
   margin: 0;
   list-style-type: none;
   display: flex;
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 
   @media (min-width: $desktop_width) {
     margin-bottom: 19px;
@@ -80,9 +92,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: inherit;
   font-weight: normal;
   font-size: 14px;
   line-height: 18px;
+  text-transform: uppercase;
 
   &--weekend {
     color: $special_orange-dark;
@@ -98,6 +112,13 @@
   }
 }
 
+.calendar__days-second-symbol {
+  @media (max-width: $mobile_width_only) {
+    display: none;
+  }
+  text-transform: none;
+}
+
 .calendar__dates {
   margin: 0;
   padding: 0;
@@ -109,7 +130,7 @@
 .calendar__dates-item {
   border: 1px solid $basic_gray;
   box-sizing: border-box;
-  min-height: 32px;
+  min-height: 31px;
 
   &:not(:nth-of-type(7n)) {
     border-right: none;
@@ -124,7 +145,7 @@
   }
 
   @media (min-width: $desktop_width) {
-    min-height: 76px;
+    min-height: 71px;
   }
 
   &:hover {
@@ -142,8 +163,10 @@
   justify-content: center;
   cursor: pointer;
   font-weight: normal;
+  font-family: inherit;
   font-size: 14px;
   line-height: 18px;
+  text-transform: uppercase;
   border: none;
   color: $basic_blue_light;
   background-color: $basic_gray_light;
@@ -196,6 +219,7 @@
       flex-direction: column;
       justify-content: space-between;
       align-items: flex-start;
+      text-transform: none;
     }
 
     &--arrival {
@@ -209,12 +233,14 @@
         content: "Выезд";
       }
     }
+  }
+}
 
-    &--next-month {
-      &::after {
-        content: "апр";
-        margin-left: 5px;
-      }
-    }
+.calendar__button-next-month {
+  text-transform: none;
+  margin-left: 5px;
+
+  @media (max-width: $tablet_width_only) {
+    display: none;
   }
 }
