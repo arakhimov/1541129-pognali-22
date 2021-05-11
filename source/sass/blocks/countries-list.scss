@@ -5,6 +5,15 @@
   display: flex;
 }
 
-.countries-list__item:not(:last-of-type) {
-  margin-right: 20px;
+.countries-list__item {
+  position: relative;
+
+  &:not(:last-of-type) {
+    margin-right: 20px;
+  }
+}
+
+
+.countries-list__item:hover .countries-list__tooltip {
+  display: block;
 }

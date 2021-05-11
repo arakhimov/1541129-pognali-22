@@ -30,6 +30,10 @@
 .travelers-footer__item {
   &:not(:last-of-type) {
     margin-right: 4px;
+
+    @media (min-width: $tablet_width) {
+      margin-right: 0;
+    }
   }
 }
 
@@ -48,6 +52,16 @@
   border-radius: 50%;
 
   &--current {
+    background-color: $basic_yellow;
+    pointer-events: none;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 1;
     background-color: $basic_yellow;
   }
 }
@@ -69,7 +83,12 @@
   }
 
   @media (min-width: $tablet_width) {
-    width: 55px;
+    width: 80px;
+    justify-content: space-between;
+  }
+
+  @media (min-width: $desktop_width) {
+    width: 96px;
   }
 }
 
@@ -81,24 +100,38 @@
   cursor: pointer;
   position: relative;
 
+  @media (min-width: $tablet_width) {
+    width: 10px;
+    justify-content: space-between;
+  }
+
   &::before {
     content: "";
     width: 20px;
     height: 20px;
     position: absolute;
     top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    left: 45%;
     background-repeat: no-repeat;
   }
 
   &--back::before {
-    background-image: url("../../img/page-arrows_prev.svg");
+    background-image: url("../img/page-arrows_next.svg");
     background-position: left center;
+    transform: translate(-50%, -50%) rotate(180deg);
   }
 
   &--forward::before {
-    background-image: url("../../img/page-arrows_next.svg");
+    background-image: url("../img/page-arrows_next.svg");
     background-position: right center;
+    transform: translate(-50%, -50%);
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.3;
   }
 }

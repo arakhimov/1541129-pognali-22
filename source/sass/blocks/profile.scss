@@ -2,11 +2,25 @@ $counter-icon: 34px;
 $counter-icon-adv: 68px;
 
 .profile {
-  padding-top: 53px;
-  border-bottom-left-radius: 40px;
-  border-bottom-right-radius: 40px;
+  padding-top: 35px;
+  padding-bottom: 38px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
   background-color: $basic_gray_light;
   box-sizing: border-box;
+  position: relative;
+
+  @media (min-width: $tablet_width) {
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+    padding-top: 70px;
+    padding-bottom: 20px;
+  }
+
+  @media (min-width: $desktop_width) {
+    padding-bottom: 140px;
+    padding-top: 102px;
+  }
 }
 
 .profile__wrapper {
@@ -19,21 +33,45 @@ $counter-icon-adv: 68px;
   @media (min-width: $tablet_width) {
     padding-left: 0;
   }
+
+  @media (min-width: $desktop_width) {
+    padding-left: 70px;
+  }
 }
 
 .profile__title {
-  margin-bottom: 56px;
+  margin: 0;
+  display: flex;
+  align-items: center;
 
   @media (min-width: $tablet_width) {
+    justify-self: center;
     grid-column: 1 / -1;
-    text-align: center;
+    margin-bottom: 35px;
+  }
+
+  @media (min-width: $desktop_width) {
+    padding-right: 65px;
+    margin-bottom: 87px;
+  }
+
+  &--modal {
+    padding-left: 25px;
+    padding-right: 25px;
+    justify-content: center;
+
+    @media (min-width: $tablet_width) {
+      margin-bottom: 0;
+      padding-left: 90px;
+      padding-right: 90px;
+    }
   }
 }
 
 .profile__rates-container {
   width: 100px;
   height: 100px;
-  background-image: url("../../img/rates.svg");
+  background-image: url("../img/rates.svg");
   background-size: contain;
   background-repeat: no-repeat;
 
@@ -42,6 +80,8 @@ $counter-icon-adv: 68px;
     grid-row: 3 / 4;
     padding-right: 49px;
     z-index: 10;
+    position: relative;
+    top: -26px;
   }
 
   @media (min-width: $desktop_width) {
@@ -50,6 +90,8 @@ $counter-icon-adv: 68px;
     align-self: center;
     width: 198px;
     height: 198px;
+    position: static;
+    padding-right: 75px;
   }
 }
 
@@ -58,12 +100,57 @@ $counter-icon-adv: 68px;
   grid-row: 2 / 3;
   padding: 0;
   margin: 0;
-  margin-bottom: 31px;
+  padding-top: 30px;
+  margin-bottom: 30px;
+
+  @media (min-width: $tablet_width) {
+    padding-top: 41px;
+    padding-bottom: 42px;
+    margin-bottom: 0;
+    position: relative;
+
+    &--gray::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 198px;
+      height: 100%;
+      background-color: $special_gray_light;
+      border-radius: 20px;
+    }
+  }
+
+  @media (min-width: $desktop_width) {
+    margin-right: 186px;
+    padding-top: 48px;
+    padding-bottom: 51px;
+
+    &::after {
+      width: 446px;
+    }
+  }
+
+  &--modal {
+    padding: 28px 25px 34px;
+    margin-bottom: 0;
+
+    @media (min-width: $tablet_width) {
+      padding: 47px 90px 52px;
+    }
+
+    @media (min-width: $desktop_width) {
+      padding: 46px 60px 53px;
+      margin: 0;
+    }
+  }
 }
 
 .profile__list-wrapper {
   min-height: 65px;
   box-sizing: border-box;
+  position: relative;
+  z-index: 10;
 
   &:last-of-type {
     border-bottom: 1px solid $special_gray_light;
@@ -77,8 +164,23 @@ $counter-icon-adv: 68px;
     display: flex;
   }
 
-  @media (min-width: $desktop_width) {
-    margin-right: 150px;
+  &--modal {
+    border-top: 1px solid rgba($basic_black, 0.05);
+    padding-top: 11px;
+    padding-bottom: 11px;
+
+    &:last-of-type {
+      border-bottom: 1px solid rgba($basic_black, 0.05);
+    }
+
+    @media (min-width: $tablet_width) {
+      padding-top: 14px;
+      padding-bottom: 14px;
+    }
+
+    @media (min-width: $desktop_width) {
+      justify-content: space-between;
+    }
   }
 }
 
@@ -99,8 +201,9 @@ $counter-icon-adv: 68px;
     flex-grow: 1;
     font-size: 28px;
     line-height: 28px;
-    padding: 20px 0;
+    padding: 19px 0 19px;
     margin-left: 90px;
+    margin-bottom: 0;
   }
 
   &--third {
@@ -126,6 +229,7 @@ $counter-icon-adv: 68px;
       line-height: inherit;
       width: $counter-icon-adv;
       height: $counter-icon-adv;
+      top: 0;
       left: -90px;
     }
   }
@@ -144,6 +248,16 @@ $counter-icon-adv: 68px;
     content: "3";
     background-color: $basic_yellow;
   }
+
+  &--modal {
+    border: none;
+    padding-top: 0;
+
+    @media (min-width: $tablet_width) {
+      margin: 0;
+      padding: 0;
+    }
+  }
 }
 
 .profile__description {
@@ -154,42 +268,28 @@ $counter-icon-adv: 68px;
   margin-bottom: 15px;
   box-sizing: border-box;
 
+  &--first {
+    @media (min-width: $tablet_width) {
+      text-indent: 10px;
+    }
+  }
+
   @media (min-width: $tablet_width) {
     justify-content: center;
     margin: 0;
     font-size: 28px;
     line-height: 28px;
     white-space: nowrap;
-    background-color: $special_gray_light;
     position: relative;
-
-    &--first::after {
-      content: "";
-      width: 100%;
-      height: 41px;
-      background-color: inherit;
-      position: absolute;
-      left: 0;
-      top: -41px;
-      border-top-left-radius: 20px;
-      border-top-right-radius: 20px;
-    }
-
-    &--third::after {
-      content: "";
-      width: 100%;
-      height: 45px;
-      background-color: inherit;
-      position: absolute;
-      left: 0;
-      bottom: -45px;
-      border-bottom-left-radius: 20px;
-      border-bottom-right-radius: 20px;
-    }
   }
 
   @media (min-width: $desktop_width) {
     width: 446px;
+  }
+
+  &--modal {
+    margin-bottom: 0;
+    width: auto;
   }
 }
 
@@ -202,12 +302,115 @@ $counter-icon-adv: 68px;
   font-weight: 700;
   font-size: 16px;
   line-height: 16px;
-  margin-bottom: 38px;
 
   @media (min-width: $tablet_width) {
     grid-column: 1 / 2;
     grid-row: 3 / 4;
     align-self: center;
-    margin: 0;
+    display: flex;
+    align-items: center;
+    position: relative;
+    top: -26px;
+    font-size: 20px;
+    line-height: 20px;
   }
+
+  @media (min-width: $desktop_width) {
+    margin-top: 7px;
+  }
+}
+
+.profile__bisiness-link-logo {
+  @media (min-width: $tablet_width) {
+    display: inline-block;
+    vertical-align: top;
+    width: 68px;
+    height: 68px;
+    border-radius: 50%;
+    background-color: $basic_half_gray;
+    margin-right: 21px;
+    position: relative;
+
+    &::after {
+      content: "";
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      background-image: url("../img/icon_businessman.svg");
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: 27px 27px;
+    }
+  }
+}
+
+.profile__bisiness-link:hover .profile__bisiness-link-text,
+.profile__bisiness-link:hover .profile__bisiness-link-logo::after {
+  opacity: 0.7;
+}
+
+.profile__bisiness-link:active .profile__bisiness-link-text,
+.profile__bisiness-link:active .profile__bisiness-link-logo::after {
+  opacity: 0.3;
+}
+
+.profile__modal {
+  background-color: $basic_white;
+  width: calc(100% - 50px);
+  padding-top: 35px;
+  border-radius: 20px;
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 100;
+  overflow: hidden;
+  transform: translate(-50%, -50%);
+  display: none;
+
+  &--open {
+    display: block;
+  }
+
+  @media (min-width: $tablet_width) {
+    width: calc(100% - 80px);
+    padding-top: 54px;
+  }
+
+  @media (min-width: $desktop_width) {
+    width: 750px;
+    border-radius: 30px;
+  }
+}
+
+.profile__modal-close {
+  width: 100%;
+  min-height: 60px;
+  border: none;
+  background-color: $basic_gray_half_light;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 24px;
+  text-transform: uppercase;
+  color: $basic_blue_light;
+  cursor: pointer;
+
+  @media (min-width: $tablet_width) {
+    min-height: 108px;
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 24px;
+    text-transform: none;
+  }
+
+  &:hover {
+    background-color: $basic_gray_light;
+  }
+}
+
+.profile__modal-close:active .profile__modal-close-text {
+  opacity: 0.3;
 }

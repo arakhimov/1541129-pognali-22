@@ -1,54 +1,85 @@
 .directions {
-  border-bottom-left-radius: 40px;
-  border-bottom-right-radius: 40px;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
   background-color: $basic_gray_light;
   padding: 70px 25px 34px;
 
   @media (min-width: $tablet_width) {
-    padding: 73px 70px 80px;
+    padding: 70px 74px 80px;
+    background-image: url("../img/flags-back.png");
+    background-repeat: no-repeat;
+    background-size: 287px 575px;
+    background-position: 92% 80px;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/flags-back@2x.png");
+    }
   }
 
   @media (min-width: $desktop_width) {
-    padding: 87px 130px;
+    padding: 161px 130px 98px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(3, min-content);
     column-gap: 170px;
+    background-position: 1094px 88px;
   }
 }
 
 .directions__title {
   padding: 0 25px;
-  margin: 0 0 3.125%;
+  margin: 0 0 7.5%;
 
   @media (min-width: $tablet_width) {
     padding: 0;
     margin: 0 0 58px;
   }
+
+  @media (min-width: $desktop_width) {
+    margin-bottom: 25px;
+  }
 }
 
 .directions__text {
-  width: 80%;
+  width: 95%;
   padding: 0 25px;
+  margin: 0;
   margin-bottom: 60px;
   box-sizing: border-box;
 
   @media (min-width: $tablet_width) {
     padding: 0;
     width: 60%;
+    margin-bottom: 104px;
   }
 
   @media (min-width: $desktop_width) {
-    width: 65%;
+    width: 80%;
+    margin-bottom: 60px;
+    padding-left: 2px;
   }
 }
 
 .directions__list {
-  margin-bottom: 25px;
+  margin-bottom: 22px;
   padding: 0;
 
+  @media (min-width: $tablet_width) {
+    margin-bottom: 50px;
+  }
+
   @media (min-width: $desktop_width) {
+    margin-top: 0;
     grid-column: 1 / 2;
     grid-row: 1 / -1;
+  }
+}
+
+.directions__link {
+  @media (min-width: $desktop_width) {
+    padding-bottom: 5px;
+    padding-left: 36px;
   }
 }

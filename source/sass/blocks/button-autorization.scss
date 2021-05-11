@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   width: 188px;
-  min-height: 50px;
+  min-height: 40px;
   background-color: $basic_yellow;
   color: $special_blue;
   font-family: inherit;
@@ -14,4 +14,23 @@
   text-transform: uppercase;
   text-decoration: none;
   border-radius: 25px;
+
+  &--popup {
+    min-height: 50px;
+  }
+
+  &:hover {
+    background-color: $special_yellow-dark;
+  }
+
+  @media (min-width: $tablet_width) {
+    min-height: 50px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
+
+
+.button-autorization:active .button-autorization__text {
+  opacity: 0.3;
 }

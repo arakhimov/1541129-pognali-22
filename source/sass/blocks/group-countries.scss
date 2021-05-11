@@ -15,8 +15,16 @@
       display: block;
       order: 2;
       padding-left: 25px;
-      padding-top: 20px;
+      padding-top: 32px;
+      margin-bottom: 7px;
+      align-items: flex-start;
     }
+  }
+}
+
+@media (max-width: $mobile_width_only) {
+  .group-countries--popup .group-countries__item:not(:last-of-type) {
+    margin-bottom: 9px;
   }
 }
 
@@ -27,14 +35,6 @@
 
   @media (min-width: $desktop_width) {
     margin-right: 32px;
-  }
-
-  &--popup {
-    @media (max-width: $mobile_width_only) {
-      &:not(:last-of-type) {
-        margin-bottom: 9px;
-      }
-    }
   }
 }
 
@@ -54,5 +54,13 @@
   @media (min-width: $tablet_width) {
     font-size: 20px;
     line-height: 20px;
+  }
+
+  &:hover {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 1;
   }
 }

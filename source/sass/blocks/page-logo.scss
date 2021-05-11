@@ -1,0 +1,21 @@
+.page-logo {
+  @media (min-width: $tablet_width) {
+    margin-right: 40px;
+  }
+}
+
+.page-logo__image {
+  width: 95px;
+  height: 14px;
+
+  @media (min-width: $tablet_width) {
+    padding-top: 4px;
+    width: 168px;
+    height: 42px;
+  }
+
+  @media (min-width: $desktop_width) {
+    width: 200px;
+    height: 52px;
+  }
+}

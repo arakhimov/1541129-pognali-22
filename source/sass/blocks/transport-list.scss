@@ -3,6 +3,17 @@
   margin: 0;
   list-style-type: none;
   display: flex;
+  margin-bottom: 20px;
+  padding-top: 5px;
+
+  @media (min-width: $tablet_width) {
+    margin-bottom: 0;
+  }
+
+  @media (min-width: $desktop_width) {
+    padding-top: 10px;
+    margin-bottom: 10px;
+  }
 }
 
 .transport-list__item {
@@ -10,10 +21,10 @@
     @media (min-width: $tablet_width) {
       margin-right: 2px;
     }
+  }
 
-    @media (min-width: $tablet_width) {
-      margin-right: 1px;
-    }
+  @media (min-width: $desktop_width) {
+    margin-bottom: 10px;
   }
 }
 
@@ -42,19 +53,19 @@
   }
 
   &--avia::after {
-    background-image: url("../../img/avia.svg");
+    background-image: url("../img/avia.svg");
   }
 
   &--auto::after {
-    background-image: url("../../img/auto.svg");
+    background-image: url("../img/auto.svg");
   }
 
   &--bicycle::after {
-    background-image: url("../../img/bicycle.svg");
+    background-image: url("../img/bicycle.svg");
   }
 
   &--run::after {
-    background-image: url("../../img/run.svg");
+    background-image: url("../img/run.svg");
   }
 
   @media (min-width: $tablet_width) {
@@ -70,4 +81,12 @@
 
 .transport-list__field:checked ~ .transport-list__label::after {
   opacity: 1;
+}
+
+.transport-list__field:hover ~ .transport-list__label::after {
+  opacity: 0.5;
+}
+
+.transport-list__field:active ~ .transport-list__label::after {
+  opacity: 0.3;
 }

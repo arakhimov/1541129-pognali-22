@@ -1,23 +1,24 @@
-$level-icon: 56px;
+$level-icon: 60px;
 
 .list-travelers {
-  margin-bottom: 20px;
-
-  @media (min-width: $tablet_width) {
+  @media (min-width: 560px) {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
   }
-
-  @media (min-width: $desktop_width) {
-    grid-column: 2 / 3;
-    grid-row: 1 / -1;
-  }
 }
 
 .list-travelers__item {
+  border-radius: 10px;
+
   &:not(:last-of-type) {
-    margin-bottom: 9px;
+    @media (max-width: 560px) {
+      margin-bottom: 9px;
+    }
+  }
+
+  @media (min-width: 560px) {
+    width: 250px;
   }
 
   @media (min-width: $tablet_width) {
@@ -26,13 +27,28 @@ $level-icon: 56px;
 }
 
 .list-travelers__card {
+  min-height: 428px;
+  box-sizing: border-box;
   background-color: $basic_white;
   border-radius: 10px;
-  overflow: hidden;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: repeat(5, min-content);
   justify-items: center;
+  padding-bottom: 15px;
+
+  @media (min-width: $tablet_width) {
+    padding-bottom: 24px;
+    border-radius: 20px;
+  }
+
+  &:hover {
+    box-shadow: 0 4px 9px rgba($basic_black, 0.16);
+  }
+}
+
+.list-travelers__card:hover .list-travelers__image {
+  transform: scale(1.01);
 }
 
 .list-travelers__image {
@@ -40,6 +56,16 @@ $level-icon: 56px;
   vertical-align: top;
   grid-column: 1 / -1;
   grid-row: 1 / 2;
+
+  @media (max-width: 560px) {
+    width: 100%;
+    height: auto;
+  }
+
+  @media (min-width: 560px) {
+    width: 250px;
+    height: auto;
+  }
 
   @media (min-width: $tablet_width) {
     width: 285px;
@@ -61,16 +87,74 @@ $level-icon: 56px;
 }
 
 .list-travelers__countries {
-  transform: translateY(-50%);
+  transform: translateY(-38%);
 }
 
 .list-travelers__title {
   margin: 0;
-  margin-bottom: 15px;
+  margin-bottom: 12px;
+  padding-right: 12px;
+  font-weight: bold;
+  font-size: 21px;
+  line-height: 21px;
+  text-align: center;
+  color: $basic_blue_light;
+  display: flex;
+  align-items: center;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    margin-right: 10px;
+  }
+
+  @media (min-width: $tablet_width) {
+    justify-self: flex-start;
+    padding: 0 44px;
+    margin-bottom: 25px;
+    font-size: 24px;
+    line-height: 22px;
+
+    &::before {
+      width: 8px;
+      height: 8px;
+      margin-right: 14px;
+    }
+  }
+
+  &--red::before {
+    background-color: $special_red_dark;
+  }
+
+  &--green::before {
+    background-color: $basic__green;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  &:active {
+    opacity: 0.2;
+  }
+}
+
+.list-travelers__link {
+  color: inherit;
+  text-decoration: none;
 }
 
 .list-travelers__hashtags {
-  width: 69.3296%;
+  width: 68%;
   justify-content: center;
-  margin-bottom: 14px;
+  padding: 0;
+  margin-bottom: 15px;
+
+  @media (min-width: $tablet_width) {
+    width: 80%;
+    margin-bottom: 20px;
+  }
 }

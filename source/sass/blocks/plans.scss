@@ -1,19 +1,19 @@
 .plans {
-  background-color: $special_blue-light;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
+  background-color: $special_blue_half_light;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
   padding: 28px 25px 30px;
 
   @media (min-width: $tablet_width) {
     border-top-left-radius: 30px;
     border-top-right-radius: 30px;
-    padding: 57px 75px 76px;
+    padding: 52px 75px 76px;
   }
 
   @media (min-width: $desktop_width) {
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
-    padding: 54px 60px 64px 125px;
+    border-top-left-radius: 60px;
+    border-top-right-radius: 60px;
+    padding: 50px 60px 64px 125px;
   }
 }
 
@@ -26,6 +26,7 @@
 
   @media (min-width: $desktop_width) {
     margin-bottom: 54px;
+    padding-left: 5px;
   }
 }
 
@@ -40,7 +41,7 @@
   border-radius: 10px;
   box-sizing: border-box;
   color: $basic_blue_light;
-  padding: 25px;
+  padding: 24px 25px 22px;
 
   @media (min-width: $tablet_width) {
     padding: 0;
@@ -54,15 +55,22 @@
 
 .plans__item:not(:last-of-type) {
   margin-bottom: 10px;
+
+  @media (min-width: $desktop_width) {
+    margin-bottom: 14px;
+  }
 }
 
 .plans__subtitle {
   margin: 0;
   margin-bottom: 20px;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 16px;
 
   @media (min-width: $tablet_width) {
-    min-height: 98px;
-    padding: 0 40px;
+    min-height: 96px;
+    padding: 4px 34px 0 40px;
     grid-column: 1 / -1;
     display: flex;
     justify-content: space-between;
@@ -72,14 +80,20 @@
     font-size: 24px;
     line-height: 24px;
   }
+
+  @media (min-width: $desktop_width) {
+    padding-top: 0;
+  }
 }
 
 .plans__subtitle-counter {
-  margin-right: 5px;
+  font-size: 16px;
+  line-height: 16px;
 
   @media (min-width: $tablet_width) {
     order: 2;
-    margin-right: 0;
+    font-size: 20px;
+    line-height: 20px;
   }
 
   @media (min-width: $desktop_width) {
@@ -97,7 +111,7 @@
     min-height: 54px;
 
     @media (min-width: $desktop_width) {
-      width: 50%;
+      width: 47%;
     }
   }
 }
@@ -121,6 +135,11 @@
 
 .plans__description {
   @media (min-width: $tablet_width) {
+    width: 33.25%;
+    letter-spacing: 0.1em;
+  }
+
+  @media (min-width: $desktop_width) {
     width: 30%;
   }
 }
@@ -152,5 +171,13 @@
 
   @media (min-width: $desktop_width) {
     letter-spacing: 0.08em;
+  }
+
+  &:hover {
+    color: rgba($basic_black, 0.6);
+  }
+
+  &:active {
+    color: rgba($basic_black, 0.1);
   }
 }

@@ -11,9 +11,18 @@
   overflow: hidden;
 }
 
-@media (max-width: 767px) {
-  .mobile-hidden {
-    display: none;
+@media (max-width: $mobile_width_only), (min-width: $desktop_width) {
+  .mobile-desktop-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
   }
 }
 

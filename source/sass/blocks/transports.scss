@@ -15,8 +15,8 @@
 
   &::after {
     content: "";
-    width: 17px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
     position: absolute;
     top: 50%;
     left: 50%;
@@ -28,19 +28,19 @@
   }
 
   &--avia::after {
-    background-image: url("../../img/avia.svg");
+    background-image: url("../img/avia.svg");
   }
 
   &--auto::after {
-    background-image: url("../../img/auto.svg");
+    background-image: url("../img/auto.svg");
   }
 
   &--bicycle::after {
-    background-image: url("../../img/bicycle.svg");
+    background-image: url("../img/bicycle.svg");
   }
 
   &--run::after {
-    background-image: url("../../img/run.svg");
+    background-image: url("../img/run.svg");
   }
 
   &--active::after {
@@ -53,18 +53,23 @@
     }
   }
 
+  &--small {
+    &::after {
+      background-size: 14px 16px;
+    }
+  }
+
   @media (min-width: $tablet_width) {
-    width: 43px;
-    height: 43px;
+    width: 34px;
+    height: 34px;
 
     &::after {
       width: 23px;
       height: 22px;
     }
   }
+}
 
-  &--small {
-    width: 29px;
-    height: 29px;
-  }
+.transports__item:hover .transports__tooltip {
+  display: block;
 }

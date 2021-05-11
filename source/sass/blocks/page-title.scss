@@ -5,8 +5,8 @@
   color: $special_orange;
 
   @media (min-width: $tablet_width) {
-    font-size: 36px;
-    line-height: 36px;
+    font-size: 45px;
+    line-height: 45px;
   }
 
   &--white {
@@ -25,6 +25,13 @@
     @media (min-width: $tablet_width) {
       font-size: 60px;
       line-height: 60px;
+    }
+  }
+
+  &--small {
+    @media (min-width: $tablet_width) {
+      font-size: 36px;
+      line-height: 36px;
     }
   }
 }

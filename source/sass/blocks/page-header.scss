@@ -15,9 +15,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding-top: 19px;
-  padding-left: 25px;
-  padding-right: 25px;
+  padding: 19px 25px 0;
   box-sizing: border-box;
   min-height: 50px;
 
@@ -26,10 +24,7 @@
   }
 
   @media (min-width: $tablet_width) {
-    padding-top: 40px;
-    padding-bottom: 72px;
-    padding-left: 40px;
-    padding-right: 40px;
+    padding: 40px 40px 68px;
     min-height: 100px;
 
     &--form,
@@ -46,6 +41,12 @@
     padding-right: 60px;
 
     &--ligthen {
+      background-color: $special_blue_half-dark;
+    }
+  }
+
+  &--form {
+    @media (max-width: $tablet_width_only) {
       background-color: $special_blue_half-dark;
     }
   }
@@ -76,29 +77,10 @@
 }
 
 .page-header__logo {
-  @media (min-width: $tablet_width) {
-    margin-right: 40px;
-  }
-
   &--dark {
     @media (min-width: $desktop_width) {
       display: none;
     }
-  }
-}
-
-.page-header__logo-image {
-  width: 95px;
-  height: 14px;
-
-  @media (min-width: $tablet_width) {
-    width: 168px;
-    height: 42px;
-  }
-
-  @media (min-width: $desktop_width) {
-    width: 200px;
-    height: 52px;
   }
 }
 
@@ -120,13 +102,17 @@
   &--opened::after {
     width: 25px;
     height: 11px;
-    background-image: url("../../img/icon_menu_mobile.svg");
+    background-image: url("../img/icon_menu_mobile.svg");
   }
 
   &--closed::after {
     width: 19px;
     height: 19px;
-    background-image: url("../../img/icon_close.svg");
+    background-image: url("../img/icon_close.svg");
+  }
+
+  @media (min-width: $tablet_width) {
+    padding-right: 20px;
   }
 
   @media (min-width: $desktop_width) {
@@ -158,12 +144,14 @@
       display: flex;
       flex-direction: column;
       width: 100%;
-      padding: 98px 40px 93px;
+      padding: 80px 97px 60px;
+      align-items: flex-start;
     }
 
     @media (max-width: $mobile_width_only) {
-      padding: 75px 25px 40px;
+      padding: 65px 25px 12px;
       top: 50px;
+      align-items: center;
     }
   }
 }
@@ -173,11 +161,11 @@
 
   &--opened {
     @media (max-width: $tablet_width_only) {
-      margin-bottom: 51px;
+      margin-bottom: 55px;
     }
 
     @media (min-width: $tablet_width) and (max-width: $tablet_width_only) {
-      margin-bottom: 144px;
+      margin-bottom: 135px;
     }
   }
 }
