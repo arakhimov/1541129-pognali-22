@@ -16,8 +16,8 @@
 </head>
 
 <body class="page__body">
-  <header class="page-header">
-    <div class="page-header__container page-header__container--nojs page-header__container--opened page-header__container--ligthen page-header__container--form">
+  <header class="page-header page-header--lighten">
+    <div class="page-header__container page-header__container--nojs page-header__container--opened page-header__container--form page__container">
       <div class="page-header__row">
         <a href="index.html" class="page-header__link">
           <picture class="page-header__logo page-header__logo--white page-logo page-logo--white">
@@ -92,13 +92,11 @@
   </header>
 
   <main class="main">
-    <form action="https://echo.htmlacademy.ru/" method="POST" class="add-plan__form" target="_blank">
-      <div class="main__wrapper">
-        <h1 class="main__title main__title--form main__title--underline page-title page-title--white page-title--adv">
-          <span class="main__title-text main__title-text--form">Направления</span></h1>
-
-        <section class="user-profile">
-          <h2 class="visually-hidden">Мой профиль</h2>
+    <form action="https://echo.htmlacademy.ru/" method="POST" target="_blank">
+      <section class="user-profile">
+        <div class="user-profile__container page__container">
+          <h1 class="user-profile__title main__title main__title--underline page-title page-title--white page-title--adv">
+            <span class="main__title-text main__title-text--form">Направления</span></h1>
 
           <div class="user-profile__level-container level">
             <span class="level__counter level__counter--form" aria-label="У Пети Демина 80 уровень">80</span>
@@ -148,45 +146,47 @@
               </li>
             </ul>
           </fieldset>
-        </section>
-      </div>
+        </div>
+      </section>
 
       <!-- секция мои планы -->
       <section class="plans">
-        <h2 class="plans__title page-title page-title--small page-title--dark">Мои планы:</h2>
-        <ol class="plans__list">
-          <li class="plans__item">
-            <article class="plans__card">
-              <h3 class="plans__subtitle">
-                <span class="plans__subtitle-counter">1.</span>
-                <span class="plans__subtitle-text">Франция, Италия</span>
-              </h3>
-              <div class="plans__wrapper">
-                <p class="plans__description">3 попутчика</p>
-                <p class="plans__date">26 мар &#x2015; 29 мар</p>
-                <a href="blank.html" class="plans__change-link">Изменить</a>
-              </div>
-            </article>
-          </li>
-          <li class="plans__item">
-            <article class="plans__card">
-              <h3 class="plans__subtitle">
-                <span class="plans__subtitle-counter">2.</span>
-                <span class="plans__subtitle-text">Таиланд, Индонезия</span>
-              </h3>
-              <div class="plans__wrapper">
-                <p class="plans__description">1 попутчик</p>
-                <p class="plans__date">1 июл &#x2015; 15 июл</p>
-                <a href="blank.html" class="plans__change-link">Изменить</a>
-              </div>
-            </article>
-          </li>
-        </ol>
+        <div class="plans__container page__container">
+          <h2 class="plans__title page-title page-title--small page-title--dark">Мои планы:</h2>
+          <ol class="plans__list">
+            <li class="plans__item">
+              <article class="plans__card">
+                <h3 class="plans__subtitle">
+                  <span class="plans__subtitle-counter">1.</span>
+                  <span class="plans__subtitle-text">Франция, Италия</span>
+                </h3>
+                <div class="plans__wrapper">
+                  <p class="plans__description">3 попутчика</p>
+                  <p class="plans__date">26 мар &#x2015; 29 мар</p>
+                  <a href="blank.html" class="plans__change-link">Изменить</a>
+                </div>
+              </article>
+            </li>
+            <li class="plans__item">
+              <article class="plans__card">
+                <h3 class="plans__subtitle">
+                  <span class="plans__subtitle-counter">2.</span>
+                  <span class="plans__subtitle-text">Таиланд, Индонезия</span>
+                </h3>
+                <div class="plans__wrapper">
+                  <p class="plans__description">1 попутчик</p>
+                  <p class="plans__date">1 июл &#x2015; 15 июл</p>
+                  <a href="blank.html" class="plans__change-link">Изменить</a>
+                </div>
+              </article>
+            </li>
+          </ol>
+        </div>
       </section>
 
       <!-- секция добавить план -->
       <section class="add-plan">
-        <div class="add-plan__wrapper">
+        <div class="add-plan__wrapper page__container">
           <div class="add-plan__header">
             <h2 class="add-plan__title page-title page-title--small page-title--dark">Добавить план:</h2>
 
@@ -820,38 +820,40 @@
   </main>
 
   <footer class="page-footer">
-    <div class="page-footer__wrapper page-wrapper">
-      <a href="index.html" class="page-footer__link">
-        <picture class="page-footer__logo page-logo page-logo--dark">
-          <source type="image/webp" media="(min-width: 768px)"
-            srcset="img/pognali-logo_dark_desktop.webp 1x, img/pognali-logo_dark_desktop@2x.webp 2x" />
-          <source type="image/webp" srcset="img/pognali-logo_dark.webp 1x, img/pognali-logo_dark@2x.png 2x" />
-          <source media="(min-width: 768px)" srcset="img/pognali-logo_dark_desktop.png 1x, img/pognali-logo_dark_desktop@2x.png 2x" />
-          <img class="page-logo__image" alt="Логотип сервиса Погнали" src="img/pognali-logo_dark.png"
-            srcset="img/pognali-logo_dark@2x.png 2x" width="96" height="15" loading="lazy" />
-        </picture>
-      </a>
-
-      <ul class="page-footer__socials-list socials">
-        <li class="socials__item socials__item--bg">
-          <a href="https://ru-ru.facebook.com/" class="socials__link socials__link--bg" target="_blank" aria-label="Наша страница в facebook">
-            <img src="img/facebook-logo.svg" alt="Логотип facebook" class="socials__logo socials__logo--facebook" width="11" height="21" loading="lazy" /></a>
-        </li>
-        <li class="socials__item socials__item--bg">
-          <a href="https://vk.com/" class="socials__link socials__link--bg" target="_blank" aria-label="Наша страница в ВКонтакте">
-            <img src="img/vkcom-logo.svg" alt="логотип ВКонтакте" class="socials__logo socials__logo--vk" width="23" height="12" loading="lazy" /></a>
-        </li>
-        <li class="socials__item socials__item--bg">
-          <a href="https://www.instagram.com/" class="socials__link socials__link--bg" target="_blank" aria-label="Наша страница в Instagram">
-            <img src="img/instagram-logo.svg" alt="Логотип Instagram" class="socials__logo socials__logo--instagram" width="18" height="14" loading="lazy" /></a>
-        </li>
-      </ul>
-
-      <div class="page-footer__copyright-container">
-        <p class="page-footer__copyright">Разработано</p>
-        <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__study-link" target="_blank">
-          <img src="img/htmlacademy.svg" alt="Логотип HTML Academy" class="page-footer__study-center" width="27" height="34" loading="lazy" />
+    <div class="page__container">
+      <div class="page-footer__wrapper page-wrapper">
+        <a href="index.html" class="page-footer__link">
+          <picture class="page-footer__logo page-logo page-logo--dark">
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="img/pognali-logo_dark_desktop.webp 1x, img/pognali-logo_dark_desktop@2x.webp 2x" />
+            <source type="image/webp" srcset="img/pognali-logo_dark.webp 1x, img/pognali-logo_dark@2x.png 2x" />
+            <source media="(min-width: 768px)" srcset="img/pognali-logo_dark_desktop.png 1x, img/pognali-logo_dark_desktop@2x.png 2x" />
+            <img class="page-logo__image" alt="Логотип сервиса Погнали" src="img/pognali-logo_dark.png"
+              srcset="img/pognali-logo_dark@2x.png 2x" width="96" height="15" loading="lazy" />
+          </picture>
         </a>
+
+        <ul class="page-footer__socials-list socials">
+          <li class="socials__item socials__item--bg">
+            <a href="https://ru-ru.facebook.com/" class="socials__link socials__link--bg" target="_blank" aria-label="Наша страница в facebook">
+              <img src="img/facebook-logo.svg" alt="Логотип facebook" class="socials__logo socials__logo--facebook" width="11" height="21" loading="lazy" /></a>
+          </li>
+          <li class="socials__item socials__item--bg">
+            <a href="https://vk.com/" class="socials__link socials__link--bg" target="_blank" aria-label="Наша страница в ВКонтакте">
+              <img src="img/vkcom-logo.svg" alt="логотип ВКонтакте" class="socials__logo socials__logo--vk" width="23" height="12" loading="lazy" /></a>
+          </li>
+          <li class="socials__item socials__item--bg">
+            <a href="https://www.instagram.com/" class="socials__link socials__link--bg" target="_blank" aria-label="Наша страница в Instagram">
+              <img src="img/instagram-logo.svg" alt="Логотип Instagram" class="socials__logo socials__logo--instagram" width="18" height="14" loading="lazy" /></a>
+          </li>
+        </ul>
+
+        <div class="page-footer__copyright-container">
+          <p class="page-footer__copyright">Разработано</p>
+          <a href="https://htmlacademy.ru/intensive/adaptive" class="page-footer__study-link" target="_blank">
+            <img src="img/htmlacademy.svg" alt="Логотип HTML Academy" class="page-footer__study-center" width="22" height="24" loading="lazy" />
+          </a>
+        </div>
       </div>
     </div>
   </footer>
@@ -862,5 +864,4 @@
   <script src="js/change-country-list.min.js"></script>
   <script src="js/form-submit.min.js"></script>
 </body>
-
 </html>

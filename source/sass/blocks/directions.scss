@@ -2,6 +2,14 @@
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
   background-color: $basic_gray_light;
+
+  @media (min-width: $tablet_width) {
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
+}
+
+.directions__container {
   padding: 70px 25px 34px;
 
   @media (min-width: $tablet_width) {
@@ -10,8 +18,6 @@
     background-repeat: no-repeat;
     background-size: 287px 575px;
     background-position: 92% 80px;
-    border-bottom-left-radius: 60px;
-    border-bottom-right-radius: 60px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/flags-back@2x.png");

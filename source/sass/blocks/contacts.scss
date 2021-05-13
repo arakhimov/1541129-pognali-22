@@ -1,8 +1,7 @@
-.contacts__container {
+.contacts__registration {
   background-color: $special_blue;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
-  padding: 72px 25px 20px;
   position: relative;
 
   &::before {
@@ -17,9 +16,16 @@
   }
 
   @media (min-width: $tablet_width) {
-    padding: 74px 75px 50px;
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
+  }
+}
+
+.contacts__container {
+  padding: 72px 25px 20px;
+
+  @media (min-width: $tablet_width) {
+    padding: 74px 75px 50px;
   }
 
   @media (min-width: $desktop_width) {
@@ -83,7 +89,7 @@
   }
 }
 
-.contacts__registration {
+.contacts__form {
   margin-bottom: 29px;
 
   @media (min-width: $tablet_width) {
@@ -96,7 +102,7 @@
 }
 
 .contacts__questions {
-  width: 80%;
+  width: 82%;
   margin: 0 auto 18px;
   text-align: center;
   letter-spacing: 0.01em;
@@ -120,23 +126,9 @@
   padding: 0;
 }
 
-.contacts__wrapper {
+.contacts__route {
   background-color: $basic_yellow;
   position: relative;
-  display: flex;
-  flex-direction: column;
-  padding: 30px 25px 5px;
-
-  @media (min-width: $tablet_width) {
-    padding: 48px 75px 25px;
-  }
-
-  @media (min-width: $desktop_width) {
-    padding: 50px 135px 0 285px;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-  }
 
   &::before {
     content: "";
@@ -166,6 +158,23 @@
       border-bottom-left-radius: 60px;
       border-bottom-right-radius: 60px;
     }
+  }
+}
+
+.contacts__route-container {
+  display: flex;
+  flex-direction: column;
+  padding: 30px 25px 5px;
+
+  @media (min-width: $tablet_width) {
+    padding: 48px 75px 25px;
+  }
+
+  @media (min-width: $desktop_width) {
+    padding: 50px 135px 0 285px;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
   }
 }
 
@@ -290,6 +299,6 @@
   }
 
   @media (min-width: $desktop_width) {
-    min-height: 494px;
+    min-height: 500px;
   }
 }

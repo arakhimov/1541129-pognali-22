@@ -2,17 +2,22 @@
   background-color: $special_blue_half_light;
   border-top-left-radius: 30px;
   border-top-right-radius: 30px;
-  padding: 28px 25px 30px;
-
-  @media (min-width: $tablet_width) {
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-    padding: 52px 75px 76px;
-  }
 
   @media (min-width: $desktop_width) {
     border-top-left-radius: 60px;
     border-top-right-radius: 60px;
+  }
+}
+
+.plans__container {
+  padding: 28px 25px 30px;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet_width) {
+    padding: 52px 75px 76px;
+  }
+
+  @media (min-width: $desktop_width) {
     padding: 50px 60px 64px 125px;
   }
 }

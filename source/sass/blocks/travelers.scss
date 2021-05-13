@@ -2,17 +2,7 @@
   background-color: $special_blue;
   border-bottom-left-radius: 30px;
   border-bottom-right-radius: 30px;
-  padding: 66px 25px 31px;
   position: relative;
-  box-sizing: border-box;
-  background-repeat: no-repeat;
-  background-image: url("../img/directions-mobile.png");
-  background-size: 297px 344px;
-  background-position: left 3.5%;
-
-  @media (min-resolution: 2dppx) {
-    background-image: url("../img/directions-mobile@2x.png");
-  }
 
   &::before {
     content: "";
@@ -30,10 +20,25 @@
     }
   }
 
-
   @media (min-width: $tablet_width) {
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
+  }
+}
+
+.travelers__container {
+  padding: 66px 25px 31px;
+  box-sizing: border-box;
+  background-repeat: no-repeat;
+  background-image: url("../img/directions-mobile.png");
+  background-size: 297px 344px;
+  background-position: left 3.5%;
+
+  @media (min-resolution: 2dppx) {
+    background-image: url("../img/directions-mobile@2x.png");
+  }
+
+  @media (min-width: $tablet_width) {
     padding: 138px 74px 87px;
     background-image: url("../img/directions-tablet.png");
     background-size: 654px 498px;

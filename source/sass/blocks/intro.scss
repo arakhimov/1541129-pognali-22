@@ -1,6 +1,25 @@
 .intro {
   background-color: $basic_blue;
   color: $basic_white;
+
+  @media (min-width: $desktop_width) {
+    background-image: url("../img/intro-desktop-man.png"), url("../img/intro-desktop.png");
+    background-position: 60% bottom, left -105px;
+    background-size: 431px 640px, 100% auto;
+    height: 13.05%;
+    background-repeat: no-repeat;
+
+    @media (min-resolution: 2dppx) {
+      background-image: url("../img/intro-desktop-man@2x.png"), url("../img/intro-desktop@2x.png");
+    }
+  }
+
+  @media (min-width: 1600px) {
+    background-position: 53.5% bottom, left -105px;
+  }
+}
+
+.intro__container {
   padding-top: 13%;
   box-sizing: border-box;
 
@@ -18,18 +37,12 @@
   }
 
   @media (min-width: $desktop_width) {
-    background-color: $basic_blue;
+    background-color: transparent;
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: repeat(3, min-content);
-    background-image: url("../img/intro-desktop.png");
-    background-position: left -115px;
-    background-size: 100% auto;
-    padding-top: 90px;
-
-    @media (min-resolution: 2dppx) {
-      background-image: url("../img/intro-desktop@2x.png");
-    }
+    padding-top: 100px;
+    background-image: none;
   }
 }
 
@@ -126,7 +139,7 @@
 
   @media (min-width: $desktop_width) {
     grid-column: 1 / -1;
-    padding-bottom: 8.5416%;
+    padding-bottom: 123px;
   }
 }
 

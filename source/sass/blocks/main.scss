@@ -1,34 +1,24 @@
 .main__wrapper {
-  display: grid;
-  grid-template-columns: 25px 1fr 1fr 25px;
-  grid-template-rows: repeat(5, min-content);
-  padding-bottom: 34px;
+  background-color: $special_blue_half-dark;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
+  overflow: hidden;
 
   @media (min-width: $tablet_width) {
-    grid-template-columns: 75px min-content 1fr min-content 75px;
-    grid-template-rows: repeat(4, min-content);
-    padding-bottom: 35px;
-  }
-
-  @media (min-width: $desktop_width) {
-    grid-template-columns: 125px 1fr min-content min-content 60px;
-    grid-template-rows: repeat(3, min-content);
-    padding-bottom: 0;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
   }
 }
 
 .main__container {
   display: flex;
   justify-content: space-between;
-  background-color: $special_blue_half-dark;
-  border-bottom-left-radius: 20px;
-  border-bottom-right-radius: 20px;
   padding: 42px 25px 0;
+  background-color: $special_blue_half-dark;
+  box-sizing: border-box;
 
   @media (min-width: $tablet_width) {
     padding: 120px 75px 0;
-    border-bottom-left-radius: 60px;
-    border-bottom-right-radius: 60px;
   }
 
   @media (min-width: $desktop_width) {
@@ -39,30 +29,6 @@
 .main__title {
   margin: 0;
   position: relative;
-
-  &--form {
-    grid-column: 1 / -1;
-    padding: 42px 25px 0;
-    margin-bottom: 24px;
-    display: flex;
-    align-items: flex-end;
-    border-bottom-left-radius: 20px;
-    border-bottom-right-radius: 20px;
-
-    @media (min-width: $tablet_width) {
-      padding: 120px 75px 0;
-      margin-bottom: 66px;
-      border-bottom-left-radius: 60px;
-      border-bottom-right-radius: 60px;
-    }
-
-    @media (min-width: $desktop_width) {
-      padding: 0 125px;
-      min-height: 236px;
-      grid-row: 1 / 2;
-      margin-bottom: 0;
-    }
-  }
 
   &--catalog {
     padding-bottom: 15px;
@@ -167,12 +133,12 @@
   }
 }
 
-.main__row {
+.main__row-container {
   @media (min-width: $desktop_width) {
-    margin: 0 60px;
     display: flex;
     justify-content: space-between;
     align-items: flex-start;
     box-sizing: border-box;
+    padding: 0 60px;
   }
 }
