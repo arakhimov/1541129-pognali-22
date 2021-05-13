@@ -3,10 +3,7 @@
 }
 
 .page__body {
-  display: grid;
-  grid-template-columns: minmax(auto, 1440px);
-  grid-template-rows: min-content 1fr min-content;
-  justify-content: safe center;
+  width: 100%;
   min-height: 100%;
   padding: 0;
   margin: 0;
@@ -17,4 +14,13 @@
   line-height: 16px;
   color: $special-gray;
   background-color: $basic_gray_light;
+  box-sizing: border-box;
+}
+
+.page__container {
+  @media (min-width: $desktop_width) {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }

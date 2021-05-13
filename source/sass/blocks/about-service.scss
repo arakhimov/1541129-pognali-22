@@ -1,12 +1,20 @@
 .about-service {
+  background-color: $special_blue;
+  border-bottom-left-radius: 30px;
+  border-bottom-right-radius: 30px;
+
+  @media (min-width: $tablet_width) {
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
+  }
+}
+
+.about-service__container {
   min-height: 353px;
   background-image: url("../img/about-mobile.png");
   background-position: top left;
   background-repeat: no-repeat;
-  background-color: $special_blue;
   padding: 33px 25px 42px;
-  border-bottom-left-radius: 30px;
-  border-bottom-right-radius: 30px;
   box-sizing: border-box;
 
   @media (min-resolution: 2dppx) {
@@ -19,8 +27,6 @@
     background-image: url("../img/about-tablet.png");
     background-position: 84% top;
     background-size: 720px 596px;
-    border-bottom-left-radius: 60px;
-    border-bottom-right-radius: 60px;
 
     @media (min-resolution: 2dppx) {
       background-image: url("../img/about-tablet@2x.png");

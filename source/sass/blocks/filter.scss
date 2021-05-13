@@ -11,23 +11,10 @@
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
   position: relative;
-  display: flex;
-  align-items: center;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 21px 28px 16px 25px;
-  box-sizing: border-box;
 
   @media (min-width: $tablet_width) {
-    min-height: 140px;
     border-bottom-left-radius: 60px;
     border-bottom-right-radius: 60px;
-    padding: 0 75px;
-  }
-
-  @media (min-width: $desktop_width) {
-    padding-left: 80px;
-    padding-right: 120px;
   }
 
   &::before {
@@ -46,7 +33,30 @@
 
     @media (min-width: $desktop_width) {
       background-color: $basic_gray_light;
+
+      &::before {
+        background-color: $basic_gray_light;
+      }
     }
+  }
+}
+
+.filter__container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 21px 28px 16px 25px;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet_width) {
+    min-height: 140px;
+    padding: 0 75px;
+  }
+
+  @media (min-width: $desktop_width) {
+    padding-left: 80px;
+    padding-right: 120px;
   }
 }
 
@@ -62,12 +72,15 @@
   white-space: nowrap;
 
   @media (min-width: $tablet_width) {
-    font-size: 20px;
-    line-height: 20px;
+    display: none;
   }
 
   @media (min-width: $desktop_width) {
+    display: flex;
     margin-right: 30px;
+    width: auto;
+    font-size: 20px;
+    line-height: 20px;
   }
 
   &::before {
@@ -79,19 +92,12 @@
     background-image: url("../img/icon_filter.svg");
     margin-right: 12px;
 
-    @media (min-width: $tablet_width) {
+    @media (min-width: $desktop_width) {
+      display: flex;
       width: 23px;
       height: 15px;
       margin-right: 22px;
     }
-  }
-
-  @media (min-width: $tablet_width) {
-    display: none;
-  }
-
-  @media (min-width: $desktop_width) {
-    display: flex;
   }
 }
 
@@ -189,16 +195,20 @@
 }
 
 .filter__index {
-  padding: 0 25px 28px;
   display: none;
 
   &--open {
     display: block;
+  }
+}
 
-    @media (min-width: $tablet_width) and (max-width: $tablet_width-only) {
-      display: flex;
-      flex-wrap: wrap;
-    }
+.filter__index-container {
+  padding: 0 25px 28px;
+  box-sizing: border-box;
+
+  @media (min-width: $tablet_width) and (max-width: $tablet_width-only) {
+    display: flex;
+    flex-wrap: wrap;
   }
 
   @media (min-width: $tablet_width) {
@@ -229,7 +239,6 @@
   @media (min-width: $tablet_width) {
     margin: 0;
     min-height: 100px;
-    width: 100%;
     font-size: 20px;
     line-height: 20px;
     margin-top: 36px;

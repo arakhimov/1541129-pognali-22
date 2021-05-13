@@ -75,6 +75,10 @@
   }
 }
 
+.navigation__list--dark .navigation__link--dark {
+  color: $basic_blue;
+}
+
 .navigation__link-text {
   @media (max-width: $tablet_width_only) {
     &:hover {
