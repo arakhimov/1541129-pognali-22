@@ -9,8 +9,10 @@ function changeCountryList(event) {
   for (let currentButton of indexButtons) {
     if (currentButton.value === event.target.value) {
       currentButton.classList.add("index__button--active");
+      currentButton.closest(".index__heading-item").classList.add("index__heading-item--active");
     } else {
       currentButton.classList.remove("index__button--active");
+      currentButton.closest(".index__heading-item").classList.remove("index__heading-item--active");
     }
   }
 

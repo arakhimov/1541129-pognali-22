@@ -9,45 +9,29 @@
     background-color: rgba($basic_black, 0.6);
     border-radius: 50%;
   }
+}
 
-  &::after {
-    content: "";
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-image: url("../img/demin_level.svg");
-    background-size: contain;
-    background-repeat: no-repeat;
+.level__image {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  &--firsova {
+    transform: rotate(70deg);
   }
 
-  &--firsova-rounded::after {
-    background-image: url("../img/99.svg");
+  &--demin {
+    transform: rotate(-10deg);
   }
 
-  &--demin-rounded::after {
-    background-image: url("../img/80.svg");
+  &--smolov {
+    transform: rotate(-40deg);
   }
 
-  &--firsova::after {
-    background-image: url("../img/99_small.svg");
-  }
-
-  &--demin::after {
-    background-image: url("../img/80_small.svg");
-  }
-
-  &--smolov::after {
-    background-image: url("../img/25_small.svg");
-    background-size: 50%;
-    background-position: top right;
-  }
-
-  &--yarovaya::after {
-    background-image: url("../img/50_small.svg");
-    background-size: 50%;
-    background-position: top right;
+  &--rogovaya {
+    transform: rotate(-92deg);
   }
 }
 
@@ -57,7 +41,7 @@
   font-size: 38px;
   line-height: 38px;
   position: relative;
-  border-bottom: 1px solid rgba(($basic_white), 0.3);
+  border-bottom: 1px solid rgba($basic_white, 0.3);
   margin-bottom: 6%;
 
   &--light {
@@ -75,7 +59,10 @@
   }
 
   &--form {
+    border-color: rgba($special_gray, 0.3);
+
     @media (min-width: $desktop_width) {
+      border-color: rgba($basic_white, 0.3);
       color: $basic_white;
     }
   }

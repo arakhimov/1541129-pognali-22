@@ -11,6 +11,7 @@
 
 .directions__container {
   padding: 70px 25px 34px;
+  box-sizing: border-box;
 
   @media (min-width: $tablet_width) {
     padding: 70px 74px 80px;

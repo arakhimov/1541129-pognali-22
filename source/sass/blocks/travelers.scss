@@ -50,7 +50,7 @@
   }
 
   @media (min-width: $desktop_width) {
-    padding: 125px 60px 134px 130px;
+    padding: 125px 60px 125px 130px;
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: repeat(4, min-content);
@@ -123,7 +123,7 @@
   z-index: 10;
 
   @media (min-width: $tablet_width) {
-    margin-bottom: 80px;
+    margin-bottom: 72px;
   }
 
   @media (min-width: $desktop_width) {

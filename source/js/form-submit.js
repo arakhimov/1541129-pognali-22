@@ -1,5 +1,5 @@
 const textFields = document.querySelectorAll(".entertainments__description");
-const directionsForm = document.querySelector(".add-plan__form");
+const directionsForm = document.querySelector(".plans-form");
 
 for (let field of textFields) {
   field.addEventListener("input", (event) => {

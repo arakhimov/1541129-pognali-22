@@ -13,7 +13,7 @@ const svgstore = require("gulp-svgstore");
 const htmlmin = require("gulp-htmlmin");
 const terser = require("gulp-terser");
 const { stream } = require("browser-sync");
-const del = require('del');
+const del = require("del");
 
 // Styles
 const styles = () => {
@@ -33,11 +33,27 @@ const styles = () => {
 
 exports.styles = styles;
 
+// StylesNoMin
+const stylesNoMin = () => {
+  return gulp.src("source/sass/style.scss")
+    .pipe(plumber())
+    .pipe(sourcemap.init())
+    .pipe(sass())
+    .pipe(postcss([
+      autoprefixer(),
+    ]))
+    .pipe(sourcemap.write("."))
+    .pipe(rename("style.css"))
+    .pipe(gulp.dest("build/css"));
+}
+
+exports.stylesNoMin = stylesNoMin;
+
 // Server
 const server = (done) => {
   sync.init({
     server: {
-      baseDir: 'build'
+      baseDir: "build"
     },
     cors: true,
     notify: false,
@@ -65,7 +81,7 @@ const watcher = () => {
 const html = () => {
   return gulp.src("source/**/*.html")
     .pipe(htmlmin({ collapseWhitespace: true }))
-    .pipe(gulp.dest('build'));
+    .pipe(gulp.dest("build"));
 }
 
 exports.html = html;
@@ -154,6 +170,7 @@ exports.build = gulp.series(
   optimizeImages,
   gulp.parallel(
     styles,
+    stylesNoMin,
     html,
     scripts,
     sprite,
@@ -169,6 +186,7 @@ exports.default = gulp.series(
   // optimizeImages,
   gulp.parallel(
     styles,
+    stylesNoMin,
     html,
     scripts,
     sprite,
