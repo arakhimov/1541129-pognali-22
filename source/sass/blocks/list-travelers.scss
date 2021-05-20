@@ -56,10 +56,13 @@ $level-icon: 60px;
   grid-column: 1 / -1;
   grid-row: 1 / 2;
   overflow: hidden;
-  border-radius: 10px;
+  width: 100%;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
 
   @media (min-width: $tablet_width) {
-    border-radius: 20px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
   }
 }
 
