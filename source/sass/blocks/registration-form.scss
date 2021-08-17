@@ -73,7 +73,7 @@
   &:focus {
     background-color: $basic_blue;
     color: $basic_white;
-    border: 4px solid $basic_white;
+    box-shadow: inset 0 0 0 4px $basic_white;
   }
 }
 

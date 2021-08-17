@@ -13,6 +13,8 @@
   <link rel="apple-touch-icon" href="img/favicon/180x180.png" />
   <link rel="manifest" href="manifest.webmanifest" />
   <link rel="stylesheet" href="css/style.min.css" />
+  <link rel="preload" href="../fonts/bloggersans.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+  <link rel="preload" href="../fonts/bloggersans-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
 </head>
 
 <body class="page__body">
@@ -21,10 +23,13 @@
       <div class="page-header__row">
         <a href="index.html" class="page-header__link">
           <picture class="page-header__logo page-header__logo--white page-logo page-logo--white">
-            <source type="image/webp" media="(min-width: 768px)"
+            <source type="image/webp" media="(min-width: 1440px)"
               srcset="img/pognali-logo_white_desktop.webp 1x, img/pognali-logo_white_desktop@2x.webp 2x" />
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="img/pognali-logo_white_tablet.webp 1x, img/pognali-logo_white_tablet@2x.webp 2x" />
             <source type="image/webp" srcset="img/pognali-logo_white.webp 1x, img/pognali-logo_white@2x.png 2x" />
-            <source media="(min-width: 768px)" srcset="img/pognali-logo_white_desktop.png 1x, img/pognali-logo_white_desktop@2x.png 2x">
+            <source media="(min-width: 1440px)" srcset="img/pognali-logo_white_desktop.png 1x, img/pognali-logo_white_desktop@2x.png 2x" />
+            <source media="(min-width: 768px)" srcset="img/pognali-logo_white_tablet.png 1x, img/pognali-logo_white_tablet@2x.png 2x" />
             <img class="page-logo__image" alt="Логотип сервиса Погнали" src="img/pognali-logo_white.png"
               srcset="img/pognali-logo_white@2x.png 2x" width="96" height="15" />
           </picture>
@@ -92,13 +97,16 @@
   </header>
 
   <main class="main">
-    <form action="https://echo.htmlacademy.ru/" method="POST" target="_blank">
+    <form action="https://echo.htmlacademy.ru/" method="POST" target="_blank" class="plans-form">
       <section class="user-profile">
         <div class="user-profile__container page__container">
           <h1 class="user-profile__title main__title main__title--underline page-title page-title--white page-title--adv">
             <span class="main__title-text main__title-text--form">Направления</span></h1>
 
           <div class="user-profile__level-container level">
+            <svg class="level__image" transform="rotate(-50)" stroke="#FF8D30" width="95" stroke-dasharray="160% 60%" height="95" viewBox="0 0 95 95" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle r="38" cx="50%" cy="50%" stroke-width="3" />
+            </svg>
             <span class="level__counter level__counter--form" aria-label="У Пети Демина 80 уровень">80</span>
             <span class="level__text level__text--form">level</span>
           </div>
@@ -126,23 +134,39 @@
             <ul class="user-profile__transports-list transport-list">
               <li class="transport-list__item">
                 <input id="transport-list-avia" type="checkbox" class="transport-list__field visually-hidden" name="avia" checked />
-                <label for="transport-list-avia" class="transport-list__label transport-list__label--avia"
-                  aria-label="Авиаперелет" title="Авиаперелет"></label>
+                <label for="transport-list-avia" class="transport-list__label" title="Авиаперелет"
+                  aria-label="Авиаперелет">
+                  <svg class="transport-list__logo" width="19" height="21" fill="#D9D9D9">
+                    <use href="img/sprite.svg#avia"></use>
+                  </svg>
+                </label>
               </li>
               <li class="transport-list__item">
                 <input id="transport-list-auto" type="checkbox" class="transport-list__field visually-hidden" name="auto" checked />
-                <label for="transport-list-auto" class="transport-list__label transport-list__label--auto"
-                  aria-label="Автотранспорт" title="Автотранспорт"></label>
+                <label for="transport-list-auto" class="transport-list__label" title="Автотранспорт"
+                  aria-label="Автотранспорт">
+                  <svg class="transport-list__logo" width="23" height="22" fill="#D9D9D9">
+                    <use href="img/sprite.svg#auto"></use>
+                  </svg>
+                </label>
               </li>
               <li class="transport-list__item">
                 <input id="transport-list-bicycle" type="checkbox" class="transport-list__field visually-hidden" name="bicycle"  />
-                <label for="transport-list-bicycle" class="transport-list__label transport-list__label--bicycle"
-                  aria-label="Велосипед" title="Велосипед"></label>
+                <label for="transport-list-bicycle" class="transport-list__label" title="Велосипед"
+                  aria-label="Велосипед">
+                  <svg class="transport-list__logo" width="25" height="24" fill="#D9D9D9">
+                    <use href="img/sprite.svg#bicycle"></use>
+                  </svg>
+                </label>
               </li>
               <li class="transport-list__item">
                 <input id="transport-list-run" type="checkbox" class="transport-list__field visually-hidden" name="run" checked />
-                <label for="transport-list-run" class="transport-list__label transport-list__label--run"
-                  aria-label="Пешком" title="Пешком"></label>
+                <label for="transport-list-run" class="transport-list__label" title="Пешком"
+                  aria-label="Пешком">
+                  <svg class="transport-list__logo" width="21" height="24" fill="#D9D9D9">
+                    <use href="img/sprite.svg#run"></use>
+                  </svg>
+                </label>
               </li>
             </ul>
           </fieldset>
@@ -409,7 +433,7 @@
 
                     <section class="routes__popup index">
                         <ul class="index__headind-list">
-                          <li class="index__heading-item">
+                          <li class="index__heading-item index__heading-item--active">
                             <button type="button" class="index__button index__button--active" value="а" aria-pressed="true">а</button></li>
                           <li class="index__heading-item">
                             <button type="button" class="index__button" value="б">б</button></li>
@@ -790,7 +814,7 @@
               </div>
 
               <ul class="entertainments__list">
-                <li class="entertainments__item entertainments__item--add-line">
+                <li class="entertainments__item">
                   <h4 class="entertainments__title">Босния и Герцеговина</h4>
                   <img class="entertainments__image-flag" src="img/bosnia-and-herzegovina.png"
                     alt="Флаг Боснии и Герцеговины" width="35" height="24" loading="lazy" />
@@ -803,7 +827,8 @@
                   <h4 class="entertainments__title">Чехия</h4>
                   <img class="entertainments__image-flag" src="img/czech.svg" alt="Флаг Чехии" width="35" height="24" loading="lazy" />
                   <div class="entertaments__wrapper">
-                    <textarea class="entertainments__description" name="czech-description" placeholder="План действий"></textarea>
+                    <textarea class="entertainments__description" name="czech-description">Пить пиво и лазить по&nbsp;старым замкам, наслаждаться архитектурой и вот это все.
+                    </textarea>
                     <span class="entertainments__invalid-text">Это поле должно быть заполнено</span>
                   </div>
                 </li>
@@ -824,10 +849,13 @@
       <div class="page-footer__wrapper page-wrapper">
         <a href="index.html" class="page-footer__link">
           <picture class="page-footer__logo page-logo page-logo--dark">
-            <source type="image/webp" media="(min-width: 768px)"
+            <source type="image/webp" media="(min-width: 1440px)"
               srcset="img/pognali-logo_dark_desktop.webp 1x, img/pognali-logo_dark_desktop@2x.webp 2x" />
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="img/pognali-logo_dark_tablet.webp 1x, img/pognali-logo_dark_desktop@2x.webp 2x" />
             <source type="image/webp" srcset="img/pognali-logo_dark.webp 1x, img/pognali-logo_dark@2x.png 2x" />
-            <source media="(min-width: 768px)" srcset="img/pognali-logo_dark_desktop.png 1x, img/pognali-logo_dark_desktop@2x.png 2x" />
+            <source media="(min-width: 1440px)" srcset="img/pognali-logo_dark_desktop.png 1x, img/pognali-logo_dark_desktop@2x.png 2x" />
+            <source media="(min-width: 768px)" srcset="img/pognali-logo_dark_tablet.png 1x, img/pognali-logo_dark_tablet@2x.png 2x" />
             <img class="page-logo__image" alt="Логотип сервиса Погнали" src="img/pognali-logo_dark.png"
               srcset="img/pognali-logo_dark@2x.png 2x" width="96" height="15" loading="lazy" />
           </picture>

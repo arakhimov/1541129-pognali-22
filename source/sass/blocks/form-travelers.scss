@@ -11,6 +11,7 @@
   }
 
   @media (min-width: $desktop_width) {
+    max-width: 285px;
     padding: 44px 48px 48px;
     order: 2;
     margin: 0;
@@ -97,6 +98,7 @@
     vertical-align: top;
     background-image: url("../img/arrow-interests.svg");
     background-repeat: no-repeat;
+    flex-shrink: 0;
 
     @media (min-width: $tablet_width) and (max-width: $tablet_width_only) {
       display: none;
@@ -120,16 +122,10 @@
   }
 }
 
-.form-travelers__group--transport:hover .form-travelers__subtitle,
-.form-travelers__group--range:hover .form-travelers__subtitle,
-.form-travelers__group--transport:focus-within .form-travelers__subtitle,
-.form-travelers__group--range:focus-within .form-travelers__subtitle {
-  opacity: 0.6;
-}
-
-.form-travelers__group--transport:active .form-travelers__subtitle,
-.form-travelers__group--range:active .form-travelers__subtitle {
-  opacity: 0.3;
+.form-travelers__submenu--close {
+  @media (max-width: $mobile_width_only), (min-width: $desktop_width) {
+    display: none;
+  }
 }
 
 .form-travelers__submit {

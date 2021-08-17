@@ -14,7 +14,6 @@
   }
 
   @media (min-width: $desktop_width) {
-    padding-top: 10px;
     margin-bottom: 10px;
   }
 }
@@ -32,8 +31,9 @@
 }
 
 .transport-list__label {
-  display: inline-block;
-  vertical-align: top;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   width: 32px;
   height: 32px;
   background-color: $basic_white;
@@ -41,55 +41,41 @@
   position: relative;
   cursor: pointer;
 
-  &::after {
-    content: "";
-    width: 17px;
-    height: 16px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-position: center;
-    opacity: 0.15;
-  }
-
-  &--avia::after {
-    background-image: url("../img/avia.svg");
-  }
-
-  &--auto::after {
-    background-image: url("../img/auto.svg");
-  }
-
-  &--bicycle::after {
-    background-image: url("../img/bicycle.svg");
-  }
-
-  &--run::after {
-    background-image: url("../img/run.svg");
-  }
-
   @media (min-width: $tablet_width) {
     width: 43px;
     height: 43px;
-
-    &::after {
-      width: 23px;
-      height: 22px;
-    }
   }
 }
 
-.transport-list__field:checked ~ .transport-list__label::after {
-  opacity: 1;
+.transport-list__field:hover ~ .transport-list__label > .transport-list__logo {
+  fill: $special_gray_darken;
 }
 
-.transport-list__field:hover ~ .transport-list__label::after {
-  opacity: 0.5;
+.transport-list__field:checked ~ .transport-list__label > .transport-list__logo {
+  fill: $basic_blue_light;
 }
 
-.transport-list__field:active ~ .transport-list__label::after {
+.transport-list__field:hover ~ .transport-list__label {
+  box-shadow: 0 4px 9px rgba($basic_black, 0.16);
+}
+
+.transport-list__field:checked:hover ~ .transport-list__label > .transport-list__logo {
+  opacity: 0.7;
+}
+
+.transport-list__field:focus ~ .transport-list__label {
+  outline: 1px solid $special_orange-dark;
+}
+
+.transport-list__field:active ~ .transport-list__label {
+  background-color: $basic_half_gray;
+}
+
+.transport-list__field:active ~ .transport-list__label > .transport-list__logo {
+  fill: $basic_blue_light;
+  opacity: 0.1;
+}
+
+.transport-list__field:checked:active ~ .transport-list__label > .transport-list__logo {
   opacity: 0.3;
 }

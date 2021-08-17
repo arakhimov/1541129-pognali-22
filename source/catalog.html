@@ -12,6 +12,8 @@
   <link rel="apple-touch-icon" href="img/favicon/180x180.png" />
   <link rel="manifest" href="manifest.webmanifest" />
   <link rel="stylesheet" href="css/style.min.css" />
+  <link rel="preload" href="../fonts/bloggersans.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+  <link rel="preload" href="../fonts/bloggersans-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
 </head>
 
 <body class="page__body">
@@ -20,10 +22,13 @@
       <div class="page-header__row">
         <a href="index.html" class="page-header__link">
           <picture class="page-header__logo page-header__logo--white page-logo page-logo--white">
-            <source type="image/webp" media="(min-width: 768px)"
+            <source type="image/webp" media="(min-width: 1440px)"
               srcset="img/pognali-logo_white_desktop.webp 1x, img/pognali-logo_white_desktop@2x.webp 2x" />
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="img/pognali-logo_white_tablet.webp 1x, img/pognali-logo_white_tablet@2x.webp 2x" />
             <source type="image/webp" srcset="img/pognali-logo_white.webp 1x, img/pognali-logo_white@2x.png 2x" />
-            <source media="(min-width: 768px)" srcset="img/pognali-logo_white_desktop.png 1x, img/pognali-logo_white_desktop@2x.png 2x" />
+            <source media="(min-width: 1440px)" srcset="img/pognali-logo_white_desktop.png 1x, img/pognali-logo_white_desktop@2x.png 2x" />
+            <source media="(min-width: 768px)" srcset="img/pognali-logo_white_tablet.png 1x, img/pognali-logo_white_tablet@2x.png 2x" />
             <img class="page-logo__image" alt="Логотип сервиса Погнали" src="img/pognali-logo_white.png"
               srcset="img/pognali-logo_white@2x.png 2x" width="96" height="15" />
           </picture>
@@ -106,11 +111,11 @@
           <h2 class="filter__title">Фильтрация по странам:</h2>
           <ul class="filter__countries-group-list group-countries">
             <li class="group-countries__item">
-              <a href="#" class="group-counries__link group-counries__link--active">Европа</a>
+              <a href="#" class="group-countries__link group-countries__link--active">Европа</a>
             </li>
-            <li class="group-countries__item"><a href="#" class="group-counries__link">Азия</a></li>
-            <li class="group-countries__item"><a href="#" class="group-counries__link">Америка</a></li>
-            <li class="group-countries__item"><a href="#" class="group-counries__link">Острова</a></li>
+            <li class="group-countries__item"><a href="#" class="group-countries__link">Азия</a></li>
+            <li class="group-countries__item"><a href="#" class="group-countries__link">Америка</a></li>
+            <li class="group-countries__item"><a href="#" class="group-countries__link">Острова</a></li>
           </ul>
           <button type="button" class="filter__button filter__button--show" aria-label="Показать список стран" title="Показать список стран"></button>
         </div>
@@ -308,7 +313,7 @@
                 <li class="index__item index__item--catalog"><a href="#" class="index__link">Люксембург</a></li>
               </ul>
             </li>
-            <li class="index__choise-item index__choise-item--open" data-heading="м">
+            <li class="index__choise-item index__choise-item--open index__choise-item--adv" data-heading="м">
               <span class="index__headind-symbol index__headind-symbol--catalog">м</span>
               <ul class="index__list index__list--catalog">
                 <li class="index__item index__item--catalog"><a href="#" class="index__link">Маврикий</a></li>
@@ -480,7 +485,7 @@
               <ul class="form-travelers__interests-menu menu-interests">
                 <li class="menu-interests__item form-travelers__menu-item">
                   <h4 class="menu-interests__title form-travelers__subtitle" tabindex="0">Хобби:</h4>
-                  <ul class="menu-interests__submenu form-travelers__submenu mobile-desktop-hidden">
+                  <ul class="menu-interests__submenu form-travelers__submenu form-travelers__submenu--close">
                     <li class="menu-interests__submenu-item">
                       <input id="menu-interests-gym" type="checkbox" class="menu-interests__field visually-hidden" name="gym" checked />
                       <label for="menu-interests-gym" class="menu-interests__label">
@@ -500,7 +505,7 @@
                 </li>
                 <li class="menu-interests__item form-travelers__menu-item">
                   <h4 class="menu-interests__title form-travelers__subtitle" tabindex="0">Музыка:</h4>
-                  <ul class="menu-interests__submenu form-travelers__submenu mobile-desktop-hidden">
+                  <ul class="menu-interests__submenu form-travelers__submenu form-travelers__submenu--close">
                     <li class="menu-interests__submenu-item">
                       <input id="menu-interests-hard-rock" type="checkbox" class="menu-interests__field visually-hidden" name="hard-rock" checked />
                       <label for="menu-interests-hard-rock" class="menu-interests__label">
@@ -520,7 +525,7 @@
                 </li>
                 <li class="menu-interests__item form-travelers__menu-item">
                   <h4 class="menu-interests__title form-travelers__subtitle" tabindex="0">Еда:</h4>
-                  <ul class="menu-interests__submenu form-travelers__submenu mobile-desktop-hidden">
+                  <ul class="menu-interests__submenu form-travelers__submenu form-travelers__submenu--close">
                     <li class="menu-interests__submenu-item">
                       <input id="menu-interests-meat" type="checkbox" class="menu-interests__field visually-hidden" name="meat" checked />
                       <label for="menu-interests-meat" class="menu-interests__label">
@@ -544,33 +549,49 @@
             <fieldset class="form-travelers__group form-travelers__group--transport form-travelers__menu-item">
               <h4 class="form-travelers__subtitle" tabindex="0">Транспорт:</h4>
 
-              <ul class="transport-list transport-list--catalog form-travelers__submenu mobile-desktop-hidden">
+              <ul class="transport-list transport-list--catalog form-travelers__submenu form-travelers__submenu--close">
                 <li class="transport-list__item">
                   <input id="transport-list-avia" type="checkbox" class="transport-list__field visually-hidden" name="avia" checked />
                   <label for="transport-list-avia" class="transport-list__label transport-list__label--avia"
-                    aria-label="Авиаперелет" title="Авиаперелет"></label>
+                    aria-label="Авиаперелет" title="Авиаперелет">
+                    <svg class="transport-list__logo" width="19" height="21" fill="#D9D9D9">
+                      <use href="img/sprite.svg#avia"></use>
+                    </svg>
+                  </label>
                 </li>
                 <li class="transport-list__item">
                   <input id="transport-list-auto" type="checkbox" class="transport-list__field visually-hidden" name="auto" checked />
                   <label for="transport-list-auto" class="transport-list__label transport-list__label--auto"
-                    aria-label="Автотранспорт" title="Автотранспорт"></label>
+                    aria-label="Автотранспорт" title="Автотранспорт">
+                    <svg class="transport-list__logo" width="23" height="22" fill="#D9D9D9">
+                      <use href="img/sprite.svg#auto"></use>
+                    </svg>
+                  </label>
                 </li>
                 <li class="transport-list__item">
                   <input id="transport-list-bicycle" type="checkbox" class="transport-list__field visually-hidden" name="bicycle"  />
                   <label for="transport-list-bicycle" class="transport-list__label transport-list__label--bicycle"
-                    aria-label="Велосипед" title="Велосипед"></label>
+                    aria-label="Велосипед" title="Велосипед">
+                    <svg class="transport-list__logo" width="25" height="24" fill="#D9D9D9">
+                      <use href="img/sprite.svg#bicycle"></use>
+                    </svg>
+                  </label>
                 </li>
                 <li class="transport-list__item">
                   <input id="transport-list-run" type="checkbox" class="transport-list__field visually-hidden" name="run" checked />
                   <label for="transport-list-run" class="transport-list__label transport-list__label--run"
-                    aria-label="Пешком" title="Пешком"></label>
+                    aria-label="Пешком" title="Пешком">
+                    <svg class="transport-list__logo" width="21" height="24" fill="#D9D9D9">
+                      <use href="img/sprite.svg#run"></use>
+                    </svg>
+                  </label>
                 </li>
               </ul>
             </fieldset>
 
             <fieldset class="form-travelers__group form-travelers__group--range form-travelers__menu-item">
               <h4 class="form-travelers__subtitle form-travelers__subtitle--level" tabindex="0">Левел:</h4>
-              <div class="range-filter form-travelers__submenu mobile-desktop-hidden">
+              <div class="range-filter form-travelers__submenu form-travelers__submenu--close">
                 <div class="range-filter__price-controls">
                   <label class="range-filter__price-label">
                     <input type="text" class="range-filter__price-field" aria-label="Минимальный уровень" value="30"></label>
@@ -653,24 +674,27 @@
                   <ul class="peoples__transports transports" aria-label="Используемые виды трансопрта">
                     <li class="transports__item transports__item--small transports__item--rounded transports__item--gray
                       transports__item--avia transports__item--active" aria-label="Авиаперелет">
-                      <div class="tooltip transports__tooltip"><span class="tooltip--text" data-hover="Авиаперелет"></span></div>
+                      <div class="tooltip transports__tooltip"><span class="tooltip__text" data-hover="Авиаперелет"></span></div>
                     </li>
                     <li class="transports__item transports__item--small transports__item--rounded transports__item--gray
                       transports__item--auto" aria-label="Автотранспорт">
-                      <div class="tooltip transports__tooltip"><span class="tooltip--text" data-hover="Автотранспорт"></span></div>
+                      <div class="tooltip transports__tooltip"><span class="tooltip__text" data-hover="Автотранспорт"></span></div>
                     </li>
                     <li class="transports__item transports__item--small transports__item--rounded transports__item--gray
                       transports__item--bicycle" aria-label="Велосипед">
-                      <div class="tooltip transports__tooltip"><span class="tooltip--text" data-hover="Велосипед"></span></div>
+                      <div class="tooltip transports__tooltip"><span class="tooltip__text" data-hover="Велосипед"></span></div>
                     </li>
                     <li class="transports__item transports__item--small transports__item--rounded transports__item--gray
                       transports__item--run" aria-label="Пешком">
-                      <div class="tooltip transports__tooltip"><span class="tooltip--text" data-hover="Пешком"></span></div>
+                      <div class="tooltip transports__tooltip"><span class="tooltip__text" data-hover="Пешком"></span></div>
                     </li>
                   </ul>
 
                   <h4 class="peoples__subtitle peoples__subtitle--level">левел:</h4>
                   <div class="peoples__level-container level level--firsova">
+                    <svg class="level__image" stroke="#FF8D30" width="60" stroke-dasharray="90 10" stroke-linecap="round" height="60" transform="rotate(65)" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle r="28" cx="50%" cy="50%" stroke-width="4" />
+                    </svg>
                     <span class="level__counter level__counter--no-bordered level__counter--light level__counter--small"
                       aria-label="У Тани Фирсовой 99 уровень">99</span>
                     <span class="level__text level__text--gray level__text--small level__text--hidden">level</span>
@@ -728,24 +752,27 @@
                   <ul class="peoples__transports transports" aria-label="Используемые виды трансопрта">
                     <li class="transports__item transports__item--small transports__item--rounded transports__item--gray
                       transports__item--avia transports__item--active" aria-label="Авиаперелет">
-                      <div class="tooltip transports__tooltip"><span class="tooltip--text" data-hover="Авиаперелет"></span></div>
+                      <div class="tooltip transports__tooltip"><span class="tooltip__text" data-hover="Авиаперелет"></span></div>
                     </li>
                     <li class="transports__item transports__item--small transports__item--rounded transports__item--gray
                       transports__item--auto transports__item--active" aria-label="Автотранспорт">
-                      <div class="tooltip transports__tooltip"><span class="tooltip--text" data-hover="Автотранспорт"></span></div>
+                      <div class="tooltip transports__tooltip"><span class="tooltip__text" data-hover="Автотранспорт"></span></div>
                     </li>
                     <li class="transports__item transports__item--small transports__item--rounded transports__item--gray
                       transports__item--bicycle" aria-label="Велосипед">
-                      <div class="tooltip transports__tooltip"><span class="tooltip--text" data-hover="Велосипед"></span></div>
+                      <div class="tooltip transports__tooltip"><span class="tooltip__text" data-hover="Велосипед"></span></div>
                     </li>
                     <li class="transports__item transports__item--small transports__item--rounded transports__item--gray
                       transports__item--run transports__item--active" aria-label="Пешком">
-                      <div class="tooltip transports__tooltip"><span class="tooltip--text" data-hover="Пешком"></span></div>
+                      <div class="tooltip transports__tooltip"><span class="tooltip__text" data-hover="Пешком"></span></div>
                     </li>
                   </ul>
 
                   <h4 class="peoples__subtitle peoples__subtitle--level">левел:</h4>
                   <div class="peoples__level-container level level--demin">
+                    <svg class="level__image" stroke="#FF8D30" width="60" stroke-dasharray="160% 60%" stroke-linecap="round" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle r="28" cx="50%" cy="50%" stroke-width="4" />
+                    </svg>
                     <span class="level__counter level__counter--no-bordered level__counter--light level__counter--small"
                       aria-label="У Пети Демина 80 уровень">80</span>
                     <span class="level__text level__text--gray level__text--small level__text--hidden">level</span>
@@ -807,24 +834,27 @@
                   <ul class="peoples__transports transports" aria-label="Используемые виды трансопрта">
                     <li class="transports__item transports__item--small transports__item--rounded transports__item--gray
                       transports__item--avia transports__item--active" aria-label="Авиаперелет">
-                      <div class="tooltip transports__tooltip"><span class="tooltip--text" data-hover="Авиаперелет"></span></div>
+                      <div class="tooltip transports__tooltip"><span class="tooltip__text" data-hover="Авиаперелет"></span></div>
                     </li>
                     <li class="transports__item transports__item--small transports__item--rounded transports__item--gray
                       transports__item--auto" aria-label="Автотранспорт">
-                      <div class="tooltip transports__tooltip"><span class="tooltip--text" data-hover="Автотранспорт"></span></div>
+                      <div class="tooltip transports__tooltip"><span class="tooltip__text" data-hover="Автотранспорт"></span></div>
                     </li>
                     <li class="transports__item transports__item--small transports__item--rounded transports__item--gray
                       transports__item--bicycle transports__item--active" aria-label="Велосипед">
-                      <div class="tooltip transports__tooltip"><span class="tooltip--text" data-hover="Велосипед"></span></div>
+                      <div class="tooltip transports__tooltip"><span class="tooltip__text" data-hover="Велосипед"></span></div>
                     </li>
                     <li class="transports__item transports__item--small transports__item--rounded transports__item--gray
                       transports__item--run" aria-label="Пешком">
-                      <div class="tooltip transports__tooltip"><span class="tooltip--text" data-hover="Пешком"></span></div>
+                      <div class="tooltip transports__tooltip"><span class="tooltip__text" data-hover="Пешком"></span></div>
                     </li>
                   </ul>
 
                   <h4 class="peoples__subtitle peoples__subtitle--level">левел:</h4>
                   <div class="peoples__level-container level level--smolov">
+                    <svg class="level__image" stroke="#FF8D30" width="60" stroke-dasharray="25 125" stroke-linecap="round" height="60" transform="rotate(-45)" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle r="28" cx="50%" cy="50%" stroke-width="4" />
+                    </svg>
                     <span class="level__counter level__counter--no-bordered level__counter--light level__counter--small"
                       aria-label="У Марка Смолова 25 уровень">25</span>
                     <span class="level__text level__text--gray level__text--small level__text--hidden">level</span>
@@ -882,23 +912,26 @@
                   <ul class="peoples__transports transports" aria-label="Используемые виды трансопрта">
                     <li class="transports__item transports__item--small transports__item--rounded transports__item--gray
                       transports__item--avia transports__item--active" aria-label="Авиаперелет">
-                      <div class="tooltip transports__tooltip"><span class="tooltip--text" data-hover="Авиаперелет"></span></div></li>
+                      <div class="tooltip transports__tooltip"><span class="tooltip__text" data-hover="Авиаперелет"></span></div></li>
                     <li class="transports__item transports__item--small transports__item--rounded transports__item--gray
                       transports__item--auto transports__item--active" aria-label="Автотранспорт">
-                      <div class="tooltip transports__tooltip"><span class="tooltip--text" data-hover="Автотранспорт"></span></div>
+                      <div class="tooltip transports__tooltip"><span class="tooltip__text" data-hover="Автотранспорт"></span></div>
                     </li>
                     <li class="transports__item transports__item--small transports__item--rounded transports__item--gray
                       transports__item--bicycle" aria-label="Велосипед">
-                      <div class="tooltip transports__tooltip"><span class="tooltip--text" data-hover="Велосипед"></span></div>
+                      <div class="tooltip transports__tooltip"><span class="tooltip__text" data-hover="Велосипед"></span></div>
                     </li>
                     <li class="transports__item transports__item--small transports__item--rounded transports__item--gray
                       transports__item--run" aria-label="Пешком">
-                      <div class="tooltip transports__tooltip"><span class="tooltip--text" data-hover="Пешком"></span></div>
+                      <div class="tooltip transports__tooltip"><span class="tooltip__text" data-hover="Пешком"></span></div>
                     </li>
                   </ul>
 
                   <h4 class="peoples__subtitle peoples__subtitle--level">левел:</h4>
                   <div class="peoples__level-container level level--yarovaya">
+                    <svg class="level__image" stroke="#FF8D30" width="60" stroke-dasharray="80 80" stroke-linecap="round" height="60" transform="rotate(-70)" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <circle r="28" cx="50%" cy="50%" stroke-width="4" />
+                    </svg>
                     <span class="level__counter level__counter--no-bordered level__counter--light level__counter--small"
                       aria-label="У Ларисы Роговой 50 уровень">50</span>
                     <span class="level__text level__text--gray level__text--small level__text--hidden">level</span>
@@ -936,10 +969,13 @@
       <div class="page-footer__wrapper page-wrapper">
         <a href="index.html" class="page-footer__link">
           <picture class="page-footer__logo page-logo page-logo--dark">
-            <source type="image/webp" media="(min-width: 768px)"
+            <source type="image/webp" media="(min-width: 1440px)"
               srcset="img/pognali-logo_dark_desktop.webp 1x, img/pognali-logo_dark_desktop@2x.webp 2x" />
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="img/pognali-logo_dark_tablet.webp 1x, img/pognali-logo_dark_desktop@2x.webp 2x" />
             <source type="image/webp" srcset="img/pognali-logo_dark.webp 1x, img/pognali-logo_dark@2x.png 2x" />
-            <source media="(min-width: 768px)" srcset="img/pognali-logo_dark_desktop.png 1x, img/pognali-logo_dark_desktop@2x.png 2x" />
+            <source media="(min-width: 1440px)" srcset="img/pognali-logo_dark_desktop.png 1x, img/pognali-logo_dark_desktop@2x.png 2x" />
+            <source media="(min-width: 768px)" srcset="img/pognali-logo_dark_tablet.png 1x, img/pognali-logo_dark_tablet@2x.png 2x" />
             <img class="page-logo__image" alt="Логотип сервиса Погнали" src="img/pognali-logo_dark.png"
               srcset="img/pognali-logo_dark@2x.png 2x" width="96" height="15" loading="lazy" />
           </picture>

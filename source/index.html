@@ -13,8 +13,8 @@
   <link rel="apple-touch-icon" href="img/favicon/180x180.png" />
   <link rel="manifest" href="manifest.webmanifest" />
   <link rel="stylesheet" href="css/style.min.css" />
-  <link rel="preload" href="../fonts/bloggersans-lightitalic.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
-  <link rel="preload" href="../fonts/bloggersans-lightitalic.woff" as="font" type="font/woff" crossorigin="anonymous" />
+  <link rel="preload" href="../fonts/bloggersans.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
+  <link rel="preload" href="../fonts/bloggersans-bold.woff2" as="font" type="font/woff2" crossorigin="anonymous" />
 </head>
 
 <body class="page__body">
@@ -23,18 +23,21 @@
       <div class="page-header__row">
         <a href="index.html" class="page-header__link">
           <picture class="page-header__logo page-header__logo--white page-logo page-logo--white">
-            <source type="image/webp" media="(min-width: 768px)"
+            <source type="image/webp" media="(min-width: 1440px)"
               srcset="img/pognali-logo_white_desktop.webp 1x, img/pognali-logo_white_desktop@2x.webp 2x" />
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="img/pognali-logo_white_tablet.webp 1x, img/pognali-logo_white_tablet@2x.webp 2x" />
             <source type="image/webp" srcset="img/pognali-logo_white.webp 1x, img/pognali-logo_white@2x.png 2x" />
-            <source media="(min-width: 768px)" srcset="img/pognali-logo_white_desktop.png 1x, img/pognali-logo_white_desktop@2x.png 2x" />
+            <source media="(min-width: 1440px)" srcset="img/pognali-logo_white_desktop.png 1x, img/pognali-logo_white_desktop@2x.png 2x" />
+            <source media="(min-width: 768px)" srcset="img/pognali-logo_white_tablet.png 1x, img/pognali-logo_white_tablet@2x.png 2x" />
             <img class="page-logo__image" alt="Логотип сервиса Погнали" src="img/pognali-logo_white.png"
               srcset="img/pognali-logo_white@2x.png 2x" width="96" height="15" />
           </picture>
           <picture class="page-header__logo page-header__logo--dark page-logo page-logo--dark">
             <source type="image/webp" media="(min-width: 768px)"
-              srcset="img/pognali-logo_dark_desktop.webp 1x, img/pognali-logo_dark_desktop@2x.webp 2x" />
+              srcset="img/pognali-logo_dark_tablet.webp 1x, img/pognali-logo_dark_tablet@2x.webp 2x" />
             <source type="image/webp" srcset="img/pognali-logo_dark.webp 1x, img/pognali-logo_dark@2x.png 2x">
-            <source media="(min-width: 768px)" srcset="img/pognali-logo_dark_desktop.png 1x, img/pognali-logo_dark_desktop@2x.png 2x" />
+            <source media="(min-width: 768px)" srcset="img/pognali-logo_dark_tablet.png 1x, img/pognali-logo_dark_tablet@2x.png 2x" />
             <img class="page-logo__image" alt="Логотип сервиса Погнали" src="img/pognali-logo_dark.png"
               srcset="img/pognali-logo_dark@2x.png 2x" width="96" height="15" />
           </picture>
@@ -113,9 +116,9 @@
 
         <blockquote class="intro__quote quote-intro">
           <p class="quote-intro__text">&laquo;Лучшее приложение, что я видел в жизни!&raquo;</p>
-          <cite class="quote-inro__author">
-            <span class="quote-inro__author-name">Мурат Эльтазин</span>
-            <span class="quote-inro__author-position">главный редактор газеты &#8249;&#8249;гаджетлайф&#8250;&#8250;</span>
+          <cite class="quote-intro__author">
+            <span class="quote-intro__author-name">Мурат Эльтазин</span>
+            <span class="quote-intro__author-position">главный редактор газеты &#8249;&#8249;гаджетлайф&#8250;&#8250;</span>
           </cite>
         </blockquote>
         <ol class="intro__list">
@@ -132,8 +135,8 @@
       <div class="page-header__wrapper page__container">
         <a class="page-header__link">
           <picture class="page-header__logo page-header__logo--white page-logo page-logo--white">
-            <source type="image/webp" media="(min-width: 768px)"
-              srcset="img/pognali-logo_dark_desktop.webp 1x, img/pognali-logo_dark_desktop@2x.webp 2x" />
+            <source type="image/webp" srcset="img/pognali-logo_dark_desktop.webp 1x,
+              img/pognali-logo_dark_desktop@2x.webp 2x" />
             <img class="page-logo__image" alt="Логотип сервиса Погнали" src="img/pognali-logo_dark_desktop.png"
               srcset="img/pognali-logo_dark_desktop@2x.png 2x" width="198" height="60" />
           </picture>
@@ -265,31 +268,36 @@
         <ul class="travelers__list list-travelers">
           <li class="list-travelers__item">
             <article class="list-travelers__card">
-              <picture class="list-travelers__image">
-                <source type="image/webp" srcset="img/travelers-firsova.webp 1x, img/travelers-firsova@2x.webp 2x" />
-                <img class="list-travelers__image" alt="Татьяна Фирсова, плавающая в океане" src="img/travelers-firsova.png"
-                  srcset="img/travelers-firsova@2x.png 2x" width="270" height="270" loading="lazy" />
-              </picture>
+              <div class="list-travelers__image-wrapper">
+                <picture>
+                  <source type="image/webp" srcset="img/travelers-firsova.webp 1x, img/travelers-firsova@2x.webp 2x" />
+                  <img class="list-travelers__image" alt="Татьяна Фирсова, плавающая в океане" src="img/travelers-firsova.png"
+                    srcset="img/travelers-firsova@2x.png 2x" width="270" height="270" loading="lazy" />
+                </picture>
+              </div>
 
               <div class="list-travelers__level-container level level--bg-dark level--firsova-rounded">
+                <svg class="level__image" stroke="#FF8D30" width="60" stroke-dasharray="90 10" stroke-linecap="round" height="60" transform="rotate(65)" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle r="28" cx="50%" cy="50%" stroke-width="4" />
+                </svg>
                 <span class="level__counter level__counter--small level__counter--white" aria-label="У Тани Фирсовой 99 уровень">99</span>
                 <span class="level__text level__text--small level__text--white">level</span>
               </div>
               <ul class="list-travelers__countries countries-list">
                 <li class="countries-list__item">
                   <img src="img/sri-lanka.svg" alt="Шри-Ланка" class="countries-list__image" width="35" height="25" loading="lazy" />
-                  <div class="tooltip countries-list__tooltip"><span class="tooltip--text" data-hover="Шри-Ланка"></span></div>
+                  <div class="tooltip countries-list__tooltip"><span class="tooltip__text" data-hover="Шри-Ланка"></span></div>
                 </li>
                 <li class="countries-list__item">
                   <img src="img/thailand.svg" alt="Таиланд" class="countries-list__image" width="35" height="25" loading="lazy" />
-                  <div class="tooltip countries-list__tooltip"><span class="tooltip--text" data-hover="Таиланд"></span></div>
+                  <div class="tooltip countries-list__tooltip"><span class="tooltip__text" data-hover="Таиланд"></span></div>
                 </li>
                 <li class="countries-list__item">
                   <img src="img/seychelles.svg" alt="Сейшельские острова" class="countries-list__image" width="35" height="25" loading="lazy" />
-                  <div class="tooltip countries-list__tooltip"><span class="tooltip--text" data-hover="Сейшельские острова"></span></div>
+                  <div class="tooltip countries-list__tooltip"><span class="tooltip__text" data-hover="Сейшельские острова"></span></div>
                 </li>
               </ul>
-              <h3 class="list-travelers__title list-travelers__title--red"><a href="#" class="list-travelers__link">Таня Фирсова</a></h3>
+              <h3 class="list-travelers__title"><a href="#" class="list-travelers__link list-travelers__link--red">Таня Фирсова</a></h3>
               <ul class="list-travelers__hashtags hashtags">
                 <li class="hashtags__item">#ЗОЖ</li>
                 <li class="hashtags__item">#ПП</li>
@@ -300,42 +308,47 @@
               </ul>
               <ul class="list-travelers__transports transports" aria-label="Используемые виды трансопрта">
                 <li class="transports__item transports__item--avia transports__item--active" aria-label="Авиаперелет">
-                  <div class="tooltip transports__tooltip"><span class="tooltip--text" data-hover="Авиаперелет"></span></div>
+                  <div class="tooltip transports__tooltip"><span class="tooltip__text" data-hover="Авиаперелет"></span></div>
                 </li>
                 <li class="transports__item transports__item--auto" aria-label="Автотранспорт">
-                  <div class="tooltip transports__tooltip"><span class="tooltip--text" data-hover="Автотранспорт"></span></div>
+                  <div class="tooltip transports__tooltip"><span class="tooltip__text" data-hover="Автотранспорт"></span></div>
                 </li>
                 <li class="transports__item transports__item--bicycle" aria-label="Велосипед">
-                  <div class="tooltip transports__tooltip"><span class="tooltip--text" data-hover="Велосипед"></span></div>
+                  <div class="tooltip transports__tooltip"><span class="tooltip__text" data-hover="Велосипед"></span></div>
                 </li>
                 <li class="transports__item transports__item--run" aria-label="Пешком">
-                  <div class="tooltip transports__tooltip"><span class="tooltip--text" data-hover="Пешком"></span></div>
+                  <div class="tooltip transports__tooltip"><span class="tooltip__text" data-hover="Пешком"></span></div>
                 </li>
               </ul>
             </article>
           </li>
           <li class="list-travelers__item">
             <article class="list-travelers__card">
-              <picture class="list-travelers__image">
-                <source type="image/webp" srcset="img/travelers-demin.webp 1x, img/travelers-demin@2x.webp 2x" />
-                <img class="list-travelers__image" alt="Татьяна Фирсова, плавающая в океане" src="img/travelers-demin.png"
-                  srcset="img/travelers-demin@2x.png 2x" width="270" height="270" loading="lazy" />
-              </picture>
+              <div class="list-travelers__image-wrapper">
+                <picture>
+                  <source type="image/webp" srcset="img/travelers-demin.webp 1x, img/travelers-demin@2x.webp 2x" />
+                  <img class="list-travelers__image" alt="Татьяна Фирсова, плавающая в океане" src="img/travelers-demin.png"
+                    srcset="img/travelers-demin@2x.png 2x" width="270" height="270" loading="lazy" />
+                </picture>
+              </div>
               <div class="list-travelers__level-container level level--bg-dark level--demin-rounded">
+                <svg class="level__image" stroke="#FF8D30" width="60" stroke-dasharray="160% 60%" stroke-linecap="round" height="60" viewBox="0 0 60 60" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <circle r="28" cx="50%" cy="50%" stroke-width="4" />
+                </svg>
                 <span class="level__counter level__counter--small level__counter--white" aria-label="У Пети Демина 80 уровень">80</span>
                 <span class="level__text level__text--small level__text--white">level</span>
               </div>
               <ul class="list-travelers__countries countries-list">
                 <li class="countries-list__item">
                   <img src="img/belgium.svg" alt="Бельгия" class="countries-list__image" width="35" height="25" loading="lazy" />
-                  <div class="tooltip countries-list__tooltip"><span class="tooltip--text" data-hover="Бельгия"></span></div>
+                  <div class="tooltip countries-list__tooltip"><span class="tooltip__text" data-hover="Бельгия"></span></div>
                 </li>
                 <li class="countries-list__item">
                   <img src="img/czech.svg" alt="Чехия" class="countries-list__image" width="35" height="25" loading="lazy" />
-                  <div class="tooltip countries-list__tooltip"><span class="tooltip--text" data-hover="Чехия"></span></div>
+                  <div class="tooltip countries-list__tooltip"><span class="tooltip__text" data-hover="Чехия"></span></div>
                 </li>
               </ul>
-              <h3 class="list-travelers__title list-travelers__title--green"><a href="#" class="list-travelers__link">Петя Демин</a></h3>
+              <h3 class="list-travelers__title"><a href="#" class="list-travelers__link list-travelers__link--green">Петя Демин</a></h3>
               <ul class="list-travelers__hashtags hashtags">
                 <li class="hashtags__item">#бургер</li>
                 <li class="hashtags__item">#бар</li>
@@ -345,16 +358,16 @@
               </ul>
               <ul class="list-travelers__transports transports" aria-label="Используемые виды трансопрта">
                 <li class="transports__item transports__item--avia transports__item--active" aria-label="Авиаперелет">
-                  <div class="tooltip transports__tooltip"><span class="tooltip--text" data-hover="Авиаперелет"></span></div>
+                  <div class="tooltip transports__tooltip"><span class="tooltip__text" data-hover="Авиаперелет"></span></div>
                 </li>
                 <li class="transports__item transports__item--auto transports__item--active" aria-label="Автотранспорт">
-                  <div class="tooltip transports__tooltip"><span class="tooltip--text" data-hover="Автотранспорт"></span></div>
+                  <div class="tooltip transports__tooltip"><span class="tooltip__text" data-hover="Автотранспорт"></span></div>
                 </li>
                 <li class="transports__item transports__item--bicycle" aria-label="Велосипед">
-                  <div class="tooltip transports__tooltip"><span class="tooltip--text" data-hover="Велосипед"></span></div>
+                  <div class="tooltip transports__tooltip"><span class="tooltip__text" data-hover="Велосипед"></span></div>
                 </li>
                 <li class="transports__item transports__item--run transports__item--active" aria-label="Пешком">
-                  <div class="tooltip transports__tooltip"><span class="tooltip--text" data-hover="Пешком"></span></div>
+                  <div class="tooltip transports__tooltip"><span class="tooltip__text" data-hover="Пешком"></span></div>
                 </li>
               </ul>
             </article>
@@ -384,9 +397,11 @@
               <dd class="profile__description profile__description--third">59&nbsp;руб./мес</dd>
             </div>
           </dl>
-          <a href="#" class="profile__bisiness-link">
-            <span class="profile__bisiness-link-logo"></span><span class="profile__bisiness-link-text">Показать тарифы для бизнеса</span>
-          </a>
+          <div class="profile__bisiness-link-wrapper">
+            <a href="#" class="profile__bisiness-link">
+              <span class="profile__bisiness-link-logo"></span><span class="profile__bisiness-link-text">Показать тарифы для бизнеса</span>
+            </a>
+          </div>
         </div>
 
         <section class="profile__modal">
@@ -423,7 +438,7 @@
           <p class="contacts__title page-title">Заинтересовались?</p>
           <p class="contacts__text page-text">
             <span class="contacts__text-wrap">Зарегистрируйтесь,</span>
-            <span class="contacts__text-wrap">это быстро и бесплатно!<br />Уже зарегистрированы? Тогда
+            <span class="contacts__text-wrap">это быстро и бесплатно!&ensp;&ensp;<br />Уже зарегистрированы? Тогда
               скорее <a href="#" class="contacts__autorization">авторизуйтесь</a>.</span>
           </p>
 
@@ -488,10 +503,13 @@
       <div class="page-footer__wrapper page-wrapper">
         <a class="page-footer__link">
           <picture class="page-footer__logo page-logo page-logo--dark">
-            <source type="image/webp" media="(min-width: 768px)"
+            <source type="image/webp" media="(min-width: 1440px)"
               srcset="img/pognali-logo_dark_desktop.webp 1x, img/pognali-logo_dark_desktop@2x.webp 2x" />
+            <source type="image/webp" media="(min-width: 768px)"
+              srcset="img/pognali-logo_dark_tablet.webp 1x, img/pognali-logo_dark_desktop@2x.webp 2x" />
             <source type="image/webp" srcset="img/pognali-logo_dark.webp 1x, img/pognali-logo_dark@2x.png 2x" />
-            <source media="(min-width: 768px)" srcset="img/pognali-logo_dark_desktop.png 1x, img/pognali-logo_dark_desktop@2x.png 2x" />
+            <source media="(min-width: 1440px)" srcset="img/pognali-logo_dark_desktop.png 1x, img/pognali-logo_dark_desktop@2x.png 2x" />
+            <source media="(min-width: 768px)" srcset="img/pognali-logo_dark_tablet.png 1x, img/pognali-logo_dark_tablet@2x.png 2x" />
             <img class="page-logo__image" alt="Логотип сервиса Погнали" src="img/pognali-logo_dark.png"
               srcset="img/pognali-logo_dark@2x.png 2x" width="96" height="15" loading="lazy" />
           </picture>

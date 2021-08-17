@@ -98,6 +98,7 @@
 
   &--active::after {
     background-color: $basic_black;
+    border: none;
   }
 
   &--add::after {
@@ -395,8 +396,8 @@
 
   @media (min-width: $tablet_width) {
     right: 25px;
-    width: 24px;
-    height: 24px;
+    width: 20px;
+    height: 20px;
   }
 
   &:hover {
@@ -439,6 +440,6 @@
   }
 
   @media (min-width: $tablet_width) {
-    padding: 32px 0  0 24px;
+    padding: 32px 0  20px 24px;
   }
 }

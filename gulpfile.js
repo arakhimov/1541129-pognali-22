@@ -33,6 +33,22 @@ const styles = () => {
 
 exports.styles = styles;
 
+// StylesNoMin
+const stylesNoMin = () => {
+  return gulp.src("source/sass/style.scss")
+    .pipe(plumber())
+    .pipe(sourcemap.init())
+    .pipe(sass())
+    .pipe(postcss([
+      autoprefixer(),
+    ]))
+    .pipe(sourcemap.write("."))
+    .pipe(rename("style.css"))
+    .pipe(gulp.dest("build/css"));
+}
+
+exports.stylesNoMin = stylesNoMin;
+
 // Server
 const server = (done) => {
   sync.init({
@@ -154,6 +170,7 @@ exports.build = gulp.series(
   optimizeImages,
   gulp.parallel(
     styles,
+    stylesNoMin,
     html,
     scripts,
     sprite,
@@ -169,6 +186,7 @@ exports.default = gulp.series(
   // optimizeImages,
   gulp.parallel(
     styles,
+    stylesNoMin,
     html,
     scripts,
     sprite,

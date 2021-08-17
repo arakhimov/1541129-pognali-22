@@ -2,7 +2,6 @@
   background-color: $special_blue_half-dark;
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-  overflow: hidden;
 
   @media (min-width: $tablet_width) {
     border-bottom-left-radius: 60px;
@@ -16,9 +15,13 @@
   padding: 42px 25px 0;
   background-color: $special_blue_half-dark;
   box-sizing: border-box;
+  border-bottom-left-radius: 20px;
+  border-bottom-right-radius: 20px;
 
   @media (min-width: $tablet_width) {
     padding: 120px 75px 0;
+    border-bottom-left-radius: 60px;
+    border-bottom-right-radius: 60px;
   }
 
   @media (min-width: $desktop_width) {

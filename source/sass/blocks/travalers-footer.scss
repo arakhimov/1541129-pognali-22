@@ -85,6 +85,10 @@
   @media (min-width: $tablet_width) {
     width: 80px;
     justify-content: space-between;
+
+    &::after {
+      display: none;
+    }
   }
 
   @media (min-width: $desktop_width) {

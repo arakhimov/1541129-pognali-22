@@ -149,14 +149,6 @@
   vertical-align: top;
 }
 
-.menu-interests__item:hover .menu-interests__title {
-  opacity: 0.6;
-}
-
-.menu-interests__item:focus-within .menu-interests__title {
-  opacity: 0.6;
-}
-
-.menu-interests__item:active .menu-interests__title {
-  opacity: 0.3;
+.menu-interests__field:focus ~ .menu-interests__label {
+  outline: 2px solid $special_orange-dark;
 }
