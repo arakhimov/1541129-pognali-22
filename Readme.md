@@ -1,58 +1,26 @@
-# Личный проект «Погнали»
+## pognali
 
-- Студент: [Артем Рахимов](https://up.htmlacademy.ru/adaptive/22/user/1541129).
-- Наставник: [Иван Кривонос](https://htmlacademy.ru/profile/id1311037).
+#### учебный проект HTML Academy
 
----
+## https://arakhimov.github.io/1541129-pognali-22/
 
-**Обратите внимание, что папка с вашими исходными файлами — `source/`.**
+### Версия v0.0.1
 
-Полезный файл:
+В проекте создана адативная кроссбраузерная верстка сервиса для поиска попутчиков для путешествий.
 
-- [Contributing.md](Contributing.md) — руководство по внесению изменений.
+Проект выполнен по принципу прогрессивного улучшения, Mobile First.
 
-_Не удаляйте и не обращайте внимание на файлы:_<br>
-_`.editorconfig`, `.gitattributes`, `.gitignore`, `.stylelintrc`, `.travis.yml`, `package-lock.json`, `package.json`._
+Использована методология БЭМ.
 
----
+Для проверки степени соответствия макету использован Pixel Perfect.
 
-### Памятка
+Выполненна адаптивность сетки: мобильная, планшетная и десктопная версии.
 
-#### 1. Зарегистрируйтесь на Гитхабе
+Выполнена ретинизация растровой графики.
 
-Если у вас ещё нет аккаунта на [github.com](https://github.com/join), скорее зарегистрируйтесь.
+Для стилизации использован препроцессор Sass.
 
-#### 2. Создайте форк
+Сборка и автоматизация выполнены при помощи Gulp.
 
-[Откройте мастер-репозиторий](https://github.com/htmlacademy-adaptive/1541129-pognali-22) и нажмите кнопку «Fork» в правом верхнем углу. Репозиторий из Академии будет скопирован в ваш аккаунт.
-
-<img width="800" alt="" src="https://user-images.githubusercontent.com/10909/60808227-6eee8a00-a190-11e9-9b7e-06ce2b06ba16.jpg">
-
-Получится вот так:
-
-<img width="800" alt="" src="https://user-images.githubusercontent.com/10909/60808229-6eee8a00-a190-11e9-8b67-371cd191fc0d.jpg">
-
-#### 3. Клонируйте репозиторий на свой компьютер
-
-Будьте внимательны: нужно клонировать свой репозиторий (форк), а не репозиторий Академии. Также обратите внимание, что клонировать репозиторий нужно через SSH, а не через HTTPS. Нажмите зелёную кнопку в правой части экрана, чтобы скопировать SSH-адрес вашего репозитория:
-
-<img width="800" alt="" src="https://user-images.githubusercontent.com/10909/60808230-6eee8a00-a190-11e9-8575-9080503a6017.jpg">
-
-Клонировать репозиторий можно так:
-
-```
-git clone SSH-адрес_вашего_форка
-```
-
-Команда клонирует репозиторий на ваш компьютер и подготовит всё необходимое для старта работы.
-
-#### 4. Начинайте обучение!
-
----
-
-<a href="https://htmlacademy.ru/intensive/adaptive"><img align="left" width="50" height="50" alt="HTML Academy" src="https://up.htmlacademy.ru/static/img/intensive/adaptive/logo-for-github-2.png"></a>
-
-Репозиторий создан для обучения на профессиональном онлайн‑курсе «[HTML и CSS. Адаптивная вёрстка и автоматизация](https://htmlacademy.ru/intensive/adaptive)» от [HTML Academy](https://htmlacademy.ru).
-
-[check-image]: https://github.com/htmlacademy-adaptive/1541129-pognali-22/workflows/Project%20check/badge.svg?branch=master
-[check-url]: https://github.com/htmlacademy-adaptive/1541129-pognali-22/actions
+Использовались технологии и интсрументы:
+JS, CSS, HTML, GIT, Sass, Gulp.
