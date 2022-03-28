@@ -24,3 +24,8 @@
 
 Использовались технологии и интсрументы:
 JS, CSS, HTML, GIT, Sass, Gulp.
+
+### Запуск проекта:
+- git clone git@github.com:arakhimov/1541129-pognali-22.git
+- npm install
+- npm start
